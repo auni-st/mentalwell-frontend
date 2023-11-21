@@ -1,0 +1,20 @@
+{
+  "routes": [
+    {
+      "src": "/src/public/(.*)",
+      "dest": "/src/public/$1"
+    },
+    {
+      "src": "/src/scripts/routes/(.*)",
+      "dest": "/src/scripts/routes/$1"
+    },
+    {
+      "src": "/src/scripts/styles/(.*)",
+      "dest": "/src/scripts/styles/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/src/scripts/templates/index.html"
+    }
+  ]
+}
