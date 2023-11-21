@@ -79,24 +79,30 @@ body {
 
 .jumbotron {
   width: 100%;
-  height: 408px;
+  height: 430px;
   background-color: #02bbdd;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
 }
 
-.hero {
+.jumbotron .hero {
   justify-content: flex-start;
   margin-left: 2rem;
 }
 
-.hero h2 {
+.jumbotron .hero h2 {
   font-size: 28px;
   font-weight: 700;
 }
-.hero p {
+
+.jumbotron .hero p {
   font-size: 13px;
+}
+
+.jumbotron .hero-image img {
+  width: 497px;
+  height: 349px;
 }
 
 main {
@@ -116,23 +122,34 @@ main {
 }
 
 .content p {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 .container-konsultasi {
-    margin-top: 2rem;
-    display: flex;
-    flex-direction: colum;
-    justify-content: center;
-    gap: 2rem;
-    width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: colum;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
 }
 
-.container-konsultasi  .content-konsultasi {
-    border: 1px solid black;
-    border-radius: 10px;
-    width: 390px;
-    height: 196px;
+.container-konsultasi .content-konsultasi {
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 300px;
+  height: 150px;
+}
+
+.container-konsultasi .content-konsultasi .konsultasi-brand {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: flex-start;
+  margin: 1rem;
+}
+.container-konsultasi .content-konsultasi p {
+    margin: 1rem;
 }
 
 footer {
