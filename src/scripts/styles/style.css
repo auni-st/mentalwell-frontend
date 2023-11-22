@@ -152,10 +152,10 @@ main {
 }
 
 .container-konsultasi .content-konsultasi .konsultasi-brand h3 {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 .container-konsultasi .content-konsultasi p {
-    margin: 1rem;
+  margin: 1rem;
 }
 
 footer {
@@ -167,3 +167,5 @@ footer {
   margin-top: 2rem;
   text-align: center;
 }
+
+

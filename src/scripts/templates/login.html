@@ -4,18 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="../styles/login.css">
   </head>
   <body>
-    <div class="container-login">
+    <div class="login-container">
+      <div class="login-title">
+        <h2>Masuk</h2>
+        <p>Belum punya akun? <a href="#">Daftar</a></p>
+      </div>
       <form class="login-form">
-        <div class="form-title">
-          <h2>Masuk</h2>
-          <p>Belum punya akun? <a href="#">Daftar</a></p>
-        </div>
-        <div class="form-input">
           <input class="form-input" type="email" id="username" name="username" placeholder="Masukkan Email" required />
-          <input class="form-input" type="password" id="password" name="password" placeholder="Masukkan Password" />
-        </div>
+          <input class="form-input" type="password" id="password" name="password" placeholder="Masukkan Password" required/>
+          <p><a href="#">Forget Password</a></p>
+          <button class="submit-btn" type="submit">Submit</button>
       </form>
     </div>
   </body>
