@@ -1,0 +1,32 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "**/*",
+      "use": "@vercel/static"
+    }
+  ],
+  "outputDirectory": "./",
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/src/scripts/templates/index.html"
+    },
+    {
+      "src": "/daftar",
+      "dest": "/src/scripts/templates/daftar.html"
+    },
+    {
+      "src": "/login",
+      "dest": "/src/scripts/templates/login.html"
+    },
+    {
+      "src": "/riwayat",
+      "dest": "/src/scripts/templates/riwayat.html"
+    },
+    {
+      "src": "/tentangkami",
+      "dest": "/src/scripts/templates/tentangkami.html"
+    }
+  ]
+}
