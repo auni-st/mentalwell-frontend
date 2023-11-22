@@ -37,16 +37,34 @@ body {
   flex-direction: column;
 }
 
-.login-container .login-form .form-input {
+.login-container .login-form .form-control {
   margin-bottom: 1rem;
+  display: flex;
+}
+
+.login-container .login-form .form-control .form-input {
+  display: flex;
   border: 1px solid #ccc;
   border-radius: 50px;
   font-size: 16px;
   padding-left: 20px;
   padding-right: 20px;
   width: 330px;
+  align-items: center;
   height: 44px;
 }
+
+.login-container .login-form .form-control .eye {
+  position: absolute;
+  margin-left: 330px;
+  margin-top: 15px;
+}
+
+.login-container .login-form .form-input {
+  border: none;
+  
+}
+
 
 .login-container .login-form p {
     text-align: end;
@@ -70,3 +88,90 @@ body {
   width: 370px;
   height: 44px;
 }
+
+
+/* Daftar */
+.daftar-container {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 400px;
+  height: 490px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.daftar-container .daftar-title {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.daftar-container .daftar-title p{
+  margin-top: -10px;
+}
+
+.daftar-container .daftar-title p a{
+  text-decoration: none;
+}
+
+.daftar-container .daftar-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.daftar-container .daftar-form .form-control {
+  margin-bottom: 1rem;
+  display: flex;
+}
+
+.daftar-container .daftar-form .form-control .form-input {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  font-size: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 330px;
+  align-items: center;
+  height: 44px;
+}
+
+.daftar-container .daftar-form .form-control .eye {
+  position: absolute;
+  margin-left: 330px;
+  margin-top: 15px;
+}
+
+.daftar-container .daftar-form .form-input {
+  border: none;
+  
+}
+
+.daftar-container .daftar-form p {
+    text-align: end;
+    margin-right: 3px;
+    margin-top: -8px;
+}
+
+.daftar-container .daftar-form p a{
+    text-decoration: none;
+    color: black;
+}
+
+.daftar-container .daftar-form .submit-btn {
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  font-size: 20px;
+  margin-top: 2rem;
+  color: white;
+  font-weight: bold;
+  background-color: #044B77;
+  width: 370px;
+  height: 44px;
+}
+
+
+
+

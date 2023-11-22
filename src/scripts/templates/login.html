@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="../styles/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   </head>
   <body>
     <div class="login-container">
@@ -13,10 +14,15 @@
         <p>Belum punya akun? <a href="#">Daftar</a></p>
       </div>
       <form class="login-form">
-          <input class="form-input" type="email" id="username" name="username" placeholder="Masukkan Email" required />
-          <input class="form-input" type="password" id="password" name="password" placeholder="Masukkan Password" required/>
+          <div class="form-control">
+            <input class="form-input" type="email" id="username" name="username" placeholder="Masukkan Email" required />
+          </div>
+          <div class="form-control">
+            <i class="fa-regular fa-eye-slash eye"></i>
+            <input class="form-input" type="password" id="password" name="password" placeholder="Masukkan Password" required/>
+          </div>          
           <p><a href="#">Forget Password</a></p>
-          <button class="submit-btn" type="submit">Submit</button>
+          <button class="submit-btn" type="submit">Masuk</button>
       </form>
     </div>
   </body>
