@@ -27,6 +27,10 @@
     {
       "src": "/tentangkami",
       "dest": "/src/scripts/templates/tentangkami.html"
+    },
+    {
+      "src": "/lupasandi",
+      "dest": "/src/scripts/templates/lupasandi.html"
     }
   ]
 }
