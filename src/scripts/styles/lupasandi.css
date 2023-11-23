@@ -55,7 +55,3 @@ body {
     border-radius: 3px;
     cursor: pointer;
 }
-
-.next-btn:hover {
-    background-color: #45a049;
-}
