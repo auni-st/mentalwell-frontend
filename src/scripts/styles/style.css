@@ -124,6 +124,12 @@ main {
   flex-direction: column;
 }
 
+.konsultasi {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
 .content {
   display: flex;
   flex-direction: column;
@@ -151,7 +157,7 @@ main {
 .container-konsultasi .content-konsultasi {
   border: 1px solid black;
   border-radius: 10px;
-  width: 300px;
+  width: 350px;
   height: 150px;
 }
 
@@ -168,6 +174,43 @@ main {
 }
 .container-konsultasi .content-konsultasi p {
   margin: 1rem;
+}
+
+/*
+Section masalah 
+*/
+.masalah {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.masalah .content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.masalah .container-masalah {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.masalah .container-masalah .content-masalah {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  width: 250px;
+  height: 68px;
+  background-color: #044B77;
+  justify-content: center;
+  align-items: center;
+  border-radius: 27.2px;
 }
 
 /*

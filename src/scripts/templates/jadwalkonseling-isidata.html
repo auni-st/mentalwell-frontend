@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <style>
+      button {
+        background-color: #044b77;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="flow d-flex justify-content-center my-5">
+          <div class="isi-data text-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="86"
+              height="77"
+              viewBox="0 0 86 77"
+              fill="none"
+            >
+              <path
+                d="M85.5 38.5C85.5 59.4363 66.5255 76.5 43 76.5C19.4745 76.5 0.5 59.4363 0.5 38.5C0.5 17.5637 19.4745 0.5 43 0.5C66.5255 0.5 85.5 17.5637 85.5 38.5Z"
+                fill="#044B77"
+                stroke="black"
+              />
+            </svg>
+            <br />
+            Isi Data
+          </div>
+          <div class="permasalahan text-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="86"
+              height="77"
+              viewBox="0 0 86 77"
+              fill="none"
+            >
+              <path
+                d="M85.5 38.5C85.5 59.4363 66.5255 76.5 43 76.5C19.4745 76.5 0.5 59.4363 0.5 38.5C0.5 17.5637 19.4745 0.5 43 0.5C66.5255 0.5 85.5 17.5637 85.5 38.5Z"
+                fill="white"
+                stroke="black"
+              />
+            </svg>
+            <br />
+            Permasalahan
+          </div>
+          <div class="selesai text-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="86"
+              height="77"
+              viewBox="0 0 86 77"
+              fill="none"
+            >
+              <path
+                d="M85.5 38.5C85.5 59.4363 66.5255 76.5 43 76.5C19.4745 76.5 0.5 59.4363 0.5 38.5C0.5 17.5637 19.4745 0.5 43 0.5C66.5255 0.5 85.5 17.5637 85.5 38.5Z"
+                fill="white"
+                stroke="black"
+              />
+            </svg>
+            <br />
+            Selesai
+          </div>
+        </div>
+        <div class="data d-flex mt-5">
+          <div class="data-diri card w-50 mx-3 shadow">
+            <h3 class="text-center mt-2 mb-3">Lengkapi Data Diri</h3>
+            <div>
+              <form
+                action=""
+                class="form-center d-flex row w-100 mx-auto justify-content-center"
+              >
+                <input
+                  type="text"
+                  placeholder="Nama Lengkap"
+                  class="w-75 mb-3 focus-ring py-1 px-2 border rounded-2"
+                />
+                <br />
+                <input
+                  type="text"
+                  placeholder="Nama Panggilan"
+                  class="w-75 mb-3 focus-ring py-1 px-2 border rounded-2"
+                />
+                <br />
+                <input
+                  type="date"
+                  placeholder="Tanggal Lahir"
+                  class="w-75 mb-3 focus-ring py-1 px-2 border rounded-2"
+                />
+                <br />
+                <input
+                  type="text"
+                  placeholder="Jenis Kelamin"
+                  class="w-75 mb-3 focus-ring py-1 px-2 border rounded-2"
+                />
+                <br />
+                <input
+                  type="number"
+                  placeholder="Nomor Whatsapp"
+                  class="w-75 mb-3 focus-ring py-1 px-2 border rounded-2"
+                />
+                <br />
+                <input
+                  type="text"
+                  placeholder="Pekerjaan"
+                  class="w-75 mb-3 focus-ring py-1 px-2 border rounded-2"
+                />
+              </form>
+            </div>
+          </div>
+          <div class="jadwal card w-50 mx-3 shadow">
+            <h3 class="text-center mt-2 mb-">Atur Jadwal</h3>
+            <p class="mx-4">Pilih Hari (Hari Kerja)</p>
+            <input
+              type="date"
+              class="border w-50 mx-auto mb-1 focus-ring py-1 px-2 border rounded-2"
+            />
+            <br />
+            <p class="mx-4">Pilih Waktu (WIB)</p>
+            <div class="waktu d-flex justify-content-center mb-3">
+              <div class="card text-center w-25 mx-3">13.00 - 14.00</div>
+              <div class="card text-center w-25 mx-3">16.00 - 17.00</div>
+              <div class="card text-center w-25 mx-3">19.30 - 20.30</div>
+            </div>
+
+            <p class="mx-4">Pilih Metode Konseling</p>
+            <div class="metode d-flex justify-content-center">
+              <div class="card text-center w-25 mx-3 mb-3">Chat</div>
+              <div class="card text-center w-25 mx-3 mb-3">Voice Call</div>
+              <div class="card text-center w-25 mx-3 mb-3">Video Call</div>
+            </div>
+            <button class="rounded p-1 mx-3 my-3 mb-4">Selanjutnya</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
