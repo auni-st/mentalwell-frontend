@@ -301,9 +301,10 @@ section rekomendasi
   width: 349px;
   height: 555px;
   border: 1px solid black;
+  border-radius: 5px;
 }
 
-.rekomendasi .container-rekomendasi .content-rekomendasi .btn-detail {
+ .btn-detail {
   width: 100%px;
   height: 55px;
   display: flex;
@@ -312,7 +313,7 @@ section rekomendasi
   justify-content: center;
 }
 
-.rekomendasi .container-rekomendasi .content-rekomendasi .btn-detail button {
+.btn-detail button {
   background-color: #044B77; 
   color: white; 
   padding: 10px 20px;
@@ -323,6 +324,10 @@ section rekomendasi
   width: 200px;
   border-radius: 27.2px;
   font-size: 18px;
+}
+
+.rekomendasi .btn-detail {
+  margin-top: 2rem;
 }
 
 /*
