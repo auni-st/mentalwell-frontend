@@ -44,14 +44,14 @@ body {
     padding: 10px;
     box-sizing: border-box;
     border: 1px solid #ccc;
-    border-radius: 3px;
+    border-radius: 50px;
 }
 
 .next-btn {
     background-color: #044B77;
     color: #fff;
     padding: 10px;
-    border: none;
-    border-radius: 3px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
     cursor: pointer;
 }
