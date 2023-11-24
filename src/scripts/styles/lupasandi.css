@@ -1,20 +1,58 @@
-/* lupa sandi */
-body {
+body, h1, h2, p, input, button {
     margin: 0;
     padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
 .lupasandi-container {
-    background-color: #fff;
-    border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.lupasandi-title {
     text-align: center;
-    width: 400px;
-    height: 400px;
+    margin-bottom: 20px;
+}
+
+.lupasandi-title h2 {
+    font-size: 24px;
+}
+
+.lupasandi-title p {
+    color: #333;
+    font-size: 16px;
+}
+
+.lupasandi-form {
     display: flex;
     flex-direction: column;
-    align-items: center;
+}
+
+.lupasandi-control {
+    margin-bottom: 16px;
+}
+
+.lupasandi-input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+}
+
+.next-btn {
+    background-color: #044B77;
+    color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    cursor: pointer;
 }
