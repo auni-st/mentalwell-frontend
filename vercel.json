@@ -39,6 +39,10 @@
     {
       "src": "/dashboardpsikolog",
       "dest": "/src/scripts/templates/dashboardpsikolog.html"
+    },
+    {
+      "src": "/editprofilpasien",
+      "dest": "/src/scripts/templates/editprofilpasien.html"
     }
   ]
 }
