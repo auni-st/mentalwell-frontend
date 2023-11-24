@@ -298,13 +298,13 @@ section rekomendasi
   gap: 2rem;
   justify-content: center;
   text-align: center;
-  width: 349px;
-  height: 555px;
+  width: 300px;
+  height: 520px;
   border: 1px solid black;
   border-radius: 5px;
 }
 
- .btn-detail {
+.btn-detail {
   width: 100%px;
   height: 55px;
   display: flex;
