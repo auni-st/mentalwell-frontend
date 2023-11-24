@@ -37,7 +37,7 @@
       "dest": "/src/scripts/templates/profil-psikolog.html"
     },
     {
-      "src": "/dasboardpsikolog",
+      "src": "/dashboardpsikolog",
       "dest": "/src/scripts/templates/dashboardpsikolog.html"
     }
   ]
