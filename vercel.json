@@ -31,6 +31,10 @@
     {
       "src": "/lupasandi",
       "dest": "/src/scripts/templates/lupasandi.html"
+    },
+    {
+      "src": "/editprofilpasien",
+      "dest": "/src/scripts/templates/editprofilpasien.html"
     }
   ]
 }
