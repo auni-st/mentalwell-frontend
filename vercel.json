@@ -31,6 +31,10 @@
     {
       "src": "/lupasandi",
       "dest": "/src/scripts/templates/lupasandi.html"
+    },
+    {
+      "src": "/profil-psikolog",
+      "dest": "/src/scripts/templates/profil-psikolog.html"
     }
   ]
 }
