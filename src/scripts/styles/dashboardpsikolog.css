@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #fafafa;
+  min-height: 100vh;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/*
+Header
+*/
+
+.navbar {
+  background-color: white;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  gap: 2 rem;
+  height: 90px;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.navbar .navbar-brand {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 1rem;
+}
+
+.navbar .navbar-brand h1 {
+  color: #02bbdd;
+  text-transform: uppercase;
+}
+
+.navbar .navbar-list {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.navbar .navbar-list .button-user {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .navbar-list .button-user button {
+  width: 95px;
+  height: 40px;
+  background-color: white;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.navbar .navbar-list .navbar-list-item {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navbar .navbar-list .list-item {
+  list-style: none;
+}
+
+.navbar .navbar-list .navbar-list-item .list-item a {
+  text-decoration: none;
+  list-style: none;
+  color: black;
+  font-size: 20px;
+  font-weight: 500px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#photoUser {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+/*
+main 
+*/
+
+main {
+  width: 100%;
+  display: flex;
+  flex: 1;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.dashboard .content {
+  width: 100%;
+  text-align: center;
+}
+
+.dashboard .content-dashboard {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.dashboard .content-dashboard table {
+  width: 1000px;
+  border-collapse: collapse;
+}
+
+
+.dashboard .content-dashboard table tr {
+  border: 1px solid black;
+}
+
+.dashboard .content-dashboard table th,
+td {
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+    background-color:  #044B77;
+    color: white;
+}
+
+
+.dashboard .content-dashboard table tbody img {
+    margin-top: 10px;
+    width: 60px;
+    height: 60px;
+}
+
+/* .dashboard .container-dashboard {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    width: 100%;
+    align-items: center;
+}
+
+.dashboard .container-dashboard .title-dashboard {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    background-color: #044B77;
+    min-width: 1200px;
+    height: 67px;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.dashboard .container-dashboard .content-dashboard {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    min-width: 1200px;
+    height: 90px;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    font-size: 20px;
+    border: 2px solid black;
+} */
+/*
+Footer
+*/
+
+footer {
+  font-size: 20px;
+  padding: 1.5em;
+  height: 20px;
+  background-color: #02bbdd;
+  color: #fff;
+  margin-top: 2rem;
+  text-align: center;
+  flex-shrink: 0;
+}

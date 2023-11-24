@@ -33,8 +33,17 @@
       "dest": "/src/scripts/templates/lupasandi.html"
     },
     {
+<<<<<<< HEAD
       "src": "/editprofilpasien",
       "dest": "/src/scripts/templates/editprofilpasien.html"
+=======
+      "src": "/profil-psikolog",
+      "dest": "/src/scripts/templates/profil-psikolog.html"
+    },
+    {
+      "src": "/dashboardpsikolog",
+      "dest": "/src/scripts/templates/dashboardpsikolog.html"
+>>>>>>> 708d7d056b697142201f6038b711370a1a4e44a0
     }
   ]
 }

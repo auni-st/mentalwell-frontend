@@ -22,7 +22,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    background-color: red;
+    background-color: white;
     width: 500px;
     height: 500px;
 }
