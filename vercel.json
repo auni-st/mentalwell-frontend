@@ -43,8 +43,6 @@
     {
       "src": "/dashboardpsikolog",
       "dest": "/src/scripts/templates/dashboardpsikolog.html"
-<<<<<<< HEAD
-=======
     },
     {
       "src": "/editprofilpasien",
@@ -57,7 +55,6 @@
     {
       "src": "/artikel",
       "dest": "/src/scripts/templates/artikel.html"
->>>>>>> 24f987ee00cb65baa2d160ed2b840f6e1828ee77
     }
   ]
 }
