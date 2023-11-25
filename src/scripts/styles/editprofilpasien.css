@@ -30,46 +30,46 @@ Header
     top: 0;
     z-index: 99;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-  }
-  
-  .navbar .navbar-brand {
+}
+
+.navbar .navbar-brand {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-left: 1rem;
-  }
-  
-  .navbar .navbar-brand h1 {
+}
+
+.navbar .navbar-brand h1 {
     color: #02bbdd;
     text-transform: uppercase;
-  }
-  
-  .navbar .navbar-list {
+}
+
+.navbar .navbar-list {
     display: flex;
     gap: 2rem;
     justify-content: center;
-  }
-  
-  .navbar .navbar-list .button {
+}
+
+.navbar .navbar-list .button {
     display: flex;
     align-items: center;
-  }
-  
-  .navbar .navbar-list .button button {
+}
+
+.navbar .navbar-list .button button {
     width: 95px;
     height: 40px;
     border-radius: 30px;
     background-color: #02bbdd;
-  }
-  
-  .navbar .navbar-list .navbar-list-item {
+}
+
+.navbar .navbar-list .navbar-list-item {
     text-decoration: none;
     display: flex;
     align-items: center;
     gap: 2rem;
-  }
-  
-  .navbar .navbar-list .list-item {
+}
+
+.navbar .navbar-list .list-item {
     list-style: none;
 }
 
