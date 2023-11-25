@@ -49,8 +49,8 @@
       "dest": "/src/scripts/templates/editprofilpasien.html"
     },
     {
-      "src": "/detailarticel",
-      "dest": "/src/scripts/templates/detailarticel.html"
+      "src": "/detailartikel",
+      "dest": "/src/scripts/templates/detailartikel.html"
     }
   ]
 }
