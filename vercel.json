@@ -49,6 +49,10 @@
       "dest": "/src/scripts/templates/editprofilpasien.html"
     },
     {
+      "src": "/editprofilpsikolog",
+      "dest": "/src/scripts/templates/editprofilpsikolog.html"
+    },
+    {
       "src": "/detailartikel",
       "dest": "/src/scripts/templates/detailartikel.html"
     },

@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: white;
+    min-height: 100vh;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/*
+Header
+*/
+
+.navbar {
+    background-color: white;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    gap: 2 rem;
+    height: 90px;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .navbar .navbar-brand {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 1rem;
+  }
+  
+  .navbar .navbar-brand h1 {
+    color: #02bbdd;
+    text-transform: uppercase;
+  }
+  
+  .navbar .navbar-list {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+  }
+  
+  .navbar .navbar-list .button {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar .navbar-list .button button {
+    width: 95px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: #02bbdd;
+  }
+  
+  .navbar .navbar-list .navbar-list-item {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .navbar .navbar-list .list-item {
+    list-style: none;
+}
+
+.navbar .navbar-list .navbar-list-item .list-item a {
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 500px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* edit profil psikolog */
+
+.editpsikolog-container {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 80%;
+    max-width: 1000px;
+    height: 730px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #000;
+    justify-content: center;
+    margin: 40px auto 10px;
+}
+
+.editpsikolog-container .editpsikolog-title {
+    margin-top: 5px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.editpsikolog-container .editpsikolog-title p{
+    margin-top: -10px;
+}
+
+.editpsikolog-container .editpsikolog-title p a{
+    text-decoration: none;
+}
+
+.editpsikolog-container .editpsikolog-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.profil-container {
+    text-align: center;
+}
+
+.profil-image img {
+    width: 150px;
+    height: 150px; 
+    border-radius: 50%; 
+}
+
+h3 {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.editpsikolog-container .editpsikolog-form .form-control {
+    margin-bottom: 1rem;
+    display: flex;
+}
+
+.editpsikolog-container .editpsikolog-form .form-control .form-input {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    font-size: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 330px;
+    align-items: center;
+    height: 44px;
+}
+
+.editpsikolog-container .editpsikolog-form .form-control .fa-edit {
+    position: absolute;
+    margin-left: 330px;
+    margin-top: 15px;
+}
+
+.editpsikolog-container .editpsikolog-form .form-input {
+    border: none;
+}
+
+.editpsikolog-container .editpsikolog-form p {
+    text-align: end;
+    margin-right: 3px;
+    margin-top: -8px;
+}
+
+.editpsikolog-container .editpsikolog-form p a{
+    text-decoration: none;
+    color: black;
+}
+
+.editpsikolog-container .editpsikolog-form .simpan-btn {
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    font-size: 20px;
+    margin-top: 2rem;
+    color: white;
+    font-weight: bold;
+    background-color: #044B77;
+    width: 370px;
+    height: 44px;
+    margin-top: 0rem;
+}
+
+/*
+Footer
+*/
+
+footer {
+    font-size: 20px;
+    padding: 1.5em;
+    height: 20px;
+    background-color: #02bbdd;
+    color: #fff;
+    margin-top: 2rem;
+    text-align: center;
+}  
