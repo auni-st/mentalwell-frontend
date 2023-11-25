@@ -51,6 +51,10 @@
     {
       "src": "/detailartikel",
       "dest": "/src/scripts/templates/detailartikel.html"
+    },
+    {
+      "src": "/artikel",
+      "dest": "/src/scripts/templates/artikel.html"
     }
   ]
 }
