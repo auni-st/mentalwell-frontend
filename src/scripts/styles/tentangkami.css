@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: white;
+    background-color: #fafafa;
     min-height: 100vh;
     flex: 1;
     display: flex;
@@ -50,16 +50,18 @@ Header
     justify-content: center;
 }
 
-.navbar .navbar-list .button {
+.navbar .navbar-list .button-user {
     display: flex;
     align-items: center;
 }
 
-.navbar .navbar-list .button button {
+.navbar .navbar-list .button-user button {
     width: 95px;
     height: 40px;
-    border-radius: 30px;
-    background-color: #02bbdd;
+    background-color: white;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
 }
 
 .navbar .navbar-list .navbar-list-item {
@@ -81,6 +83,13 @@ Header
     font-weight: 500px;
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+#photoUser {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
 }
 
 /*
