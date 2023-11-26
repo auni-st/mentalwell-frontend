@@ -59,6 +59,10 @@
     {
       "src": "/artikel",
       "dest": "/src/scripts/templates/artikel.html"
+    },
+    {
+      "src": "/listpsikolog",
+      "dest": "/src/scripts/templates/listpsikolog.html"
     }
   ]
 }
