@@ -10,71 +10,71 @@
   "routes": [
     {
       "src": "/",
-      "dest": "/src/scripts/templates/index.html"
+      "dest": "/src/templates/index.html"
     },
     {
       "src": "/daftar",
-      "dest": "/src/scripts/templates/daftar.html"
+      "dest": "/src/templates/daftar.html"
     },
     {
       "src": "/login",
-      "dest": "/src/scripts/templates/login.html"
+      "dest": "/src/templates/login.html"
     },
     {
       "src": "/riwayat",
-      "dest": "/src/scripts/templates/riwayat.html"
+      "dest": "/src/templates/riwayat.html"
     },
     {
       "src": "/tentangkami",
-      "dest": "/src/scripts/templates/tentangkami.html"
+      "dest": "/src/templates/tentangkami.html"
     },
     {
       "src": "/lupasandi",
-      "dest": "/src/scripts/templates/lupasandi.html"
+      "dest": "/src/templates/lupasandi.html"
     },
     {
       "src": "/editprofilpasien",
-      "dest": "/src/scripts/templates/editprofilpasien.html"
+      "dest": "/src/templates/editprofilpasien.html"
     },
     {
       "src": "/profilpsikolog",
-      "dest": "/src/scripts/templates/profilpsikolog.html"
+      "dest": "/src/templates/profilpsikolog.html"
     },
     {
       "src": "/dashboardpsikolog",
-      "dest": "/src/scripts/templates/dashboardpsikolog.html"
+      "dest": "/src/templates/dashboardpsikolog.html"
     },
     {
       "src": "/editprofilpasien",
-      "dest": "/src/scripts/templates/editprofilpasien.html"
+      "dest": "/src/templates/editprofilpasien.html"
     },
     {
       "src": "/editprofilpsikolog",
-      "dest": "/src/scripts/templates/editprofilpsikolog.html"
+      "dest": "/src/templates/editprofilpsikolog.html"
     },
     {
       "src": "/detailartikel",
-      "dest": "/src/scripts/templates/detailartikel.html"
+      "dest": "/src/templates/detailartikel.html"
     },
     {
       "src": "/artikel",
-      "dest": "/src/scripts/templates/artikel.html"
+      "dest": "/src/templates/artikel.html"
     },
     {
       "src": "/listpsikolog",
-      "dest": "/src/scripts/templates/listpsikolog.html"
+      "dest": "/src/templates/listpsikolog.html"
     },
     {
       "src": "/aturkonseling",
-      "dest": "/src/scripts/templates/aturkonseling.html"
+      "dest": "/src/templates/aturkonseling.html"
     },
     {
       "src": "/dropdownprofil",
-      "dest": "/src/scripts/templates/dropdownprofil.html"
+      "dest": "/src/templates/dropdownprofil.html"
     },
     {
       "src": "/konfirmasilogout",
-      "dest": "/src/scripts/templates/konfirmasilogout.html"
+      "dest": "/src/templates/konfirmasilogout.html"
     }
   ]
 }
