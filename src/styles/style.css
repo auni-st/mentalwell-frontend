@@ -320,7 +320,10 @@ section rekomendasi
   flex-direction: row;
   justify-content: center;
   gap: 2rem;
+  flex-wrap: wrap;
+  width: 100%;
 }
+
 
 .rekomendasi .container-rekomendasi .content-rekomendasi {
   display: flex;
