@@ -85,7 +85,7 @@ Header
   padding-bottom: 10px;
 }
 
-#userPhoto {
+#photoUser {
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -93,70 +93,89 @@ Header
 }
 
 /*
-Content Riwayat
+Content Atur Konseling
 */
 
-h2 {
-    font-weight: 400;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 30px;
-}
-
-.content-riwayat {
+.main-content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  background-color: white;
+  margin: 40px 30px;
+  border: 1px solid black;
+  border-radius: 20px;
 }
 
-.container-riwayat {
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    border: 1px solid black;
-    border-radius: 10px;
-    width: 1110px;
-    height: 170px;
-    background-color: white;
-    margin-bottom: 30px;
-    position: relative;
-  }
-  
-#psychologPhoto {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    margin: 30px 30px 30px 10px; 
-    cursor: pointer;
-}
-  
-.info-riwayat {
-    display: flex;
-    justify-content: space-between;
-    flex-grow: 1; 
+#patientProfile {
+  /* position: absolute; */
+  width: 170px;
+  height: 170px;
 }
 
-.info-text p {
-  font-size: 20px;
-  line-height: 1.7;
-  margin: 0 0 10px 10px;
-  cursor: pointer;
-}
-
-.status-button {
+.data-konseling {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  flex-direction: row;
+  margin: 30px 0 0 40px;
 }
 
-.status-riwayat {
-  font-size: 22px;
-  margin-right: 35px;
+.biodata-pasien {
+  margin-left: 30px;
 }
 
-.status-button button {
+.biodata-pasien h2 {
+  margin: 10px 0;
+}
+
+.biodata-pasien p {
+  line-height: 1.8;
+}
+
+.tanggal-konseling {
+  margin-left: auto;
+  margin-right: 50px;
+  line-height: 2;
+}
+
+.deskripsi-konseling {
+  border: 1px solid black;
+  border-radius: 20px;
+  margin: 30px 50px;
+  height: 100px;
+  padding: 30px;
+}
+
+.deskripsi-konseling h3 {
+  margin-bottom: 20px;
+}
+
+.harapan-pasien {
+  border: 1px solid black;
+  border-radius: 20px;
+  margin: 0 50px 30px 50px;
+  height: 100px;
+  padding: 30px;
+}
+
+.harapan-pasien h3 {
+  margin-bottom: 20px;
+}
+
+.status-konseling {
+  border: 1px solid black;
+  border-radius: 15px;
+  width: 130px;
+  height: 50px;
+  margin-left: 50px;
+  margin-bottom: 30px;
+  padding: 10px;
+  line-height: 1.5;
+}
+
+.button-simpan {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#btnSimpan {
   border: 1px solid #ccc;
   border-radius: 50px;
   color: white;
@@ -166,16 +185,6 @@ h2 {
   height: 44px;
   cursor: pointer;
   font-size: 18px;
-  margin: 80px 20px 0 0;
-}
-
-#button-riwayat-undone {
-  background-color: #7298a6;
-  cursor: not-allowed; 
-}
-
-#button-riwayat-undone:hover {
-  cursor: not-allowed; 
 }
 
 /*
@@ -191,4 +200,3 @@ footer {
     margin-top: 2rem;
     text-align: center;
   }
-  

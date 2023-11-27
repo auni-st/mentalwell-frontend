@@ -96,6 +96,124 @@ Header
 Content Profil Psikolog
 */
 
+.main-content {
+  background-color: white;
+  margin: 40px 30px;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+
+#psychologProfile {
+  position: absolute;
+  margin: 40px 50px;
+  width: 200px;
+  height: 200px;
+}
+
+.data-psikolog {
+  display: flex;
+  flex-direction: column;
+  margin: 50px 0 30px 300px;
+}
+
+.biodata-psikolog p {
+  font-size: 19px;
+  margin: 30px 20px 10px 0;
+}
+
+.data-lainnya {
+  display: flex;
+  flex-direction: row;
+}
+
+.pengalaman-praktik {
+  border: 1px solid #02bbdd;
+  border-radius: 15px;
+  width: 200px;
+  height: 50px;
+  margin: 10px 0 20px 50px;
+}
+
+.topik-keahlian {
+  margin-left: 50px;
+}
+
+.topik-keahlian p {
+  font-size: 21px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.topik-keahlian ul {
+  font-size: 19px;
+  margin-left: 20px;
+}
+
+.container-ulasan {
+  display: flex;
+  flex-direction: row;
+  margin: 60px 50px 20px 50px;
+}
+
+.container-ulasan::before {
+  position: absolute;
+  content: "←"; 
+  bottom: -140px;
+  left: 80px;
+  font-size: 24px; 
+}
+
+.container-ulasan::after {
+  position: absolute;
+  content: "→"; 
+  bottom: -140px;
+  right: 80px; 
+  font-size: 24px; 
+}
+
+.header-ulasan {
+  position: absolute;
+  right: 47%;
+  text-align: center;
+}
+
+#userReview {
+  margin: 20px 20px;
+  width: 100px;
+  height: 100px;
+}
+
+.isi-ulasan {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid black;
+  border-radius: 20px;
+  margin: 60px 40px 30px 40px;
+  width: 500px;
+  height: 150px;
+}
+
+.isi-ulasan h3 {
+  margin-top: 20px;
+}
+
+.button-daftar {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#btnDaftar {
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  color: white;
+  font-weight: bold;
+  background-color: #044B77;
+  width: 230px;
+  height: 44px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
 /*
 Footer
 */

@@ -37,8 +37,8 @@
       "dest": "/src/scripts/templates/editprofilpasien.html"
     },
     {
-      "src": "/profil-psikolog",
-      "dest": "/src/scripts/templates/profil-psikolog.html"
+      "src": "/profilpsikolog",
+      "dest": "/src/scripts/templates/profilpsikolog.html"
     },
     {
       "src": "/dashboardpsikolog",
@@ -63,6 +63,10 @@
     {
       "src": "/listpsikolog",
       "dest": "/src/scripts/templates/listpsikolog.html"
+    },
+    {
+      "src": "/aturkonseling",
+      "dest": "/src/scripts/templates/aturkonseling.html"
     }
   ]
 }
