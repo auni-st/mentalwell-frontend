@@ -169,10 +169,10 @@ main {
   justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
-  gap: 1rem;
+  gap: 2rem;
 }
 .detail-articel .referensi-articel ol,h2 {
-  margin-left: 4rem;
+  margin-left: 3rem;
 }
 
 
