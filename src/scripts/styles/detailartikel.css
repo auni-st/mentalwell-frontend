@@ -99,56 +99,82 @@ Main
 main {
   width: 100%;
   display: flex;
+  flex-direction: column;
   flex: 1;
 }
 
 .detail-articel {
-    display: flex;
-    flex-direction: column;
-    margin-top: 2rem;
-    gap: 2rem;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  gap: 2rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 .detail-articel .judul-detail-articel {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.detail-articel .created-articel {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.detail-articel .created-articel time {
+  margin-left: 2rem;
+  margin-top: -1rem;
 }
 
 .detail-articel .garis-detail-articel {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    margin-top: -1rem;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: -1rem;
 }
 
 .garis-detail-articel hr {
-    width: 95%;
+  width: 95%;
 }
 
 .detail-articel .image-detail-articel {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .detail-articel .content-detail-articel {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: justify;
-    gap: 1rem;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  gap: 1rem;
 }
 
 .detail-articel .content-detail-articel p {
-    width: 95%;
+  width: 95%;
 }
+
+.detail-articel .referensi-articel {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  gap: 1rem;
+}
+.detail-articel .referensi-articel ol,h2 {
+  margin-left: 4rem;
+}
+
 
 /*
 Footer

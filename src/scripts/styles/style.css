@@ -94,11 +94,16 @@ Jumbotron
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
+  justify-content: center;
+  gap: 2rem;
 }
 
 .jumbotron .hero {
+  display: flex;
+  flex-direction: column;
   justify-content: flex-start;
-  margin-left: 2rem;
+  gap: 1rem;
+  margin-left: 5rem;
 }
 
 .jumbotron .hero h2 {
@@ -107,7 +112,32 @@ Jumbotron
 }
 
 .jumbotron .hero p {
-  font-size: 13px;
+  font-size: 15px;
+}
+
+.jumbotron .hero .btn-hero {
+  width: 100%px;
+  height: 55px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.jumbotron .hero .btn-hero  button {
+  background-color: #044B77; 
+  color: white; 
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 44px;
+  width: 200px;
+  border-radius: 27.2px;
+  font-size: 18px;
+}
+
+.jumbotron .hero-image {
+  width: 100%;
 }
 
 .jumbotron .hero-image img {
