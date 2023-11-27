@@ -67,6 +67,14 @@
     {
       "src": "/aturkonseling",
       "dest": "/src/scripts/templates/aturkonseling.html"
+    },
+    {
+      "src": "/dropdownprofil",
+      "dest": "/src/scripts/templates/dropdownprofil.html"
+    },
+    {
+      "src": "/konfirmasilogout",
+      "dest": "/src/scripts/templates/konfirmasilogout.html"
     }
   ]
 }

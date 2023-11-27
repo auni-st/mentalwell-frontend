@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    height: 100vh;
+}
+  
+.logout-container {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 350px;
+    height: 200px;
+    padding: 20px;
+    text-align: center;
+}
+
+.logout-title {
+    margin-top: 20px;
+}
+
+.button-pilihan {
+    display: flex;
+    flex-direction: row;
+    margin: 50px 0 0 15px;
+}
+
+#btnBatal {
+    border: 1px solid black;
+    border-radius: 50px;
+    color: black;
+    font-weight: bold;
+    background-color: #fafafa;
+    width: 150px;
+    height: 44px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-right: 15px;
+}
+
+#btnKeluar {
+    border: 1px solid black;
+    border-radius: 50px;
+    color: white;
+    font-weight: bold;
+    background-color: #044B77;
+    width: 150px;
+    height: 44px;
+    cursor: pointer;
+    font-size: 15px;
+}
