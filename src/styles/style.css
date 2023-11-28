@@ -60,6 +60,8 @@ Header
   height: 40px;
   border-radius: 30px;
   background-color: #02bbdd;
+  cursor: pointer;
+  color: white;
 }
 
 .navbar .navbar-list .navbar-list-item {
