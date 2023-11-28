@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="/src/scripts/dashboardpsikolog.css" />
+    <link rel="stylesheet" href="/src/styles/dashboardpsikolog.css" />
   </head>
   <body>
     <header class="navbar">
@@ -49,15 +49,13 @@
                 <td>08.00 - 09.00</td>
                 <td>Video Call</td>
                 <td>Selesai</td>
-                <td><img src="/src/public/dashboard/tulis.png" alt="tambah" /></td>
-              </tr>
-              <tr>
-                <td>Natasha</td>
-                <td>27 November 2023</td>
-                <td>08.00 - 09.00</td>
-                <td>Video Call</td>
-                <td>Selesai</td>
-                <td><img src="/src/public/dashboard/tulis.png" alt="tambah" /></td>
+                <td>
+                  <img src="/src/public/dashboard/tulis.png" alt="tambah" />
+                  <select id="buttonStatus">
+                    <option value="button1">Tersedia</option>
+                    <option value="button2">Tidak Tersedia</option>
+                  </select>
+                </td>
               </tr>
             </tbody>
           </table>
