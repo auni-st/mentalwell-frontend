@@ -143,6 +143,33 @@ th {
     color: white;
 }
 
+.dropdown-container {
+  text-align: center;
+}
+
+
+.status-dropdown {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 15px;
+  list-style: none;
+  text-decoration: none;
+}
+
+.status-dropdown:focus {
+  outline: none;
+}
+
+/* Style pilihan dropdown */
+.status-dropdown option {
+  background-color: #fff;
+  color: #333;
+  list-style: none;
+  text-decoration: none;
+}
+
 
 .dashboard .content-dashboard table tbody img {
     margin-top: 10px;
