@@ -145,6 +145,10 @@ th {
 
 .dropdown-container {
   text-align: center;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 11rem;
 }
 
 
@@ -156,6 +160,8 @@ th {
   font-size: 15px;
   list-style: none;
   text-decoration: none;
+  background-color: #044B77;
+  color: white;
 }
 
 .status-dropdown:focus {
