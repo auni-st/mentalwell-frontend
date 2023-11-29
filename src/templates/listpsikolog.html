@@ -78,7 +78,7 @@
                   <p>Jadwal Tersedia</p>
                 </div>
                 <div class="button-psikolog">
-                  <button type="button">Lihat Selengkapnya</button>
+                  <button type="button" onclick="redirectToDetailPsychologist()">Lihat Selengkapnya</button>
                 </div>
               </div>
             </div>
@@ -97,7 +97,7 @@
                   <p>Jadwal Tidak Tersedia</p>
                 </div>
                 <div class="button-psikolog">
-                  <button type="button">Lihat Selengkapnya</button>
+                  <button type="button" onclick="redirectToDetailPsychologist()">Lihat Selengkapnya</button>
                 </div>
               </div>
             </div>
@@ -116,13 +116,18 @@
                   <p>Jadwal Tersedia</p>
                 </div>
                 <div class="button-psikolog">
-                  <button type="button">Lihat Selengkapnya</button>
+                  <button type="button" onclick="redirectToDetailPsychologist()">Lihat Selengkapnya</button>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+      <script>
+        function redirectToDetailPsychologist() {
+          window.location.href = "/profilpsikolog";
+        }
+      </script>
     </main>
     <footer>
       <span>@MentalWell 2023, SEMUA HAK DILINDUNGI</span>
