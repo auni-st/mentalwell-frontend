@@ -626,6 +626,37 @@ section rekomendasi
   margin-top: 1px;
 }
 
+.btn-semua {
+  width: 100%px;
+  height: 55px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-semua button {
+  background-color: #044b77;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 40px;
+  width:150px;
+  border-radius: 27.2px;
+  font-size: 15px;
+}
+
+.btn-semua button:hover {
+  background-color: #3ad0ea; 
+  color: #ffffff;
+}
+
+.rekomendasi .btn-semua {
+  margin-top: 20px;
+}
+
 /*
 Footer
 */
