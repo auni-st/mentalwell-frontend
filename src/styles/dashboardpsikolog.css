@@ -127,7 +127,6 @@ main {
   border-collapse: collapse;
 }
 
-
 .dashboard .content-dashboard table tr {
   border: 1px solid black;
 }
@@ -150,7 +149,6 @@ th {
   justify-content: flex-end;
   margin-right: 11rem;
 }
-
 
 .status-dropdown {
   padding: 10px;

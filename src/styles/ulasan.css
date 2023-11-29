@@ -39,8 +39,8 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
-  
+}
+
 .container-ulasan .content-ulasan .btn-detail button {
     background-color: #044B77; 
     color: white; 
@@ -52,5 +52,9 @@ body {
     width: 200px;
     border-radius: 27.2px;
     font-size: 18px;
-  }
-  
+}
+
+.container-ulasan .content-ulasan .btn-detail button:hover {
+    background-color: #3ad0ea; 
+    color: #ffffff;
+}

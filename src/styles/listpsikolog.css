@@ -147,12 +147,6 @@ main .keahlian-psikolog {
   font-size: 18px;
 }
 
-
-
-
-
-
-
 main .listpsikolog {
   display: flex;
   flex-direction: column;
@@ -197,7 +191,6 @@ main .listpsikolog {
 .listpsikolog form .button-search i {
   margin-right: 10px;
 }
-
 
 .listpsikolog .container-psikolog {
     display: flex;
@@ -295,9 +288,9 @@ main .listpsikolog {
 }
 
 .listpsikolog .container-psikolog .content-psikolog .data-psikolog .list-button-psikolog .button-psikolog button:hover {
-    background-color: blue;
+  background-color: #3ad0ea; 
+  color: #ffffff;
 }
-
 
   
   

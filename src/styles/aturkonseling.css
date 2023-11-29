@@ -187,6 +187,11 @@ Content Atur Konseling
   font-size: 18px;
 }
 
+#btnSimpan:hover {
+  background-color: #3ad0ea; 
+  color: #ffffff;
+}
+
 /*
 Footer
 */

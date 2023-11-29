@@ -141,6 +141,12 @@ main .articel {
   font-weight: 700px;
   border: none;
 }
+
+.articel .search-articel .button-search button:hover {
+  background-color: #3ad0ea; 
+  color: #ffffff;
+}
+
 .articel .search-articel .button-search i {
   margin-right: 10px;
 }
@@ -191,6 +197,10 @@ p {
   border: none;
 }
 
+.content-articel .button-articel button:hover {
+  background-color: #3ad0ea; 
+  color: #ffffff;
+}
 /*
 footer 
 */

@@ -214,6 +214,11 @@ Content Profil Psikolog
   font-size: 18px;
 }
 
+#btnDaftar:hover {
+  background-color: #3ad0ea; 
+  color: #ffffff;
+}
+
 /*
 Footer
 */

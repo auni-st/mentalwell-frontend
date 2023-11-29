@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap');
 
 * {
-  padding: 0;
-  margin: 0;
+    padding: 0;
+    margin: 0;
 }
 
 body {
@@ -13,7 +13,7 @@ body {
     justify-content: flex-end;
     height: 100vh;
 }
-  
+
 .dropdown-container {
     border: 1px solid black;
     border-radius: 10px;

@@ -59,7 +59,14 @@ Header
   width: 95px;
   height: 40px;
   border-radius: 30px;
-  background-color: #02bbdd;
+  background-color: #044B77;
+  color: #ffffff;
+}
+
+
+.navbar .navbar-list .button button:hover {
+  background-color: #3ad0ea; 
+  color: #ffffff;
 }
 
 .navbar .navbar-list .navbar-list-item {
@@ -133,7 +140,12 @@ Jumbotron
   height: 44px;
   width: 200px;
   border-radius: 27.2px;
-  font-size: 18px;
+  font-size: 18px; 
+}
+
+.jumbotron .hero .btn-hero  button:hover {
+  background-color: #3ad0ea; 
+  color: #ffffff;
 }
 
 .jumbotron .hero-image {
@@ -357,6 +369,11 @@ section rekomendasi
   width: 200px;
   border-radius: 27.2px;
   font-size: 18px;
+}
+
+.btn-detail button:hover {
+  background-color: #3ad0ea; 
+  color: #ffffff;
 }
 
 .rekomendasi .btn-detail {
