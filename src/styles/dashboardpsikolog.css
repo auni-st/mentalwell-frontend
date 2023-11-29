@@ -221,12 +221,11 @@ Footer
 */
 
 footer {
-  font-size: 20px;
+  font-size: 18px;
   padding: 1.5em;
-  height: 20px;
+  height: 18px;
   background-color: #02bbdd;
   color: #fff;
   margin-top: 2rem;
   text-align: center;
-  flex-shrink: 0;
 }
