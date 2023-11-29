@@ -10,22 +10,22 @@
 <body>
     <header class="navbar">
         <div class="navbar-brand">
-          <h1>MentalWell</h1>
+            <h1>MentalWell</h1>
         </div>
         <div class="navbar-list">
-          <ul class="navbar-list-item">
+            <ul class="navbar-list-item">
             <li class="list-item"><a href="./">Beranda</a></li>
             <li class="list-item"><a href="/artikel">Artikel</a></li>
             <li class="list-item"><a href="/riwayat">Riwayat</a></li>
             <li class="list-item"><a href="/tentangkami">Tentang Kami</a></li>
-          </ul>
-          <div class="button-user">
+            </ul>
+            <div class="button-user">
             <img src="/src/public/beranda/man.png" alt="Foto User" id="photoUser" />
             <button type="submit">Natasya</button>
-          </div>
+            </div>
         </div>
-      </header>
-      <main>
+        </header>
+        <main>
         <section class="articel">
                 <form class="search-articel">
                     <input type="text" placeholder="Cari artikel berdasarkan judul">
@@ -42,7 +42,7 @@
                 <h2>Judul Artikel</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, beatae! Placeat, labore blanditiis quo ipsum magni excepturi asperiores, provident sed expedita aliquid, modi quibusdam. Beatae quasi earum a voluptates ducimus!</p>
                 <div class="button-articel">
-                    <button type="button"> Baca Selengkapnya</button>
+                    <button type="button"  onclick="redirectToDetail()"> Baca Selengkapnya</button>
                 </div>
             </article>
             <article>
@@ -52,7 +52,7 @@
                 <h2>Judul Artikel</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, beatae! Placeat, labore blanditiis quo ipsum magni excepturi asperiores, provident sed expedita aliquid, modi quibusdam. Beatae quasi earum a voluptates ducimus!</p>
                 <div class="button-articel">
-                    <button type="button"> Baca Selengkapnya</button>
+                    <button type="button" onclick="redirectToDetail()"> Baca Selengkapnya</button>
                 </div>
             </article>
             <article>
@@ -62,7 +62,7 @@
                 <h2>Judul Artikel</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, beatae! Placeat, labore blanditiis quo ipsum magni excepturi asperiores, provident sed expedita aliquid, modi quibusdam. Beatae quasi earum a voluptates ducimus!</p>
                 <div class="button-articel">
-                    <button type="button"> Baca Selengkapnya</button>
+                    <button type="button" onclick="redirectToDetail()"> Baca Selengkapnya</button>
                 </div>
             </article>
             <article>
@@ -72,7 +72,7 @@
                 <h2>Judul Artikel</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, beatae! Placeat, labore blanditiis quo ipsum magni excepturi asperiores, provident sed expedita aliquid, modi quibusdam. Beatae quasi earum a voluptates ducimus!</p>
                 <div class="button-articel">
-                    <button type="button"> Baca Selengkapnya</button>
+                    <button type="button" onclick="redirectToDetail()"> Baca Selengkapnya</button>
                 </div>
             </article>
             <article>
@@ -82,7 +82,7 @@
                 <h2>Judul Artikel</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, beatae! Placeat, labore blanditiis quo ipsum magni excepturi asperiores, provident sed expedita aliquid, modi quibusdam. Beatae quasi earum a voluptates ducimus!</p>
                 <div class="button-articel">
-                    <button type="button"> Baca Selengkapnya</button>
+                    <button type="button" onclick="redirectToDetail()"> Baca Selengkapnya</button>
                 </div>
             </article>
             <article>
@@ -92,13 +92,18 @@
                 <h2>Judul Artikel</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, beatae! Placeat, labore blanditiis quo ipsum magni excepturi asperiores, provident sed expedita aliquid, modi quibusdam. Beatae quasi earum a voluptates ducimus!</p>
                 <div class="button-articel">
-                    <button type="button"> Baca Selengkapnya</button>
+                    <button type="button" onclick="redirectToDetail()"> Baca Selengkapnya</button>
                 </div>
             </article>
         </section>
-      </main>
-      <footer>
+        <script>
+            function redirectToDetail() {
+                window.location.href = "/src/templates/detailartikel.html";
+            }
+        </script>        
+        </main>
+        <footer>
         <span>@MentalWell 2023, SEMUA HAK DILINDUNGI</span>
-      </footer>
+        </footer>
 </body>
 </html>
