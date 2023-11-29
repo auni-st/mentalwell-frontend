@@ -75,6 +75,18 @@
     {
       "src": "/konfirmasilogout",
       "dest": "/src/templates/konfirmasilogout.html"
+    },
+    {
+      "src": "/jadwalkonseling-isidata",
+      "dest": "/src/templates/jadwalkonseling-isidata.html"
+    },
+    {
+      "src": "/jadwalkonseling-permasalahan",
+      "dest": "/src/templates/jadwalkonseling-permasalahan.html"
+    },
+    {
+      "src": "/jadwalkonseling-selesai",
+      "dest": "/src/templates/jadwalkonseling-selesai.html"
     }
   ]
 }
