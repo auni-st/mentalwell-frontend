@@ -33,7 +33,7 @@
         </h2>
         <p>Temukan ketenanganmu di sini bersama psikolog professional yang siap <br />membantu menyelesaikan masalahmu,mari berproses bersama MentalWell</p>
         <div class="btn-hero">
-          <button type="button">Daftar Konseling</button>
+          <button type="button" onclick="redirectToList()">Daftar Konseling</button>
         </div>
       </div>
       <div class="hero-image">
@@ -173,7 +173,7 @@
             </div>
             <h2>John Doe M.Si., M.Psi., Psikolog</h2>
             <div class="btn-detail">
-              <button type="button">Lihat Detail</button>
+              <button type="button" onclick="redirectToDetailPsychologist()">Lihat Detail</button>
             </div>
           </div>
           <div class="content-rekomendasi">
@@ -182,7 +182,7 @@
             </div>
             <h2>John Doe M.Si., M.Psi., Psikolog</h2>
             <div class="btn-detail">
-              <button type="button">Lihat Detail</button>
+              <button type="button" onclick="redirectToDetailPsychologist()">Lihat Detail</button>
             </div>
           </div>
           <div class="content-rekomendasi">
@@ -191,7 +191,7 @@
             </div>
             <h2>John Doe M.Si., M.Psi., Psikolog</h2>
             <div class="btn-detail">
-              <button type="button">Lihat Detail</button>
+              <button type="button" onclick="redirectToDetailPsychologist()">Lihat Detail</button>
             </div>
           </div>
           <div class="content-rekomendasi">
@@ -200,7 +200,7 @@
             </div>
             <h2>John Doe M.Si., M.Psi., Psikolog</h2>
             <div class="btn-detail">
-              <button type="button">Lihat Detail</button>
+              <button type="button" onclick="redirectToDetailPsychologist()">Lihat Detail</button>
             </div>
           </div>
           <div class="content-rekomendasi">
@@ -209,7 +209,7 @@
             </div>
             <h2>John Doe M.Si., M.Psi., Psikolog</h2>
             <div class="btn-detail">
-              <button type="button">Lihat Detail</button>
+              <button type="button" onclick="redirectToDetailPsychologist()">Lihat Detail</button>
             </div>
           </div>
           <div class="content-rekomendasi">
@@ -218,12 +218,12 @@
             </div>
             <h2>John Doe M.Si., M.Psi., Psikolog</h2>
             <div class="btn-detail">
-              <button type="button">Lihat Detail</button>
+              <button type="button" onclick="redirectToDetailPsychologist()">Lihat Detail</button>
             </div>
           </div>
         </div>
         <div class="btn-detail">
-          <button type="button">Lihat Semua</button>
+          <button type="button" onclick="redirectToList()">Lihat Semua</button>
         </div>
       </section>
     </main>
@@ -273,5 +273,13 @@
     event.preventDefault(); // Prevent the default form submission for this example
     // Add your authentication logic here
     alert('Authentication logic goes here!');
+  }
+
+  function redirectToList() {
+    window.location.href = "/listpsikolog";
+  }
+
+  function redirectToDetailPsychologist() {
+    window.location.href = "/profilpsikolog";
   }
 </script>
