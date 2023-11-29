@@ -44,7 +44,7 @@
     <div class="login-container" id="login-container">
       <div class="login-title">
         <h2>Masuk</h2>
-        <p>Belum punya akun? <a href="/daftar">Daftar</a></p>
+        <p>Belum punya akun? <a href="/daftar" onclick="openDaftarPopup()">Daftar</a></p>
       </div>
       <form class="login-form">
         <div class="form-control">
@@ -56,6 +56,29 @@
         </div>
         <p><a href="#">Forget Password</a></p>
         <button class="submit-btn" type="submit">Masuk</button>
+      </form>
+    </div>
+    <div class="daftar-container" class="overlay" onclick="closeDaftarPopup()">
+      <div class="daftar-title">
+        <h2>Daftar</h2>
+        <p>Sudah punya akun? <a href="/login">Masuk</a></p>
+      </div>
+      <form class="daftar-form">
+        <div class="form-control">
+          <input class="form-input" type="email" id="email" name="email" placeholder="Email" required />
+        </div>
+        <div class="form-control">
+          <input class="form-input" type="notelp" id="notelp" name="notelp" placeholder="No.Telp" required />
+        </div>
+        <div class="form-control">
+          <i class="far fa-eye eye" onclick="togglePasswordVisibility()"></i>
+          <input class="form-input" type="text" id="password" name="password" placeholder="Password" required />
+        </div>
+        <div class="form-control">
+          <i class="far fa-eye eye confpassword" onclick="toggleConfirmasiPasswordVisibility()"></i>
+          <input class="form-input" type="password" id="confpassword" name="password" placeholder="Confirm Password" required />
+        </div>
+        <button class="submit-btn" type="submit">Daftar</button>
       </form>
     </div>
     <main>
@@ -233,3 +256,4 @@
   </body>
 </html>
 <script src="/src/scripts/views/pages/login.js"></script>
+<script src="/src/scripts/views/pages/daftar.js"></script>
