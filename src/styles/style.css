@@ -59,7 +59,6 @@ Header
   width: 95px;
   height: 40px;
   border-radius: 30px;
-<<<<<<< HEAD
   background-color: #044B77;
   color: #ffffff;
 }
@@ -68,11 +67,9 @@ Header
 .navbar .navbar-list .button button:hover {
   background-color: #3ad0ea; 
   color: #ffffff;
-=======
   background-color: #02bbdd;
   cursor: pointer;
   color: white;
->>>>>>> 0e4dce452c9160e09dd078ff675a2320f42a1e1a
 }
 
 .navbar .navbar-list .navbar-list-item {
@@ -207,6 +204,7 @@ login
 }
 
 .login-container .login-title p {
+  font-size: 16px;
 }
 
 .login-container .login-title p a {
