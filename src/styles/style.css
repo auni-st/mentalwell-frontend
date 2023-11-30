@@ -192,8 +192,8 @@ login
   justify-content: center;
   align-items: center;
   position: fixed;
-  top: 30%;
-  left: 40%;
+  top: 20%;
+  left: 30%;
   z-index: 1;
 }
 
@@ -294,8 +294,8 @@ daftar
   height: 490px;
   display: none;
   position: fixed;
-  top: 30%;
-  left: 40%;
+  top: 20%;
+  left: 30%;
   z-index: 1;
   flex-direction: column;
   align-items: center;
@@ -304,10 +304,7 @@ daftar
 .daftar-container .daftar-title {
   margin-bottom: 20px;
   color: #333;
-}
-
-.daftar-container .daftar-title p{
-  margin-top: -10px;
+  margin-top: 2rem;
 }
 
 .daftar-container .daftar-title p a{
