@@ -3,6 +3,7 @@ function openLoginPopup() {
   document.getElementById('daftar-container').style.display = 'none';
   document.body.classList.add('popup-open');
   document.getElementById('overlay').style.display = 'block';
+  document.getElementById('overly').style.display = 'none';
   var navbarLinks = document.querySelectorAll('.navbar a');
   navbarLinks.forEach(function (link) {
     link.style.pointerEvents = 'none';
