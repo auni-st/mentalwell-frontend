@@ -1,5 +1,6 @@
 function openLoginPopup() {
   document.getElementById('login-container').style.display = 'flex';
+  document.getElementById('daftar-container').style.display = 'none';
   document.body.classList.add('popup-open');
   document.getElementById('overlay').style.display = 'block';
   var navbarLinks = document.querySelectorAll('.navbar a');

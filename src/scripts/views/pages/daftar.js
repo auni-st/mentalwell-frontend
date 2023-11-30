@@ -1,5 +1,6 @@
 function openDaftarPopup() {
   document.getElementById('daftar-container').style.display = 'flex';
+  document.getElementById('login-container').style.display = 'none'
   document.body.classList.add('popup-open');
   document.getElementById('overly').style.display = 'block';
   var navbarLinks = document.querySelectorAll('.navbar a');
@@ -23,3 +24,5 @@ document.getElementById('popupDaftar').addEventListener('click', function(event)
     event.preventDefault(); // Mencegah tautan mengarahkan ke URL yang sebenarnya
     showPopup();
 });
+
+
