@@ -471,7 +471,7 @@ Section masalah
   display: flex;
   flex-direction: row;
   gap: 1rem;
-  width: 200px;
+  width: 250px;
   height: 60px;
   background-color: #044b77;
   justify-content: center;

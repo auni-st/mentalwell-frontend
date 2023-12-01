@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MentalWell</title>
-    <link rel="stylesheet" href="/src/styles/riwayat.css">
+    <link rel="stylesheet" href="/src/styles/riwayat.css" />
   </head>
   <body>
     <header class="navbar">
@@ -20,28 +20,36 @@
           <li class="list-item"><a href="/tentangkami">Tentang Kami</a></li>
         </ul>
         <div class="button-user">
-          <img src="/src/public/beranda/man.png" alt="Foto User" id="userPhoto" >
+          <img src="/src/public/beranda/man.png" alt="Foto User" id="userPhoto" />
           <button type="submit">Natasya</button>
         </div>
       </div>
     </header>
-    
+
     <main>
+      <div id="overlay" class="overlay" onclick="closeUlasanPopup()"></div>
+      <div  class="container-ulasan" id="container-ulasan">
+        <form class="content-ulasan">
+          <div class="isi-ulasan">
+            <h2>Berikan Ulasan</h2>
+            <textarea name="ulasan" id="ulasan" cols="55" rows="15" placeholder="Tuliskan ulasanmu disini"></textarea>
+          </div>
+          <div class="btn-detail">
+            <button type="submit">Kirim</button>
+          </div>
+        </form>
+      </div>
       <h2>Riwayat Konseling</h2>
       <div class="content-riwayat">
         <div class="container-riwayat">
-          <img 
-            src="/src/public/beranda/man.png" 
-            alt="Foto Psikolog"
-            id="psychologPhoto" 
-          >
+          <img src="/src/public/beranda/man.png" alt="Foto Psikolog" id="psychologPhoto" />
           <div class="info-riwayat">
             <div class="info-text">
               <p>
-                John Doe M.Si., M.Psi., Psikolog<br>
-                27 November 2023<br>
-                16:00 - 17:00<br>
-                Via Video Call  
+                John Doe M.Si., M.Psi., Psikolog<br />
+                27 November 2023<br />
+                16:00 - 17:00<br />
+                Via Video Call
               </p>
             </div>
             <div class="status-button">
@@ -52,23 +60,19 @@
         </div>
 
         <div class="container-riwayat">
-          <img 
-            src="/src/public/beranda/man.png" 
-            alt="Foto Psikolog"
-            id="psychologPhoto" 
-          >
+          <img src="/src/public/beranda/man.png" alt="Foto Psikolog" id="psychologPhoto" />
           <div class="info-riwayat">
             <div class="info-text">
               <p>
-                John Doe M.Si., M.Psi., Psikolog<br>
-                27 November 2023<br>
-                16:00 - 17:00<br>
-                Via Video Call  
+                John Doe M.Si., M.Psi., Psikolog<br />
+                27 November 2023<br />
+                16:00 - 17:00<br />
+                Via Video Call
               </p>
             </div>
             <div class="status-button">
               <span class="status-riwayat">Selesai</span>
-              <button type="button" id="button-riwayat-done">ISI ULASAN</button>
+              <button type="button" id="button-riwayat-done" onclick="openUlasanPopup()">ISI ULASAN</button>
             </div>
           </div>
         </div>
@@ -79,3 +83,4 @@
     </footer>
   </body>
 </html>
+<script src="/src/scripts/views/pages/ulasan.js"></script>
