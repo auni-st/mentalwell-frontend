@@ -1,7 +1,6 @@
 function openLoginPopup() {
   document.getElementById('login-container').style.display = 'flex';
   document.getElementById('daftar-container').style.display = 'none';
-  document.body.classList.add('popup-open');
   document.getElementById('overlay').style.display = 'block';
   document.getElementById('overly').style.display = 'none';
   var navbarLinks = document.querySelectorAll('.navbar a');
@@ -12,7 +11,6 @@ function openLoginPopup() {
 
 function closeLoginPopup() {
   document.getElementById('login-container').style.display = 'none';
-  document.body.classList.remove('popup-open');
   document.getElementById('overlay').style.display = 'none';
   var navbarLinks = document.querySelectorAll('.navbar a');
   navbarLinks.forEach(function (link) {
@@ -34,8 +32,8 @@ function redirectToDetailPsychologist() {
   window.location.href = '/profilpsikolog';
 }
 
-function togglePasswordVisibility() {
-  const passwordInput = document.getElementById('password');
+function togglePasswordLoginVisibility() {
+  const passwordInput = document.getElementById('loginpassword');
   const toggleIcon = document.querySelector('.form-control i');
 
   // Mengubah tipe input dan ikon berdasarkan status input
