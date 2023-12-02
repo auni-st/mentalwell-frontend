@@ -86,21 +86,30 @@
                 />
                 <br />
                 <input
-                  type="date"
-                  placeholder="Tanggal Lahir"
+                  type="text"
+                  placeholder="01-02-2023"
                   class="w-75 mb-3 focus-ring py-1 px-2 border rounded-2"
+                  aria-label="Disabled input example"
+                  disabled
+                  readonly
                 />
                 <br />
                 <input
                   type="text"
-                  placeholder="Jenis Kelamin"
+                  placeholder="laki-Laki"
                   class="w-75 mb-3 focus-ring py-1 px-2 border rounded-2"
+                  aria-label="Disabled input example"
+                  disabled
+                  readonly
                 />
                 <br />
                 <input
                   type="number"
-                  placeholder="Nomor Whatsapp"
+                  placeholder="08123456789"
                   class="w-75 mb-3 focus-ring py-1 px-2 border rounded-2"
+                  aria-label="Disabled input example"
+                  disabled
+                  readonly
                 />
                 <br />
                 <input
@@ -132,7 +141,12 @@
               <div class="card text-center w-25 mx-3 mb-3">Voice Call</div>
               <div class="card text-center w-25 mx-3 mb-3">Video Call</div>
             </div>
-            <button class="rounded p-1 mx-3 my-3 mb-4" onclick="redirectToCounseling2()">Selanjutnya</button>
+            <button
+              class="rounded p-1 mx-3 my-3 mb-4"
+              onclick="redirectToCounseling2()"
+            >
+              Selanjutnya
+            </button>
           </div>
         </div>
       </div>
@@ -142,9 +156,9 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     >
-    function redirectToCounseling2() {
-      window.location.href = '/jadwalkonseling-permasalahan';
-    }
-  </script>
+      function redirectToCounseling2() {
+        window.location.href = '/jadwalkonseling-permasalahan';
+      }
+    </script>
   </body>
 </html>
