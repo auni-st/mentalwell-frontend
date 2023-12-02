@@ -52,15 +52,22 @@
         <h2>Masuk</h2>
         <p>Belum punya akun? <a href="#" id="popupDaftar" onclick="openDaftarPopup()">Daftar</a></p>
       </div>
-      <form class="login-form">
+      <form class="login-form" id="login-form">
         <div class="form-control">
-          <input class="form-input" type="email" id="username" name="username" placeholder="Masukkan Email" required />
+          <input
+            class="form-input"
+            type="email"
+            id="emaillogin"
+            name="emaillogin"
+            placeholder="Masukkan Email"
+            required
+          />
         </div>
         <div class="form-control">
           <i class="far fa-eye eye" onclick="togglePasswordLoginVisibility()"></i>
           <input class="form-input" type="text" id="loginpassword" name="loginpassword" placeholder="Masukkan Password" required />
         </div>
-        <p><a href="#">Forget Password</a></p>
+        <p><a href="/src/templates/lupasandi.html">Forget Password</a></p>
         <button class="submit-btn" type="submit">Masuk</button>
       </form>
     </div>
@@ -70,7 +77,7 @@
         <h2>Daftar</h2>
         <p>Sudah punya akun? <a href="#" onclick="openLoginPopup()">Masuk</a></p>
       </div>
-      <form class="daftar-form">
+      <form class="daftar-form" id="daftar-form">
         <div class="form-control">
           <input class="form-input" type="email" id="email" name="email" placeholder="Email" required />
         </div>

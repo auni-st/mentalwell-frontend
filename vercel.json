@@ -87,6 +87,10 @@
     {
       "src": "/jadwalkonseling-selesai",
       "dest": "/src/templates/jadwalkonseling-selesai.html"
+    },
+    {
+      "src": "/ubah-sandi",
+      "dest": "/src/templates/ubah-sandi.html"
     }
   ]
 }

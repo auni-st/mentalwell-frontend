@@ -47,3 +47,48 @@ function togglePasswordLoginVisibility() {
     toggleIcon.classList.add('far', 'fa-eye-slash');
   }
 }
+
+const loginForm = document.getElementById('login-form');
+
+loginForm.addEventListener('submit', async (event) => {
+  event.preventDefault();
+
+  const emaillogin = document.getElementById('emaillogin').value;
+  const password = document.getElementById('loginpassword').value;
+
+  const formData = {
+    email: emaillogin,
+    password,
+  };
+
+  try {
+    const response = await fetch('https://mentalwell-backend.vercel.app/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
+
+    if (response.ok) {
+      const responseData = await response.json();
+      const token = responseData.data.token;
+
+      sessionStorage.setItem('authToken', token);
+
+      setTimeout(() => {
+        alert('Login successful!');
+
+        // Redirect to the specified URL
+        window.location.href = 'https://mentalwell.vercel.app/';
+      }, 100);
+    } else {
+      const responseData = await response.json();
+      const errorMessage = responseData.message || 'Error!'
+      alert(`Login failed: ${errorMessage}`);
+    }
+  } catch (error) {
+    console.error('Error during login:', error);
+    alert('Login failed. Please try again');
+  }
+})
