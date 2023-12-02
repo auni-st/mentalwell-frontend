@@ -9,7 +9,7 @@ fetch(apiUrl)
       const articleElement = document.createElement('div');
       articleElement.classList.add("content-psikolog")
       articleElement.innerHTML = `
-                    <img class="image-psikolog" src="" alt="man" />
+                    <img class="image-psikolog" src="${articleData.profile_image}" alt="man" />
                     <div class="data-psikolog">
                         <h2>${articleData.name}</h2>
                         <div class="value-psikolog">
@@ -27,7 +27,6 @@ fetch(apiUrl)
                         </div>
                     </div>
                 `;
-
       articleSection.appendChild(articleElement);
     });
   })
