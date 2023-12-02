@@ -56,3 +56,46 @@ function toggleConfirmasiPasswordVisibility() {
     toggleIcon.classList.add('far', 'fa-eye-slash');
   }
 }
+
+const daftarForm = document.getElementById('daftar-form');
+
+daftarForm.addEventListener('submit', async (event) => {
+  event.preventDefault();
+
+  const email = document.getElementById('email').value;
+  const notelp = document.getElementById('notelp').value;
+  const password = document.getElementById('passworddaftar').value;
+  const confirmPassword = document.getElementById('confpassword').value;
+
+  if (password !== confirmPassword){
+    alert('Password and Confirm Password must match!');
+    return;
+  }
+
+  const formData = {
+    email,
+    password,
+    password_confirm: confirmPassword,
+    phone_number: notelp,
+  };
+
+  try {
+    const response = await fetch('https://mentalwell-backend.vercel.app/users', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
+
+    if (response.ok) {
+      alert('Registration successful!')
+    } else {
+      const responseData = await response.json();
+      alert(`Registration failed: ${responseData.message}`);
+    }
+  } catch (error) {
+    console.error('Error during registration:', error);
+    alert('Register failed. Please try again.')
+  }
+})
