@@ -18,11 +18,17 @@
           <li class="list-item"><a href="/artikel">Artikel</a></li>
           <li class="list-item"><a href="/riwayat">Riwayat</a></li>
           <li class="list-item"><a href="/tentangkami">Tentang Kami</a></li>
+          <div class="button">
+            <button type="button" id="btnnMasuk" onclick="openLoginPopup()">
+              Masuk
+            </button>
+          </div>
+          <!-- <div class="button-user">
+            <img src="/src/public/beranda/man.png" alt="Foto User" id="photoUser" />
+            <button type="submit">Natasya</button>
+          </div> -->
         </ul>
-        <div class="button-user">
-          <img src="/src/public/beranda/man.png" alt="Foto User" id="photoUser" />
-          <button type="submit">Natasya</button>
-        </div>
+       
       </div>
     </header>
     <main>
@@ -57,10 +63,10 @@
         </div>
       </aside>
       <section class="listpsikolog">
-        <form class="search-psikolog">
+        <form class="search-psikolog" id="search-psikolog">
           <input type="text" placeholder="Masukkan nama psikolog" />
           <div class="button-search">
-            <button type="submit"><i class="fas fa-search"></i>Cari</button>
+            <button type="submit" id="searchButton"><i class="fas fa-search"></i>Cari</button>
           </div>
         </form>
         <div class="container-psikolog" id="container-psikolog"></div>
@@ -70,7 +76,7 @@
           window.location.href = '/profilpsikolog';
         }
       </script>
-
+      <script src="/src/scripts/views/pages/searchpsikolog.js"></script>
       <script src="/src/scripts/views/pages/listpsikolog.js"></script>
     </main>
     <footer>

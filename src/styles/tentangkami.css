@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap');
 
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    background-color: #fafafa;
-    min-height: 100vh;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+  font-family: 'Inter', sans-serif;
+  background-color: #fafafa;
+  min-height: 100vh;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 /*
@@ -19,157 +19,173 @@ Header
 */
 
 .navbar {
-    background-color: white;
-    display: grid;
-    width: 100%;
-    grid-template-columns: 1fr 1fr;
-    gap: 2 rem;
-    height: 90px;
-    position: sticky;
-    width: 100%;
-    top: 0;
-    z-index: 99;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  background-color: white;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  gap: 2 rem;
+  height: 90px;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
 .navbar .navbar-brand {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-left: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 1rem;
 }
 
 .navbar .navbar-brand h1 {
-    color: #02bbdd;
-    text-transform: uppercase;
+  color: #02bbdd;
+  text-transform: uppercase;
 }
 
 .navbar .navbar-list {
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
 }
 
 .navbar .navbar-list .button-user {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .navbar .navbar-list .button-user button {
-    width: 95px;
-    height: 40px;
-    background-color: white;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
+  width: 95px;
+  height: 40px;
+  background-color: white;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 .navbar .navbar-list .navbar-list-item {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 2rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 
 .navbar .navbar-list .list-item {
-    list-style: none;
+  list-style: none;
 }
 
 .navbar .navbar-list .navbar-list-item .list-item a {
-    text-decoration: none;
-    list-style: none;
-    color: black;
-    font-size: 20px;
-    font-weight: 500px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+  text-decoration: none;
+  list-style: none;
+  color: black;
+  font-size: 20px;
+  font-weight: 500px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 #photoUser {
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.navbar .navbar-list .button button {
+  width: 95px;
+  height: 40px;
+  border-radius: 30px;
+  background-color: #044b77;
+  color: #ffffff;
+}
+
+.navbar .navbar-list .button button:hover {
+  background-color: #3ad0ea;
+  color: #ffffff;
+  background-color: #02bbdd;
+  cursor: pointer;
+  color: white;
 }
 
 /*
 Tentang Kami
 */
 
-h2, h3 {
-    color: #000;
-    text-align: center;
-    padding: 20px;
-    font-size: 25px;
+h2,
+h3 {
+  color: #000;
+  text-align: center;
+  padding: 20px;
+  font-size: 25px;
 }
 
 .highlight-text {
-    background-color: #02BBDD;
-    height: 100px; 
-    text-align: left;
-    font-size: 18px;
-    color: white;
-    margin-bottom: 20px;
-    padding: 100px; 
-    line-height: 1.5; 
+  background-color: #02bbdd;
+  height: 100px;
+  text-align: left;
+  font-size: 18px;
+  color: white;
+  margin-bottom: 20px;
+  padding: 100px;
+  line-height: 1.5;
 }
 
 p {
-    text-align: center;
-    padding: 5px;
-    color: #000;
+  text-align: center;
+  padding: 5px;
+  color: #000;
 }
 
 .img-tentangkami img {
-    float: left; 
+  float: left;
 }
 
 #tim-pengembang {
-    display: grid;
-    place-items: center;
-    padding: 20px;
-    border: 2px solid #808080;
-    border-radius: 10px;
-    width: 1200px;
-    height: 800px; 
-    box-sizing: border-box;
-    margin: 0 auto;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  border: 2px solid #808080;
+  border-radius: 10px;
+  width: 1200px;
+  height: 800px;
+  box-sizing: border-box;
+  margin: 0 auto;
 }
 
 .team-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around; 
-    
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .team-member {
-    text-align: center;
-    margin-top: 20px; 
-    width: 30%; 
-    flex: 0 1 calc(30% - 20px);
+  text-align: center;
+  margin-top: 20px;
+  width: 30%;
+  flex: 0 1 calc(30% - 20px);
 }
 
 .team-member img {
-    border-radius: 50%; 
-    width: 150px; 
-    height: 150px; 
-    object-fit: cover; 
-    margin-bottom: 10px;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 10px;
 }
 
 .social-icons a {
-    display: inline-block;
-    margin-right: 5px;
-    text-decoration: none;
-    list-style: none; 
+  display: inline-block;
+  margin-right: 5px;
+  text-decoration: none;
+  list-style: none;
 }
 
 .social-icons img {
-    width: 30px; 
-    height: 30px; 
-    border: none;
-    outline: none;
+  width: 30px;
+  height: 30px;
+  border: none;
+  outline: none;
 }
 
 /*
@@ -177,11 +193,11 @@ Footer
 */
 
 footer {
-    font-size: 18px;
-    padding: 1.5em;
-    height: 18px;
-    background-color: #02bbdd;
-    color: #fff;
-    margin-top: 2rem;
-    text-align: center;
+  font-size: 18px;
+  padding: 1.5em;
+  height: 18px;
+  background-color: #02bbdd;
+  color: #fff;
+  margin-top: 2rem;
+  text-align: center;
 }

@@ -85,6 +85,19 @@ Header
   padding-bottom: 10px;
 }
 
+.navbar .navbar-list .button {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .navbar-list .button button {
+  width: 95px;
+  height: 40px;
+  border-radius: 30px;
+  background-color: #044B77;
+  color: #ffffff;
+}
+
 #photoUser {
   border-radius: 50%;
   width: 50px;
