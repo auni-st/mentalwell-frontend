@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MentalWell</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: poppins;
+      }
+
+      .navbar {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+        gap: 2 rem;
+        height: 70px;
+        position: sticky;
+        width: 100%;
+        top: 0;
+        z-index: 99;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+        background-color: #02bbdd;
+      }
+
+      .navbar .navbar-brand {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 2rem;
+      }
+
+      .navbar .navbar-brand h1 {
+        color: #fff;
+        font-size: 25px;
+        /* text-transform: uppercase; */
+      }
+
+      .navbar .navbar-list {
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+      }
+
+      .navbar .navbar-list .button {
+        display: flex;
+        align-items: center;
+        margin-right: 2rem;
+      }
+
+      .navbar .navbar-list .button button {
+        width: 95px;
+        height: 44px;
+        border-radius: 10px;
+        background-color: #044b77;
+        color: #ffffff;
+        font-size: 17px;
+      }
+
+      .navbar .navbar-list .button button:hover {
+        background-color: #3ad0ea;
+        color: #ffffff;
+        background-color: #02bbdd;
+        cursor: pointer;
+        color: white;
+      }
+
+      .navbar .navbar-list .navbar-list-item {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+      }
+
+      .navbar .navbar-list .list-item {
+        list-style: none;
+      }
+
+      .navbar .navbar-list .navbar-list-item .list-item a {
+        text-decoration: none;
+        list-style: none;
+        color: black;
+        font-size: 17px;
+        font-weight: 500px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+
+      /* animasi */
+      .navbar .navbar-list .navbar-list-item .list-item a::after {
+        content: "";
+        width: 0;
+        height: 2px;
+        background-color: #000;
+        display: block;
+        transition: 0.2s linear;
+      }
+
+      .navbar .navbar-list .navbar-list-item .list-item a:hover::after {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="navbar-brand">
+        <h1>MentalWell</h1>
+      </div>
+      <div class="navbar-list">
+        <ul class="navbar-list-item">
+          <li class="list-item"><a href="./">Beranda</a></li>
+          <li class="list-item"><a href="/artikel">Artikel</a></li>
+          <li class="list-item"><a href="/listpsikolog">Cari Psikolog</a></li>
+          <li class="list-item"><a href="/tentangkami">Tentang Kami</a></li>
+        </ul>
+        <div class="button">
+          <button type="button" id="btnnMasuk" onclick="openLoginPopup()">
+            Masuk
+          </button>
+        </div>
+      </div>
+    </header>
+  </body>
+</html>
