@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MentalWell</title>
     <link rel="stylesheet" href="/src/styles/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
   </head>
   <body>
     <header class="navbar">
@@ -21,7 +24,9 @@
           <li class="list-item"><a href="/tentangkami">Tentang Kami</a></li>
         </ul>
         <div class="button">
-          <button type="button" id="btnnMasuk" onclick="openLoginPopup()">Masuk</button>
+          <button type="button" id="btnnMasuk" onclick="openLoginPopup()">
+            Masuk
+          </button>
         </div>
       </div>
     </header>
@@ -31,9 +36,15 @@
           Pikiran Yang Baik, <br />
           Dirimu Yang Lebih Baik
         </h2>
-        <p>Temukan ketenanganmu di sini bersama psikolog professional yang siap <br />membantu menyelesaikan masalahmu, mari berproses bersama MentalWell</p>
+        <p>
+          Temukan ketenanganmu di sini bersama psikolog professional yang siap
+          <br />membantu menyelesaikan masalahmu, mari berproses bersama
+          MentalWell
+        </p>
         <div class="btn-hero">
-          <button type="button" onclick="redirectToList()">Daftar Konseling</button>
+          <button type="button" onclick="redirectToList()">
+            Daftar Konseling
+          </button>
         </div>
       </div>
       <div class="hero-image">
@@ -44,15 +55,35 @@
     <div class="login-container" id="login-container">
       <div class="login-title">
         <h2>Masuk</h2>
-        <p>Belum punya akun? <a href="#" id="popupDaftar" onclick="openDaftarPopup()">Daftar</a></p>
+        <p>
+          Belum punya akun?
+          <a href="#" id="popupDaftar" onclick="openDaftarPopup()">Daftar</a>
+        </p>
       </div>
       <form class="login-form">
         <div class="form-control">
-          <input class="form-input" type="email" id="username" name="username" placeholder="Masukkan Email" required />
+          <input
+            class="form-input"
+            type="email"
+            id="username"
+            name="username"
+            placeholder="Masukkan Email"
+            required
+          />
         </div>
         <div class="form-control">
-          <i class="far fa-eye eye" onclick="togglePasswordLoginVisibility()"></i>
-          <input class="form-input" type="text" id="loginpassword" name="loginpassword" placeholder="Masukkan Password" required />
+          <i
+            class="far fa-eye eye"
+            onclick="togglePasswordLoginVisibility()"
+          ></i>
+          <input
+            class="form-input"
+            type="text"
+            id="loginpassword"
+            name="loginpassword"
+            placeholder="Masukkan Password"
+            required
+          />
         </div>
         <p><a href="#">Forget Password</a></p>
         <button class="submit-btn" type="submit">Masuk</button>
@@ -62,22 +93,55 @@
     <div class="daftar-container" id="daftar-container">
       <div class="daftar-title">
         <h2>Daftar</h2>
-        <p>Sudah punya akun? <a href="#" onclick="openLoginPopup()">Masuk</a></p>
+        <p>
+          Sudah punya akun? <a href="#" onclick="openLoginPopup()">Masuk</a>
+        </p>
       </div>
       <form class="daftar-form">
         <div class="form-control">
-          <input class="form-input" type="email" id="email" name="email" placeholder="Email" required />
+          <input
+            class="form-input"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email"
+            required
+          />
         </div>
         <div class="form-control">
-          <input class="form-input" type="notelp" id="notelp" name="notelp" placeholder="No.Telp" required />
+          <input
+            class="form-input"
+            type="notelp"
+            id="notelp"
+            name="notelp"
+            placeholder="No.Telp"
+            required
+          />
         </div>
         <div class="form-control">
           <i class="far fa-eye eye" onclick="togglePasswordVisibility()"></i>
-          <input class="form-input" type="password" id="passworddaftar" name="passworddaftar" placeholder="Password" required />
+          <input
+            class="form-input"
+            type="password"
+            id="passworddaftar"
+            name="passworddaftar"
+            placeholder="Password"
+            required
+          />
         </div>
         <div class="form-control">
-          <i class="far fa-eye eye confpassword" onclick="toggleConfirmasiPasswordVisibility()"></i>
-          <input class="form-input" type="password" id="confpassword" name="password" placeholder="Confirm Password" required />
+          <i
+            class="far fa-eye eye confpassword"
+            onclick="toggleConfirmasiPasswordVisibility()"
+          ></i>
+          <input
+            class="form-input"
+            type="password"
+            id="confpassword"
+            name="password"
+            placeholder="Confirm Password"
+            required
+          />
         </div>
         <button class="submit-btn" type="submit">Daftar</button>
       </form>
@@ -118,7 +182,12 @@
       <section class="masalah">
         <div class="content">
           <h2>Lebih Kenal dengan Psikolog dan Konselor MentalWell</h2>
-          <p>Semua Psikolog dan Konselor terbaik di Mental Well telah berlisensi dan memiliki pengakuan di bidang psikologi<br />yang siap mendengarkan dan membantu mengatasi satiap masalah seputar kesehatan mental dan emosional Anda</p>
+          <p>
+            Semua Psikolog dan Konselor terbaik di Mental Well telah berlisensi
+            dan memiliki pengakuan di bidang psikologi<br />yang siap
+            mendengarkan dan membantu mengatasi satiap masalah seputar kesehatan
+            mental dan emosional Anda
+          </p>
         </div>
         <div class="container-masalah">
           <div class="content-masalah">
@@ -162,24 +231,48 @@
         <div class="container-solusi">
           <div class="content-solusi">
             <div class="solusi-image">
-              <img src="/src/public/beranda/komputer.png" alt="gambar komputer" width="100px" height="100px" />
+              <img
+                src="/src/public/beranda/komputer.png"
+                alt="gambar komputer"
+                width="100px"
+                height="100px"
+              />
             </div>
             <h2>Cerita dimana saja,<br />kapan saja</h2>
-            <p>Saatnya pilih cara konseling yang paling nyaman untukmu. Bisa tatap muka maupun online, semua pasti bisa!</p>
+            <p>
+              Saatnya pilih cara konseling yang paling nyaman untukmu. Bisa
+              tatap muka maupun online, semua pasti bisa!
+            </p>
           </div>
           <div class="content-solusi">
             <div class="solusi-image">
-              <img src="/src/public/beranda/cerita.png" alt="gambar cerita" width="100px" height="100px" />
+              <img
+                src="/src/public/beranda/cerita.png"
+                alt="gambar cerita"
+                width="100px"
+                height="100px"
+              />
             </div>
             <h2>Semua orang berhak<br />sehat mental</h2>
-            <p>MentalWell menyediakan berbagai jenis layanan kesehatan mental yang bisa diakses sesuai kebutuhanmu.</p>
+            <p>
+              MentalWell menyediakan berbagai jenis layanan kesehatan mental
+              yang bisa diakses sesuai kebutuhanmu.
+            </p>
           </div>
           <div class="content-solusi">
             <div class="solusi-image">
-              <img src="/src/public/beranda/game.png" alt="gambar cerita" width="100px" height="100px" />
+              <img
+                src="/src/public/beranda/game.png"
+                alt="gambar cerita"
+                width="100px"
+                height="100px"
+              />
             </div>
             <h2>Kamu Bercerita<br />Kami jaga Rahasia</h2>
-            <p>Tidak perlu khawatir, konseling tentang apa pun akan dijamin keamanannya. Selamat explore MentallWell</p>
+            <p>
+              Tidak perlu khawatir, konseling tentang apa pun akan dijamin
+              keamanannya. Selamat explore MentallWell
+            </p>
           </div>
         </div>
         <div class="garis">
@@ -197,7 +290,9 @@
             </div>
             <h2 class="nama-psikolog">John Doe M.Si., M.Psi., Psikolog</h2>
             <div class="btn-detail">
-              <button type="button" onclick="redirectToDetailPsychologist()">Lihat Detail</button>
+              <button type="button" onclick="redirectToDetailPsychologist()">
+                Lihat Detail
+              </button>
             </div>
           </div>
           <div class="content-rekomendasi">
@@ -206,7 +301,9 @@
             </div>
             <h2 class="nama-psikolog">John Doe M.Si., M.Psi., Psikolog</h2>
             <div class="btn-detail">
-              <button type="button" onclick="redirectToDetailPsychologist()">Lihat Detail</button>
+              <button type="button" onclick="redirectToDetailPsychologist()">
+                Lihat Detail
+              </button>
             </div>
           </div>
           <div class="content-rekomendasi">
@@ -215,7 +312,9 @@
             </div>
             <h2 class="nama-psikolog">John Doe M.Si., M.Psi., Psikolog</h2>
             <div class="btn-detail">
-              <button type="button" onclick="redirectToDetailPsychologist()">Lihat Detail</button>
+              <button type="button" onclick="redirectToDetailPsychologist()">
+                Lihat Detail
+              </button>
             </div>
           </div>
           <div class="content-rekomendasi">
@@ -224,7 +323,9 @@
             </div>
             <h2 class="nama-psikolog">John Doe M.Si., M.Psi., Psikolog</h2>
             <div class="btn-detail">
-              <button type="button" onclick="redirectToDetailPsychologist()">Lihat Detail</button>
+              <button type="button" onclick="redirectToDetailPsychologist()">
+                Lihat Detail
+              </button>
             </div>
           </div>
           <div class="content-rekomendasi">
@@ -233,7 +334,9 @@
             </div>
             <h2 class="nama-psikolog">John Doe M.Si., M.Psi., Psikolog</h2>
             <div class="btn-detail">
-              <button type="button" onclick="redirectToDetailPsychologist()">Lihat Detail</button>
+              <button type="button" onclick="redirectToDetailPsychologist()">
+                Lihat Detail
+              </button>
             </div>
           </div>
           <div class="content-rekomendasi">
@@ -242,7 +345,9 @@
             </div>
             <h2 class="nama-psikolog">John Doe M.Si., M.Psi., Psikolog</h2>
             <div class="btn-detail">
-              <button type="button" onclick="redirectToDetailPsychologist()">Lihat Detail</button>
+              <button type="button" onclick="redirectToDetailPsychologist()">
+                Lihat Detail
+              </button>
             </div>
           </div>
         </div>
