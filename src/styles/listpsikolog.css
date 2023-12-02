@@ -215,8 +215,9 @@ main .listpsikolog {
 
 .listpsikolog .container-psikolog .content-psikolog .image-psikolog {
     margin: 1rem 0 1rem 1rem;
-    width: 133.69px;
+    width: 300px;
     height: 133.69px;
+    border-radius: 10px;
 }
 
 .listpsikolog .container-psikolog .content-psikolog .data-psikolog {

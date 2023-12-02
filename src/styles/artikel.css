@@ -170,6 +170,8 @@ main .content-articel {
 
 .content-articel article img {
   width: 100%;
+  height: 200px;
+  border-radius: 20px;
 }
 
 .content-articel article h2,
