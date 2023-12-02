@@ -27,15 +27,15 @@
     </header>
     <main>
       <section class="articel">
-        <form class="search-articel">
+        <form class="search-articel" id="searchForm">
           <input type="text" id="searchInput" placeholder="Cari artikel berdasarkan judul" />
           <div class="button-search">
-            <button type="submit"><i class="fas fa-search"></i>Cari</button>
+            <button type="submit" id="searchButton"><i class="fas fa-search"></i>Cari</button>
           </div>
         </form>
       </section>
       <section class="content-articel" id="content-articel">
-        <article>
+        <!-- <article>
                 <div class="image-articel">
                     <img src="/src/public/articel/articel1.png" alt="articel">
                 </div>
@@ -64,7 +64,7 @@
                 <div class="button-articel">
                     <button type="button" onclick="redirectToDetail()"> Baca Selengkapnya</button>
                 </div>
-            </article>
+            </article> -->
       </section>
       <script src="/src/scripts/views/pages/articel.js"></script>
       <script src="/src/scripts/views/pages/searcharticel.js"></script>
