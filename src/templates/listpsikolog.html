@@ -63,71 +63,15 @@
             <button type="submit"><i class="fas fa-search"></i>Cari</button>
           </div>
         </form>
-        <div class="container-psikolog">
-          <div class="content-psikolog">
-            <img class="image-psikolog" src="/src/public/list/man.png" alt="man" />
-            <div class="data-psikolog">
-              <h2>John Doe, M.Psi., Psikolog</h2>
-              <div class="value-psikolog">
-                <p>Pengalaman Praktik : 2 - 3 Tahun</p>
-                <i class="far fa-envelope"></i>
-                <p class="ulasan">(15 Ulasan)</p>
-              </div>
-              <div class="list-button-psikolog">
-                <div class="jadwal-hijau">
-                  <p>Jadwal Tersedia</p>
-                </div>
-                <div class="button-psikolog">
-                  <button type="button" onclick="redirectToDetailPsychologist()">Lihat Selengkapnya</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="content-psikolog">
-            <img class="image-psikolog" src="/src/public/list/man.png" alt="man" />
-            <div class="data-psikolog">
-              <h2>John Doe, M.Psi., Psikolog</h2>
-              <div class="value-psikolog">
-                <p>Pengalaman Praktik : 2 - 3 Tahun</p>
-                <i class="far fa-envelope"></i>
-                <p class="ulasan">(15 Ulasan)</p>
-              </div>
-              <div class="list-button-psikolog">
-                <div class="jadwal-merah">
-                  <p>Jadwal Tidak Tersedia</p>
-                </div>
-                <div class="button-psikolog">
-                  <button type="button" onclick="redirectToDetailPsychologist()">Lihat Selengkapnya</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="content-psikolog">
-            <img class="image-psikolog" src="/src/public/list/man.png" alt="man" />
-            <div class="data-psikolog">
-              <h2>John Doe, M.Psi., Psikolog</h2>
-              <div class="value-psikolog">
-                <p>Pengalaman Praktik : 2 - 3 Tahun</p>
-                <i class="far fa-envelope"></i>
-                <p class="ulasan">(15 Ulasan)</p>
-              </div>
-              <div class="list-button-psikolog">
-                <div class="jadwal-hijau">
-                  <p>Jadwal Tersedia</p>
-                </div>
-                <div class="button-psikolog">
-                  <button type="button" onclick="redirectToDetailPsychologist()">Lihat Selengkapnya</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="container-psikolog" id="container-psikolog"></div>
       </section>
       <script>
         function redirectToDetailPsychologist() {
-          window.location.href = "/profilpsikolog";
+          window.location.href = '/profilpsikolog';
         }
       </script>
+
+      <script src="/src/scripts/views/pages/listpsikolog.js"></script>
     </main>
     <footer>
       <span>@MentalWell 2023, SEMUA HAK DILINDUNGI</span>
