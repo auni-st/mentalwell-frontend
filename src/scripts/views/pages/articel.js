@@ -15,7 +15,7 @@ fetch(apiUrl)
                         <h2>${articleData.title}</h2>
                         <p>${articleData.content}</p>
                         <div class="button-articel">
-                        <button type="button" onclick="redirectToDetail()"> Baca Selengkapnya</button>
+                        <button type="button" onclick="redirectToDetail(${articleData.id})"> Baca Selengkapnya</button>
                     </div>
                 `;
 
@@ -24,6 +24,6 @@ fetch(apiUrl)
   })
   .catch((error) => console.error('Error fetching data from API:', error));
 
-function redirectToDetail() {
-  window.location.href = '/detailartikel';
+function redirectToDetail(id) {
+  window.location.href = `/detailartikel?id=${id}`;
 }

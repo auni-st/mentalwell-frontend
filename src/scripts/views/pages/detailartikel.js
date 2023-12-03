@@ -13,36 +13,36 @@ async function fetchArticleById(articleId) {
   }
 }
 
-// // Function to render article details
-// async function renderArticleDetails() {
-//   try {
-//      // Mendapatkan ID artikel dari URL
-//      const urlParams = new URLSearchParams(window.location.search);
-//      const articleId = urlParams.get('id');
+// Function to render article details
+async function renderArticleDetails() {
+  try {
+     // Mendapatkan ID artikel dari URL
+     const urlParams = new URLSearchParams(window.location.search);
+     const articleId = urlParams.get('id');
 
-//      // Mendapatkan elemen HTML untuk menampilkan data artikel
-//      const judulDetailArticel = document.getElementById('judul-detail-articel');
-//      const createdArticel = document.getElementById('created-articel');
-//      const imageDetailArticel = document.getElementById('image-detail-articel');
-//      const contentDetailArticel = document.getElementById('content-detail-articel');
-//      const referensiArticel = document.getElementById('referensi-articel');
-//     // Fetch data artikel berdasarkan ID
-//     const articleData = await fetchArticleById(articleId);
+     // Mendapatkan elemen HTML untuk menampilkan data artikel
+     const judulDetailArticel = document.getElementById('judul-detail-articel');
+     const createdArticel = document.getElementById('created-articel');
+     const imageDetailArticel = document.getElementById('image-detail-articel');
+     const contentDetailArticel = document.getElementById('content-detail-articel');
+     const referensiArticel = document.getElementById('referensi-articel');
+    // Fetch data artikel berdasarkan ID
+    const articleData = await fetchArticleById(articleId);
 
-//     // Menampilkan data artikel pada elemen HTML
-//     judulDetailArticel.innerHTML = `<h2>${articleData.title}</h2>`;
-//     createdArticel.innerHTML = `<time datetime="${articleData.createdAt}">Created At: ${articleData.createdAt}</time>`;
-//     imageDetailArticel.innerHTML = `<img src="${articleData.image}" alt="image detail artice" />`;
-//     contentDetailArticel.innerHTML = `<p>${articleData.content}</p>`;
+    // Menampilkan data artikel pada elemen HTML
+    judulDetailArticel.innerHTML = `<h2>${articleData.title}</h2>`;
+    createdArticel.innerHTML = `<time datetime="${articleData.createdAt}">Created At: ${articleData.createdAt}</time>`;
+    imageDetailArticel.innerHTML = `<img src="${articleData.image}" alt="image detail artice" />`;
+    contentDetailArticel.innerHTML = `<p>${articleData.content}</p>`;
 
-//     // Menampilkan referensi artikel jika ada
-//     if (articleData.references && articleData.references.length > 0) {
-//       referensiArticel.innerHTML = `<h2>Referensi</h2><ol>${articleData.references.map((ref) => `<li>${ref}</li>`).join('')}</ol>`;
-//     }
-//   } catch (error) {
-//     console.error('Error rendering article details:', error);
-//   }
-// }
+    // Menampilkan referensi artikel jika ada
+    if (articleData.references && articleData.references.length > 0) {
+      referensiArticel.innerHTML = `<h2>Referensi</h2><ol>${articleData.references.map((ref) => `<li>${ref}</li>`).join('')}</ol>`;
+    }
+  } catch (error) {
+    console.error('Error rendering article details:', error);
+  }
+}
 
-// // Render artikel details ketika halaman dimuat
-// renderArticleDetails();
+// Render artikel details ketika halaman dimuat
+renderArticleDetails();
