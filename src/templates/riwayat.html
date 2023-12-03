@@ -6,9 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MentalWell</title>
     <link rel="stylesheet" href="/src/styles/riwayat.css" />
+    <script
+      type="module"
+      src="../scripts/components/navbar-user.js"
+      defer
+    ></script>
   </head>
   <body>
+    <!-- navbar components -->
     <header class="navbar">
+      <navbar-user></navbar-user>
+    </header>
+
+    <!-- <header class="navbar">
       <div class="navbar-brand">
         <h1>MentalWell</h1>
       </div>
@@ -24,15 +34,21 @@
           <button type="submit">Natasya</button>
         </div>
       </div>
-    </header>
+    </header> -->
 
     <main>
       <div id="overlay" class="overlay" onclick="closeUlasanPopup()"></div>
-      <div  class="container-ulasan" id="container-ulasan">
+      <div class="container-ulasan" id="container-ulasan">
         <form class="content-ulasan">
           <div class="isi-ulasan">
             <h2>Berikan Ulasan</h2>
-            <textarea name="ulasan" id="ulasan" cols="55" rows="15" placeholder="Tuliskan ulasanmu disini"></textarea>
+            <textarea
+              name="ulasan"
+              id="ulasan"
+              cols="55"
+              rows="15"
+              placeholder="Tuliskan ulasanmu disini"
+            ></textarea>
           </div>
           <div class="btn-detail">
             <button type="submit">Kirim</button>
@@ -42,7 +58,11 @@
       <h2>Riwayat Konseling</h2>
       <div class="content-riwayat">
         <div class="container-riwayat">
-          <img src="/src/public/beranda/man.png" alt="Foto Psikolog" id="psychologPhoto" />
+          <img
+            src="/src/public/beranda/man.png"
+            alt="Foto Psikolog"
+            id="psychologPhoto"
+          />
           <div class="info-riwayat">
             <div class="info-text">
               <p>
@@ -54,13 +74,19 @@
             </div>
             <div class="status-button">
               <span class="status-riwayat">Belum selesai</span>
-              <button type="button" id="button-riwayat-undone">ISI ULASAN</button>
+              <button type="button" id="button-riwayat-undone">
+                ISI ULASAN
+              </button>
             </div>
           </div>
         </div>
 
         <div class="container-riwayat">
-          <img src="/src/public/beranda/man.png" alt="Foto Psikolog" id="psychologPhoto" />
+          <img
+            src="/src/public/beranda/man.png"
+            alt="Foto Psikolog"
+            id="psychologPhoto"
+          />
           <div class="info-riwayat">
             <div class="info-text">
               <p>
@@ -72,7 +98,13 @@
             </div>
             <div class="status-button">
               <span class="status-riwayat">Selesai</span>
-              <button type="button" id="button-riwayat-done" onclick="openUlasanPopup()">ISI ULASAN</button>
+              <button
+                type="button"
+                id="button-riwayat-done"
+                onclick="openUlasanPopup()"
+              >
+                ISI ULASAN
+              </button>
             </div>
           </div>
         </div>

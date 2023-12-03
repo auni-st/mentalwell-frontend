@@ -5,10 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MentalWell</title>
-    <link rel="stylesheet" href="/src/styles/aturkonseling.css">
+    <link rel="stylesheet" href="/src/styles/aturkonseling.css" />
+    <script
+      type="module"
+      src="../scripts/components/navbar-user.js"
+      defer
+    ></script>
   </head>
   <body>
+    <!-- navbar components -->
     <header class="navbar">
+      <navbar-user></navbar-user>
+    </header>
+
+    <!-- <header class="navbar">
       <div class="navbar-brand">
         <h1>MentalWell</h1>
       </div>
@@ -24,13 +34,17 @@
           <button type="submit">John Doe</button>
         </div>
       </div>
-    </header>
+    </header> -->
 
     <main>
       <div class="main-content">
         <div class="data-konseling">
           <div class="foto-pasien">
-            <img src="src/public/beranda/man.png" alt="Foto Pasien" id="patientProfile">
+            <img
+              src="src/public/beranda/man.png"
+              alt="Foto Pasien"
+              id="patientProfile"
+            />
           </div>
           <div class="biodata-pasien">
             <h2>NATASYA</h2>
@@ -49,21 +63,21 @@
         <div class="deskripsi-konseling">
           <h3>Deskripsi Masalah</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel 
-            tortor augue. Vestibulum et purus quis enim ultricies consequat in vel 
-            odio. Etiam placerat ultricies commodo. Interdum et malesuada fames ac 
-            ante ipsum primis in faucibus. Phasellus turpis turpis, hendrerit eget 
-            feugiat ut, rutrum sed nisi.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel
+            tortor augue. Vestibulum et purus quis enim ultricies consequat in
+            vel odio. Etiam placerat ultricies commodo. Interdum et malesuada
+            fames ac ante ipsum primis in faucibus. Phasellus turpis turpis,
+            hendrerit eget feugiat ut, rutrum sed nisi.
           </p>
         </div>
         <div class="harapan-pasien">
           <h3>Harapan Setelah Konseling</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel 
-            tortor augue. Vestibulum et purus quis enim ultricies consequat in vel 
-            odio. Etiam placerat ultricies commodo. Interdum et malesuada fames ac 
-            ante ipsum primis in faucibus. Phasellus turpis turpis, hendrerit eget 
-            feugiat ut, rutrum sed nisi.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel
+            tortor augue. Vestibulum et purus quis enim ultricies consequat in
+            vel odio. Etiam placerat ultricies commodo. Interdum et malesuada
+            fames ac ante ipsum primis in faucibus. Phasellus turpis turpis,
+            hendrerit eget feugiat ut, rutrum sed nisi.
           </p>
         </div>
         <div class="status-konseling">

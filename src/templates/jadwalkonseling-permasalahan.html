@@ -11,8 +11,18 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <script
+      type="module"
+      src="../scripts/components/navbar-user.js"
+      defer
+    ></script>
   </head>
   <body>
+    <!-- navbar components -->
+    <header class="navbar">
+      <navbar-user></navbar-user>
+    </header>
+
     <main>
       <div class="container">
         <div class="flow d-flex justify-content-center my-5">
@@ -89,7 +99,10 @@
             </div>
           </div>
         </div>
-        <button class="rounded py-2 px-5 my-4 mb-4 d-flex mx-auto" onclick="redirectToCounseling3()">
+        <button
+          class="rounded py-2 px-5 my-4 mb-4 d-flex mx-auto"
+          onclick="redirectToCounseling3()"
+        >
           Selanjutnya
         </button>
       </div>
@@ -99,9 +112,9 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     >
-    function redirectToCounseling3() {
-      window.location.href = '/jadwalkonseling-selesai';
-    }
-  </script>
+      function redirectToCounseling3() {
+        window.location.href = '/jadwalkonseling-selesai';
+      }
+    </script>
   </body>
 </html>

@@ -5,10 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="/src/styles/listpsikolog.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-..."
+      crossorigin="anonymous"
+    />
+    <script
+      type="module"
+      src="../scripts/components/navbar-masuk.js"
+      defer
+    ></script>
   </head>
   <body>
+    <!-- navbar components -->
     <header class="navbar">
+      <navbar-masuk></navbar-masuk>
+    </header>
+
+    <!-- <header class="navbar">
       <div class="navbar-brand">
         <h1>MentalWell</h1>
       </div>
@@ -23,14 +38,14 @@
               Masuk
             </button>
           </div>
-          <!-- <div class="button-user">
+          <div class="button-user">
             <img src="/src/public/beranda/man.png" alt="Foto User" id="photoUser" />
             <button type="submit">Natasya</button>
-          </div> -->
+          </div>
         </ul>
        
       </div>
-    </header>
+    </header> -->
     <main>
       <aside class="keahlian-psikolog">
         <div class="container-keahlian">
@@ -64,16 +79,22 @@
       </aside>
       <section class="listpsikolog">
         <form class="search-psikolog" id="searchForm">
-          <input type="text" placeholder="Masukkan nama psikolog"  id="search-psikolog"/>
+          <input
+            type="text"
+            placeholder="Masukkan nama psikolog"
+            id="search-psikolog"
+          />
           <div class="button-search">
-            <button type="submit" id="searchButton"><i class="fas fa-search"></i>Cari</button>
+            <button type="submit" id="searchButton">
+              <i class="fas fa-search"></i>Cari
+            </button>
           </div>
         </form>
         <div class="container-psikolog" id="container-psikolog"></div>
       </section>
       <script>
         function redirectToDetailPsychologist() {
-          window.location.href = '/profilpsikolog';
+          window.location.href = "/profilpsikolog";
         }
       </script>
       <script src="/src/scripts/views/pages/searchpsikolog.js"></script>

@@ -5,9 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Datail Artikel</title>
     <link rel="stylesheet" href="/src/styles/detailartikel.css" />
+    <script
+      type="module"
+      src="../scripts/components/navbar-user.js"
+      defer
+    ></script>
   </head>
   <body>
+    <!-- navbar components -->
     <header class="navbar">
+      <navbar-user></navbar-user>
+    </header>
+
+    <!-- <header class="navbar">
       <div class="navbar-brand">
         <h1>MentalWell</h1>
       </div>
@@ -19,11 +29,15 @@
           <li class="list-item"><a href="/tentangkami">Tentang Kami</a></li>
         </ul>
         <div class="button-user">
-          <img src="/src/public/beranda/man.png" alt="Foto User" id="photoUser" />
+          <img
+            src="/src/public/beranda/man.png"
+            alt="Foto User"
+            id="photoUser"
+          />
           <button type="submit">Natasya</button>
         </div>
       </div>
-    </header>
+    </header> -->
     <main>
       <section class="detail-articel">
         <div class="judul-detail-articel">
@@ -36,43 +50,103 @@
           <time datetime="2023-11-25T12:00">Created At: 25 november,2023</time>
         </div>
         <div class="image-detail-articel">
-          <img src="/src/public/detailartikel/ibunda.png" alt="image detail artice" />
+          <img
+            src="/src/public/detailartikel/ibunda.png"
+            alt="image detail artice"
+          />
         </div>
         <div class="content-detail-articel">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt praesentium, voluptates vero dolores officia dolore deleniti, dignissimos nihil porro libero aut, rem maiores. Unde ipsam quaerat minima vero dignissimos ab nulla.
-            Veniam ducimus harum animi, consequuntur nesciunt dolorum dolores. Aspernatur minima voluptatem officiis voluptates ex ipsa impedit, a eveniet aliquam eius in, possimus saepe velit libero optio cum corporis repudiandae
-            voluptatibus magnam nostrum! Accusantium quam consectetur cupiditate velit expedita, iste modi impedit consequuntur rem facilis voluptatum praesentium quasi voluptatibus in excepturi repellat voluptatem labore dignissimos
-            deleniti ducimus exercitationem eaque? Eos fugiat assumenda blanditiis adipisci nostrum exercitationem eius hic non error tempora illo recusandae perspiciatis quos impedit distinctio ex similique in dolorem quidem libero modi,
-            ullam maiores sapiente minima! Blanditiis modi rerum dolores vel consequuntur similique sed ad asperiores ratione animi nisi incidunt, iure minus at dolor doloribus cum perspiciatis cumque hic quis eos voluptate? Neque in veniam
-            quia odio tenetur, distinctio facilis architecto similique porro exercitationem quod vero, tempora nostrum accusamus repellendus ut libero! Veritatis adipisci ipsa tempore deleniti ipsum architecto sit numquam eos. Vitae
-            repellendus cumque amet quos labore, repudiandae sunt iste necessitatibus unde nemo eveniet error saepe commodi pariatur architecto maxime. Eveniet officia odio ex, amet mollitia temporibus.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+            praesentium, voluptates vero dolores officia dolore deleniti,
+            dignissimos nihil porro libero aut, rem maiores. Unde ipsam quaerat
+            minima vero dignissimos ab nulla. Veniam ducimus harum animi,
+            consequuntur nesciunt dolorum dolores. Aspernatur minima voluptatem
+            officiis voluptates ex ipsa impedit, a eveniet aliquam eius in,
+            possimus saepe velit libero optio cum corporis repudiandae
+            voluptatibus magnam nostrum! Accusantium quam consectetur cupiditate
+            velit expedita, iste modi impedit consequuntur rem facilis
+            voluptatum praesentium quasi voluptatibus in excepturi repellat
+            voluptatem labore dignissimos deleniti ducimus exercitationem eaque?
+            Eos fugiat assumenda blanditiis adipisci nostrum exercitationem eius
+            hic non error tempora illo recusandae perspiciatis quos impedit
+            distinctio ex similique in dolorem quidem libero modi, ullam maiores
+            sapiente minima! Blanditiis modi rerum dolores vel consequuntur
+            similique sed ad asperiores ratione animi nisi incidunt, iure minus
+            at dolor doloribus cum perspiciatis cumque hic quis eos voluptate?
+            Neque in veniam quia odio tenetur, distinctio facilis architecto
+            similique porro exercitationem quod vero, tempora nostrum accusamus
+            repellendus ut libero! Veritatis adipisci ipsa tempore deleniti
+            ipsum architecto sit numquam eos. Vitae repellendus cumque amet quos
+            labore, repudiandae sunt iste necessitatibus unde nemo eveniet error
+            saepe commodi pariatur architecto maxime. Eveniet officia odio ex,
+            amet mollitia temporibus.
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt praesentium, voluptates vero dolores officia dolore deleniti, dignissimos nihil porro libero aut, rem maiores. Unde ipsam quaerat minima vero dignissimos ab nulla.
-            Veniam ducimus harum animi, consequuntur nesciunt dolorum dolores. Aspernatur minima voluptatem officiis voluptates ex ipsa impedit, a eveniet aliquam eius in, possimus saepe velit libero optio cum corporis repudiandae
-            voluptatibus magnam nostrum! Accusantium quam consectetur cupiditate velit expedita, iste modi impedit consequuntur rem facilis voluptatum praesentium quasi voluptatibus in excepturi repellat voluptatem labore dignissimos
-            deleniti ducimus exercitationem eaque? Eos fugiat assumenda blanditiis adipisci nostrum exercitationem eius hic non error tempora illo recusandae perspiciatis quos impedit distinctio ex similique in dolorem quidem libero modi,
-            ullam maiores sapiente minima! Blanditiis modi rerum dolores vel consequuntur similique sed ad asperiores ratione animi nisi incidunt, iure minus at dolor doloribus cum perspiciatis cumque hic quis eos voluptate? Neque in veniam
-            quia odio tenetur, distinctio facilis architecto similique porro exercitationem quod vero, tempora nostrum accusamus repellendus ut libero! Veritatis adipisci ipsa tempore deleniti ipsum architecto sit numquam eos. Vitae
-            repellendus cumque amet quos labore, repudiandae sunt iste necessitatibus unde nemo eveniet error saepe commodi pariatur architecto maxime. Eveniet officia odio ex, amet mollitia temporibus.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+            praesentium, voluptates vero dolores officia dolore deleniti,
+            dignissimos nihil porro libero aut, rem maiores. Unde ipsam quaerat
+            minima vero dignissimos ab nulla. Veniam ducimus harum animi,
+            consequuntur nesciunt dolorum dolores. Aspernatur minima voluptatem
+            officiis voluptates ex ipsa impedit, a eveniet aliquam eius in,
+            possimus saepe velit libero optio cum corporis repudiandae
+            voluptatibus magnam nostrum! Accusantium quam consectetur cupiditate
+            velit expedita, iste modi impedit consequuntur rem facilis
+            voluptatum praesentium quasi voluptatibus in excepturi repellat
+            voluptatem labore dignissimos deleniti ducimus exercitationem eaque?
+            Eos fugiat assumenda blanditiis adipisci nostrum exercitationem eius
+            hic non error tempora illo recusandae perspiciatis quos impedit
+            distinctio ex similique in dolorem quidem libero modi, ullam maiores
+            sapiente minima! Blanditiis modi rerum dolores vel consequuntur
+            similique sed ad asperiores ratione animi nisi incidunt, iure minus
+            at dolor doloribus cum perspiciatis cumque hic quis eos voluptate?
+            Neque in veniam quia odio tenetur, distinctio facilis architecto
+            similique porro exercitationem quod vero, tempora nostrum accusamus
+            repellendus ut libero! Veritatis adipisci ipsa tempore deleniti
+            ipsum architecto sit numquam eos. Vitae repellendus cumque amet quos
+            labore, repudiandae sunt iste necessitatibus unde nemo eveniet error
+            saepe commodi pariatur architecto maxime. Eveniet officia odio ex,
+            amet mollitia temporibus.
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt praesentium, voluptates vero dolores officia dolore deleniti, dignissimos nihil porro libero aut, rem maiores. Unde ipsam quaerat minima vero dignissimos ab nulla.
-            Veniam ducimus harum animi, consequuntur nesciunt dolorum dolores. Aspernatur minima voluptatem officiis voluptates ex ipsa impedit, a eveniet aliquam eius in, possimus saepe velit libero optio cum corporis repudiandae
-            voluptatibus magnam nostrum! Accusantium quam consectetur cupiditate velit expedita, iste modi impedit consequuntur rem facilis voluptatum praesentium quasi voluptatibus in excepturi repellat voluptatem labore dignissimos
-            deleniti ducimus exercitationem eaque? Eos fugiat assumenda blanditiis adipisci nostrum exercitationem eius hic non error tempora illo recusandae perspiciatis quos impedit distinctio ex similique in dolorem quidem libero modi,
-            ullam maiores sapiente minima! Blanditiis modi rerum dolores vel consequuntur similique sed ad asperiores ratione animi nisi incidunt, iure minus at dolor doloribus cum perspiciatis cumque hic quis eos voluptate? Neque in veniam
-            quia odio tenetur, distinctio facilis architecto similique porro exercitationem quod vero, tempora nostrum accusamus repellendus ut libero! Veritatis adipisci ipsa tempore deleniti ipsum architecto sit numquam eos. Vitae
-            repellendus cumque amet quos labore, repudiandae sunt iste necessitatibus unde nemo eveniet error saepe commodi pariatur architecto maxime. Eveniet officia odio ex, amet mollitia temporibus.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+            praesentium, voluptates vero dolores officia dolore deleniti,
+            dignissimos nihil porro libero aut, rem maiores. Unde ipsam quaerat
+            minima vero dignissimos ab nulla. Veniam ducimus harum animi,
+            consequuntur nesciunt dolorum dolores. Aspernatur minima voluptatem
+            officiis voluptates ex ipsa impedit, a eveniet aliquam eius in,
+            possimus saepe velit libero optio cum corporis repudiandae
+            voluptatibus magnam nostrum! Accusantium quam consectetur cupiditate
+            velit expedita, iste modi impedit consequuntur rem facilis
+            voluptatum praesentium quasi voluptatibus in excepturi repellat
+            voluptatem labore dignissimos deleniti ducimus exercitationem eaque?
+            Eos fugiat assumenda blanditiis adipisci nostrum exercitationem eius
+            hic non error tempora illo recusandae perspiciatis quos impedit
+            distinctio ex similique in dolorem quidem libero modi, ullam maiores
+            sapiente minima! Blanditiis modi rerum dolores vel consequuntur
+            similique sed ad asperiores ratione animi nisi incidunt, iure minus
+            at dolor doloribus cum perspiciatis cumque hic quis eos voluptate?
+            Neque in veniam quia odio tenetur, distinctio facilis architecto
+            similique porro exercitationem quod vero, tempora nostrum accusamus
+            repellendus ut libero! Veritatis adipisci ipsa tempore deleniti
+            ipsum architecto sit numquam eos. Vitae repellendus cumque amet quos
+            labore, repudiandae sunt iste necessitatibus unde nemo eveniet error
+            saepe commodi pariatur architecto maxime. Eveniet officia odio ex,
+            amet mollitia temporibus.
           </p>
         </div>
         <div class="referensi-articel">
           <h2>Referensi</h2>
           <ol>
-            <li>Ekman, P. (1992). An argument for basic emotions. Cognition and Emotion, 6(3-4), 169-200.</li>
+            <li>
+              Ekman, P. (1992). An argument for basic emotions. Cognition and
+              Emotion, 6(3-4), 169-200.
+            </li>
             <li>Goleman, D. (1995). Emotional Intelligence. Bantam Books.</li>
-            <li>Lazarus, R. S. (1991). Emotion and Adaptation. Oxford University Press.</li>
+            <li>
+              Lazarus, R. S. (1991). Emotion and Adaptation. Oxford University
+              Press.
+            </li>
           </ol>
         </div>
       </section>

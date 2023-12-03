@@ -5,10 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Artikel Mentalwell</title>
     <link rel="stylesheet" href="/src/styles/artikel.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <script
+      type="module"
+      src="../scripts/components/navbar-masuk.js"
+      defer
+    ></script>
   </head>
   <body>
+    <!-- navbar components -->
     <header class="navbar">
+      <navbar-masuk></navbar-masuk>
+    </header>
+
+    <!-- <header class="navbar">
       <div class="navbar-brand">
         <h1>MentalWell</h1>
       </div>
@@ -17,7 +30,7 @@
           <li class="list-item"><a href="./">Beranda</a></li>
           <li class="list-item"><a href="/artikel">Artikel</a></li>
           <li class="list-item"><a href="/listpsikolog">Cari Psikolog</a></li>
-          <!-- <li class="list-item"><a href="/riwayat">Riwayat</a></li> -->
+          <li class="list-item"><a href="/riwayat">Riwayat</a></li>
           <li class="list-item"><a href="/tentangkami">Tentang Kami</a></li>
         </ul>
         <div class="button">
@@ -25,20 +38,27 @@
             Masuk
           </button>
         </div>
-        <!-- <div class="button-user">
+        <div class="button-user">
           <img src="/src/public/beranda/man.png" alt="Foto User" id="photoUser" />
           <button type="submit">Natasya</button>
-        </div> -->
+        </div>
       </div>
-    </header>
+    </header> -->
     <main>
       <section class="articel">
         <form class="search-articel" id="searchForm">
-          <input type="text" id="searchInput" placeholder="Cari artikel berdasarkan judul" />
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Cari artikel berdasarkan judul"
+          />
           <div class="button-search">
-            <button type="submit" id="searchButton"><i class="fas fa-search"></i>Cari</button>
+            <button type="submit" id="searchButton">
+              <i class="fas fa-search"></i>Cari
+            </button>
           </div>
-        </form>x`
+        </form>
+        x`
       </section>
       <section class="content-articel" id="content-articel">
         <!-- <article>
