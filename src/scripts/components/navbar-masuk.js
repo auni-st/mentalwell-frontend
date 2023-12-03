@@ -9,7 +9,6 @@ class NavBar extends HTMLElement {
     this.shadowRoot.innerHTML = `
         <style>
           /* Add your styling for the navbar here */
-          
           .navbar {
             width: 100%;
             height: 89px;
@@ -18,7 +17,7 @@ class NavBar extends HTMLElement {
             position: sticky;
             top: 0;
             z-index: 99;
-            background-color: #fff;
+            background-color: white;
           }
     
           .navbar .navbar-brand {
