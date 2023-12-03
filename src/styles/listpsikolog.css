@@ -126,7 +126,7 @@ main .keahlian-psikolog {
   flex-direction: column;
   width: 320px;
   margin-left: 1rem;
-  margin-top: 2rem;
+  margin-top: 89px;
   align-items: center;
 }
 
@@ -167,7 +167,7 @@ main .listpsikolog {
   display: flex;
   flex-direction: column;
   width: 1200px;
-  margin-top: 2rem;
+  margin-top: 89px;
   margin-right: 1rem;
 }
 

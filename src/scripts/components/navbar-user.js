@@ -9,7 +9,12 @@ class NavBar extends HTMLElement {
     this.shadowRoot.innerHTML = `
           <style>
             /* Add your styling for the navbar here */
-            
+            nav {
+              position: fixed;
+              top: 0;
+              z-index: 99;
+              width: 100%;
+            }
             .navbar {
               width: 100%;
               height: 89px;

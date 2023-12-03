@@ -25,7 +25,7 @@ Header
   grid-template-columns: 1fr 1fr;
   gap: 2 rem;
   height: 90px;
-  position: sticky;
+  position: fixed;
   width: 100%;
   top: 0;
   z-index: 99;
@@ -106,6 +106,7 @@ Jumbotron
   align-items: center;
   justify-content: center;
   gap: 2rem;
+  margin-top: 89px;
 }
 
 .jumbotron .hero {
