@@ -5,15 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Artikel Mentalwell</title>
     <link rel="stylesheet" href="/src/styles/artikel.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
-    <script
-      type="module"
-      src="/src/scripts/components/navbar-masuk.js"
-      defer
-    ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <script type="module" src="/src/scripts/components/navbar-masuk.js" defer></script>
   </head>
   <body>
     <!-- navbar components -->
@@ -45,51 +38,14 @@
     <main>
       <section class="articel">
         <form class="search-articel" id="searchForm">
-          <input
-            type="text"
-            id="searchInput"
-            placeholder="Cari artikel berdasarkan judul"
-          />
+          <input type="text" id="searchInput" placeholder="Cari artikel berdasarkan judul" />
           <div class="button-search">
-            <button type="submit" id="searchButton">
-              <i class="fas fa-search"></i>Cari
-            </button>
+            <button type="submit" id="searchButton"><i class="fas fa-search"></i>Cari</button>
           </div>
         </form>
         x`
       </section>
-      <section class="content-articel" id="content-articel">
-        <article>
-                <div class="image-articel">
-                    <img src="/src/public/articel/articel1.png" alt="articel">
-                </div>
-                <h2>Judul Artikel</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, beatae! Placeat, labore blanditiis quo ipsum magni excepturi asperiores, provident sed expedita aliquid, modi quibusdam. Beatae quasi earum a voluptates ducimus!</p>
-                <div class="button-articel">
-                    <button type="button"  onclick="redirectToDetail()"> Baca Selengkapnya</button>
-                </div>
-            </article>
-            <article>
-                <div class="image-articel">
-                    <img src="/src/public/articel/articel2.png" alt="articel">
-                </div>
-                <h2>Judul Artikel</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, beatae! Placeat, labore blanditiis quo ipsum magni excepturi asperiores, provident sed expedita aliquid, modi quibusdam. Beatae quasi earum a voluptates ducimus!</p>
-                <div class="button-articel">
-                    <button type="button" onclick="redirectToDetail()"> Baca Selengkapnya</button>
-                </div>
-            </article>
-            <article>
-                <div class="image-articel">
-                    <img src="/src/public/articel/articel3.png" alt="articel">
-                </div>
-                <h2>Judul Artikel</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, beatae! Placeat, labore blanditiis quo ipsum magni excepturi asperiores, provident sed expedita aliquid, modi quibusdam. Beatae quasi earum a voluptates ducimus!</p>
-                <div class="button-articel">
-                    <button type="button" onclick="redirectToDetail()"> Baca Selengkapnya</button>
-                </div>
-            </article>
-      </section>
+      <section class="content-articel" id="content-articel"></section>
       <script src="/src/scripts/views/pages/articel.js"></script>
       <script src="/src/scripts/views/pages/searcharticel.js"></script>
     </main>
