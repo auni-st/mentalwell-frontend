@@ -73,14 +73,23 @@ loginForm.addEventListener('submit', async (event) => {
     if (response.ok) {
       const responseData = await response.json();
       const token = responseData.data.token;
+      const userRole = responseData.data.role;
 
       sessionStorage.setItem('authToken', token);
 
       setTimeout(() => {
         alert('Login successful!');
 
+        if (userRole === 'patient') {
+          window.location.href = 'https://mentalwell.vercel.app/';
+        } else if (userRole === 'psychologist') {
+          window.location.href = 'https://mentalwell.vercel.app/dashboardpsikolog';
+        } else {
+          window.location.href = 'https://mentalwell.vercel.app/'
+        }
+
         // Redirect to the specified URL
-        window.location.href = 'https://mentalwell.vercel.app/';
+        // window.location.href = 'https://mentalwell.vercel.app/';
       }, 100);
     } else {
       const responseData = await response.json();
