@@ -129,7 +129,7 @@ class NavBar extends HTMLElement {
                       <ul class="navbar-list-item">
                           <li class="list-item"><a href="./">Beranda</a></li>
                           <li class="list-item"><a href="/artikel">Artikel</a></li>
-                          <li class="list-item"><a href="/riwayat">Riwayat</a></li>
+                          <li class="list-item"><a href="/listpsikolog">Cari Psikolog</a></li>
                           <li class="list-item"><a href="/tentangkami">Tentang Kami</a></li>
                       </ul>
                   
