@@ -6,7 +6,7 @@ async function fetchArticleById(articleId) {
       throw new Error('Network response was not ok');
     }
     const data = await response.json();
-    return data;
+    return data[0];
   } catch (error) {
     console.error('Error fetching article data:', error);
     throw error; // Re-throw the error to propagate it further
@@ -16,16 +16,16 @@ async function fetchArticleById(articleId) {
 // Function to render article details
 async function renderArticleDetails() {
   try {
-     // Mendapatkan ID artikel dari URL
-     const urlParams = new URLSearchParams(window.location.search);
-     const articleId = urlParams.get('id');
+    // Mendapatkan ID artikel dari URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const articleId = urlParams.get('id');
 
-     // Mendapatkan elemen HTML untuk menampilkan data artikel
-     const judulDetailArticel = document.getElementById('judul-detail-articel');
-     const createdArticel = document.getElementById('created-articel');
-     const imageDetailArticel = document.getElementById('image-detail-articel');
-     const contentDetailArticel = document.getElementById('content-detail-articel');
-     const referensiArticel = document.getElementById('referensi-articel');
+    // Mendapatkan elemen HTML untuk menampilkan data artikel
+    const judulDetailArticel = document.getElementById('judul-detail-articel');
+    const createdArticel = document.getElementById('created-articel');
+    const imageDetailArticel = document.getElementById('image-detail-articel');
+    const contentDetailArticel = document.getElementById('content-detail-articel');
+    const referensiArticel = document.getElementById('referensi-articel');
     // Fetch data artikel berdasarkan ID
     const articleData = await fetchArticleById(articleId);
 

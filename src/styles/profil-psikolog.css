@@ -97,8 +97,10 @@ Content Profil Psikolog
 */
 
 .main-content {
+  margin-top: 98px;
   background-color: white;
-  margin: 40px 30px;
+  margin-left: 30px;
+  margin-right: 30px;
   border: 1px solid black;
   border-radius: 20px;
 }
