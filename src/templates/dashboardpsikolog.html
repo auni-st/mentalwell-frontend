@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="/src/styles/dashboardpsikolog.css" />
-    <script
-      type="module"
-      src="../scripts/components/navbar-user.js"
-      defer
-    ></script>
-  </head>
-  <body>
-    <!-- navbar components -->
-    <header class="navbar">
-      <navbar-user></navbar-user>
-    </header>
 
-    <!-- <header class="navbar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="/src/styles/dashboardpsikolog.css" />
+  <script type="module" src="/src/scripts/components/navbar-user.js" defer></script>
+</head>
+
+<body>
+  <!-- navbar components -->
+  <header class="navbar">
+    <navbar-user></navbar-user>
+  </header>
+
+  <!-- <header class="navbar">
       <div class="navbar-brand">
         <h1>MentalWell</h1>
       </div>
@@ -35,47 +33,48 @@
       </div>
     </header> -->
 
-    <main>
-      <section class="dashboard">
-        <div class="content">
-          <h2>Dashboard Psikolog</h2>
-        </div>
-        <div class="dropdown-container">
-          <select id="statusDropdown2" class="status-dropdown">
-            <option value="available">Tersedia</option>
-            <option value="unavailable">Tidak Tersedia</option>
-          </select>
-        </div>
-        <div class="content-dashboard">
-          <table>
-            <thead>
-              <tr>
-                <th>Nama</th>
-                <th>Tanggal</th>
-                <th>Jam</th>
-                <th>Jenis Konseling</th>
-                <th>Status</th>
-                <th>Aksi</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Natasha</td>
-                <td>27 November 2023</td>
-                <td>08.00 - 09.00</td>
-                <td>Video Call</td>
-                <td>Selesai</td>
-                <td>
-                  <img src="/src/public/dashboard/tulis.png" alt="tambah" />
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <span>@MentalWell 2023, SEMUA HAK DILINDUNGI</span>
-    </footer>
-  </body>
+  <main>
+    <section class="dashboard">
+      <div class="content">
+        <h2>Dashboard Psikolog</h2>
+      </div>
+      <div class="dropdown-container">
+        <select id="statusDropdown2" class="status-dropdown">
+          <option value="available">Tersedia</option>
+          <option value="unavailable">Tidak Tersedia</option>
+        </select>
+      </div>
+      <div class="content-dashboard">
+        <table>
+          <thead>
+            <tr>
+              <th>Nama</th>
+              <th>Tanggal</th>
+              <th>Jam</th>
+              <th>Jenis Konseling</th>
+              <th>Status</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Natasha</td>
+              <td>27 November 2023</td>
+              <td>08.00 - 09.00</td>
+              <td>Video Call</td>
+              <td>Selesai</td>
+              <td>
+                <img src="/src/public/dashboard/tulis.png" alt="tambah" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <span>@MentalWell 2023, SEMUA HAK DILINDUNGI</span>
+  </footer>
+</body>
+
 </html>
