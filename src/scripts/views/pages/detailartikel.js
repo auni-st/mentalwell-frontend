@@ -31,14 +31,14 @@ async function renderArticleDetails() {
 
     // Menampilkan data artikel pada elemen HTML
     judulDetailArticel.innerHTML = `<h2>${articleData.title}</h2>`;
-    createdArticel.innerHTML = `<time datetime="${articleData.createdAt}">Created At: ${articleData.createdAt}</time>`;
+    createdArticel.innerHTML = `<time> Created At: ${articleData.created_at}</time>`;
     imageDetailArticel.innerHTML = `<img src="${articleData.image}" alt="image detail artice" />`;
     contentDetailArticel.innerHTML = `<p>${articleData.content}</p>`;
-
+    referensiArticel.innerHTML = `<p>Referensi : ${articleData.references}<p>`;
     // Menampilkan referensi artikel jika ada
-    if (articleData.references && articleData.references.length > 0) {
-      referensiArticel.innerHTML = `<h2>Referensi</h2><ol>${articleData.references.map((ref) => `<li>${ref}</li>`).join('')}</ol>`;
-    }
+    // if (articleData.references && articleData.references.length > 0) {
+    //   referensiArticel.innerHTML = `<h2>Referensi</h2><ol>${articleData.references.map((ref) => `<li>${ref}</li>`).join('')}</ol>`;
+    // }
   } catch (error) {
     console.error('Error rendering article details:', error);
   }
