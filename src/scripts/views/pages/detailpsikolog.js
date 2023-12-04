@@ -18,15 +18,17 @@ async function renderArticleDetails() {
     const urlParams = new URLSearchParams(window.location.search);
     const articleId = urlParams.get('id');
     // Mendapatkan elemen HTML untuk menampilkan data artikel
-    // const fotopsikolog = document.getElementById('foto-psikolog');
+    const fotopsikolog = document.querySelector('.foto-psikolog img');
     const datapsikolog = document.querySelector('h2');
     const biodatapsikolog = document.getElementById('biodata-psikolog');
+    const pengalamanpraktik = document.getElementById('praktik');
     const articleData = await fetchArticleById(articleId);
 
     // Menampilkan data artikel pada elemen HTML
-    // fotopsikolog.innerHTML = `<img src="${articleData.image}" alt="image detail artice"/>`;
+    fotopsikolog.src = `${articleData.profile_image}`;
     datapsikolog.innerHTML = `${articleData.name}`;
     biodatapsikolog.innerHTML = `<p>${articleData.bio}</p> `;
+    pengalamanpraktik.innerHTML = `${articleData.experience}`
 
   } catch (error) {
     console.error('Error rendering article details:', error);
