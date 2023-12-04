@@ -9,33 +9,11 @@
     <link rel="stylesheet" href="/src/styles/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     <script type="module" src="/src/scripts/components/navbar-masuk.js" defer></script>  
+    <script type="module" src="/src/scripts/components/navbar-user.js"></script>
   </head>
   <body>
-    <navbar-masuk></navbar-masuk>
-
-    <!-- <header class="navbar">
-      <div class="navbar-brand">
-        <h1>MentalWell</h1>
-      </div>
-      <div class="navbar-list">
-        <ul class="navbar-list-item">
-          <li class="list-item"><a href="./">Beranda</a></li>
-          <li class="list-item"><a href="/artikel">Artikel</a></li>
-          <li class="list-item"><a href="/listpsikolog">Cari Psikolog</a></li>
-          <li class="list-item"><a href="/tentangkami">Tentang Kami</a></li>
-          <div class="button">
-            <button type="button" id="btnnMasuk" onclick="openLoginPopup()">
-              Masuk
-            </button>
-          </div>
-            <div class="button-user">
-          <img src="/src/public/beranda/man.png" alt="Foto User" id="photoUser" />
-          <button type="submit">Natasya</button>
-        </div>
-        </ul>
-      </div>
-    </header> -->
-    
+    <navbar-masuk class="navbar-masuk" id="masuk"></navbar-masuk>
+    <!-- <navbar-user></navbar-user> -->
     <div class="jumbotron">
       <div class="hero">
         <h2>
@@ -208,62 +186,7 @@
         <div class="content">
           <h2>Rekomendasi Psikolog di MentalWell</h2>
         </div>
-        <div class="container-rekomendasi" id="container-rekomendasi">
-          <!-- <div class="content-rekomendasi">
-            <div class="rekomendasi-image">
-              <img src="/src/public/beranda/man.png" alt="gambar orang" />
-            </div>
-            <h2 class="nama-psikolog">John Doe M.Si., M.Psi., Psikolog</h2>
-            <div class="btn-detail">
-              <button type="button" onclick="redirectToDetailPsychologist()">Lihat Detail</button>
-            </div>
-          </div>
-          <div class="content-rekomendasi">
-            <div class="rekomendasi-image">
-              <img src="/src/public/beranda/man.png" alt="gambar orang" />
-            </div>
-            <h2 class="nama-psikolog">John Doe M.Si., M.Psi., Psikolog</h2>
-            <div class="btn-detail">
-              <button type="button" onclick="redirectToDetailPsychologist()">Lihat Detail</button>
-            </div>
-          </div>
-          <div class="content-rekomendasi">
-            <div class="rekomendasi-image">
-              <img src="/src/public/beranda/man.png" alt="gambar orang" />
-            </div>
-            <h2 class="nama-psikolog">John Doe M.Si., M.Psi., Psikolog</h2>
-            <div class="btn-detail">
-              <button type="button" onclick="redirectToDetailPsychologist()">Lihat Detail</button>
-            </div>
-          </div>
-          <div class="content-rekomendasi">
-            <div class="rekomendasi-image">
-              <img src="/src/public/beranda/man.png" alt="gambar orang" />
-            </div>
-            <h2 class="nama-psikolog">John Doe M.Si., M.Psi., Psikolog</h2>
-            <div class="btn-detail">
-              <button type="button" onclick="redirectToDetailPsychologist()">Lihat Detail</button>
-            </div>
-          </div>
-          <div class="content-rekomendasi">
-            <div class="rekomendasi-image">
-              <img src="/src/public/beranda/man.png" alt="gambar orang" />
-            </div>
-            <h2 class="nama-psikolog">John Doe M.Si., M.Psi., Psikolog</h2>
-            <div class="btn-detail">
-              <button type="button" onclick="redirectToDetailPsychologist()">Lihat Detail</button>
-            </div>
-          </div>
-          <div class="content-rekomendasi">
-            <div class="rekomendasi-image">
-              <img src="/src/public/beranda/man.png" alt="gambar orang" />
-            </div>
-            <h2 class="nama-psikolog">John Doe M.Si., M.Psi., Psikolog</h2>
-            <div class="btn-detail">
-              <button type="button" onclick="redirectToDetailPsychologist()">Lihat Detail</button>
-            </div>
-          </div> -->
-          </div>
+        <div class="container-rekomendasi" id="container-rekomendasi"></div>
         </div>
         <div class="btn-semua">
           <button type="button" onclick="redirectToList()">Lihat Semua</button>

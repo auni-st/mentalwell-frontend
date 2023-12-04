@@ -3,19 +3,15 @@ function openLoginPopup() {
   document.getElementById('daftar-container').style.display = 'none';
   document.getElementById('overlay').style.display = 'block';
   document.getElementById('overly').style.display = 'none';
-  var navbarLinks = document.querySelectorAll('.navbar a');
-  navbarLinks.forEach(function (link) {
-    link.style.pointerEvents = 'none';
-  });
+  var navbarLinks = document.getElementById('masuk');
+  navbarLinks.style.pointerEvents ='none';
 }
 
 function closeLoginPopup() {
   document.getElementById('login-container').style.display = 'none';
   document.getElementById('overlay').style.display = 'none';
-  var navbarLinks = document.querySelectorAll('.navbar a');
-  navbarLinks.forEach(function (link) {
-    link.style.pointerEvents = 'auto';
-  });
+  var navbarLinks = document.getElementById('masuk');
+  navbarLinks.style.pointerEvents = 'auto';
 }
 
 function authenticate(event) {
