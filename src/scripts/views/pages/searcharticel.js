@@ -59,14 +59,18 @@ searchForm.addEventListener('submit', (event) => {
           const articleElement = document.createElement('article');
 
           articleElement.innerHTML = `
-            <div class="image-articel">
-              <img src="${articleData.image}" alt="articel">
-            </div>
-            <h2>${articleData.title}</h2>
-            <p>${articleData.content}</p>
-            <div class="button-articel">
-              <button type="button" onclick="redirectToDetail()"> Baca Selengkapnya</button>
-            </div>
+          <div class="image-articel">
+          <img src="${articleData.image}" alt="articel">
+          </div>
+          <div class="isi-articel">
+              <h2>${articleData.title}</h2>
+              <div class="content"> 
+                <p id="contentParagraph">${articleData.content}</p>
+              </div>
+              <div class="button-articel">
+              <button type="button" onclick="redirectToDetail('${articleData.id}')"> Baca Selengkapnya</button>
+              </div>
+          </div>
           `;
           contentArticle.appendChild(articleElement);
         });
