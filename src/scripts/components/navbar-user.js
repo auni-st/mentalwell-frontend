@@ -137,11 +137,11 @@ class NavBar extends HTMLElement {
                           <li class="list-item"><a href="/listpsikolog">Cari Psikolog</a></li>
                           <li class="list-item"><a href="/tentangkami">Tentang Kami</a></li>
                       </ul>
-                  
-                  <div class="button-user">
-                    <img src="/src/public/beranda/man.png" alt="Foto User" id="photoUser" >
-                    <button type="submit">John Doe</button>
-                  </div>
+                      <div class="button-user">
+                          <img src="/src/public/beranda/man.png" alt="Foto User" id="photoUser" >
+                      <button type="submit">John Doe</button>
+                    </div>
+                  </div
               </div>
           </nav>
         `;

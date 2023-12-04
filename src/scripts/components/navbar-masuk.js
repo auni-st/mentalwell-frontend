@@ -114,10 +114,11 @@ class NavBar extends HTMLElement {
                         <li class="list-item"><a href="/listpsikolog">Cari Psikolog</a></li>
                         <li class="list-item"><a href="/tentangkami">Tentang Kami</a></li>
                     </ul>
-                <div class="button">
-                    <button type="button" id="btnnMasuk" onclick="openLoginPopup()">
-                        Masuk
-                    </button>
+                    <div class="button">
+                      <button type="button" id="btnnMasuk" onclick="openLoginPopup()">
+                          Masuk
+                      </button>
+                    </div>
                 </div>
             </div>
         </nav>
