@@ -18,9 +18,14 @@
         <div class="lupasandi-control">
         <input class="lupasandi-input" type="email" id="email" name="email" placeholder="Masukan Email" required />
         </div>
-        <button class="next-btn" type="submit">Selanjutnya</button>
+        <button class="next-btn" type="submit"  onclick="redirectToUbah()">Selanjutnya</button>
     </form>
     </div>
+    <script>
+        function redirectToUbah() {
+            window.location.href = "/ubah-sandi";
+        }
+    </script> 
 </body>
 </html>
 <script src="/src/scripts/views/pages/lupasandi.js"></script>
