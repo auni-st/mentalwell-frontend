@@ -12,8 +12,11 @@ fetch(apiUrl)
                     <div class="image-articel">
                     <img src="${articleData.image}" alt="articel">
                     </div>
+                    <div class="isi-articel">
                         <h2>${articleData.title}</h2>
-                        <p>${articleData.content}</p>
+                        <div class="content"> 
+                          <p id="contentParagraph">${articleData.content}</p>
+                        </div>
                         <div class="button-articel">
                         <button type="button" onclick="redirectToDetail('${articleData.id}')"> Baca Selengkapnya</button>
                         </div>

@@ -22,7 +22,7 @@ fetch(apiUrl)
                                 <p>${articleData.availability}</p>
                             </div>
                             <div class="button-psikolog">
-                                <button type="button" onclick="redirectToDetailPsychologist()">Lihat Selengkapnya</button>
+                                <button type="button" onclick="redirectToDetailPsychologist('${articleData.id}')">Lihat Selengkapnya</button>
                             </div>
                         </div>
                     </div>
@@ -32,3 +32,7 @@ fetch(apiUrl)
   })
   .catch((error) => console.error('Error fetching data from API:', error));
 
+
+  function redirectToDetailPsychologist(id) {
+    window.location.href = `/profilpsikolog?id=${id}`;
+  }

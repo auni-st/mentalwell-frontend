@@ -188,6 +188,16 @@ main .content-articel {
   border-radius: 20px;
 }
 
+.content-articel article .isi-articel {
+  width: 100%;
+  max-height: 100px;
+}
+
+.content-articel article .isi-articel .content {
+  max-height: 100px; 
+  overflow: hidden;
+}
+
 .content-articel article h2,
 p {
   margin-right: 20px;
