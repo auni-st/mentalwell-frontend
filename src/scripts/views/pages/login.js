@@ -81,8 +81,12 @@ loginForm.addEventListener('submit', async (event) => {
         alert('Login successful!');
 
         if (userRole === 'patient') {
+          // window.location.href = 'http://localhost:5501/src/templates/index.html';
+
           window.location.href = 'https://mentalwell.vercel.app/';
         } else if (userRole === 'psychologist') {
+
+          // window.location.href = 'http://localhost:5501/src/templates/dashboardpsikolog.html';
           window.location.href = 'https://mentalwell.vercel.app/dashboardpsikolog';
         } else {
           window.location.href = 'https://mentalwell.vercel.app/'
