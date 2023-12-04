@@ -178,7 +178,7 @@ main .content-articel {
   flex-direction: column;
   width: 400px;
   min-height: 500px;
-  border: 1px solid black;
+  border: 1px solid #808080;
   border-radius: 20px;
 }
 
