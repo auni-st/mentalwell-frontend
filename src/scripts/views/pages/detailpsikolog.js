@@ -22,13 +22,15 @@ async function renderArticleDetails() {
     const datapsikolog = document.querySelector('h2');
     const biodatapsikolog = document.getElementById('biodata-psikolog');
     const pengalamanpraktik = document.getElementById('praktik');
+    const ulelement =  document.getElementById('topiclist')
     const articleData = await fetchArticleById(articleId);
 
     // Menampilkan data artikel pada elemen HTML
     fotopsikolog.src = `${articleData.profile_image}`;
     datapsikolog.innerHTML = `${articleData.name}`;
     biodatapsikolog.innerHTML = `<p>${articleData.bio}</p> `;
-    pengalamanpraktik.innerHTML = `${articleData.experience}`
+    pengalamanpraktik.innerHTML = `${articleData.experience}`;
+    topicList.innerHTML = '';
 
   } catch (error) {
     console.error('Error rendering article details:', error);
