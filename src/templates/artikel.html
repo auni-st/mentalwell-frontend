@@ -8,34 +8,61 @@
     <link rel="stylesheet" href="/src/styles/artikel.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <script type="module" src="/src/scripts/components/navbar-masuk.js" defer></script>
+    <script type="module" src="/src/scripts/components/navbar-user.js" defer></script>
   </head>
   <body>
     <!-- navbar components -->
-    <navbar-masuk></navbar-masuk>
-
-    <!-- <header class="navbar">
-      <div class="navbar-brand">
-        <h1>MentalWell</h1>
+    <navbar-masuk id="masuk"></navbar-masuk>
+    <!-- <navbar-user></navbar-user> -->
+    <div id="overlay" class="overlay" onclick="closeLoginPopup()"></div>
+    <div class="login-container" id="login-container">
+      <div class="login-title">
+        <h2>Masuk</h2>
+        <p>Belum punya akun? <a href="#" id="popupDaftar" onclick="openDaftarPopup()">Daftar</a></p>
       </div>
-      <div class="navbar-list">
-        <ul class="navbar-list-item">
-          <li class="list-item"><a href="./">Beranda</a></li>
-          <li class="list-item"><a href="/artikel">Artikel</a></li>
-          <li class="list-item"><a href="/listpsikolog">Cari Psikolog</a></li>
-          <li class="list-item"><a href="/riwayat">Riwayat</a></li>
-          <li class="list-item"><a href="/tentangkami">Tentang Kami</a></li>
-        </ul>
-        <div class="button">
-          <button type="button" id="btnnMasuk" onclick="openLoginPopup()">
-            Masuk
-          </button>
+      <form class="login-form" id="login-form">
+        <div class="form-control">
+          <input
+            class="form-input"
+            type="email"
+            id="emaillogin"
+            name="emaillogin"
+            placeholder="Masukkan Email"
+            required
+          />
         </div>
-        <div class="button-user">
-          <img src="/src/public/beranda/man.png" alt="Foto User" id="photoUser" />
-          <button type="submit">Natasya</button>
+        <div class="form-control">
+          <i class="far fa-eye eye" onclick="togglePasswordLoginVisibility()"></i>
+          <input class="form-input" type="text" id="loginpassword" name="loginpassword" placeholder="Masukkan Password" required />
         </div>
+        <p><a href="/src/templates/lupasandi.html">Forget Password</a></p>
+        <button class="submit-btn" type="submit">Masuk</button>
+      </form>
+    </div>
+    <div id="overly" class="overly" onclick="closeDaftarPopup()"></div>
+    <div class="daftar-container" id="daftar-container">
+      <div class="daftar-title">
+        <h2>Daftar</h2>
+        <p>Sudah punya akun? <a href="#" onclick="openLoginPopup()">Masuk</a></p>
       </div>
-    </header> -->
+      <form class="daftar-form" id="daftar-form">
+        <div class="form-control">
+          <input class="form-input" type="email" id="email" name="email" placeholder="Email" required />
+        </div>
+        <div class="form-control">
+          <input class="form-input" type="notelp" id="notelp" name="notelp" placeholder="No.Telp" required />
+        </div>
+        <div class="form-control">
+          <i class="far fa-eye eye" onclick="togglePasswordVisibility()"></i>
+          <input class="form-input" type="password" id="passworddaftar" name="passworddaftar" placeholder="Password" required />
+        </div>
+        <div class="form-control">
+          <i class="far fa-eye eye confpassword" onclick="toggleConfirmasiPasswordVisibility()"></i>
+          <input class="form-input" type="password" id="confpassword" name="password" placeholder="Confirm Password" required />
+        </div>
+        <button class="submit-btn" type="submit">Daftar</button>
+      </form>
+    </div>
     <main>
       <section class="articel">
         <form class="search-articel" id="searchForm">
@@ -54,3 +81,5 @@
     </footer>
   </body>
 </html>
+<script src="/src/scripts/views/pages/login.js"></script>
+<script src="/src/scripts/views/pages/daftar.js"></script>
