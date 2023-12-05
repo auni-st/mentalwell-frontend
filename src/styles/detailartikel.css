@@ -171,6 +171,7 @@ main {
   flex-direction: column;
   justify-content: flex-start;
   width: 100%;
+  gap: 2rem;
 }
 
 .detail-articel .referensi-articel {
