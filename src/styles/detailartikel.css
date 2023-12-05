@@ -169,7 +169,8 @@ main {
 
 .detail-articel .content-detail-articel p {
   width: 100%;
-  margin: 0; 
+  margin-right: 5rem;
+  margin-left: 5rem;
 }
 
 .detail-articel .referensi-articel {
