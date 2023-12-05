@@ -1,202 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MentalWell</title>
-    <link rel="icon" href="/src/public/logo/3.png" type="image/x-icon">
-    <link rel="stylesheet" href="/src/styles/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-    <script type="module" src="/src/scripts/components/navbar-masuk.js" defer></script>  
-    <script type="module" src="/src/scripts/components/navbar-user.js"></script>
-  </head>
-  <body>
-    <navbar-masuk class="navbar-masuk" id="masuk"></navbar-masuk>
-    <!-- <navbar-user></navbar-user> -->
-    <div class="jumbotron">
-      <div class="hero">
-        <h2>
-          Pikiran Yang Baik, <br />
-          Dirimu Yang Lebih Baik
-        </h2>
-        <p>Temukan ketenanganmu di sini bersama psikolog professional yang siap <br />membantu menyelesaikan masalahmu, mari berproses bersama MentalWell</p>
-        <div class="btn-hero">
-          <button type="button" onclick="redirectToList()">Daftar Konseling</button>
-        </div>
-      </div>
-      <div class="hero-image">
-        <img src="/src/public/paralax.png" alt="Gambar Logo" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MentalWell</title>
+  <link rel="icon" href="/src/public/logo/3.png" type="image/x-icon">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="/src/styles/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <script type="module" src="/src/scripts/components/navbar-masuk.js" defer></script>
+  <script type="module" src="/src/scripts/components/navbar-user.js"></script>
+</head>
+
+<body>
+  <navbar-masuk class="navbar-masuk" id="masuk"></navbar-masuk>
+  <!-- <navbar-user></navbar-user> -->
+  <div class="jumbotron">
+    <div class="hero">
+      <h2>
+        Pikiran Yang Baik, <br />
+        Dirimu Yang Lebih Baik
+      </h2>
+      <p>Temukan ketenanganmu di sini bersama psikolog professional yang siap <br />membantu menyelesaikan masalahmu,
+        mari berproses bersama MentalWell</p>
+      <div class="btn-hero">
+        <button type="button" onclick="redirectToList()">Daftar Konseling</button>
       </div>
     </div>
-    <div id="overlay" class="overlay" onclick="closeLoginPopup()"></div>
-    <div class="login-container" id="login-container">
-      <div class="login-title">
-        <h2>Masuk</h2>
-        <p>Belum punya akun? <a href="#" id="popupDaftar" onclick="openDaftarPopup()">Daftar</a></p>
-      </div>
-      <form class="login-form" id="login-form">
-        <div class="form-control">
-          <input
-            class="form-input"
-            type="email"
-            id="emaillogin"
-            name="emaillogin"
-            placeholder="Masukkan Email"
-            required
-          />
-        </div>
-        <div class="form-control">
-          <i class="far fa-eye eye" onclick="togglePasswordLoginVisibility()"></i>
-          <input class="form-input" type="text" id="loginpassword" name="loginpassword" placeholder="Masukkan Password" required />
-        </div>
-        <p><a href="/src/templates/lupasandi.html">Forget Password</a></p>
-        <button class="submit-btn" type="submit">Masuk</button>
-      </form>
+    <div class="hero-image">
+      <img src="/src/public/paralax.png" alt="Gambar Logo" />
     </div>
-    <div id="overly" class="overly" onclick="closeDaftarPopup()"></div>
-    <div class="daftar-container" id="daftar-container">
-      <div class="daftar-title">
-        <h2>Daftar</h2>
-        <p>Sudah punya akun? <a href="#" onclick="openLoginPopup()">Masuk</a></p>
-      </div>
-      <form class="daftar-form" id="daftar-form">
-        <div class="form-control">
-          <input class="form-input" type="email" id="email" name="email" placeholder="Email" required />
-        </div>
-        <div class="form-control">
-          <input class="form-input" type="notelp" id="notelp" name="notelp" placeholder="No.Telp" required />
-        </div>
-        <div class="form-control">
-          <i class="far fa-eye eye" onclick="togglePasswordVisibility()"></i>
-          <input class="form-input" type="password" id="passworddaftar" name="passworddaftar" placeholder="Password" required />
-        </div>
-        <div class="form-control">
-          <i class="far fa-eye eye confpassword" onclick="toggleConfirmasiPasswordVisibility()"></i>
-          <input class="form-input" type="password" id="confpassword" name="password" placeholder="Confirm Password" required />
-        </div>
-        <button class="submit-btn" type="submit">Daftar</button>
-      </form>
+  </div>
+  <div id="overlay" class="overlay" onclick="closeLoginPopup()"></div>
+  <div class="login-container" id="login-container">
+    <div class="login-title">
+      <h2>Masuk</h2>
+      <p>Belum punya akun? <a href="#" id="popupDaftar" onclick="openDaftarPopup()">Daftar</a></p>
     </div>
-    <main>
-      <section class="konsultasi">
-        <div class="content">
-          <h2>Ruang Aman dan Nyaman untuk Ceritakan Masalahmu</h2>
-          <p>Beragam pilihan ruang aman sesuai kenyamanan dan kebutuhanmu</p>
+    <form class="login-form" id="login-form">
+      <div class="form-control">
+        <input class="form-input" type="email" id="emaillogin" name="emaillogin" placeholder="Masukkan Email"
+          required />
+      </div>
+      <div class="form-control">
+        <i class="far fa-eye eye" onclick="togglePasswordLoginVisibility()"></i>
+        <input class="form-input" type="text" id="loginpassword" name="loginpassword" placeholder="Masukkan Password"
+          required />
+      </div>
+      <p><a href="/src/templates/lupasandi.html">Forget Password</a></p>
+      <button class="submit-btn" type="submit">Masuk</button>
+    </form>
+  </div>
+  <div id="overly" class="overly" onclick="closeDaftarPopup()"></div>
+  <div class="daftar-container" id="daftar-container">
+    <div class="daftar-title">
+      <h2>Daftar</h2>
+      <p>Sudah punya akun? <a href="#" onclick="openLoginPopup()">Masuk</a></p>
+    </div>
+    <form class="daftar-form" id="daftar-form">
+      <div class="form-control">
+        <input class="form-input" type="email" id="email" name="email" placeholder="Email" required />
+      </div>
+      <div class="form-control">
+        <input class="form-input" type="notelp" id="notelp" name="notelp" placeholder="No.Telp" required />
+      </div>
+      <div class="form-control">
+        <i class="far fa-eye eye" onclick="togglePasswordVisibility()"></i>
+        <input class="form-input" type="password" id="passworddaftar" name="passworddaftar" placeholder="Password"
+          required />
+      </div>
+      <div class="form-control">
+        <i class="far fa-eye eye confpassword" onclick="toggleConfirmasiPasswordVisibility()"></i>
+        <input class="form-input" type="password" id="confpassword" name="password" placeholder="Confirm Password"
+          required />
+      </div>
+      <button class="submit-btn" type="submit">Daftar</button>
+    </form>
+  </div>
+  <main>
+    <section class="konsultasi">
+      <div class="content">
+        <h2>Ruang Aman dan Nyaman untuk Ceritakan Masalahmu</h2>
+        <p>Beragam pilihan ruang aman sesuai kenyamanan dan kebutuhanmu</p>
+      </div>
+      <div class="container-konsultasi">
+        <div class="content-konsultasi">
+          <div class="konsultasi-brand">
+            <img src="/src/public/pesan.png" alt="Chat" />
+            <h3>Chat</h3>
+          </div>
+          <p>Sesi konseling melalui Metode Chat dengan Psikolog</p>
         </div>
-        <div class="container-konsultasi">
-          <div class="content-konsultasi">
-            <div class="konsultasi-brand">
-              <img src="/src/public/pesan.png" alt="Chat" />
-              <h3>Chat</h3>
-            </div>
-            <p>Sesi konseling melalui Metode Chat dengan Psikolog</p>
+        <div class="content-konsultasi">
+          <div class="konsultasi-brand">
+            <img src="/src/public/telepon.png" alt="Call" />
+            <h3>Call</h3>
           </div>
-          <div class="content-konsultasi">
-            <div class="konsultasi-brand">
-              <img src="/src/public/telepon.png" alt="Call" />
-              <h3>Call</h3>
-            </div>
-            <p>Sesi konseling melalui Metode Call dengan Psikolog</p>
-          </div>
-          <div class="content-konsultasi">
-            <div class="konsultasi-brand">
-              <img src="/src/public/video.png" alt="Zoom" />
-              <h3>Video</h3>
-            </div>
-            <p>Sesi konseling melalui Metode Video dengan Psikolog</p>
-          </div>
+          <p>Sesi konseling melalui Metode Call dengan Psikolog</p>
         </div>
-        <div class="garis">
-          <hr />
+        <div class="content-konsultasi">
+          <div class="konsultasi-brand">
+            <img src="/src/public/video.png" alt="Zoom" />
+            <h3>Video</h3>
+          </div>
+          <p>Sesi konseling melalui Metode Video dengan Psikolog</p>
         </div>
-      </section>
-      <section class="masalah">
-        <div class="content">
-          <h2>Lebih Kenal dengan Psikolog dan Konselor MentalWell</h2>
-          <p>Semua Psikolog dan Konselor terbaik di Mental Well telah berlisensi dan memiliki pengakuan di bidang psikologi<br />yang siap mendengarkan dan membantu mengatasi satiap masalah seputar kesehatan mental dan emosional Anda</p>
+      </div>
+      <div class="garis">
+        <hr />
+      </div>
+    </section>
+    <section class="masalah">
+      <div class="content">
+        <h2>Lebih Kenal dengan Psikolog dan Konselor MentalWell</h2>
+        <p>Semua Psikolog dan Konselor terbaik di Mental Well telah berlisensi dan memiliki pengakuan di bidang
+          psikologi<br />yang siap mendengarkan dan membantu mengatasi satiap masalah seputar kesehatan mental dan
+          emosional Anda</p>
+      </div>
+      <div class="container-masalah">
+        <div class="content-masalah">
+          <i class="fa-solid fa-fire"></i>
+          <h2>Kecemasan</h2>
         </div>
-        <div class="container-masalah">
-          <div class="content-masalah">
-            <i class="fa-solid fa-fire"></i>
-            <h2>Kecemasan</h2>
-          </div>
-          <div class="content-masalah">
-            <i class="fa-solid fa-users"></i>
-            <h2>Keluarga</h2>
-          </div>
-          <div class="content-masalah">
-            <i class="fa-solid fa-bolt"></i>
-            <h2>Kendali Emosi</h2>
-          </div>
-          <div class="content-masalah">
-            <i class="fa-solid fa-house-user"></i>
-            <h2>Sosial</h2>
-          </div>
-          <div class="content-masalah">
-            <i class="fa-sharp fa-solid fa-graduation-cap"></i>
-            <h2>Pendidikan</h2>
-          </div>
-          <div class="content-masalah">
-            <i class="fa-sharp fa-solid fa-briefcase"></i>
-            <h2>Pekerjaan</h2>
-          </div>
-          <div class="content-masalah">
-            <i class="fa-solid fa-user-large"></i>
-            <h2>Kesepian</h2>
-          </div>
-          <div class="content-masalah">
-            <i class="fas fa-heart"></i>
-            <h2>Pasangan</h2>
-          </div>
+        <div class="content-masalah">
+          <i class="fa-solid fa-users"></i>
+          <h2>Keluarga</h2>
         </div>
-      </section>
-      <section class="alasan">
-        <div class="container-alasan">
-          <h2>Kenapa Harus Konseling di MentalWell?</h2>
+        <div class="content-masalah">
+          <i class="fa-solid fa-bolt"></i>
+          <h2>Kendali Emosi</h2>
         </div>
-        <div class="container-solusi">
-          <div class="content-solusi">
-            <div class="solusi-image">
-              <img src="/src/public/beranda/komputer.png" alt="gambar komputer" width="100px" height="100px" />
-            </div>
-            <h2>Cerita dimana saja,<br />kapan saja</h2>
-            <p>Saatnya pilih cara konseling yang paling nyaman untukmu. Bisa tatap muka maupun online, semua pasti bisa!</p>
+        <div class="content-masalah">
+          <i class="fa-solid fa-house-user"></i>
+          <h2>Sosial</h2>
+        </div>
+        <div class="content-masalah">
+          <i class="fa-sharp fa-solid fa-graduation-cap"></i>
+          <h2>Pendidikan</h2>
+        </div>
+        <div class="content-masalah">
+          <i class="fa-sharp fa-solid fa-briefcase"></i>
+          <h2>Pekerjaan</h2>
+        </div>
+        <div class="content-masalah">
+          <i class="fa-solid fa-user-large"></i>
+          <h2>Kesepian</h2>
+        </div>
+        <div class="content-masalah">
+          <i class="fas fa-heart"></i>
+          <h2>Pasangan</h2>
+        </div>
+      </div>
+    </section>
+    <section class="alasan">
+      <div class="container-alasan">
+        <h2>Kenapa Harus Konseling di MentalWell?</h2>
+      </div>
+      <div class="container-solusi">
+        <div class="content-solusi">
+          <div class="solusi-image">
+            <img src="/src/public/beranda/komputer.png" alt="gambar komputer" width="100px" height="100px" />
           </div>
-          <div class="content-solusi">
-            <div class="solusi-image">
-              <img src="/src/public/beranda/cerita.png" alt="gambar cerita" width="100px" height="100px" />
-            </div>
-            <h2>Semua orang berhak<br />sehat mental</h2>
-            <p>MentalWell menyediakan berbagai jenis layanan kesehatan mental yang bisa diakses sesuai kebutuhanmu.</p>
+          <h2>Cerita dimana saja,<br />kapan saja</h2>
+          <p>Saatnya pilih cara konseling yang paling nyaman untukmu. Bisa tatap muka maupun online, semua pasti bisa!
+          </p>
+        </div>
+        <div class="content-solusi">
+          <div class="solusi-image">
+            <img src="/src/public/beranda/cerita.png" alt="gambar cerita" width="100px" height="100px" />
           </div>
-          <div class="content-solusi">
-            <div class="solusi-image">
-              <img src="/src/public/beranda/game.png" alt="gambar cerita" width="100px" height="100px" />
-            </div>
-            <h2>Kamu Bercerita<br />Kami jaga Rahasia</h2>
-            <p>Tidak perlu khawatir, konseling tentang apa pun akan dijamin keamanannya. Selamat explore MentallWell</p>
+          <h2>Semua orang berhak<br />sehat mental</h2>
+          <p>MentalWell menyediakan berbagai jenis layanan kesehatan mental yang bisa diakses sesuai kebutuhanmu.</p>
+        </div>
+        <div class="content-solusi">
+          <div class="solusi-image">
+            <img src="/src/public/beranda/game.png" alt="gambar cerita" width="100px" height="100px" />
           </div>
+          <h2>Kamu Bercerita<br />Kami jaga Rahasia</h2>
+          <p>Tidak perlu khawatir, konseling tentang apa pun akan dijamin keamanannya. Selamat explore MentallWell</p>
         </div>
-        <div class="garis">
-          <hr />
-        </div>
-      </section>
-      <section class="rekomendasi">
-        <div class="content">
-          <h2>Rekomendasi Psikolog di MentalWell</h2>
-        </div>
-        <div class="container-rekomendasi" id="container-rekomendasi"></div>
-        </div>
-        <div class="btn-semua">
-          <button type="button" onclick="redirectToList()">Lihat Semua</button>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <span>@MentalWell 2023, SEMUA HAK DILINDUNGI</span>
-    </footer>
-  </body>
+      </div>
+      <div class="garis">
+        <hr />
+      </div>
+    </section>
+    <section class="rekomendasi">
+      <div class="content">
+        <h2>Rekomendasi Psikolog di MentalWell</h2>
+      </div>
+      <div class="container-rekomendasi" id="container-rekomendasi"></div>
+      </div>
+      <div class="btn-semua">
+        <button type="button" onclick="redirectToList()">Lihat Semua</button>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <span>@MentalWell 2023, SEMUA HAK DILINDUNGI</span>
+  </footer>
+</body>
+
 </html>
 <script src="/src/scripts/views/pages/login.js"></script>
 <script src="/src/scripts/views/pages/daftar.js"></script>

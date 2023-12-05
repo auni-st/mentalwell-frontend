@@ -1,47 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MentallWell</title>
-    <link rel="icon" href="/src/public/logo/3.png" type="image/x-icon">
-    <link rel="stylesheet" href="/src/styles/ubah-sandi.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    />
-  </head>
-  <body>
-    <div class="ubahsandi-container">
-      <div class="ubahsandi-title">
-        <h2>Ubah Kata Sandi</h2>
-        <p>Verifikasi akun akan dikirimkan melalui email</p>
-      </div>
-      <form class="ubahsandi-form" id="ubahsandi-form">
-        <div class="ubahsandi-control">
-          <input
-            class="ubahsandi-input"
-            type="sandibaru"
-            id="sandibaru"
-            name="sandibaru"
-            placeholder="Masukan Kata Sandi Baru"
-            required
-          />
-        </div>
-        <div class="ubahsandi-control">
-          <input
-            class="ubahsandi-input"
-            type="konfirmasi"
-            id="konfirmasi"
-            name="konfirmasi"
-            placeholder="Konfirmasi Kata Sandi Baru"
-            required
-          />
-        </div>
-        <button class="next-btn" type="submit">Selanjutnya</button>
-      </form>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MentallWell</title>
+  <link rel="icon" href="/src/public/logo/3.png" type="image/x-icon">
+  <link rel="stylesheet" href="/src/styles/ubah-sandi.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+
+<body>
+  <div class="ubahsandi-container">
+    <div class="ubahsandi-title">
+      <h2>Ubah Kata Sandi</h2>
+      <p>Verifikasi akun akan dikirimkan melalui email</p>
     </div>
-  </body>
+    <form class="ubahsandi-form" id="ubahsandi-form">
+      <div class="ubahsandi-control">
+        <input class="ubahsandi-input" type="sandibaru" id="sandibaru" name="sandibaru"
+          placeholder="Masukan Kata Sandi Baru" required />
+      </div>
+      <div class="ubahsandi-control">
+        <input class="ubahsandi-input" type="konfirmasi" id="konfirmasi" name="konfirmasi"
+          placeholder="Konfirmasi Kata Sandi Baru" required />
+      </div>
+      <button class="next-btn" type="submit">Selanjutnya</button>
+    </form>
+  </div>
+</body>
+
 </html>
 
 <script src="/src/scripts/views/pages/ubahsandi.js"></script>

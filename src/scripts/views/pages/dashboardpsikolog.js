@@ -44,7 +44,17 @@ statusDropdown.addEventListener('change', () => {
       return response.json();
     })
     .then(data => {
-      alert('Availibility updated! : ', data)
+      if (selectedValue == 'unavailable') {
+        formattedValue = 'Tidak Tersedia'
+      } else {
+        formattedValue = 'Tersedia'
+      }
+      Swal.fire({
+        title: `Berhasil Mengubah Ketersediaan Menjadi ${formattedValue}!`,
+        icon: 'success',
+        timer: 3000,
+        showConfirmButton: false, // Hide the "OK" button
+      });
       console.log('Availibility updated:', data)
     })
     .catch(error => {
@@ -59,10 +69,10 @@ tableBody.addEventListener('click', (event) => {
   // console.log(targetRow)
   console.log(isIcon)
 
-  const counselingId = event.target.closest('tr').querySelector('img').getAttribute('data-counseling-id');  ;
+  const counselingId = event.target.closest('tr').querySelector('img').getAttribute('data-counseling-id');;
   console.log(counselingId)
 
-  if(counselingId) {
+  if (counselingId) {
     redirectToCounselingDetail(counselingId);
   }
 })
@@ -83,9 +93,9 @@ try {
       }
     })
     .then(data => {
-      if (data.psychologistAvailability === 'not_available') {
+      if (data.psychologistAvailability == 'not_available') {
         statusDropdown.value = 'unavailable';
-      } else {
+      } else if (data.psychologistAvailability == 'available'){
         statusDropdown.value = 'available';
       }
 
@@ -102,11 +112,24 @@ try {
         const statusCell = row.insertCell(4);
         const actionCell = row.insertCell(5);
 
+        const backendValues = {
+          call: 'Call',
+          video_call: 'Video Call',
+          chat: 'Chat',
+          belum_selesai: 'Belum Selesai',
+          selesai: 'Selesai'
+        };
+
+        const backendType = counseling.type;
+        const backendStatus = counseling.status;
+        const displayTextType = backendValues[backendType]
+        const displayTextStatus = backendValues[backendStatus]
+
         nameCell.textContent = counseling.patientName;
         dateCell.textContent = formatDate(counseling.scheduleDate);
         timeCell.textContent = counseling.scheduleTime;
-        typeCell.textContent = counseling.type;
-        statusCell.textContent = counseling.status;
+        typeCell.textContent = displayTextType;
+        statusCell.textContent = displayTextStatus;
 
         const actionImage = document.createElement('img');
         actionImage.src = '/src/public/dashboard/tulis.png';

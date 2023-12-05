@@ -33,19 +33,41 @@ fetch(`https://mentalwell-backend.vercel.app/dashboard/counseling/${counselingId
   })
   .then(counselingDetails => {
     const patientDetails = counselingDetails[0];
+    const birthdateString = patientDetails.birthdate;
+    const birthdate = new Date(birthdateString);
+    const options = { day: 'numeric', month: 'long', year: 'numeric' };
+    const formattedBirthdate = birthdate.toLocaleDateString('id-ID', options);
+
+    const scheduleDateString = patientDetails.schedule_date;
+    const scheduleDate = new Date(scheduleDateString);
+    const formattedScheduleDate = scheduleDate.toLocaleDateString('id-ID', options)
+
+    const backendValues = {
+      call: 'Call',
+      video_call: 'Video Call',
+      chat: 'Chat',
+      laki_laki: 'Laki-laki',
+      perempuan: 'Perempuan'
+    };
+
+    const backendType = patientDetails.type;
+    const backendGender = patientDetails.gender;
+    const displayTextType = backendValues[backendType]
+    const displayTextGender = backendValues[backendGender]
+
     patientProfile.src = `${patientDetails.profile_image}`
     biodataPasien.innerHTML = `
         <h2>${patientDetails.full_name}</h2>
         <p>Nama Panggilan: ${patientDetails.nickname}</p>
-        <p>Tanggal Lahir: ${patientDetails.birthdate}</p>
-        <p>Jenis Kelamin: ${patientDetails.gender}</p>
+        <p>Tanggal Lahir: ${formattedBirthdate}</p>
+        <p>Jenis Kelamin: ${displayTextGender}</p>
         <p>Nomor Telepon: ${patientDetails.phone_number}</p>
         <p>Pekerjaan: ${patientDetails.occupation}</p>
     `;
     tanggalKonseling.innerHTML = `
-        <p>${patientDetails.schedule_date}</p>
+        <p>${formattedScheduleDate}</p>
         <p>${patientDetails.schedule_time}</p>
-        <p>Via ${patientDetails.type}</p>
+        <p>Via ${displayTextType}</p>
       `;
     deskripsiKonseling.innerHTML = `
         <h3>Deskripsi Masalah</h3>
@@ -79,7 +101,12 @@ statusDropdown.addEventListener('change', () => {
     .then(response => {
       if (response.ok) {
         console.log('Status Konseling Berhasil Diubah!');
-        alert('status changed!')
+        Swal.fire({
+          title: 'Status Konseling Berhasil Diubah!',
+          icon: 'success',
+          showConfirmButton: false,
+          timer: 2000, 
+        });
       } else {
         console.error('Failed to update status');
         throw new Error('Failed to update status.');

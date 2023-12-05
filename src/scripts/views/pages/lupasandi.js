@@ -20,7 +20,13 @@ lupasandiForm.addEventListener('submit', async (event) => {
 
     if (response.ok) {
       const responseData = await response.json();
-      alert(`Password reset link has been sent!`);
+      Swal.fire({
+        title: 'Success!',
+        text: 'Tautan untuk Mengubah Kata Sandi Telah Dikirim ke Email Anda!',
+        icon: 'success',
+        timer: 2000, // Set the timer to close the alert after 2000 milliseconds (2 seconds)
+        showConfirmButton: false, // Hide the "OK" button
+      });
 
       //redirect user to reset-password page
 
@@ -28,9 +34,21 @@ lupasandiForm.addEventListener('submit', async (event) => {
       const responseData = await response.json();
       const errorMessage = responseData.message || 'Error occurred';
       alert(`Request failed: ${errorMessage}`)
+      await Swal.fire({
+        title: 'Gagal Mengirim Email!',
+        text: 'Silahkan Coba Lagi',
+        icon: 'error',
+        showConfirmButton: true,
+      });
+
     }
   } catch (error) {
     console.error('Error during reset password:', error);
-    alert('Error. Please try again')
+    await Swal.fire({
+      title: 'Gagal Mengirim Email!',
+      text: 'Silahkan Coba Lagi',
+      icon: 'error',
+      showConfirmButton: true,
+    });
   }
 })
