@@ -151,9 +151,12 @@ main {
 
 .detail-articel .image-detail-articel img {
   width: 100%;
-  height: 500px;
+  /*height: 500px;
   margin-right: 5rem;
-  margin-left: 5rem;
+  margin-left: 5rem; */
+  max-width: 500px; 
+  height: auto; 
+  margin: 0 2rem;
 }
 
 .detail-articel .content-detail-articel {
