@@ -140,7 +140,7 @@ main {
 }
 
 .garis-detail-articel hr {
-  width: 95%;
+  width: 80%;
 }
 
 .detail-articel .image-detail-articel {
@@ -152,8 +152,8 @@ main {
 .detail-articel .image-detail-articel img {
   width: 100%;
   height: 500px;
-  margin-right: 2rem;
-  margin-left: 2rem;
+  margin-right: 5rem;
+  margin-left: 5rem;
 }
 
 .detail-articel .content-detail-articel {
@@ -180,8 +180,8 @@ main {
 
 
 .detail-articel .referensi-articel p {
-  margin-right: 2rem;
-  margin-left: 2rem;
+  margin-right: 5rem;
+  margin-left: 5rem;
 }
 
 
