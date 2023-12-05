@@ -68,7 +68,12 @@ daftarForm.addEventListener('submit', async (event) => {
   const confirmPassword = document.getElementById('confpassword').value;
 
   if (password !== confirmPassword){
-    alert('Password and Confirm Password must match!');
+    Swal.fire({
+      title: 'Gagal!',
+      text: 'Kata Sandi dan Konfirmasi Kata Sandi Harus Sama!',
+      icon: 'error',
+      showConfirmButton: true,
+    });
     return;
   }
 
@@ -89,13 +94,27 @@ daftarForm.addEventListener('submit', async (event) => {
     });
 
     if (response.ok) {
-      alert('Registration successful!')
+      Swal.fire({
+        title: 'Daftar Akun Berhasil!',
+        icon: 'success',
+        showConfirmButton: true,
+      });
     } else {
       const responseData = await response.json();
-      alert(`Registration failed: ${responseData.message}`);
+      Swal.fire({
+        title: 'Daftar Akun Gagal!',
+        text: 'Silahkan Coba Lagi',
+        icon: 'error',
+        showConfirmButton: true,
+      });
     }
   } catch (error) {
     console.error('Error during registration:', error);
-    alert('Register failed. Please try again.')
+    Swal.fire({
+      title: 'Daftar Akun Gagal!',
+      text: 'Silahkan Coba Lagi',
+      icon: 'error',
+      showConfirmButton: true,
+    });
   }
 })

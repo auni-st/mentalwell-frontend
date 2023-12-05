@@ -4,7 +4,7 @@ function openLoginPopup() {
   document.getElementById('overlay').style.display = 'block';
   document.getElementById('overly').style.display = 'none';
   var navbarLinks = document.getElementById('masuk');
-  navbarLinks.style.pointerEvents ='none';
+  navbarLinks.style.pointerEvents = 'none';
 }
 
 function closeLoginPopup() {
@@ -44,6 +44,8 @@ function togglePasswordLoginVisibility() {
   }
 }
 
+// import Swal from 'sweetalert2';
+
 const loginForm = document.getElementById('login-form');
 
 loginForm.addEventListener('submit', async (event) => {
@@ -67,37 +69,80 @@ loginForm.addEventListener('submit', async (event) => {
     });
 
     if (response.ok) {
+
       const responseData = await response.json();
       const token = responseData.data.token;
       const userRole = responseData.data.role;
+      const userName = responseData.data.name;
 
       sessionStorage.setItem('authToken', token);
 
-      setTimeout(() => {
-        alert('Login successful!');
+      setTimeout(async () => {
+        // Display success message
+        await Swal.fire({
+          title: 'Anda Berhasil Masuk!',
+          icon: 'success',
+          timer: 2000,
+          showConfirmButton: false,
+        });
 
-        if (userRole === 'patient') {
+        // Check if it's the first time login as a patient
+        if (userName === null && userRole === 'patient') {
+          const result = await Swal.fire({
+            title: "Selamat Datang!",
+            text: "Sepertinya ini pertama kalinya anda masuk. Ayo isi profilmu!",
+            icon: 'info',
+            showConfirmButton: true,
+          });
+          if (result.isConfirmed) {
+            // Redirect to the edit profile page
+            // window.location.href = 'http://localhost:5501/src/templates/editprofilpasien.html';
+            // or use the production URL
+            window.location.href = 'https://mentalwell.vercel.app/editprofilpasien';
+          }
+        } else if (userName === null && userRole === 'psychologist') {
+          const result = await Swal.fire({
+            title: "Selamat Datang!",
+            text: "Sepertinya ini pertama kalinya anda masuk. Ayo isi profilmu!",
+            icon: 'info',
+            showConfirmButton: true,
+          });
+          if (result.isConfirmed) {
+            // Redirect to the edit profile page
+            // window.location.href = 'http://localhost:5501/src/templates/editprofilpsikolog.html';
+            // or use the production URL
+            window.location.href = 'https://mentalwell.vercel.app/editprofilpasien';
+          }
+        } else if (userRole === 'patient') {
+          // Handle patient login
           // window.location.href = 'http://localhost:5501/src/templates/index.html';
-
           window.location.href = 'https://mentalwell.vercel.app/';
         } else if (userRole === 'psychologist') {
-
+          // Handle psychologist login
           // window.location.href = 'http://localhost:5501/src/templates/dashboardpsikolog.html';
           window.location.href = 'https://mentalwell.vercel.app/dashboardpsikolog';
         } else {
-          window.location.href = 'https://mentalwell.vercel.app/'
+          // Handle other cases
+          window.location.href = 'https://mentalwell.vercel.app/';
         }
-
-        // Redirect to the specified URL
-        // window.location.href = 'https://mentalwell.vercel.app/';
       }, 100);
     } else {
       const responseData = await response.json();
       const errorMessage = responseData.message || 'Error!'
-      alert(`Login failed: ${errorMessage}`);
+      await Swal.fire({
+        title: 'Gagal Masuk!',
+        text: 'Email atau Kata Sandi Salah!',
+        icon: 'error',
+        showConfirmButton: true,
+      });
     }
   } catch (error) {
     console.error('Error during login:', error);
-    alert('Login failed. Please try again');
+    await Swal.fire({
+      title: 'Gagal Masuk!',
+      text: 'Silahkan Coba Lagi',
+      icon: 'error',
+      showConfirmButton: true,
+    });
   }
 })
