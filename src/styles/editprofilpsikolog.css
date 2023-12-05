@@ -167,6 +167,11 @@ h3 {
     margin-top: 15px;
 }
 
+.editpsikolog-container .editpsikolog-form .form-control .fa-edit:hover {
+    background-color: #044B77; 
+    color: #ffffff;
+}
+
 .editpsikolog-container .editpsikolog-form .form-input {
     border: none;
 }

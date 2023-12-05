@@ -29,6 +29,14 @@ body {
     margin: 20px 0 20px 30px;
 }
 
+.profile-button:hover {
+    color: #808080;
+}
+
 .logout-button {
     margin: 20px 0 20px 30px;
+}
+
+.logout-button:hover {
+    color: #808080;
 }

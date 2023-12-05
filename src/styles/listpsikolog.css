@@ -204,6 +204,11 @@ main .listpsikolog {
   border: none;
 }
 
+.listpsikolog form .button-search button {
+  background-color: #3ad0ea; 
+  color: #ffffff;
+}
+
 .listpsikolog form .button-search i {
   margin-right: 10px;
 }

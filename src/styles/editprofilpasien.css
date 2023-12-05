@@ -168,6 +168,11 @@ h3 {
     margin-top: 15px;
 }
 
+.editpasien-container .editpasien-form .form-control .fa-edit:hover {
+    background-color: #044B77; 
+    color: #ffffff;
+}
+
 .editpasien-container .editpasien-form .form-input {
     border: none;
 }
