@@ -30,7 +30,7 @@ async function renderArticleDetails() {
     datapsikolog.innerHTML = `${articleData.name}`;
     biodatapsikolog.innerHTML = `<p>${articleData.bio}</p> `;
     pengalamanpraktik.innerHTML = `${articleData.experience}`;
-    topicList.innerHTML = '';
+    ulelement.innerHTML = `<li>${articleData.psychologist_topics.topic_name}</li>`
 
   } catch (error) {
     console.error('Error rendering article details:', error);
