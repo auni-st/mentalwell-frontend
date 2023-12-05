@@ -167,11 +167,9 @@ main {
 }
 
 .detail-articel .content-detail-articel p {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
   width: 100%;
-  gap: 2rem;
+  margin-left: 7rem; 
+  margin-right: 7rem;
 }
 
 .detail-articel .referensi-articel {
