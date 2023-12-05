@@ -154,9 +154,8 @@ main {
   /*height: 500px;
   margin-right: 5rem;
   margin-left: 5rem; */
-  max-width: 500px; 
+  max-width: 1000px; 
   height: auto; 
-  margin: 0 2rem;
 }
 
 .detail-articel .content-detail-articel {
