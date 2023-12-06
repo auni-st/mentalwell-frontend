@@ -94,9 +94,8 @@ Jumbotron
 }
 
 /*
-login
+login 
 */
-
 .overlay {
   display: none;
   position: fixed;
@@ -204,7 +203,6 @@ login
 /*
 daftar
 */
-
 .overly {
   display: none;
   position: fixed;
@@ -234,7 +232,7 @@ daftar
 .daftar-container .daftar-title {
   margin-bottom: 20px;
   color: #333;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .daftar-container .daftar-title p a {
@@ -271,6 +269,7 @@ daftar
 
 .daftar-container .daftar-form .form-input {
   border: none;
+
 }
 
 .daftar-container .daftar-form p {
@@ -291,7 +290,7 @@ daftar
   margin-top: 2rem;
   color: white;
   font-weight: bold;
-  background-color: #044b77;
+  background-color: #044B77;
   width: 370px;
   height: 44px;
 }

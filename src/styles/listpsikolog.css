@@ -320,9 +320,8 @@ main .listpsikolog {
 }
 
 /*
-login
+login 
 */
-
 .overlay {
   display: none;
   position: fixed;
@@ -430,7 +429,6 @@ login
 /*
 daftar
 */
-
 .overly {
   display: none;
   position: fixed;
@@ -460,7 +458,7 @@ daftar
 .daftar-container .daftar-title {
   margin-bottom: 20px;
   color: #333;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .daftar-container .daftar-title p a {
