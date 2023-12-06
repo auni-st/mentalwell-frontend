@@ -37,6 +37,7 @@ class NavBar extends HTMLElement {
             font-size: 25px;
             margin-left: 10px;
             /* text-transform: uppercase; */
+            margin-left: 5px;
           }
     
           .navbar .navbar-list {
@@ -52,12 +53,13 @@ class NavBar extends HTMLElement {
           }
     
           .navbar .navbar-list .button button {
-            width: 95px;
-            height: 44px;
+            width: 110px;
+            height: 40px;
             border-radius: 10px;
             background-color: #044b77;
             color: #ffffff;
             font-size: 17px;
+            border-radius: 40px;
           }
     
           .navbar .navbar-list .button button:hover {
@@ -66,6 +68,7 @@ class NavBar extends HTMLElement {
             background-color: #02bbdd;
             cursor: pointer;
             color: white;
+            border: none;
           }
     
           .navbar .navbar-list .navbar-list-item {
@@ -94,7 +97,7 @@ class NavBar extends HTMLElement {
             content: "";
             width: 0;
             height: 2px;
-            background-color: #000;
+            background-color: #044b77;
             display: block;
             transition: 0.2s linear;
           }

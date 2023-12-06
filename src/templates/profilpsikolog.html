@@ -7,15 +7,19 @@
     <title>MentalWell</title>
     <link rel="icon" href="/src/public/logo/3.png" type="image/x-icon" />
     <link rel="stylesheet" href="/src/styles/profil-psikolog.css" />
-    <script type="module" src="/src/scripts/components/navbar-user.js" defer></script>
+    <script
+      type="module"
+      src="/src/scripts/components/navbar-psikolog.js"
+      defer
+    ></script>
   </head>
   <body>
     <!-- navbar components -->
-    <navbar-user></navbar-user>
+    <navbar-psikolog></navbar-psikolog>
     <main>
       <div class="main-content">
         <div class="foto-psikolog" id="foto-psikolog">
-          <img  alt="Foto Psikolog" id="psychologProfile" />
+          <img alt="Foto Psikolog" id="psychologProfile" />
         </div>
         <div class="data-psikolog" id="data-psikolog">
           <h2></h2>
@@ -40,23 +44,33 @@
             <h2>ULASAN</h2>
           </div>
           <div id="userReviews" class="userReviews">
-            <div class="isi-ulasan" >
-              <img src="/src/public/beranda/man.png" alt="Foto User" id="userReview" />
+            <div class="isi-ulasan">
+              <img
+                src="/src/public/beranda/man.png"
+                alt="Foto User"
+                id="userReview"
+              />
               <div class="komentar-user">
                 <h3>KEVIN</h3>
-                <p>Saya mendapatkan saran dan analisa yg belum pernah saya dengar sebelumnya, saya jadi bisa melihat permasalahan dari sudut pandang yang baru.</p>
+                <p>
+                  Saya mendapatkan saran dan analisa yg belum pernah saya dengar
+                  sebelumnya, saya jadi bisa melihat permasalahan dari sudut
+                  pandang yang baru.
+                </p>
               </div>
             </div>
-         </div>
+          </div>
         </div>
       </div>
       <div class="button-daftar">
-        <button type="button" id="btnDaftar" onclick="redirectToCounseling()">Daftar Konseling</button>
+        <button type="button" id="btnDaftar" onclick="redirectToCounseling()">
+          Daftar Konseling
+        </button>
       </div>
     </main>
     <script>
       function redirectToCounseling() {
-        window.location.href = '/jadwalkonseling-isidata';
+        window.location.href = "/jadwalkonseling-isidata";
       }
     </script>
     <script src="/src/scripts/views/pages/detailpsikolog.js"></script>
