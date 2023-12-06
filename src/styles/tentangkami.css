@@ -278,6 +278,11 @@ login
 
 .login-container .login-form p a {
   text-decoration: none;
+  color: grey;
+}
+
+.login-container .login-form p a:hover {
+  text-decoration: none;
   color: black;
 }
 
