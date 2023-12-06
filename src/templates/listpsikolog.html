@@ -1,120 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MentallWell</title>
+    <link rel="stylesheet" href="/src/styles/listpsikolog.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="icon" href="/src/public/logo/3.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+    <script type="module" src="/src/scripts/components/navbar-masuk.js" defer></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MentallWell</title>
-  <link rel="stylesheet" href="/src/styles/listpsikolog.css" />
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <link rel="icon" href="/src/public/logo/3.png" type="image/x-icon">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    integrity="sha512-..." crossorigin="anonymous" />
-  <script type="module" src="/src/scripts/components/navbar-masuk.js" defer></script>
-</head>
-
-<body>
-  <!-- navbar components -->
-  <navbar-masuk id="masuk"></navbar-masuk>
-  <div id="overlay" class="overlay" onclick="closeLoginPopup()"></div>
-  <div class="login-container" id="login-container">
-    <div class="login-title">
-      <h2>Masuk</h2>
-      <p>Belum punya akun? <a href="#" id="popupDaftar" onclick="openDaftarPopup()">Daftar</a></p>
-    </div>
-    <form class="login-form" id="login-form">
-      <div class="form-control">
-        <input class="form-input" type="email" id="emaillogin" name="emaillogin" placeholder="Masukkan Email"
-          required />
+  <body>
+    <!-- navbar components -->
+    <navbar-masuk id="masuk"></navbar-masuk>
+    <div id="overlay" class="overlay" onclick="closeLoginPopup()"></div>
+    <div class="login-container" id="login-container">
+      <div class="login-title">
+        <h2>Masuk</h2>
+        <p>Belum punya akun? <a href="#" id="popupDaftar" onclick="openDaftarPopup()">Daftar</a></p>
       </div>
-      <div class="form-control">
-        <i class="far fa-eye eye" onclick="togglePasswordLoginVisibility()"></i>
-        <input class="form-input" type="text" id="loginpassword" name="loginpassword" placeholder="Masukkan Password"
-          required />
-      </div>
-      <p><a href="/src/templates/lupasandi.html">Forget Password</a></p>
-      <button class="submit-btn" type="submit">Masuk</button>
-    </form>
-  </div>
-  <div id="overly" class="overly" onclick="closeDaftarPopup()"></div>
-  <div class="daftar-container" id="daftar-container">
-    <div class="daftar-title">
-      <h2>Daftar</h2>
-      <p>Sudah punya akun? <a href="#" onclick="openLoginPopup()">Masuk</a></p>
-    </div>
-    <form class="daftar-form" id="daftar-form">
-      <div class="form-control">
-        <input class="form-input" type="email" id="email" name="email" placeholder="Email" required />
-      </div>
-      <div class="form-control">
-        <input class="form-input" type="notelp" id="notelp" name="notelp" placeholder="No.Telp" required />
-      </div>
-      <div class="form-control">
-        <i class="far fa-eye eye" onclick="togglePasswordVisibility()"></i>
-        <input class="form-input" type="password" id="passworddaftar" name="passworddaftar" placeholder="Password"
-          required />
-      </div>
-      <div class="form-control">
-        <i class="far fa-eye eye confpassword" onclick="toggleConfirmasiPasswordVisibility()"></i>
-        <input class="form-input" type="password" id="confpassword" name="password" placeholder="Confirm Password"
-          required />
-      </div>
-      <button class="submit-btn" type="submit">Daftar</button>
-    </form>
-  </div>
-  <main>
-    <aside class="keahlian-psikolog">
-      <div class="container-keahlian">
-        <h2>Pilih<br />Topik Keahlian</h2>
-        <hr />
-        <div class="content-keahlian">
-          <input type="checkbox" />
-          <p>Adiksi</p>
+      <form class="login-form" id="login-form">
+        <div class="form-control">
+          <input class="form-input" type="email" id="emaillogin" name="emaillogin" placeholder="Masukkan Email" required />
         </div>
-        <div class="content-keahlian">
-          <input type="checkbox" />
-          <p>Anak remaja</p>
+        <div class="form-control">
+          <i class="far fa-eye eye" onclick="togglePasswordLoginVisibility()"></i>
+          <input class="form-input" type="text" id="loginpassword" name="loginpassword" placeholder="Masukkan Password" required />
         </div>
-        <div class="content-keahlian">
-          <input type="checkbox" />
-          <p>Trauma</p>
-        </div>
-        <div class="content-keahlian">
-          <input type="checkbox" />
-          <p>Seksualitas</p>
-        </div>
-        <div class="content-keahlian">
-          <input type="checkbox" />
-          <p>Fobia</p>
-        </div>
-        <div class="content-keahlian">
-          <input type="checkbox" />
-          <p>Kecenderungan Bunuh Diri</p>
-        </div>
-      </div>
-    </aside>
-    <section class="listpsikolog">
-      <form class="search-psikolog" id="searchForm">
-        <input type="text" placeholder="Masukkan nama psikolog" id="search-psikolog" />
-        <div class="button-search">
-          <button type="submit" id="searchButton">
-            <i class="fas fa-search"></i>Cari
-          </button>
-        </div>
+        <p><a href="/src/templates/lupasandi.html">Forget Password</a></p>
+        <button class="submit-btn" type="submit">Masuk</button>
       </form>
-      <div class="container-psikolog" id="container-psikolog">
-        <!-- Loading Spinner -->
-        <div id="loading-indicator" class="spinner" style="display: none;"></div>
+    </div>
+    <div id="overly" class="overly" onclick="closeDaftarPopup()"></div>
+    <div class="daftar-container" id="daftar-container">
+      <div class="daftar-title">
+        <h2>Daftar</h2>
+        <p>Sudah punya akun? <a href="#" onclick="openLoginPopup()">Masuk</a></p>
       </div>
-    </section>
-    <script src="/src/scripts/views/pages/searchpsikolog.js"></script>
-    <script src="/src/scripts/views/pages/listpsikolog.js"></script>
-  </main>
-  <footer>
-    <span>@MentalWell 2023, SEMUA HAK DILINDUNGI</span>
-  </footer>
-</body>
-
+      <form class="daftar-form" id="daftar-form">
+        <div class="form-control">
+          <input class="form-input" type="email" id="email" name="email" placeholder="Email" required />
+        </div>
+        <div class="form-control">
+          <input class="form-input" type="notelp" id="notelp" name="notelp" placeholder="No.Telp" required />
+        </div>
+        <div class="form-control">
+          <i class="far fa-eye eye" onclick="togglePasswordVisibility()"></i>
+          <input class="form-input" type="password" id="passworddaftar" name="passworddaftar" placeholder="Password" required />
+        </div>
+        <div class="form-control">
+          <i class="far fa-eye eye confpassword" onclick="toggleConfirmasiPasswordVisibility()"></i>
+          <input class="form-input" type="password" id="confpassword" name="password" placeholder="Confirm Password" required />
+        </div>
+        <button class="submit-btn" type="submit">Daftar</button>
+      </form>
+    </div>
+    <main>
+      <aside class="keahlian-psikolog">
+        <div class="container-keahlian">
+          <h2>Pilih<br />Topik Keahlian</h2>
+          <hr />
+          <div class="content-keahlian">
+            <input type="checkbox" />
+            <p>Adiksi</p>
+          </div>
+          <div class="content-keahlian">
+            <input type="checkbox" />
+            <p>Anak remaja</p>
+          </div>
+          <div class="content-keahlian">
+            <input type="checkbox" />
+            <p>Trauma</p>
+          </div>
+          <div class="content-keahlian">
+            <input type="checkbox" />
+            <p>Seksualitas</p>
+          </div>
+          <div class="content-keahlian">
+            <input type="checkbox" />
+            <p>Fobia</p>
+          </div>
+          <div class="content-keahlian">
+            <input type="checkbox" />
+            <p>Kecenderungan Bunuh Diri</p>
+          </div>
+        </div>
+      </aside>
+      <section class="listpsikolog">
+        <form class="search-psikolog" id="searchForm">
+          <input type="text" placeholder="Masukkan nama psikolog" id="search-psikolog" />
+          <div class="button-search">
+            <button type="submit" id="searchButton"><i class="fas fa-search"></i>Cari</button>
+          </div>
+        </form>
+        <div class="container-psikolog" id="container-psikolog">
+          <!-- Loading Spinner -->
+          <div id="loading-indicator" class="spinner" style="display: none"></div>
+        </div>
+      </section>
+      <script src="/src/scripts/views/pages/searchpsikolog.js"></script>
+      <script src="/src/scripts/views/pages/listpsikolog.js"></script>
+    </main>
+    <footer>
+      <span>@MentalWell 2023, SEMUA HAK DILINDUNGI</span>
+    </footer>
+  </body>
 </html>
 <script src="/src/scripts/views/pages/login.js"></script>
 <script src="/src/scripts/views/pages/daftar.js"></script>
