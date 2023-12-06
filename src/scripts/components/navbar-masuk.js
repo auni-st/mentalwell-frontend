@@ -160,6 +160,7 @@ class NavBarLogin extends HTMLElement {
     
           .navbar .navbar-brand {
             display: flex;
+            flex-direction: row;
             align-items: center;
             justify-content: space-between;
             margin-left: 2rem;
@@ -168,6 +169,7 @@ class NavBarLogin extends HTMLElement {
           .navbar .navbar-brand h1 {
             color: #044b77;
             font-size: 25px;
+            margin-left: 5px;
             /* text-transform: uppercase; */
           }
     
@@ -240,7 +242,7 @@ class NavBarLogin extends HTMLElement {
             <div class="navbar">
                 <div class="navbar-brand">
                     <h1>MentallWell</h1>
-                    <img src="/src/public/logo/2.png" alt="imagelogo">
+                    <img src="/src/public/logo/2.png" alt="imagelogo" width="50px" height="50px">
                 </div>
                 <div class="navbar-list">
                     <ul class="navbar-list-item">

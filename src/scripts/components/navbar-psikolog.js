@@ -166,7 +166,7 @@ class NavBar extends HTMLElement {
                     <div class="navbar-brand">
                     <img src="../public/logo/logo-mentalwell.jpg" width="50px" alt="logo mentalwell">
                         <h1>MentalWell</h1>
-                        <img src="/src/public/logo/2.png"></img>
+                        <img src="/src/public/logo/2.png">
                     </div>
                     <div class="navbar-list">
                         <div class="button-user" id="userDropdown">
