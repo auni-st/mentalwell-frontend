@@ -94,7 +94,7 @@ class NavBar extends HTMLElement {
               content: "";
               width: 0;
               height: 2px;
-              background-color: #000;
+              background-color: #044b77;
               display: block;
               transition: 0.2s linear;
             }

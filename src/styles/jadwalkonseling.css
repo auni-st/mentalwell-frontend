@@ -1,3 +1,17 @@
 .container {
-    margin-top: 98px;
+  margin-top: 98px;
+}
+
+button {
+  background-color: #044b77;
+  border: none;
+  color: #fff;
+}
+
+button:hover {
+  background-color: #02bbdd;
+}
+
+footer {
+  padding-bottom: 50px;
 }
