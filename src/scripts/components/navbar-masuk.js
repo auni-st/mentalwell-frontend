@@ -185,15 +185,8 @@ class NavBarLogin extends HTMLElement {
               align-items: center;
               margin-right: 20px;
             }
-
-            .navbar .navbar-list .button button {
-              width: 95px;
-              height: 44px;
-              border-radius: 10px;
-              background-color: white;
-              color: black;
-              font-size: 17px;
-              border: none;
+            .navbar .navbar-list .button h2 {
+              margin-left: 1rem;
             }
 
             .navbar .navbar-list .button button:hover {
