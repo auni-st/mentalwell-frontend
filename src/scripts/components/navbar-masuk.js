@@ -196,7 +196,6 @@ class NavBarLogin extends HTMLElement {
           }
     
           .navbar .navbar-list .button button:hover {
-            background-color: #3ad0ea;
             color: #ffffff;
             background-color: #02bbdd;
             cursor: pointer;
@@ -253,9 +252,9 @@ class NavBarLogin extends HTMLElement {
                         <li class="list-item"><a href="/tentangkami">Tentang Kami</a></li>
                     </ul>
                     <div class="button">
-                        <button type="submit">
+                         <img src="/src/public/beranda/man.png" alt="Foto User" id="photoUser" width="90px" height="90px">
+                        <button type="button">
                           John Doe
-                          <img src="/src/public/beranda/man.png" alt="Foto User" id="photoUser" width="100px" height="100px">
                         </button>
                     </div>
                 </div>
