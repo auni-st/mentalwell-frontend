@@ -1,10 +1,15 @@
 const articleSection = document.getElementById('container-rekomendasi');
 
 const apiUrl = 'https://mentalwell-backend.vercel.app/psychologists_index';
+const loadingIndicator = document.getElementById('loading-indicator');
+
+loadingIndicator.style.display = 'block';
 
 fetch(apiUrl)
   .then((response) => response.json())
   .then((data) => {
+    loadingIndicator.style.display = 'none';
+
     data.forEach((articleData) => {
       const articleElement = document.createElement('div');
       articleElement.classList.add('content-rekomendasi');
@@ -24,7 +29,10 @@ fetch(apiUrl)
       articleSection.appendChild(articleElement);
     });
   })
-  .catch((error) => console.error('Error fetching data from API:', error));
+  .catch((error) => {
+    console.error('Error fetching data from API:', error)
+    loadingIndicator.style.display = 'none';
+  });
 
 function redirectToDetail() {
   window.location.href = '/profilpsikolog';
