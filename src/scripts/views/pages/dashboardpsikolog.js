@@ -1,7 +1,10 @@
 const authToken = sessionStorage.getItem("authToken");
 
-const statusDropdown = document.getElementById("statusDropdown2");
-const tableBody = document.querySelector("tbody");
+const statusDropdown = document.getElementById('statusDropdown2')
+const tableBody = document.querySelector('tbody');
+const loadingIndicator = document.getElementById('loading-indicator');
+
+loadingIndicator.style.display = 'block';
 
 const redirectToCounselingDetail = (counselingId) => {
   fetch(
@@ -98,11 +101,13 @@ try {
         throw new Error("Failed to fetch data from the backend.");
       }
     })
-    .then((data) => {
-      if (data.psychologistAvailability == "not_available") {
-        statusDropdown.value = "unavailable";
-      } else if (data.psychologistAvailability == "available") {
-        statusDropdown.value = "available";
+    .then(data => {
+      loadingIndicator.style.display = 'none';
+
+      if (data.psychologistAvailability == 'unavailable') {
+        statusDropdown.value = 'unavailable';
+      } else if (data.psychologistAvailability == 'available') {
+        statusDropdown.value = 'available';
       }
 
       const tableBody = document.querySelector("tbody");
@@ -144,11 +149,13 @@ try {
         actionCell.appendChild(actionImage);
       });
     })
-    .catch((error) => {
-      console.error("Error during data fetching:", error);
+    .catch(error => {
+      console.error('Error during data fetching:', error);
+      loadingIndicator.style.display = 'none';
     });
 } catch (error) {
-  console.error("Error during data fetching:", error);
+  console.error('Error during data fetching:', error);
+  loadingIndicator.style.display = 'none';
 }
 
 function formatDate(dateString) {

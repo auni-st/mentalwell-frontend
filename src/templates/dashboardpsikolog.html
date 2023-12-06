@@ -39,12 +39,14 @@
         <h2>Dashboard Psikolog</h2>
       </div>
       <div class="dropdown-container">
+        <h2>Status Ketersediaan Anda:</h2>
         <select id="statusDropdown2" class="status-dropdown">
           <option value="available">Tersedia</option>
           <option value="unavailable">Tidak Tersedia</option>
         </select>
       </div>
       <div class="content-dashboard">
+        <!-- Loading Spinner -->
         <table>
           <thead>
             <tr>
@@ -69,6 +71,8 @@
             </tr> -->
           </tbody>
         </table>
+        <div id="loading-indicator" class="spinner" style="display: none;"></div>
+
       </div>
     </section>
   </main>

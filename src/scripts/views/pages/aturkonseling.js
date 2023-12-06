@@ -1,5 +1,6 @@
 const urlParams = new URLSearchParams(window.location.search);
 const counselingId = urlParams.get('id')
+const loadingIndicator = document.getElementById('loading-indicator');
 
 const patientProfile = document.getElementById('patientProfile');
 const biodataPasien = document.querySelector('.biodata-pasien');
@@ -10,10 +11,12 @@ const statusDropdown = document.getElementById('statusDropdown');
 const statusKonseling = document.querySelector('.status-konseling')
 const btnSimpan = document.getElementById('btnSimpan');
 
+loadingIndicator.style.display = 'block';
+
 if (btnSimpan) {
   btnSimpan.addEventListener('click', () => {
     window.location.href = 'https://mentalwell.vercel.app/dashboardpsikolog';
-    // window.location.href = 'http://localhost:5501/src/templates/aturkonseling.html';
+    // window.location.href = 'http://localhost:5501/src/templates/dashboardpsikolog.html';
   });
 }
 
@@ -32,6 +35,7 @@ fetch(`https://mentalwell-backend.vercel.app/dashboard/counseling/${counselingId
     }
   })
   .then(counselingDetails => {
+    loadingIndicator.style.display = 'none';
     const patientDetails = counselingDetails[0];
     const birthdateString = patientDetails.birthdate;
     const birthdate = new Date(birthdateString);
@@ -82,6 +86,7 @@ fetch(`https://mentalwell-backend.vercel.app/dashboard/counseling/${counselingId
   })
   .catch(error => {
     console.error('Error fetching details:', error)
+    loadingIndicator.style.display = 'none';
   })
 
 statusDropdown.addEventListener('change', () => {
@@ -105,7 +110,7 @@ statusDropdown.addEventListener('change', () => {
           title: 'Status Konseling Berhasil Diubah!',
           icon: 'success',
           showConfirmButton: false,
-          timer: 2000, 
+          timer: 2000,
         });
       } else {
         console.error('Failed to update status');

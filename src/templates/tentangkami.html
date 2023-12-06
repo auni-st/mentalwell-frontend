@@ -1,162 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/src/styles/tentangkami.css" />
-    <title>MentallWell</title>
-    <link rel="icon" href="/src/public/logo/3.png" type="image/x-icon" />
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script type="module" src="/src/scripts/components/navbar-user.js" defer></script>
-    <script type="module" src="/src/scripts/components/navbar-masuk.js"></script>
-  </head>
-  <body>
-    <!-- navbar components -->
-    <navbar-masuk id="masuk"></navbar-masuk>
-    <!-- <navbar-user></navbar-user> -->
-    <div id="overlay" class="overlay" onclick="closeLoginPopup()"></div>
-    <div class="login-container" id="login-container">
-      <div class="login-title">
-        <h2>Masuk</h2>
-        <p>Belum punya akun? <a href="#" id="popupDaftar" onclick="openDaftarPopup()">Daftar</a></p>
-      </div>
-      <form class="login-form" id="login-form">
-        <div class="form-control">
-          <input class="form-input" type="email" id="emaillogin" name="emaillogin" placeholder="Masukkan Email" required />
-        </div>
-        <div class="form-control">
-          <i class="far fa-eye eye" onclick="togglePasswordLoginVisibility()"></i>
-          <input class="form-input" type="text" id="loginpassword" name="loginpassword" placeholder="Masukkan Password" required />
-        </div>
-        <p><a href="/src/templates/lupasandi.html">Forget Password</a></p>
-        <button class="submit-btn" type="submit">Masuk</button>
-      </form>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/src/styles/tentangkami.css" />
+  <title>MentallWell</title>
+  <link rel="icon" href="/src/public/logo/3.png" type="image/x-icon" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script type="module" src="/src/scripts/components/navbar-user.js" defer></script>
+  <script type="module" src="/src/scripts/components/navbar-masuk.js"></script>
+</head>
+
+<body>
+  <!-- navbar components -->
+  <navbar-masuk id="masuk"></navbar-masuk>
+  <!-- <navbar-user></navbar-user> -->
+  <div id="overlay" class="overlay" onclick="closeLoginPopup()"></div>
+  <div class="login-container" id="login-container">
+    <div class="login-title">
+      <h2>Masuk</h2>
+      <p>Belum punya akun? <a href="#" id="popupDaftar" onclick="openDaftarPopup()">Daftar</a></p>
     </div>
-    <div id="overly" class="overly" onclick="closeDaftarPopup()"></div>
-    <div class="daftar-container" id="daftar-container">
-      <div class="daftar-title">
-        <h2>Daftar</h2>
-        <p>Sudah punya akun? <a href="#" onclick="openLoginPopup()">Masuk</a></p>
+    <form class="login-form" id="login-form">
+      <div class="form-control">
+        <input class="form-input" type="email" id="emaillogin" name="emaillogin" placeholder="Masukkan Email"
+          required />
       </div>
-      <form class="daftar-form" id="daftar-form">
-        <div class="form-control">
-          <input class="form-input" type="email" id="email" name="email" placeholder="Email" required />
-        </div>
-        <div class="form-control">
-          <input class="form-input" type="notelp" id="notelp" name="notelp" placeholder="No.Telp" required />
-        </div>
-        <div class="form-control">
-          <i class="far fa-eye eye" onclick="togglePasswordVisibility()"></i>
-          <input class="form-input" type="password" id="passworddaftar" name="passworddaftar" placeholder="Password" required />
-        </div>
-        <div class="form-control">
-          <i class="far fa-eye eye confpassword" onclick="toggleConfirmasiPasswordVisibility()"></i>
-          <input class="form-input" type="password" id="confpassword" name="password" placeholder="Confirm Password" required />
-        </div>
-        <button class="submit-btn" type="submit">Daftar</button>
-      </form>
+      <div class="form-control">
+        <i class="far fa-eye eye" onclick="togglePasswordLoginVisibility()"></i>
+        <input class="form-input" type="text" id="loginpassword" name="loginpassword" placeholder="Masukkan Password"
+          required />
+      </div>
+      <p><a href="/src/templates/lupasandi.html">Forget Password</a></p>
+      <button class="submit-btn" type="submit">Masuk</button>
+    </form>
+  </div>
+  <div id="overly" class="overly" onclick="closeDaftarPopup()"></div>
+  <div class="daftar-container" id="daftar-container">
+    <div class="daftar-title">
+      <h2>Daftar</h2>
+      <p>Sudah punya akun? <a href="#" onclick="openLoginPopup()">Masuk</a></p>
     </div>
-    <main>
-      <section class="tentangkami">
-        <h2>Tentang Kami</h2>
-        <div class="img-tentangkami">
-          <img src="/src/public/profil/rafiki.png" alt="Gambar Logo" />
-          <p class="highlight-text">
-            MentalWell adalah platform kesehatan mental yang inovatif, bertujuan memberikan akses mudah dan terpercaya ke layanan penyuluhan dan konseling psikologis secara online.<br /><br />
-            MentalWell dirancang untuk mendukung kesejahteraan emosional dengan menyediakan sesi konseling online yang membantu pengguna menjalani perjalanan kesehatan mental mereka.
-          </p>
-        </div>
-      </section>
+    <form class="daftar-form" id="daftar-form">
+      <div class="form-control">
+        <input class="form-input" type="email" id="email" name="email" placeholder="Email" required />
+      </div>
+      <div class="form-control">
+        <input class="form-input" type="notelp" id="notelp" name="notelp" placeholder="No.Telp" required />
+      </div>
+      <div class="form-control">
+        <i class="far fa-eye eye" onclick="togglePasswordVisibility()"></i>
+        <input class="form-input" type="password" id="passworddaftar" name="passworddaftar" placeholder="Password"
+          required />
+      </div>
+      <div class="form-control">
+        <i class="far fa-eye eye confpassword" onclick="toggleConfirmasiPasswordVisibility()"></i>
+        <input class="form-input" type="password" id="confpassword" name="password" placeholder="Confirm Password"
+          required />
+      </div>
+      <button class="submit-btn" type="submit">Daftar</button>
+    </form>
+  </div>
+  <main>
+    <section class="tentangkami">
+      <h2>Tentang Kami</h2>
+      <div class="img-tentangkami">
+        <img src="/src/public/profil/rafiki.png" alt="Gambar Logo" />
+        <p class="highlight-text">
+          MentalWell adalah platform kesehatan mental yang inovatif, bertujuan memberikan akses mudah dan terpercaya ke
+          layanan penyuluhan dan konseling psikologis secara online.<br /><br />
+          MentalWell dirancang untuk mendukung kesejahteraan emosional dengan menyediakan sesi konseling online yang
+          membantu pengguna menjalani perjalanan kesehatan mental mereka.
+        </p>
+      </div>
+    </section>
 
-      <section id="tim-pengembang">
-        <h3>Tim Pengembang</h3>
-        <div class="team-container">
-          <!-- Profil Pengembang 1 -->
-          <div class="team-member">
-            <img src="/src/public/profil/auni.jpg" alt="Foto Auni" />
-            <h4>Ahmad Ramadhan Auni</h4>
-            <p>Universitas Negeri Semarang</p>
-            <p>DevOps Engineer | Backend Web Developer</p>
-            <div class="social-icons">
-              <a href="https://www.linkedin.com/in/ahmad-ramadhan-auni" target="_blank" rel="noopener">
-                <img src="/src/public/profil/linkedin-icon.png" alt="LinkedIn" />
-              </a>
-              <a href="https://github.com/auni-st" target="_blank" rel="noopener">
-                <img src="/src/public/profil/github-icon.png" alt="GitHub" />
-              </a>
-            </div>
-          </div>
-
-          <!-- Profil Pengembang 2 -->
-          <div class="team-member">
-            <img src="/src/public/profil/rahman.jpg" alt="Foto Rahman" />
-            <h4>Rahman Hakim</h4>
-            <p>Universitas Amikom Yogyakarta</p>
-            <p>Frontend Web Developer</p>
-            <div class="social-icons">
-              <a href="https://www.linkedin.com/in/rahman-hakim-69641227a/" target="_blank" rel="noopener">
-                <img src="/src/public/profil/linkedin-icon.png" alt="LinkedIn" />
-              </a>
-              <a href="https://github.com/Rahmanhakim7" target="_blank" rel="noopener">
-                <img src="/src/public/profil/github-icon.png" alt="GitHub" />
-              </a>
-            </div>
-          </div>
-
-          <!-- Profil Pengembang 3 -->
-          <div class="team-member">
-            <img src="/src/public/profil/gibran.jpg" alt="Foto Gibran" />
-            <h4>Gibran Alfarabi</h4>
-            <p>Universitas Lampung</p>
-            <p>Frontend Web Developer</p>
-            <div class="social-icons">
-              <a href="https://www.linkedin.com/in/gibran-alfarabi/" target="_blank" rel="noopener">
-                <img src="/src/public/profil/linkedin-icon.png" alt="LinkedIn" />
-              </a>
-              <a href="https://github.com/gibranalfarabi" target="_blank" rel="noopener">
-                <img src="/src/public/profil/github-icon.png" alt="GitHub" />
-              </a>
-            </div>
-          </div>
-
-          <!-- Profil Pengembang 4 -->
-          <div class="team-member">
-            <img src="/src/public/profil/rizki.jpeg" alt="Foto Rizki" />
-            <h4>Rizki Septi Ardi</h4>
-            <p>Universitas Muhammadiyah Purworejo</p>
-            <p>Frontend Web Developer</p>
-            <div class="social-icons">
-              <a href="https://www.linkedin.com/in/rizki-ardi/" target="_blank" rel="noopener">
-                <img src="/src/public/profil/linkedin-icon.png" alt="LinkedIn" />
-              </a>
-              <a href="https://github.com/rizkiardii" target="_blank" rel="noopener">
-                <img src="/src/public/profil/github-icon.png" alt="GitHub" />
-              </a>
-            </div>
-          </div>
-
-          <!-- Profil Pengembang 5 -->
-          <div class="team-member">
-            <img src="/src/public/profil/echa.jpg" alt="Foto Echa" />
-            <h4>Echa Andrea Gustiar</h4>
-            <p>Universitas Lampung</p>
-            <p>UI UX Designer</p>
-            <div class="social-icons">
-              <a href="https://www.linkedin.com/in/echa-andrea-gustiar" target="_blank" rel="noopener">
-                <img src="/src/public/profil/linkedin-icon.png" alt="LinkedIn" />
-              </a>
-              <a href="https://github.com/EchaAndrea" target="_blank" rel="noopener">
-                <img src="/src/public/profil/github-icon.png" alt="GitHub" />
-              </a>
-            </div>
+    <section id="tim-pengembang">
+      <h3>Tim Pengembang</h3>
+      <div class="team-container">
+        <!-- Profil Pengembang 1 -->
+        <div class="team-member">
+          <img src="/src/public/profil/auni.jpg" alt="Foto Auni" />
+          <h4>Ahmad Ramadhan Auni</h4>
+          <p>Universitas Negeri Semarang</p>
+          <p>DevOps Engineer | Backend Web Developer</p>
+          <div class="social-icons">
+            <a href="https://www.linkedin.com/in/ahmad-ramadhan-auni" target="_blank" rel="noopener">
+              <img src="/src/public/profil/linkedin-icon.png" alt="LinkedIn" />
+            </a>
+            <a href="https://github.com/auni-st" target="_blank" rel="noopener">
+              <img src="/src/public/profil/github-icon.png" alt="GitHub" />
+            </a>
           </div>
         </div>
-      </section>
-    </main>
-    <footer>
-      <span>@MentalWell 2023, SEMUA HAK DILINDUNGI</span>
-    </footer>
-  </body>
+
+        <!-- Profil Pengembang 2 -->
+        <div class="team-member">
+          <img src="/src/public/profil/rahman.jpg" alt="Foto Rahman" />
+          <h4>Rahman Hakim</h4>
+          <p>Universitas Amikom Yogyakarta</p>
+          <p>Frontend Web Developer</p>
+          <div class="social-icons">
+            <a href="https://www.linkedin.com/in/rahman-hakim-69641227a/" target="_blank" rel="noopener">
+              <img src="/src/public/profil/linkedin-icon.png" alt="LinkedIn" />
+            </a>
+            <a href="https://github.com/Rahmanhakim7" target="_blank" rel="noopener">
+              <img src="/src/public/profil/github-icon.png" alt="GitHub" />
+            </a>
+          </div>
+        </div>
+
+        <!-- Profil Pengembang 3 -->
+        <div class="team-member">
+          <img src="/src/public/profil/gibran.jpg" alt="Foto Gibran" />
+          <h4>Gibran Alfarabi</h4>
+          <p>Universitas Lampung</p>
+          <p>Frontend Web Developer</p>
+          <div class="social-icons">
+            <a href="https://www.linkedin.com/in/gibran-alfarabi/" target="_blank" rel="noopener">
+              <img src="/src/public/profil/linkedin-icon.png" alt="LinkedIn" />
+            </a>
+            <a href="https://github.com/gibranalfarabi" target="_blank" rel="noopener">
+              <img src="/src/public/profil/github-icon.png" alt="GitHub" />
+            </a>
+          </div>
+        </div>
+
+        <!-- Profil Pengembang 4 -->
+        <div class="team-member">
+          <img src="/src/public/profil/rizki.jpeg" alt="Foto Rizki" />
+          <h4>Rizki Septi Ardi</h4>
+          <p>Universitas Muhammadiyah Purworejo</p>
+          <p>Frontend Web Developer</p>
+          <div class="social-icons">
+            <a href="https://www.linkedin.com/in/rizki-ardi/" target="_blank" rel="noopener">
+              <img src="/src/public/profil/linkedin-icon.png" alt="LinkedIn" />
+            </a>
+            <a href="https://github.com/rizkiardii" target="_blank" rel="noopener">
+              <img src="/src/public/profil/github-icon.png" alt="GitHub" />
+            </a>
+          </div>
+        </div>
+
+        <!-- Profil Pengembang 5 -->
+        <div class="team-member">
+          <img src="/src/public/profil/echa.jpg" alt="Foto Echa" />
+          <h4>Echa Andrea Gustiar</h4>
+          <p>Universitas Lampung</p>
+          <p>UI UX Designer</p>
+          <div class="social-icons">
+            <a href="https://www.linkedin.com/in/echa-andrea-gustiar" target="_blank" rel="noopener">
+              <img src="/src/public/profil/linkedin-icon.png" alt="LinkedIn" />
+            </a>
+            <a href="https://github.com/EchaAndrea" target="_blank" rel="noopener">
+              <img src="/src/public/profil/github-icon.png" alt="GitHub" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <span>@MentalWell 2023, SEMUA HAK DILINDUNGI</span>
+  </footer>
+</body>
+
 </html>
 <script src="/src/scripts/views/pages/login.js"></script>
 <script src="/src/scripts/views/pages/daftar.js"></script>

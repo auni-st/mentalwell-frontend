@@ -120,13 +120,13 @@ Jumbotron
 .jumbotron .hero h2 {
   font-size: 3vw;
   font-weight: 700;
-  color:#fff;
+  color: #fff;
   margin-left: 20px;
 }
 
 .jumbotron .hero p {
   font-size: 1vw;
-  color:#fff;
+  color: #fff;
   margin-left: 20px;
 }
 
@@ -149,11 +149,11 @@ Jumbotron
   height: 44px;
   width: 200px;
   border-radius: 27.2px;
-  font-size: 18px; 
+  font-size: 18px;
 }
 
-.jumbotron .hero .btn-hero  button:hover {
-  background-color: #3ad0ea; 
+.jumbotron .hero .btn-hero button:hover {
+  background-color: #3ad0ea;
   color: #ffffff;
 }
 
@@ -164,7 +164,7 @@ Jumbotron
 .jumbotron .hero-image img {
   width: 497px;
   height: 349px;
-  margin-left: 5rem; 
+  margin-left: 5rem;
 }
 
 /*
@@ -308,7 +308,7 @@ daftar
   margin-top: 2rem;
 }
 
-.daftar-container .daftar-title p a{
+.daftar-container .daftar-title p a {
   text-decoration: none;
 }
 
@@ -342,18 +342,18 @@ daftar
 
 .daftar-container .daftar-form .form-input {
   border: none;
-  
+
 }
 
 .daftar-container .daftar-form p {
-    text-align: end;
-    margin-right: 3px;
-    margin-top: -8px;
+  text-align: end;
+  margin-right: 3px;
+  margin-top: -8px;
 }
 
-.daftar-container .daftar-form p a{
-    text-decoration: none;
-    color: black;
+.daftar-container .daftar-form p a {
+  text-decoration: none;
+  color: black;
 }
 
 .daftar-container .daftar-form .submit-btn {
@@ -369,7 +369,7 @@ daftar
 }
 
 .daftar-container .daftar-form .submit-btn:hover {
-  background-color: #3ad0ea; 
+  background-color: #3ad0ea;
   color: #ffffff;
 }
 
@@ -433,6 +433,7 @@ main {
 .container-konsultasi .content-konsultasi .konsultasi-brand h3 {
   margin-top: 20px;
 }
+
 .container-konsultasi .content-konsultasi p {
   margin: 1rem;
 }
@@ -533,11 +534,11 @@ section rekomendasi
 
 /* Gaya untuk foto psikolog */
 .rekomendasi-image img {
-  width: 150px; 
-  height: 150px; 
-  border-radius: 50%; 
-  object-fit: cover; 
-  border: 2px solid #ffffff; 
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ffffff;
 }
 
 .content-rekomendasi {
@@ -545,7 +546,7 @@ section rekomendasi
 }
 
 .content-rekomendasi h2 {
-  margin-top: 10px; 
+  margin-top: 10px;
 }
 
 .rekomendasi {
@@ -587,10 +588,10 @@ section rekomendasi
 }
 
 .nama-psikolog {
-  font-size: 20px; 
+  font-size: 20px;
   font-weight: bold;
-  margin-top: 1px; 
-  margin-bottom: 1px; 
+  margin-top: 1px;
+  margin-bottom: 1px;
 }
 
 .btn-detail {
@@ -610,13 +611,13 @@ section rekomendasi
   border-radius: 5px;
   cursor: pointer;
   height: 40px;
-  width:150px;
+  width: 150px;
   border-radius: 27.2px;
   font-size: 15px;
 }
 
 .btn-detail button:hover {
-  background-color: #3ad0ea; 
+  background-color: #3ad0ea;
   color: #ffffff;
 }
 
@@ -641,18 +642,38 @@ section rekomendasi
   border-radius: 5px;
   cursor: pointer;
   height: 40px;
-  width:150px;
+  width: 150px;
   border-radius: 27.2px;
   font-size: 15px;
 }
 
 .btn-semua button:hover {
-  background-color: #3ad0ea; 
+  background-color: #3ad0ea;
   color: #ffffff;
 }
 
 .rekomendasi .btn-semua {
   margin-top: 20px;
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /*
