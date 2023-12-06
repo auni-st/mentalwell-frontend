@@ -37,6 +37,7 @@ class NavBar extends HTMLElement {
                 color: #044b77;
                 font-size: 25px;
                 /* text-transform: uppercase; */
+                margin-left: 5px;
               }
         
               .navbar .navbar-list {
@@ -162,6 +163,7 @@ class NavBar extends HTMLElement {
             <nav>
                 <div class="navbar">
                     <div class="navbar-brand">
+                    <img src="../public/logo/logo-mentalwell.jpg" width="50px" alt="logo mentalwell">
                         <h1>MentalWell</h1>
                     </div>
                     <div class="navbar-list">

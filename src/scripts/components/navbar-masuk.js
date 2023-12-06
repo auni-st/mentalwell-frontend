@@ -35,6 +35,7 @@ class NavBar extends HTMLElement {
             color: #044b77;
             font-size: 25px;
             /* text-transform: uppercase; */
+            margin-left: 5px;
           }
     
           .navbar .navbar-list {
@@ -50,12 +51,13 @@ class NavBar extends HTMLElement {
           }
     
           .navbar .navbar-list .button button {
-            width: 95px;
-            height: 44px;
+            width: 110px;
+            height: 40px;
             border-radius: 10px;
             background-color: #044b77;
             color: #ffffff;
             font-size: 17px;
+            border-radius: 40px;
           }
     
           .navbar .navbar-list .button button:hover {
@@ -64,6 +66,7 @@ class NavBar extends HTMLElement {
             background-color: #02bbdd;
             cursor: pointer;
             color: white;
+            border: none;
           }
     
           .navbar .navbar-list .navbar-list-item {
@@ -105,6 +108,7 @@ class NavBar extends HTMLElement {
         <nav>
             <div class="navbar">
                 <div class="navbar-brand">
+                <img src="../public/logo/logo-mentalwell.jpg" width="50px" alt="logo mentalwell">
                     <h1>MentalWell</h1>
                 </div>
                 <div class="navbar-list">
