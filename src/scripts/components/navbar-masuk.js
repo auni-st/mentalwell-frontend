@@ -53,7 +53,6 @@ class NavBar extends HTMLElement {
           }
     
           .navbar .navbar-list .button button {
-<<<<<<< HEAD
             width: 95px;
             height: 44px;
             border-radius: 20px;
@@ -61,15 +60,6 @@ class NavBar extends HTMLElement {
             color: #ffffff;
             font-size: 17px;
             border: none;
-=======
-            width: 110px;
-            height: 40px;
-            border-radius: 10px;
-            background-color: #044b77;
-            color: #ffffff;
-            font-size: 17px;
-            border-radius: 40px;
->>>>>>> fbe054b082a5d80ce20532b4e43a0d67d6179255
           }
     
           .navbar .navbar-list .button button:hover {
