@@ -120,9 +120,7 @@ class NavBar extends HTMLElement {
               </ul>
               <div class="button">
                    <img src="/src/public/beranda/man.png" alt="Foto User" id="photoUser" width="60px" height="60px">
-                  <button type="button">
-                    John Doe
-                  </button>
+                    <h2>John Doe</h2>
               </div>
           </div>
       </div>
