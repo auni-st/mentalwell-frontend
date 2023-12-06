@@ -206,6 +206,11 @@ main .listpsikolog {
 }
 
 .listpsikolog form .button-search button {
+  background-color: #044b77; 
+  color: #ffffff;
+}
+
+.listpsikolog form .button-search button:hover {
   background-color: #3ad0ea; 
   color: #ffffff;
 }
