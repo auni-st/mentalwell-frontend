@@ -34,7 +34,6 @@ async function renderArticleDetails() {
     // Menampilkan topik-topik psikolog
     if (articleData.psychologist_topics && articleData.psychologist_topics.length > 0) {
       const topicsList = articleData.psychologist_topics.map(topic => `<li>${topic.topic_name}</li>`).join('');
-      console.log('Topics List:', topicsList);
       topicList.innerHTML = topicsList;
       topikKeahlian.style.display = 'block'; // Show the container if there are topics
     } else {

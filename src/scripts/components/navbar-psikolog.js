@@ -164,7 +164,7 @@ class NavBar extends HTMLElement {
             <nav>
                 <div class="navbar">
                     <div class="navbar-brand">
-                    <img src="../public/logo/logo-mentalwell.jpg" width="50px" alt="logo mentalwell">
+                    <img src="/src/public/logo/logo-mentalwell.jpg" width="50px" alt="logo mentalwell">
                         <h1>MentalWell</h1>
                         <img src="/src/public/logo/2.png">
                     </div>
