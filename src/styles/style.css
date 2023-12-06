@@ -1,12 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap");
 
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   background-color: white;
   min-height: 100vh;
   flex: 1;
@@ -17,81 +18,6 @@ body {
 /*
 Header
 */
-
-/* .navbar {
-  background-color: white;
-  display: grid;
-  width: 100%;
-  grid-template-columns: 1fr 1fr;
-  gap: 2 rem;
-  height: 90px;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 99;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-}
-
-.navbar .navbar-brand {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-left: 1rem;
-}
-
-.navbar .navbar-brand h1 {
-  color: #02bbdd;
-  text-transform: uppercase;
-}
-
-.navbar .navbar-list {
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
-}
-
-.navbar .navbar-list .button {
-  display: flex;
-  align-items: center;
-}
-
-.navbar .navbar-list .button button {
-  width: 95px;
-  height: 40px;
-  border-radius: 30px;
-  background-color: #044B77;
-  color: #ffffff;
-}
-
-
-.navbar .navbar-list .button button:hover {
-  background-color: #3ad0ea; 
-  color: #ffffff;
-  background-color: #02bbdd;
-  cursor: pointer;
-  color: white;
-}
-
-.navbar .navbar-list .navbar-list-item {
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-}
-
-.navbar .navbar-list .list-item {
-  list-style: none;
-}
-
-.navbar .navbar-list .navbar-list-item .list-item a {
-  text-decoration: none;
-  list-style: none;
-  color: black;
-  font-size: 20px;
-  font-weight: 500px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-} */
 
 /*
 Jumbotron
@@ -120,18 +46,18 @@ Jumbotron
 .jumbotron .hero h2 {
   font-size: 3vw;
   font-weight: 700;
-  color:#fff;
+  color: #fff;
   margin-left: 20px;
 }
 
 .jumbotron .hero p {
   font-size: 1vw;
-  color:#fff;
+  color: #fff;
   margin-left: 20px;
 }
 
 .jumbotron .hero .btn-hero {
-  width: 100%px;
+  width: 100%;
   height: 55px;
   display: flex;
   flex-direction: column;
@@ -149,11 +75,11 @@ Jumbotron
   height: 44px;
   width: 200px;
   border-radius: 27.2px;
-  font-size: 18px; 
+  font-size: 18px;
 }
 
-.jumbotron .hero .btn-hero  button:hover {
-  background-color: #3ad0ea; 
+.jumbotron .hero .btn-hero button:hover {
+  background-color: #3ad0ea;
   color: #ffffff;
 }
 
@@ -164,7 +90,7 @@ Jumbotron
 .jumbotron .hero-image img {
   width: 497px;
   height: 349px;
-  margin-left: 5rem; 
+  margin-left: 5rem;
 }
 
 /*
@@ -270,8 +196,6 @@ login
   height: 44px;
 }
 
-
-
 /*
 daftar
 */
@@ -308,7 +232,7 @@ daftar
   margin-top: 2rem;
 }
 
-.daftar-container .daftar-title p a{
+.daftar-container .daftar-title p a {
   text-decoration: none;
 }
 
@@ -342,18 +266,17 @@ daftar
 
 .daftar-container .daftar-form .form-input {
   border: none;
-  
 }
 
 .daftar-container .daftar-form p {
-    text-align: end;
-    margin-right: 3px;
-    margin-top: -8px;
+  text-align: end;
+  margin-right: 3px;
+  margin-top: -8px;
 }
 
-.daftar-container .daftar-form p a{
-    text-decoration: none;
-    color: black;
+.daftar-container .daftar-form p a {
+  text-decoration: none;
+  color: black;
 }
 
 .daftar-container .daftar-form .submit-btn {
@@ -363,13 +286,13 @@ daftar
   margin-top: 2rem;
   color: white;
   font-weight: bold;
-  background-color: #044B77;
+  background-color: #044b77;
   width: 370px;
   height: 44px;
 }
 
 .daftar-container .daftar-form .submit-btn:hover {
-  background-color: #3ad0ea; 
+  background-color: #3ad0ea;
   color: #ffffff;
 }
 
@@ -393,7 +316,6 @@ main {
   flex-direction: column;
   text-align: center;
   margin-top: 3rem;
-
 }
 
 .content h2 {
@@ -533,11 +455,11 @@ section rekomendasi
 
 /* Gaya untuk foto psikolog */
 .rekomendasi-image img {
-  width: 150px; 
-  height: 150px; 
-  border-radius: 50%; 
-  object-fit: cover; 
-  border: 2px solid #ffffff; 
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ffffff;
 }
 
 .content-rekomendasi {
@@ -545,7 +467,7 @@ section rekomendasi
 }
 
 .content-rekomendasi h2 {
-  margin-top: 10px; 
+  margin-top: 10px;
 }
 
 .rekomendasi {
@@ -587,10 +509,10 @@ section rekomendasi
 }
 
 .nama-psikolog {
-  font-size: 20px; 
+  font-size: 20px;
   font-weight: bold;
-  margin-top: 1px; 
-  margin-bottom: 1px; 
+  margin-top: 1px;
+  margin-bottom: 1px;
 }
 
 .btn-detail {
@@ -610,13 +532,13 @@ section rekomendasi
   border-radius: 5px;
   cursor: pointer;
   height: 40px;
-  width:150px;
+  width: 150px;
   border-radius: 27.2px;
   font-size: 15px;
 }
 
 .btn-detail button:hover {
-  background-color: #3ad0ea; 
+  background-color: #3ad0ea;
   color: #ffffff;
 }
 
@@ -641,13 +563,13 @@ section rekomendasi
   border-radius: 5px;
   cursor: pointer;
   height: 40px;
-  width:150px;
+  width: 150px;
   border-radius: 27.2px;
   font-size: 15px;
 }
 
 .btn-semua button:hover {
-  background-color: #3ad0ea; 
+  background-color: #3ad0ea;
   color: #ffffff;
 }
 
@@ -667,4 +589,112 @@ footer {
   color: #fff;
   margin-top: 2rem;
   text-align: center;
+}
+
+/* responsive */
+/* mobile */
+@media screen and (max-width: 577px) {
+  .jumbotron {
+    display: flex;
+    flex-direction: column-reverse;
+    height: 90vh;
+  }
+
+  .jumbotron .hero-image img {
+    width: 400px;
+    margin-top: 20px;
+  }
+
+  .jumbotron .hero {
+    margin: 0 auto;
+  }
+
+  .jumbotron .hero h2 {
+    font-size: 25px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+  }
+
+  .jumbotron .hero p {
+    font-size: 10px;
+    color: #fff;
+    text-align: start;
+  }
+
+  .jumbotron .hero .btn-hero button {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  /* konsultasi */
+  .konsultasi {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .konsultasi .content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  .content h2 {
+    font-size: 25px;
+    font-weight: 700;
+  }
+
+  .content p {
+    font-size: 15px;
+    margin-top: 5px;
+  }
+
+  .container-konsultasi {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+  }
+
+  /* alasan */
+  .alasan {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 3rem;
+  }
+
+  .alasan .container-alasan {
+    width: 100%;
+    height: 400px;
+    background-color: #02bbdd;
+    text-align: center;
+  }
+
+  .alasan .container-alasan h2 {
+    margin-top: 3rem;
+    color: white;
+    font-size: 28px;
+  }
+
+  .container-solusi {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* tablet */
+@media screen and (min-width: 578px) {
+}
+
+/* desktop*/
+@media screen and (max-width: 1200px) {
 }
