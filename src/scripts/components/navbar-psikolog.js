@@ -1,12 +1,12 @@
 class NavBar extends HTMLElement {
-    constructor() {
-      super();
-  
-      // Create a shadow root
-      this.attachShadow({ mode: "open" });
-  
-      // Define the HTML content for the component
-      this.shadowRoot.innerHTML = `
+  constructor() {
+    super();
+
+    // Create a shadow root
+    this.attachShadow({ mode: "open" });
+
+    // Define the HTML content for the component
+    this.shadowRoot.innerHTML = `
             <style>
               /* Add your styling for the navbar here */
               nav {
@@ -28,6 +28,7 @@ class NavBar extends HTMLElement {
         
               .navbar .navbar-brand {
                 display: flex;
+                flex-direction: row;
                 align-items: center;
                 justify-content: space-between;
                 margin-left: 2rem;
@@ -37,6 +38,7 @@ class NavBar extends HTMLElement {
                 color: #044b77;
                 font-size: 25px;
                 /* text-transform: uppercase; */
+                margin-left: 5px;
               }
         
               .navbar .navbar-list {
@@ -123,24 +125,88 @@ class NavBar extends HTMLElement {
                   height: 50px;
                   cursor: pointer;
                 }
+
+                // dropdown menu
+                .button-user {
+                  position: relative;
+                  display: inline-block;
+              }
+              
+              .dropdown-content {
+                  display: none;
+                  position: absolute;
+                  background-color: #f9f9f9;
+                  min-width: 160px;
+                  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                  z-index: 1;
+                  top: 90px;
+                  right: 0;
+                  border-bottom-left-radius: 10px;
+              }
+              
+              .dropdown-content a {
+                  color: black;
+                  padding: 12px 16px;
+                  display: block;
+                  text-decoration: none;
+              }
+              
+              .dropdown-content a:hover {
+                  background-color: #044B77;
+                  color: #fff;
+              }
+
+              .keluar {
+                border-bottom-left-radius: 10px;
+              }
             </style>
             
             <nav>
                 <div class="navbar">
                     <div class="navbar-brand">
+                    <img src="../public/logo/logo-mentalwell.jpg" width="50px" alt="logo mentalwell">
                         <h1>MentalWell</h1>
+                        <img src="/src/public/logo/2.png">
                     </div>
                     <div class="navbar-list">
-                        <div class="button-user">
+                        <div class="button-user" id="userDropdown">
                             <img src="/src/public/beranda/man.png" alt="Foto User" id="photoUser" >
                             <button type="submit">John Doe</button>
+                            <div class="dropdown-content">
+                                <a href="#">Profil saya</a>
+                                <a class="keluar" href="#">Keluar</a>
+                            </div>
                         </div>
                     <div>
                 </div>
             </nav>
           `;
-    }
+
+    // Get userDropdown element within Shadow DOM
+    const userDropdown = this.shadowRoot.getElementById("userDropdown");
+
+    // Add event listeners for mouseover and mouseout within Shadow DOM
+    userDropdown.addEventListener("mouseover", () => {
+      userDropdown.querySelector(".dropdown-content").style.display = "block";
+    });
+
+    userDropdown.addEventListener("mouseout", () => {
+      userDropdown.querySelector(".dropdown-content").style.display = "none";
+    });
   }
-  
-  // Define the custom element
-  customElements.define("navbar-psikolog", NavBar);
+}
+
+// Define the custom element
+customElements.define("navbar-psikolog", NavBar);
+
+// Get userDropdown element outside Shadow DOM
+const userDropdown = document.getElementById("userDropdown");
+
+// Add event listeners for mouseover and mouseout outside Shadow DOM
+userDropdown.addEventListener("mouseover", () => {
+  userDropdown.querySelector(".dropdown-content").style.display = "block";
+});
+
+userDropdown.addEventListener("mouseout", () => {
+  userDropdown.querySelector(".dropdown-content").style.display = "none";
+});

@@ -1,67 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MentalWell</title>
-    <link rel="icon" href="/src/public/logo/3.png" type="image/x-icon" />
-    <link rel="stylesheet" href="/src/styles/profil-psikolog.css" />
-    <script type="module" src="/src/scripts/components/navbar-user.js" defer></script>
-  </head>
-  <body>
-    <!-- navbar components -->
-    <navbar-user></navbar-user>
-    <main>
-      <div class="main-content">
-        <div class="foto-psikolog" id="foto-psikolog">
-          <img  alt="Foto Psikolog" id="psychologProfile" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MentalWell</title>
+  <link rel="icon" href="/src/public/logo/3.png" type="image/x-icon" />
+  <link rel="stylesheet" href="/src/styles/profil-psikolog.css" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script type="module" src="/src/scripts/components/navbar-user.js" defer></script>
+</head>
+
+<body>
+  <!-- navbar components -->
+  <navbar-user></navbar-user>
+
+  <!-- <header class="navbar">
+      <div class="navbar-brand">
+        <h1>MentalWell</h1>
+      </div>
+      <div class="navbar-list">
+        <ul class="navbar-list-item">
+          <li class="list-item"><a href="./">Beranda</a></li>
+          <li class="list-item"><a href="/artikel">Artikel</a></li>
+          <li class="list-item"><a href="/riwayat">Riwayat</a></li>
+          <li class="list-item"><a href="/tentangkami">Tentang Kami</a></li>
+        </ul>
+        <div class="button-user">
+          <img src="/src/public/beranda/man.png" alt="Foto User" id="photoUser" >
+          <button type="submit">Natasya</button>
         </div>
-        <div class="data-psikolog" id="data-psikolog">
-          <h2></h2>
-          <div class="biodata-psikolog" id="biodata-psikolog"></div>
+      </div>
+    </header> -->
+
+  <main>
+    <div class="main-content">
+      <div class="foto-psikolog" id="foto-psikolog">
+        <img alt="Foto Psikolog" id="psychologProfile" />
+      </div>
+      <div class="data-psikolog" id="data-psikolog">
+        <h2></h2>
+        <div class="biodata-psikolog" id="biodata-psikolog"></div>
+      </div>
+      <div class="data-lainnya">
+        <div class="pengalaman-praktik" id="pengalaman-praktik">
+          <h3>PRAKTIK</h3>
+          <p id="praktik"></p>
         </div>
-        <div class="data-lainnya">
-          <div class="pengalaman-praktik" id="pengalaman-praktik">
-            <h3>PRAKTIK</h3>
-            <p id="praktik"></p>
-          </div>
-          <div class="topik-keahlian" id="topik-keahlian">
-            <p>Topik Keahlian</p>
-            <ul id="topiclist">
-              <!-- <li>Adiksi</li>
+        <div class="topik-keahlian" id="topik-keahlian">
+          <p>Topik Keahlian</p>
+          <ul id="topiclist">
+            <!-- <li>Adiksi</li>
               <li>Fobia</li>
               <li>Kecenderungan Bunuh Diri</li> -->
-            </ul>
-          </div>
-        </div>
-        <div class="container-ulasan">
-          <div class="header-ulasan">
-            <h2>ULASAN</h2>
-          </div>
-          <div id="userReviews" class="userReviews">
-            <div class="isi-ulasan" >
-              <img src="/src/public/beranda/man.png" alt="Foto User" id="userReview" />
-              <div class="komentar-user">
-                <h3>KEVIN</h3>
-                <p>Saya mendapatkan saran dan analisa yg belum pernah saya dengar sebelumnya, saya jadi bisa melihat permasalahan dari sudut pandang yang baru.</p>
-              </div>
-            </div>
-         </div>
+          </ul>
         </div>
       </div>
-      <div class="button-daftar">
-        <button type="button" id="btnDaftar" onclick="redirectToCounseling()">Daftar Konseling</button>
+      <div class="container-ulasan">
+        <div class="header-ulasan">
+          <h2>ULASAN</h2>
+        </div>
+        <div class="isi-ulasan">
+          <img src="/src/public/beranda/man.png" alt="Foto User" id="userReview" />
+          <div class="komentar-user">
+            <h3>KEVIN</h3>
+            <p>Saya mendapatkan saran dan analisa yg belum pernah saya dengar sebelumnya, saya jadi bisa melihat
+              permasalahan dari sudut pandang yang baru.</p>
+          </div>
+        </div>
+        <div class="isi-ulasan">
+          <img src="/src/public/beranda/man.png" alt="Foto User" id="userReview" />
+          <div class="komentar-user">
+            <h3>KEVIN</h3>
+            <p>Saya mendapatkan saran dan analisa yg belum pernah saya dengar sebelumnya, saya jadi bisa melihat
+              permasalahan dari sudut pandang yang baru.</p>
+          </div>
+        </div>
       </div>
-    </main>
-    <script>
-      function redirectToCounseling() {
-        window.location.href = '/jadwalkonseling-isidata';
-      }
-    </script>
-    <script src="/src/scripts/views/pages/detailpsikolog.js"></script>
-    <footer>
-      <span>@MentalWell 2023, SEMUA HAK DILINDUNGI</span>
-    </footer>
-  </body>
+    </div>
+    <div class="button-daftar">
+      <button type="button" id="btnDaftar" onclick="redirectToCounseling()">Daftar Konseling</button>
+    </div>
+  </main>
+  <script>
+    function redirectToCounseling() {
+      window.location.href = '/jadwalkonseling-isidata';
+    }
+  </script>
+  <script src="/src/scripts/views/pages/detailpsikolog.js"></script>
+  <footer>
+    <span>@MentalWell 2023, SEMUA HAK DILINDUNGI</span>
+  </footer>
+</body>
+
 </html>
+<script src="/src/scripts/views/pages/login.js"></script>
+<script src="/src/scripts/views/pages/daftar.js"></script>

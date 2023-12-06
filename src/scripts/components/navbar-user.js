@@ -3,7 +3,7 @@ class NavBar extends HTMLElement {
     super();
 
     // Create a shadow root
-    this.attachShadow({ mode: "open" });
+    this.attachShadow({ mode: 'open' });
 
     // Define the HTML content for the component
     this.shadowRoot.innerHTML = `
@@ -28,6 +28,7 @@ class NavBar extends HTMLElement {
       
             .navbar .navbar-brand {
               display: flex;
+              flex-direction: row;
               align-items: center;
               justify-content: space-between;
               margin-left: 2rem;
@@ -36,7 +37,9 @@ class NavBar extends HTMLElement {
             .navbar .navbar-brand h1 {
               color: #044b77;
               font-size: 25px;
+              margin-left: 10px;
               /* text-transform: uppercase; */
+              margin-left: 5px;
             }
       
             .navbar .navbar-list {
@@ -94,7 +97,7 @@ class NavBar extends HTMLElement {
               content: "";
               width: 0;
               height: 2px;
-              background-color: #000;
+              background-color: #044b77;
               display: block;
               transition: 0.2s linear;
             }
@@ -128,6 +131,7 @@ class NavBar extends HTMLElement {
           <nav>
               <div class="navbar">
                   <div class="navbar-brand">
+                  <img src="../public/logo/logo-mentalwell.jpg" width="50px" alt="logo mentalwell">
                       <h1>MentalWell</h1>
                   </div>
                   <div class="navbar-list">
@@ -149,4 +153,4 @@ class NavBar extends HTMLElement {
 }
 
 // Define the custom element
-customElements.define("navbar-user", NavBar);
+customElements.define('navbar-user', NavBar);

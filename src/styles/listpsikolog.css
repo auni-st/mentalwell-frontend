@@ -145,6 +145,7 @@ main .keahlian-psikolog {
   text-align: center;
   margin-top: 1rem;
 }
+
 .keahlian-psikolog .container-keahlian hr {
   margin: 0 1rem;
 }
@@ -460,7 +461,7 @@ daftar
   margin-top: 2rem;
 }
 
-.daftar-container .daftar-title p a{
+.daftar-container .daftar-title p a {
   text-decoration: none;
 }
 
@@ -494,18 +495,18 @@ daftar
 
 .daftar-container .daftar-form .form-input {
   border: none;
-  
+
 }
 
 .daftar-container .daftar-form p {
-    text-align: end;
-    margin-right: 3px;
-    margin-top: -8px;
+  text-align: end;
+  margin-right: 3px;
+  margin-top: -8px;
 }
 
-.daftar-container .daftar-form p a{
-    text-decoration: none;
-    color: black;
+.daftar-container .daftar-form p a {
+  text-decoration: none;
+  color: black;
 }
 
 .daftar-container .daftar-form .submit-btn {
@@ -521,10 +522,29 @@ daftar
 }
 
 .daftar-container .daftar-form .submit-btn:hover {
-  background-color: #3ad0ea; 
+  background-color: #3ad0ea;
   color: #ffffff;
 }
 
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 
 

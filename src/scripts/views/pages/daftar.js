@@ -61,7 +61,7 @@ daftarForm.addEventListener('submit', async (event) => {
   const password = document.getElementById('passworddaftar').value;
   const confirmPassword = document.getElementById('confpassword').value;
 
-  if (password !== confirmPassword){
+  if (password !== confirmPassword) {
     Swal.fire({
       title: 'Gagal!',
       text: 'Kata Sandi dan Konfirmasi Kata Sandi Harus Sama!',
@@ -92,6 +92,10 @@ daftarForm.addEventListener('submit', async (event) => {
         title: 'Daftar Akun Berhasil!',
         icon: 'success',
         showConfirmButton: true,
+      }).then(() => {
+        // window.location.href = "http://localhost:5501/src/templates/index.html"
+        window.location.href = 'https://mentalwell.vercel.app/';
+        event.preventDefault();
       });
     } else {
       const responseData = await response.json();

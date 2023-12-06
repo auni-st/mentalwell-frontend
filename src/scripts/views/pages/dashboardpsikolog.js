@@ -1,108 +1,119 @@
-const authToken = sessionStorage.getItem('authToken')
+const authToken = sessionStorage.getItem("authToken");
 
 const statusDropdown = document.getElementById('statusDropdown2')
 const tableBody = document.querySelector('tbody');
+const loadingIndicator = document.getElementById('loading-indicator');
+
+loadingIndicator.style.display = 'block';
 
 const redirectToCounselingDetail = (counselingId) => {
-  fetch(`https://mentalwell-backend.vercel.app/dashboard/counseling/${counselingId}`, {
-    headers: {
-      'Authorization': `Bearer ${authToken}`,
-    },
-  })
-    .then(response => {
+  fetch(
+    `https://mentalwell-backend.vercel.app/dashboard/counseling/${counselingId}`,
+    {
+      headers: {
+        Authorization: `Bearer ${authToken}`,
+      },
+    }
+  )
+    .then((response) => {
       if (response.ok) {
         return response.json();
       } else {
-        console.error('Failed to fetch')
-        throw new Error('Failed to fetch')
+        console.error("Failed to fetch");
+        throw new Error("Failed to fetch");
       }
     })
-    .then(counselingDetails => {
+    .then((counselingDetails) => {
       // window.location.href = `http://localhost:5501/src/templates/aturkonseling.html?id=${counselingDetails[0].id}`
-      window.location.href = `http://mentalwell.vercel.app/aturkonseling?id=${counselingDetails[0].id}`
+      window.location.href = `http://mentalwell.vercel.app/aturkonseling?id=${counselingDetails[0].id}`;
     })
-    .catch(error => {
-      console.error('Error fetching details:', error)
-    })
-}
+    .catch((error) => {
+      console.error("Error fetching details:", error);
+    });
+};
 
-statusDropdown.addEventListener('change', () => {
+statusDropdown.addEventListener("change", () => {
   const selectedValue = statusDropdown.value;
 
-  fetch('https://mentalwell-backend.vercel.app/counselings/psychologist', {
-    method: 'PUT',
+  fetch("https://mentalwell-backend.vercel.app/counselings/psychologist", {
+    method: "PUT",
     headers: {
-      'Authorization': `Bearer ${authToken}`,
-      'Content-Type': 'application/json',
+      Authorization: `Bearer ${authToken}`,
+      "Content-Type": "application/json",
     },
     body: JSON.stringify({ newAvailability: selectedValue }),
   })
-    .then(response => {
+    .then((response) => {
       if (!response.ok) {
-        throw new Error('Failed to update availability');
+        throw new Error("Failed to update availability");
       }
       return response.json();
     })
-    .then(data => {
-      if (selectedValue == 'unavailable') {
-        formattedValue = 'Tidak Tersedia'
+    .then((data) => {
+      if (selectedValue == "unavailable") {
+        formattedValue = "Tidak Tersedia";
       } else {
-        formattedValue = 'Tersedia'
+        formattedValue = "Tersedia";
       }
       Swal.fire({
         title: `Berhasil Mengubah Ketersediaan Menjadi ${formattedValue}!`,
-        icon: 'success',
+        icon: "success",
         timer: 3000,
         showConfirmButton: false, // Hide the "OK" button
       });
-      console.log('Availibility updated:', data)
+      console.log("Availibility updated:", data);
     })
-    .catch(error => {
-      console.error('Error update availability:', error)
-    })
-})
+    .catch((error) => {
+      console.error("Error update availability:", error);
+    });
+});
 
-tableBody.addEventListener('click', (event) => {
+tableBody.addEventListener("click", (event) => {
   // const targetRow = event.target.closest('tr');
-  const isIcon = event.target.tagName === 'IMG' && event.target.alt === 'tulis';
+  const isIcon = event.target.tagName === "IMG" && event.target.alt === "tulis";
 
   // console.log(targetRow)
-  console.log(isIcon)
+  console.log(isIcon);
 
-  const counselingId = event.target.closest('tr').querySelector('img').getAttribute('data-counseling-id');;
-  console.log(counselingId)
+  const counselingId = event.target
+    .closest("tr")
+    .querySelector("img")
+    .getAttribute("data-counseling-id");
+  console.log(counselingId);
 
   if (counselingId) {
     redirectToCounselingDetail(counselingId);
   }
-})
+});
 
 try {
-  fetch('https://mentalwell-backend.vercel.app/dashboard/psychologist', {
+  fetch("https://mentalwell-backend.vercel.app/dashboard/psychologist", {
     headers: {
       Authorization: `Bearer ${authToken}`,
-      'Content-Type': 'application/json'
-    }
+      "Content-Type": "application/json",
+    },
   })
-    .then(response => {
+    .then((response) => {
       if (response.ok) {
-        return response.json()
+        return response.json();
       } else {
-        console.error('Failed to fetch')
-        throw new Error('Failed to fetch data from the backend.')
+        console.error("Failed to fetch");
+        throw new Error("Failed to fetch data from the backend.");
       }
     })
     .then(data => {
-      if (data.psychologistAvailability == 'not_available') {
+      loadingIndicator.style.display = 'none';
+
+      if (data.psychologistAvailability == 'unavailable') {
         statusDropdown.value = 'unavailable';
-      } else if (data.psychologistAvailability == 'available'){
+      } else if (data.psychologistAvailability == 'available') {
         statusDropdown.value = 'available';
       }
 
-      const tableBody = document.querySelector('tbody');
-      tableBody.innerHTML = '';
+      const tableBody = document.querySelector("tbody");
+      tableBody.innerHTML = "";
 
-      data.counselingList.forEach(counseling => {
+      data.counselingList.forEach((counseling) => {
         const row = tableBody.insertRow();
 
         const nameCell = row.insertCell(0);
@@ -113,17 +124,17 @@ try {
         const actionCell = row.insertCell(5);
 
         const backendValues = {
-          call: 'Call',
-          video_call: 'Video Call',
-          chat: 'Chat',
-          belum_selesai: 'Belum Selesai',
-          selesai: 'Selesai'
+          call: "Call",
+          video_call: "Video Call",
+          chat: "Chat",
+          belum_selesai: "Belum Selesai",
+          selesai: "Selesai",
         };
 
         const backendType = counseling.type;
         const backendStatus = counseling.status;
-        const displayTextType = backendValues[backendType]
-        const displayTextStatus = backendValues[backendStatus]
+        const displayTextType = backendValues[backendType];
+        const displayTextStatus = backendValues[backendStatus];
 
         nameCell.textContent = counseling.patientName;
         dateCell.textContent = formatDate(counseling.scheduleDate);
@@ -131,22 +142,23 @@ try {
         typeCell.textContent = displayTextType;
         statusCell.textContent = displayTextStatus;
 
-        const actionImage = document.createElement('img');
-        actionImage.src = '/src/public/dashboard/tulis.png';
-        actionImage.alt = 'tulis';
-        actionImage.setAttribute('data-counseling-id', `${counseling.id}`)
+        const actionImage = document.createElement("img");
+        actionImage.src = "/src/public/dashboard/tulis.png";
+        actionImage.alt = "tulis";
+        actionImage.setAttribute("data-counseling-id", `${counseling.id}`);
         actionCell.appendChild(actionImage);
-      })
+      });
     })
     .catch(error => {
       console.error('Error during data fetching:', error);
+      loadingIndicator.style.display = 'none';
     });
 } catch (error) {
   console.error('Error during data fetching:', error);
+  loadingIndicator.style.display = 'none';
 }
 
 function formatDate(dateString) {
-  const options = { year: 'numeric', month: 'long', day: 'numeric' };
-  return new Date(dateString).toLocaleDateString('id-ID', options);
+  const options = { year: "numeric", month: "long", day: "numeric" };
+  return new Date(dateString).toLocaleDateString("id-ID", options);
 }
-

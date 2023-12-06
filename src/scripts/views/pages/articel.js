@@ -1,10 +1,14 @@
 const articleSection = document.getElementById('content-articel');
-
+const loadingIndicator = document.getElementById('loading-indicator');
 const apiUrl = 'https://mentalwell-backend.vercel.app/articles';
+
+loadingIndicator.style.display = 'block';
 
 fetch(apiUrl)
   .then((response) => response.json())
   .then((data) => {
+    loadingIndicator.style.display = 'none';
+
     data.forEach((articleData) => {
       const articleElement = document.createElement('article');
 
@@ -26,7 +30,10 @@ fetch(apiUrl)
       articleSection.appendChild(articleElement);
     });
   })
-  .catch((error) => console.error('Error fetching data from API:', error));
+  .catch((error) => {
+    console.error('Error fetching data from API:', error);
+    loadingIndicator.style.display = 'none';
+  })
 
 function redirectToDetail(id) {
   window.location.href = `/detailartikel?id=${id}`;

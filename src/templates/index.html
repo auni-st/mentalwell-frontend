@@ -13,7 +13,6 @@
   <script type="module" src="/src/scripts/components/navbar-masuk.js" defer></script>
   <script type="module" src="/src/scripts/components/navbar-user.js"></script>
 </head>
-
 <body>
   <navbar-masuk class="navbar-masuk" id="masuk"></navbar-masuk>
   <!-- <navbar-user></navbar-user> -->
@@ -190,7 +189,10 @@
       <div class="content">
         <h2>Rekomendasi Psikolog di MentalWell</h2>
       </div>
-      <div class="container-rekomendasi" id="container-rekomendasi"></div>
+      <div class="container-rekomendasi" id="container-rekomendasi">
+        <!-- Loading Indicator -->
+        <div id="loading-indicator" class="spinner" style="display: none;"></div>
+      </div>
       </div>
       <div class="btn-semua">
         <button type="button" onclick="redirectToList()">Lihat Semua</button>
