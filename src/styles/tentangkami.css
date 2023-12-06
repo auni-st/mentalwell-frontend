@@ -17,7 +17,7 @@ body {
 /*
 Header
 */
-
+/* 
 .navbar {
   background-color: white;
   display: grid;
@@ -106,7 +106,7 @@ Header
   background-color: #02bbdd;
   cursor: pointer;
   color: white;
-}
+} */
 
 /*
 Tentang Kami
@@ -190,7 +190,6 @@ p {
   border: none;
   outline: none;
 }
-
 /*
 login 
 */
@@ -262,7 +261,7 @@ login
 
 .login-container .login-form .form-control .eye {
   position: absolute;
-  margin-left: 300px;
+  margin-left: 200px;
   margin-top: 15px;
 }
 
@@ -335,7 +334,7 @@ daftar
 .daftar-container .daftar-title {
   margin-bottom: 20px;
   color: #333;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 .daftar-container .daftar-title p a {
@@ -345,12 +344,13 @@ daftar
 .daftar-container .daftar-form {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .daftar-container .daftar-form .form-control {
   margin-bottom: 1rem;
   display: flex;
-  justify-content: center;
 }
 
 .daftar-container .daftar-form .form-control .form-input {
@@ -360,7 +360,7 @@ daftar
   font-size: 16px;
   padding-left: 20px;
   padding-right: 20px;
-  width: 350px;
+  width: 300px;
   align-items: center;
   height: 44px;
 }
@@ -373,7 +373,6 @@ daftar
 
 .daftar-container .daftar-form .form-input {
   border: none;
-
 }
 
 .daftar-container .daftar-form p {
@@ -394,8 +393,8 @@ daftar
   margin-top: 2rem;
   color: white;
   font-weight: bold;
-  background-color: #044B77;
-  width: 370px;
+  background-color: #044b77;
+  width: 330px;
   height: 44px;
 }
 
