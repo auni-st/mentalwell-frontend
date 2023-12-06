@@ -36,7 +36,7 @@ fetch(apiUrl)
   .catch((error) => {
     console.error('Error fetching data from API:', error)
     loadingIndicator.style.display = 'none';
-  });
+  }); 
 
 
 function redirectToDetailPsychologist(id) {
