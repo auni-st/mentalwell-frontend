@@ -20,7 +20,7 @@ fetch(apiUrl)
                 </div>
                 <h2 class="nama-psikolog">${articleData.name}</h2>
                 <div class="btn-detail">
-                    <button type="button" onclick="redirectToDetailPsychologist()">
+                    <button type="button" onclick="redirectToDetailPsychologist('${articleData.id}')">
                     Lihat Detail
                     </button>
                 </div>
@@ -34,8 +34,8 @@ fetch(apiUrl)
     loadingIndicator.style.display = 'none';
   });
 
-function redirectToDetail() {
-  window.location.href = '/profilpsikolog';
-}
+  function redirectToDetailPsychologist(id) {
+    window.location.href = `/profilpsikolog?id=${id}`;
+  }
 
 
