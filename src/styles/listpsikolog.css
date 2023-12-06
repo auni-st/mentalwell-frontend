@@ -319,7 +319,6 @@ main .listpsikolog {
   color: #ffffff;
 }
 
-
 /*
 login
 */
@@ -347,7 +346,7 @@ login
   align-items: center;
   position: fixed;
   top: 20%;
-  left: 30%;
+  left: 38%;
   z-index: 1;
 }
 
@@ -423,8 +422,6 @@ login
   height: 44px;
 }
 
-
-
 /*
 daftar
 */
@@ -449,7 +446,7 @@ daftar
   display: none;
   position: fixed;
   top: 20%;
-  left: 30%;
+  left: 38%;
   z-index: 1;
   flex-direction: column;
   align-items: center;
@@ -545,8 +542,6 @@ daftar
     transform: rotate(360deg);
   }
 }
-
-
 
 /*
 Footer
