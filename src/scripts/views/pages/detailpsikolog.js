@@ -5,7 +5,7 @@ async function fetchArticleById(articleId) {
       throw new Error('Network response was not ok');
     }
     const data = await response.json();
-    return data;
+    return data[0];
   } catch (error) {
     console.error('Error fetching article data:', error);
     throw error; // Re-throw the error to propagate it further
