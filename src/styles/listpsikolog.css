@@ -463,7 +463,7 @@ daftar
 .daftar-container .daftar-title {
   margin-bottom: 20px;
   color: #333;
-  margin-top: 1rem;
+  margin-top: 2.5rem;
 }
 
 .daftar-container .daftar-title p a {
@@ -473,6 +473,8 @@ daftar
 .daftar-container .daftar-form {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .daftar-container .daftar-form .form-control {
@@ -487,20 +489,19 @@ daftar
   font-size: 16px;
   padding-left: 20px;
   padding-right: 20px;
-  width: 330px;
+  width: 300px;
   align-items: center;
   height: 44px;
 }
 
 .daftar-container .daftar-form .form-control .eye {
   position: absolute;
-  margin-left: 330px;
+  margin-left: 300px;
   margin-top: 15px;
 }
 
 .daftar-container .daftar-form .form-input {
   border: none;
-
 }
 
 .daftar-container .daftar-form p {
@@ -522,7 +523,7 @@ daftar
   color: white;
   font-weight: bold;
   background-color: #044B77;
-  width: 370px;
+  width: 330px;
   height: 44px;
 }
 

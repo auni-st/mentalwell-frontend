@@ -148,6 +148,7 @@ login
 .login-container .login-form .form-control {
   margin-bottom: 1rem;
   display: flex;
+  justify-content: center;
 }
 
 .login-container .login-form .form-control .form-input {
@@ -157,14 +158,14 @@ login
   font-size: 16px;
   padding-left: 20px;
   padding-right: 20px;
-  width: 330px;
+  width: 350px;
   align-items: center;
   height: 44px;
 }
 
 .login-container .login-form .form-control .eye {
   position: absolute;
-  margin-left: 330px;
+  margin-left: 300px;
   margin-top: 15px;
 }
 
@@ -185,7 +186,8 @@ login
 
 .login-container .login-form p a:hover {
   text-decoration: none;
-  color: black;
+  color: blue;
+
 }
 
 .login-container .login-form .submit-btn {
@@ -196,7 +198,7 @@ login
   color: white;
   font-weight: bold;
   background-color: #044b77;
-  width: 370px;
+  width: 350px;
   height: 44px;
 }
 
@@ -235,9 +237,9 @@ daftar
 }
 
 .daftar-container .daftar-title {
-  margin-bottom: 20px;
   color: #333;
-  margin-top: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 .daftar-container .daftar-title p a {
@@ -252,6 +254,7 @@ daftar
 .daftar-container .daftar-form .form-control {
   margin-bottom: 1rem;
   display: flex;
+  justify-content: center;
 }
 
 .daftar-container .daftar-form .form-control .form-input {
@@ -261,14 +264,14 @@ daftar
   font-size: 16px;
   padding-left: 20px;
   padding-right: 20px;
-  width: 330px;
+  width: 350px;
   align-items: center;
   height: 44px;
 }
 
 .daftar-container .daftar-form .form-control .eye {
   position: absolute;
-  margin-left: 330px;
+  margin-left: 300px;
   margin-top: 15px;
 }
 
@@ -296,7 +299,7 @@ daftar
   color: white;
   font-weight: bold;
   background-color: #044B77;
-  width: 370px;
+  width: 350px;
   height: 44px;
 }
 

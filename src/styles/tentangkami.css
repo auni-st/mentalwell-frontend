@@ -262,7 +262,7 @@ login
 
 .login-container .login-form .form-control .eye {
   position: absolute;
-  margin-left: 330px;
+  margin-left: 300px;
   margin-top: 15px;
 }
 
@@ -350,6 +350,7 @@ daftar
 .daftar-container .daftar-form .form-control {
   margin-bottom: 1rem;
   display: flex;
+  justify-content: center;
 }
 
 .daftar-container .daftar-form .form-control .form-input {
@@ -359,14 +360,14 @@ daftar
   font-size: 16px;
   padding-left: 20px;
   padding-right: 20px;
-  width: 330px;
+  width: 350px;
   align-items: center;
   height: 44px;
 }
 
 .daftar-container .daftar-form .form-control .eye {
   position: absolute;
-  margin-left: 330px;
+  margin-left: 300px;
   margin-top: 15px;
 }
 
