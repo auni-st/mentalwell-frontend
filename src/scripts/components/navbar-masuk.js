@@ -253,8 +253,10 @@ class NavBarLogin extends HTMLElement {
                         <li class="list-item"><a href="/tentangkami">Tentang Kami</a></li>
                     </ul>
                     <div class="button">
-                        <img src="/src/public/beranda/man.png" alt="Foto User" id="photoUser" >
-                        <button type="submit">John Doe</button>
+                        <button type="submit">
+                          John Doe
+                          <img src="/src/public/beranda/man.png" alt="Foto User" id="photoUser" width="100px" height="100px">
+                        </button>
                     </div>
                 </div>
             </div>
