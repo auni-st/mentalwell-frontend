@@ -294,6 +294,11 @@ login
   height: 44px;
 }
 
+.login-container .login-form .submit-btn:hover {
+  background-color: #3ad0ea;
+  color: #ffffff;
+}
+
 /*
 daftar
 */
