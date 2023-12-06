@@ -1,10 +1,13 @@
 const articleSection = document.getElementById('container-psikolog');
-
+const loadingIndicator = document.getElementById('loading-indicator');
 const apiUrl = 'https://mentalwell-backend.vercel.app/psychologists';
+
+loadingIndicator.style.display = 'block';
 
 fetch(apiUrl)
   .then((response) => response.json())
   .then((data) => {
+    loadingIndicator.style.display = 'none';
     data.forEach((articleData) => {
       const articleElement = document.createElement('div');
       articleElement.classList.add("content-psikolog")
@@ -18,7 +21,7 @@ fetch(apiUrl)
                             <p class="ulasan">${articleData.counselings.review.count}</p>
                         </div>
                         <div class="list-button-psikolog">
-                            <div class="jadwal-hijau">
+                          <div class="jadwal-hijau">
                                 <p>${articleData.availability}</p>
                             </div>
                             <div class="button-psikolog">
@@ -30,9 +33,12 @@ fetch(apiUrl)
       articleSection.appendChild(articleElement);
     });
   })
-  .catch((error) => console.error('Error fetching data from API:', error));
+  .catch((error) => {
+    console.error('Error fetching data from API:', error)
+    loadingIndicator.style.display = 'none';
+  });
 
 
-  function redirectToDetailPsychologist(id) {
-    window.location.href = `/profilpsikolog?id=${id}`;
-  }
+function redirectToDetailPsychologist(id) {
+  window.location.href = `/profilpsikolog?id=${id}`;
+}

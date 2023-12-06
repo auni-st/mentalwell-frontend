@@ -3,7 +3,7 @@ class NavBar extends HTMLElement {
     super();
 
     // Create a shadow root
-    this.attachShadow({ mode: "open" });
+    this.attachShadow({ mode: 'open' });
 
     // Define the HTML content for the component
     this.shadowRoot.innerHTML = `
@@ -26,6 +26,7 @@ class NavBar extends HTMLElement {
     
           .navbar .navbar-brand {
             display: flex;
+            flex-direction: row;
             align-items: center;
             justify-content: space-between;
             margin-left: 2rem;
@@ -34,6 +35,7 @@ class NavBar extends HTMLElement {
           .navbar .navbar-brand h1 {
             color: #044b77;
             font-size: 25px;
+            margin-left: 10px;
             /* text-transform: uppercase; */
             margin-left: 5px;
           }
@@ -51,13 +53,13 @@ class NavBar extends HTMLElement {
           }
     
           .navbar .navbar-list .button button {
-            width: 110px;
-            height: 40px;
-            border-radius: 10px;
+            width: 95px;
+            height: 44px;
+            border-radius: 20px;
             background-color: #044b77;
             color: #ffffff;
             font-size: 17px;
-            border-radius: 40px;
+            border: none;
           }
     
           .navbar .navbar-list .button button:hover {
@@ -108,7 +110,7 @@ class NavBar extends HTMLElement {
         <nav>
             <div class="navbar">
                 <div class="navbar-brand">
-                <img src="../public/logo/logo-mentalwell.jpg" width="50px" alt="logo mentalwell">
+                    <img src="/src/public/logo/logo-mentalwell.jpg" width="50px" height="50px">
                     <h1>MentalWell</h1>
                 </div>
                 <div class="navbar-list">
@@ -135,7 +137,7 @@ class NavBarLogin extends HTMLElement {
     super();
 
     // Create a shadow root
-    this.attachShadow({ mode: "open" });
+    this.attachShadow({ mode: 'open' });
 
     // Define the HTML content for the component
     this.shadowRoot.innerHTML = `
@@ -158,6 +160,7 @@ class NavBarLogin extends HTMLElement {
     
           .navbar .navbar-brand {
             display: flex;
+            flex-direction: row;
             align-items: center;
             justify-content: space-between;
             margin-left: 2rem;
@@ -166,6 +169,7 @@ class NavBarLogin extends HTMLElement {
           .navbar .navbar-brand h1 {
             color: #044b77;
             font-size: 25px;
+            margin-left: 5px;
             /* text-transform: uppercase; */
           }
     
@@ -237,7 +241,8 @@ class NavBarLogin extends HTMLElement {
         <nav>
             <div class="navbar">
                 <div class="navbar-brand">
-                    <h1>MentalWell</h1>
+                    <h1>MentallWell</h1>
+                    <img src="/src/public/logo/logo-mentalwell.jpg" alt="imagelogo" width="50px" height="50px">
                 </div>
                 <div class="navbar-list">
                     <ul class="navbar-list-item">
@@ -257,11 +262,11 @@ class NavBarLogin extends HTMLElement {
   }
 }
 
-const authToken = sessionStorage.getItem("authToken");
+const authToken = sessionStorage.getItem('authToken');
 
 if (authToken) {
-  customElements.define("navbar-masuk", NavBarLogin);
+  customElements.define('navbar-masuk', NavBarLogin);
 } else {
-  customElements.define("navbar-masuk", NavBar);
+  customElements.define('navbar-masuk', NavBar);
 }
 // Define the custom element

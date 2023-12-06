@@ -5,7 +5,7 @@ async function fetchArticleById(articleId) {
       throw new Error('Network response was not ok');
     }
     const data = await response.json();
-    return data;
+    return data[0];
   } catch (error) {
     console.error('Error fetching article data:', error);
     throw error; // Re-throw the error to propagate it further
@@ -29,12 +29,11 @@ async function renderArticleDetails() {
     // Menampilkan data artikel pada elemen HTML
     fotopsikolog.src = `${articleData.profile_image}`;
     datapsikolog.innerHTML = `${articleData.name}`;
-    biodatapsikolog.innerHTML = `<p>${articleData.bio}</p> `;
+    biodatapsikolog.innerHTML = `<p>${articleData.bio}</p>`;
     pengalamanpraktik.innerHTML = `${articleData.experience}`;
     // Menampilkan topik-topik psikolog
     if (articleData.psychologist_topics && articleData.psychologist_topics.length > 0) {
       const topicsList = articleData.psychologist_topics.map(topic => `<li>${topic.topic_name}</li>`).join('');
-      console.log('Topics List:', topicsList);
       topicList.innerHTML = topicsList;
       topikKeahlian.style.display = 'block'; // Show the container if there are topics
     } else {

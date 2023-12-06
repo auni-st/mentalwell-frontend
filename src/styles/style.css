@@ -355,6 +355,7 @@ main {
 .container-konsultasi .content-konsultasi .konsultasi-brand h3 {
   margin-top: 20px;
 }
+
 .container-konsultasi .content-konsultasi p {
   margin: 1rem;
 }
@@ -577,6 +578,26 @@ section rekomendasi
   margin-top: 20px;
 }
 
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 /*
 Footer
 */
@@ -589,112 +610,4 @@ footer {
   color: #fff;
   margin-top: 2rem;
   text-align: center;
-}
-
-/* responsive */
-/* mobile */
-@media screen and (max-width: 577px) {
-  .jumbotron {
-    display: flex;
-    flex-direction: column-reverse;
-    height: 90vh;
-  }
-
-  .jumbotron .hero-image img {
-    width: 400px;
-    margin-top: 20px;
-  }
-
-  .jumbotron .hero {
-    margin: 0 auto;
-  }
-
-  .jumbotron .hero h2 {
-    font-size: 25px;
-    font-weight: 700;
-    color: #fff;
-    text-align: center;
-  }
-
-  .jumbotron .hero p {
-    font-size: 10px;
-    color: #fff;
-    text-align: start;
-  }
-
-  .jumbotron .hero .btn-hero button {
-    margin: 0 auto;
-    text-align: center;
-    margin-top: 10px;
-  }
-
-  /* konsultasi */
-  .konsultasi {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-
-  .konsultasi .content {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin-top: 3rem;
-  }
-
-  .content h2 {
-    font-size: 25px;
-    font-weight: 700;
-  }
-
-  .content p {
-    font-size: 15px;
-    margin-top: 5px;
-  }
-
-  .container-konsultasi {
-    margin-top: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    width: 100%;
-  }
-
-  /* alasan */
-  .alasan {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 3rem;
-  }
-
-  .alasan .container-alasan {
-    width: 100%;
-    height: 400px;
-    background-color: #02bbdd;
-    text-align: center;
-  }
-
-  .alasan .container-alasan h2 {
-    margin-top: 3rem;
-    color: white;
-    font-size: 28px;
-  }
-
-  .container-solusi {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-/* tablet */
-@media screen and (min-width: 578px) {
-}
-
-/* desktop*/
-@media screen and (max-width: 1200px) {
 }

@@ -145,6 +145,7 @@ main .keahlian-psikolog {
   text-align: center;
   margin-top: 1rem;
 }
+
 .keahlian-psikolog .container-keahlian hr {
   margin: 0 1rem;
 }
@@ -205,6 +206,11 @@ main .listpsikolog {
 }
 
 .listpsikolog form .button-search button {
+  background-color: #044b77; 
+  color: #ffffff;
+}
+
+.listpsikolog form .button-search button:hover {
   background-color: #3ad0ea; 
   color: #ffffff;
 }
@@ -313,7 +319,6 @@ main .listpsikolog {
   color: #ffffff;
 }
 
-
 /*
 login
 */
@@ -341,7 +346,7 @@ login
   align-items: center;
   position: fixed;
   top: 20%;
-  left: 30%;
+  left: 38%;
   z-index: 1;
 }
 
@@ -417,8 +422,6 @@ login
   height: 44px;
 }
 
-
-
 /*
 daftar
 */
@@ -443,7 +446,7 @@ daftar
   display: none;
   position: fixed;
   top: 20%;
-  left: 30%;
+  left: 38%;
   z-index: 1;
   flex-direction: column;
   align-items: center;
@@ -455,7 +458,7 @@ daftar
   margin-top: 2rem;
 }
 
-.daftar-container .daftar-title p a{
+.daftar-container .daftar-title p a {
   text-decoration: none;
 }
 
@@ -489,18 +492,18 @@ daftar
 
 .daftar-container .daftar-form .form-input {
   border: none;
-  
+
 }
 
 .daftar-container .daftar-form p {
-    text-align: end;
-    margin-right: 3px;
-    margin-top: -8px;
+  text-align: end;
+  margin-right: 3px;
+  margin-top: -8px;
 }
 
-.daftar-container .daftar-form p a{
-    text-decoration: none;
-    color: black;
+.daftar-container .daftar-form p a {
+  text-decoration: none;
+  color: black;
 }
 
 .daftar-container .daftar-form .submit-btn {
@@ -516,12 +519,29 @@ daftar
 }
 
 .daftar-container .daftar-form .submit-btn:hover {
-  background-color: #3ad0ea; 
+  background-color: #3ad0ea;
   color: #ffffff;
 }
 
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
 
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
 
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 /*
 Footer

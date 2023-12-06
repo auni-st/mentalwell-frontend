@@ -14,11 +14,11 @@ function closeLoginPopup() {
   navbarLinks.style.pointerEvents = 'auto';
 }
 
-// function authenticate(event) {
-//   event.preventDefault(); // Prevent the default form submission for this example
-//   // Add your authentication logic here
-//   alert('Authentication logic goes here!');
-// }
+function authenticate(event) {
+  event.preventDefault(); // Prevent the default form submission for this example
+  // Add your authentication logic here
+  alert('Authentication logic goes here!');
+}
 
 function redirectToList() {
   window.location.href = '/listpsikolog';

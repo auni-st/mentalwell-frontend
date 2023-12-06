@@ -28,6 +28,7 @@ class NavBar extends HTMLElement {
         
               .navbar .navbar-brand {
                 display: flex;
+                flex-direction: row;
                 align-items: center;
                 justify-content: space-between;
                 margin-left: 2rem;
@@ -163,8 +164,9 @@ class NavBar extends HTMLElement {
             <nav>
                 <div class="navbar">
                     <div class="navbar-brand">
-                    <img src="../public/logo/logo-mentalwell.jpg" width="50px" alt="logo mentalwell">
+                    <img src="/src/public/logo/logo-mentalwell.jpg" width="50px" alt="logo mentalwell">
                         <h1>MentalWell</h1>
+                        <img src="/src/public/logo/2.png">
                     </div>
                     <div class="navbar-list">
                         <div class="button-user" id="userDropdown">
