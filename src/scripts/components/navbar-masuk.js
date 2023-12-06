@@ -183,14 +183,14 @@ class NavBarLogin extends HTMLElement {
             display: flex;
             flex-direction: row;
             align-items: center;
-            margin-right: 1rem;
+            margin-right: 20px;
           }
     
           .navbar .navbar-list .button button {
             width: 95px;
             height: 44px;
             border-radius: 10px;
-            background-color: #044b77;
+            background-color: white;
             color: #ffffff;
             font-size: 17px;
           }
