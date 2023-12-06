@@ -29,7 +29,7 @@ async function renderArticleDetails() {
     // Menampilkan data artikel pada elemen HTML
     fotopsikolog.src = `${articleData.profile_image}`;
     datapsikolog.innerHTML = `${articleData.name}`;
-    biodatapsikolog.innerHTML = `<p>${articleData.bio}</p> `;
+    biodatapsikolog.innerHTML = `<p>${articleData.bio}</p>`;
     pengalamanpraktik.innerHTML = `${articleData.experience}`;
     // Menampilkan topik-topik psikolog
     if (articleData.psychologist_topics && articleData.psychologist_topics.length > 0) {
