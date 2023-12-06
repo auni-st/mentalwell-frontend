@@ -181,8 +181,9 @@ class NavBarLogin extends HTMLElement {
     
           .navbar .navbar-list .button {
             display: flex;
+            flex-direction: row;
             align-items: center;
-            margin-right: 2rem;
+            margin-right: 1rem;
           }
     
           .navbar .navbar-list .button button {
@@ -251,10 +252,10 @@ class NavBarLogin extends HTMLElement {
                         <li class="list-item"><a href="/listpsikolog">Cari Psikolog</a></li>
                         <li class="list-item"><a href="/tentangkami">Tentang Kami</a></li>
                     </ul>
-                <div class="button">
-                    <button type="button" id="btnnMasuk" onclick="openLoginPopup()">
-                        ANDA SUDAH MASUK
-                    </button>
+                    <div class="button">
+                        <img src="/src/public/beranda/man.png" alt="Foto User" id="photoUser" >
+                        <button type="submit">John Doe</button>
+                    </div>
                 </div>
             </div>
         </nav>
