@@ -5,18 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MentallWell</title>
     <link rel="stylesheet" href="/src/styles/listpsikolog.css" />
-    <link rel="icon" href="/src/public/logo/3.png" type="image/x-icon">
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      integrity="sha512-..."
-      crossorigin="anonymous"
-    />
-    <script
-      type="module"
-      src="/src/scripts/components/navbar-masuk.js"
-      defer
-    ></script>
+    <link rel="icon" href="/src/public/logo/3.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="/src/scripts/components/navbar-masuk.js" defer></script>
   </head>
   <body>
     <!-- navbar components -->
@@ -29,14 +21,7 @@
       </div>
       <form class="login-form" id="login-form">
         <div class="form-control">
-          <input
-            class="form-input"
-            type="email"
-            id="emaillogin"
-            name="emaillogin"
-            placeholder="Masukkan Email"
-            required
-          />
+          <input class="form-input" type="email" id="emaillogin" name="emaillogin" placeholder="Masukkan Email" required />
         </div>
         <div class="form-control">
           <i class="far fa-eye eye" onclick="togglePasswordLoginVisibility()"></i>
@@ -103,15 +88,9 @@
       </aside>
       <section class="listpsikolog">
         <form class="search-psikolog" id="searchForm">
-          <input
-            type="text"
-            placeholder="Masukkan nama psikolog"
-            id="search-psikolog"
-          />
+          <input type="text" placeholder="Masukkan nama psikolog" id="search-psikolog" />
           <div class="button-search">
-            <button type="submit" id="searchButton">
-              <i class="fas fa-search"></i>Cari
-            </button>
+            <button type="submit" id="searchButton"><i class="fas fa-search"></i>Cari</button>
           </div>
         </form>
         <div class="container-psikolog" id="container-psikolog"></div>

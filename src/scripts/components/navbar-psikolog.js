@@ -28,6 +28,7 @@ class NavBar extends HTMLElement {
         
               .navbar .navbar-brand {
                 display: flex;
+                flex-direction: row;
                 align-items: center;
                 justify-content: space-between;
                 margin-left: 2rem;
@@ -37,6 +38,7 @@ class NavBar extends HTMLElement {
                 color: #044b77;
                 font-size: 25px;
                 /* text-transform: uppercase; */
+                margin-left: 10px;
               }
         
               .navbar .navbar-list {
@@ -129,6 +131,7 @@ class NavBar extends HTMLElement {
                 <div class="navbar">
                     <div class="navbar-brand">
                         <h1>MentalWell</h1>
+                        <img src="/src/public/logo/2.png"></img>
                     </div>
                     <div class="navbar-list">
                         <div class="button-user">
