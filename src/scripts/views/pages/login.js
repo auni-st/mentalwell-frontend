@@ -24,9 +24,6 @@ function redirectToList() {
   window.location.href = '/listpsikolog';
 }
 
-function redirectToDetailPsychologist() {
-  window.location.href = '/profilpsikolog';
-}
 
 function togglePasswordLoginVisibility() {
   const passwordInput = document.getElementById('loginpassword');

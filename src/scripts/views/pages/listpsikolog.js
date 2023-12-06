@@ -10,7 +10,7 @@ fetch(apiUrl)
     loadingIndicator.style.display = 'none';
     data.forEach((articleData) => {
       const articleElement = document.createElement('div');
-      articleElement.classList.add("content-psikolog")
+      articleElement.classList.add('content-psikolog');
       articleElement.innerHTML = `
                     <img class="image-psikolog" src="${articleData.profile_image}" alt="man" />
                     <div class="data-psikolog">
@@ -34,10 +34,9 @@ fetch(apiUrl)
     });
   })
   .catch((error) => {
-    console.error('Error fetching data from API:', error)
+    console.error('Error fetching data from API:', error);
     loadingIndicator.style.display = 'none';
-  }); 
-
+  });
 
 function redirectToDetailPsychologist(id) {
   window.location.href = `/profilpsikolog?id=${id}`;
