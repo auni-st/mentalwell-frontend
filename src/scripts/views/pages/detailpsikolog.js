@@ -68,17 +68,6 @@ async function renderArticleDetails() {
 // Render artikel details ketika halaman dimuat
 renderArticleDetails();
 
-function redirectToCounseling() {
-  // Get the articleId from the URL
-  const urlParams = new URLSearchParams(window.location.search);
-  const articleId = urlParams.get('id');
-
-  // Redirect to the specified URL with the articleId parameter
-  // window.location.href = `http://localhost:5501/src/templates/jadwalkonseling-isidata.html?id=${articleId}`;
-  // for prod
-  window.location.href = `https://mentalwell.vercel.app/jadwalkonseling-isidata?id=${articleId}`;
-
-}
 
 // Add an event listener to the Daftar Konseling button
 const daftarKonselingButton = document.getElementById('btnDaftar');
