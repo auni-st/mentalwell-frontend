@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap");
 
 * {
   padding: 0;
@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   background-color: #fafafa;
   min-height: 100vh;
   flex: 1;
@@ -136,7 +136,10 @@ main .keahlian-psikolog {
   width: 240px;
   height: 350px;
   margin-top: 1rem;
-  border: 1px solid black;
+  margin-left: 3em;
+  /* border: 1px solid black; */
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
   border-radius: 10px;
   gap: 1rem;
 }
@@ -184,7 +187,9 @@ main .listpsikolog {
 .listpsikolog form input {
   width: 880px;
   height: 48px;
-  border-radius: 20px;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid #044b77;
   font-size: 20px;
   padding-left: 10px;
   font-weight: 700px;
@@ -206,12 +211,12 @@ main .listpsikolog {
 }
 
 .listpsikolog form .button-search button {
-  background-color: #044b77; 
+  background-color: #044b77;
   color: #ffffff;
 }
 
 .listpsikolog form .button-search button:hover {
-  background-color: #3ad0ea; 
+  background-color: #3ad0ea;
   color: #ffffff;
 }
 
@@ -234,9 +239,11 @@ main .listpsikolog {
   display: flex;
   flex-direction: row;
   gap: 2rem;
-  border: 1px solid black;
-  border-radius: 30px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  border-radius: 20px;
   justify-content: flex-start;
+  margin-bottom: 15px;
 }
 
 .listpsikolog .container-psikolog .content-psikolog .image-psikolog {
@@ -255,7 +262,11 @@ main .listpsikolog {
   width: 100%;
 }
 
-.listpsikolog .container-psikolog .content-psikolog .data-psikolog .value-psikolog {
+.listpsikolog
+  .container-psikolog
+  .content-psikolog
+  .data-psikolog
+  .value-psikolog {
   display: flex;
   flex-direction: row;
   gap: 1rem;
@@ -263,18 +274,32 @@ main .listpsikolog {
   justify-content: flex-start;
 }
 
-.listpsikolog .container-psikolog .content-psikolog .data-psikolog .value-psikolog .ulasan {
+.listpsikolog
+  .container-psikolog
+  .content-psikolog
+  .data-psikolog
+  .value-psikolog
+  .ulasan {
   margin-left: -10px;
 }
 
-.listpsikolog .container-psikolog .content-psikolog .data-psikolog .list-button-psikolog {
+.listpsikolog
+  .container-psikolog
+  .content-psikolog
+  .data-psikolog
+  .list-button-psikolog {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 
-.listpsikolog .container-psikolog .content-psikolog .data-psikolog .list-button-psikolog .jadwal-hijau {
+.listpsikolog
+  .container-psikolog
+  .content-psikolog
+  .data-psikolog
+  .list-button-psikolog
+  .jadwal-hijau {
   display: flex;
   justify-content: center;
   border: 1px solid black;
@@ -283,7 +308,12 @@ main .listpsikolog {
   border-radius: 10px;
 }
 
-.listpsikolog .container-psikolog .content-psikolog .data-psikolog .list-button-psikolog .jadwal-merah {
+.listpsikolog
+  .container-psikolog
+  .content-psikolog
+  .data-psikolog
+  .list-button-psikolog
+  .jadwal-merah {
   display: flex;
   justify-content: center;
   border: 1px solid black;
@@ -292,18 +322,34 @@ main .listpsikolog {
   border-radius: 10px;
 }
 
-.listpsikolog .container-psikolog .content-psikolog .data-psikolog .list-button-psikolog p {
+.listpsikolog
+  .container-psikolog
+  .content-psikolog
+  .data-psikolog
+  .list-button-psikolog
+  p {
   padding: 2px 1rem;
   font-weight: bold;
 }
 
-.listpsikolog .container-psikolog .content-psikolog .data-psikolog .list-button-psikolog .button-psikolog {
+.listpsikolog
+  .container-psikolog
+  .content-psikolog
+  .data-psikolog
+  .list-button-psikolog
+  .button-psikolog {
   display: flex;
   justify-content: flex-end;
   margin-right: 2rem;
 }
 
-.listpsikolog .container-psikolog .content-psikolog .data-psikolog .list-button-psikolog .button-psikolog button {
+.listpsikolog
+  .container-psikolog
+  .content-psikolog
+  .data-psikolog
+  .list-button-psikolog
+  .button-psikolog
+  button {
   padding: 5px 20px;
   border-radius: 20px;
   font-size: 15px;
@@ -314,7 +360,13 @@ main .listpsikolog {
   cursor: pointer;
 }
 
-.listpsikolog .container-psikolog .content-psikolog .data-psikolog .list-button-psikolog .button-psikolog button:hover {
+.listpsikolog
+  .container-psikolog
+  .content-psikolog
+  .data-psikolog
+  .list-button-psikolog
+  .button-psikolog
+  button:hover {
   background-color: #3ad0ea;
   color: #ffffff;
 }
@@ -522,7 +574,7 @@ daftar
   margin-top: 2rem;
   color: white;
   font-weight: bold;
-  background-color: #044B77;
+  background-color: #044b77;
   width: 330px;
   height: 44px;
 }

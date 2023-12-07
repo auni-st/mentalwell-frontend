@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MentalWell</title>
+    <link rel="icon" href="/src/public/logo/3.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/src/styles/aturkonseling.css" />
+    <script
+      type="module"
+      src="/src/scripts/components/navbar-user.js"
+      defer
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MentalWell</title>
-  <link rel="icon" href="/src/public/logo/3.png" type="image/x-icon">
-  <link rel="stylesheet" href="/src/styles/aturkonseling.css" />
-  <script type="module" src="/src/scripts/components/navbar-user.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <body>
+    <!-- navbar components -->
+    <navbar-user></navbar-user>
 
-</head>
-
-<body>
-  <!-- navbar components -->
-  <navbar-user></navbar-user>
-
-  <!-- <header class="navbar">
+    <!-- <header class="navbar">
       <div class="navbar-brand">
         <h1>MentalWell</h1>
       </div>
@@ -35,66 +37,73 @@
       </div>
     </header> -->
 
-  <main>
-    <div class="main-content">
-      <div class="data-konseling">
-        <div class="foto-pasien">
-          <img src="/src/public/beranda/man.png" alt="Foto Pasien" id="patientProfile" />
-        </div>
+    <main>
+      <div class="main-content">
+        <div class="data-konseling">
+          <div class="foto-pasien">
+            <img
+              src="/src/public/beranda/man.png"
+              alt="Foto Pasien"
+              id="patientProfile"
+            />
+          </div>
 
-        <div class="biodata-pasien">
-          <!-- <h2>NATASYA</h2>
+          <div class="biodata-pasien">
+            <!-- <h2>NATASYA</h2>
           <p>Nama Panggilan: Natasya</p>
           <p>Tanggal Lahir: 29 Februari 2000</p>
           <p>Jenis Kelamin: Perempuan</p>
           <p>Nomor Telepon: 08123456789</p>
           <p>Pekerjaan: Mahasiswa</p> -->
-        </div>
-        <div class="tanggal-konseling">
-          <!-- <p>Rabu, 18 November 2023</p>
+          </div>
+          <div class="tanggal-konseling">
+            <!-- <p>Rabu, 18 November 2023</p>
           <p>09:00 - 10:00</p>
           <p>Via Video Call</p> -->
+          </div>
+        </div>
+        <div class="deskripsi-konseling">
+          <div
+            id="loading-indicator"
+            class="spinner"
+            style="display: none"
+          ></div>
+
+          <!-- <h3>Deskripsi Masalah</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel
+          tortor augue. Vestibulum et purus quis enim ultricies consequat in
+          vel odio. Etiam placerat ultricies commodo. Interdum et malesuada
+          fames ac ante ipsum primis in faucibus. Phasellus turpis turpis,
+          hendrerit eget feugiat ut, rutrum sed nisi.
+        </p> -->
+        </div>
+        <div class="harapan-pasien">
+          <!-- <h3>Harapan Setelah Konseling</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel
+          tortor augue. Vestibulum et purus quis enim ultricies consequat in
+          vel odio. Etiam placerat ultricies commodo. Interdum et malesuada
+          fames ac ante ipsum primis in faucibus. Phasellus turpis turpis,
+          hendrerit eget feugiat ut, rutrum sed nisi.
+        </p> -->
+        </div>
+        <div class="status-konseling">
+          <h2>Status</h2>
+          <select id="statusDropdown" class="baru">
+            <option value="belum_selesai">Belum Selesai</option>
+            <option value="selesai">Selesai</option>
+          </select>
         </div>
       </div>
-      <div class="deskripsi-konseling">
-        <div id="loading-indicator" class="spinner" style="display: none;"></div>
-
-        <!-- <h3>Deskripsi Masalah</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel
-          tortor augue. Vestibulum et purus quis enim ultricies consequat in
-          vel odio. Etiam placerat ultricies commodo. Interdum et malesuada
-          fames ac ante ipsum primis in faucibus. Phasellus turpis turpis,
-          hendrerit eget feugiat ut, rutrum sed nisi.
-        </p> -->
+      <div class="button-simpan">
+        <button type="button" id="btnSimpan">Kembali</button>
       </div>
-      <div class="harapan-pasien">
-        <!-- <h3>Harapan Setelah Konseling</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel
-          tortor augue. Vestibulum et purus quis enim ultricies consequat in
-          vel odio. Etiam placerat ultricies commodo. Interdum et malesuada
-          fames ac ante ipsum primis in faucibus. Phasellus turpis turpis,
-          hendrerit eget feugiat ut, rutrum sed nisi.
-        </p> -->
-      </div>
-      <div class="status-konseling">
-        <h2>Status</h2>
-        <select id="statusDropdown" class="baru">
-          <option value="belum_selesai">Belum Selesai</option>
-          <option value="selesai">Selesai</option>
-        </select>
-      </div>
-    </div>
-    <div class="button-simpan">
-      <button type="button" id="btnSimpan">Kembali</button>
-    </div>
-  </main>
+    </main>
 
-  <footer>
-    <span>@MentalWell 2023, SEMUA HAK DILINDUNGI</span>
-  </footer>
-</body>
-
+    <footer>
+      <span>@MentalWell 2023, SEMUA HAK DILINDUNGI</span>
+    </footer>
+  </body>
 </html>
 <script src="/src/scripts/views/pages/aturkonseling.js"></script>

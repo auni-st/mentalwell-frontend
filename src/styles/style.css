@@ -187,7 +187,6 @@ login
 .login-container .login-form p a:hover {
   text-decoration: none;
   color: blue;
-
 }
 
 .login-container .login-form .submit-btn {
@@ -277,7 +276,6 @@ daftar
 
 .daftar-container .daftar-form .form-input {
   border: none;
-
 }
 
 .daftar-container .daftar-form p {
@@ -298,7 +296,7 @@ daftar
   margin-top: 2rem;
   color: white;
   font-weight: bold;
-  background-color: #044B77;
+  background-color: #044b77;
   width: 350px;
   height: 44px;
 }
@@ -453,7 +451,9 @@ section alasan
 .alasan .container-solusi .content-solusi {
   height: 400px;
   width: 350px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -517,8 +517,10 @@ section rekomendasi
   text-align: center;
   width: 280px;
   height: 400px;
-  border: 1px solid black;
-  border-radius: 5px;
+  /* border: 1px solid black; */
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  border-radius: 10px;
 }
 
 .nama-psikolog {
