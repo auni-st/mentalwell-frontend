@@ -161,6 +161,11 @@ h3 {
   height: 44px;
 }
 
+.editpsikolog-container .editpsikolog-form .form-control .form-input:focus {
+  outline: none;
+  border: 1px solid #044b77;
+}
+
 .editpsikolog-container .editpsikolog-form .form-control .fa-edit {
   position: absolute;
   margin-left: 330px;
