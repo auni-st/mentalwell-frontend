@@ -24,8 +24,8 @@ const redirectToCounselingDetail = (counselingId) => {
       }
     })
     .then((counselingDetails) => {
-      // window.location.href = `http://localhost:5501/src/templates/aturkonseling.html?id=${counselingDetails[0].id}`
-      window.location.href = `http://mentalwell.vercel.app/aturkonseling?id=${counselingDetails[0].id}`;
+      window.location.href = `http://localhost:5501/src/templates/aturkonseling.html?id=${counselingDetails[0].id}`
+      // window.location.href = `http://mentalwell.vercel.app/aturkonseling?id=${counselingDetails[0].id}`;
     })
     .catch((error) => {
       console.error("Error fetching details:", error);

@@ -93,9 +93,9 @@ loginForm.addEventListener('submit', async (event) => {
           });
           if (result.isConfirmed) {
             // Redirect to the edit profile page
-            // window.location.href = 'http://localhost:5501/src/templates/editprofilpasien.html';
+            window.location.href = 'http://localhost:5501/src/templates/editprofilpasien.html';
             // or use the production URL
-            window.location.href = 'https://mentalwell.vercel.app/editprofilpasien';
+            // window.location.href = 'https://mentalwell.vercel.app/editprofilpasien';
           }
         } else if (userName === null && userRole === 'psychologist') {
           const result = await Swal.fire({
@@ -106,18 +106,18 @@ loginForm.addEventListener('submit', async (event) => {
           });
           if (result.isConfirmed) {
             // Redirect to the edit profile page
-            // window.location.href = 'http://localhost:5501/src/templates/editprofilpsikolog.html';
+            window.location.href = 'http://localhost:5501/src/templates/editprofilpsikolog.html';
             // or use the production URL
-            window.location.href = 'https://mentalwell.vercel.app/editprofilpasien';
+            // window.location.href = 'https://mentalwell.vercel.app/editprofilpasien';
           }
         } else if (userRole === 'patient') {
           // Handle patient login
-          // window.location.href = 'http://localhost:5501/src/templates/index.html';
-          window.location.href = 'https://mentalwell.vercel.app/';
+          window.location.href = 'http://localhost:5501/src/templates/index.html';
+          // window.location.href = 'https://mentalwell.vercel.app/';
         } else if (userRole === 'psychologist') {
           // Handle psychologist login
-          // window.location.href = 'http://localhost:5501/src/templates/dashboardpsikolog.html';
-          window.location.href = 'https://mentalwell.vercel.app/dashboardpsikolog';
+          window.location.href = 'http://localhost:5501/src/templates/dashboardpsikolog.html';
+          // window.location.href = 'https://mentalwell.vercel.app/dashboardpsikolog';
         } else {
           // Handle other cases
           window.location.href = 'https://mentalwell.vercel.app/';

@@ -15,8 +15,8 @@ loadingIndicator.style.display = 'block';
 
 if (btnSimpan) {
   btnSimpan.addEventListener('click', () => {
-    window.location.href = 'https://mentalwell.vercel.app/dashboardpsikolog';
-    // window.location.href = 'http://localhost:5501/src/templates/dashboardpsikolog.html';
+    // window.location.href = 'https://mentalwell.vercel.app/dashboardpsikolog';
+    window.location.href = 'http://localhost:5501/src/templates/dashboardpsikolog.html';
   });
 }
 

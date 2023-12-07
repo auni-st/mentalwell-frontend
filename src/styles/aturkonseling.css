@@ -51,18 +51,18 @@ Header
 }
 
 .navbar .navbar-list .button-user {
-    display: flex;
-    align-items: center;
-  }
-  
-  .navbar .navbar-list .button-user button {
-    width: 95px;
-    height: 40px;
-    background-color: white;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-  }
+  display: flex;
+  align-items: center;
+}
+
+.navbar .navbar-list .button-user button {
+  width: 95px;
+  height: 40px;
+  background-color: white;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
 
 .navbar .navbar-list .navbar-list-item {
   text-decoration: none;
@@ -188,7 +188,7 @@ Content Atur Konseling
 }
 
 #btnSimpan:hover {
-  background-color: #3ad0ea; 
+  background-color: #3ad0ea;
   color: #ffffff;
 }
 
@@ -203,8 +203,13 @@ Content Atur Konseling
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /*

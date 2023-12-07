@@ -15,3 +15,10 @@ button:hover {
 footer {
   padding-bottom: 50px;
 }
+
+.card.selected {
+  background-color: lightblue;
+  /* Customize the background color for the selected card */
+  color: white;
+  /* Customize the text color for the selected card */
+}
