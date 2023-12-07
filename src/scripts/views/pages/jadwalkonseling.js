@@ -147,7 +147,7 @@ async function redirectToCounseling2() {
   }
 
   // window.location.href = `http://localhost:5501/src/templates/jadwalkonseling-permasalahan.html?id=${currentId}`;
-    window.location.href = `https://mentalwell.vercel.app/jadwalkonseling-permasalahan.html?id=${currentId}`;
+    window.location.href = `https://mentalwell.vercel.app/jadwalkonseling-permasalahan?id=${currentId}`;
 
 
   try {
