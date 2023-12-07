@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
   min-height: 100vh;
   flex: 1;
   display: flex;
@@ -155,6 +155,24 @@ Content Atur Konseling
   padding: 30px;
 }
 
+.baru {
+  padding: 10px 0px 10px 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  list-style: none;
+  text-decoration: none;
+  background-color: #044b77;
+  color: white;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.baru:hover {
+  background-color: #3498db;
+}
+
 .harapan-pasien h3 {
   margin-bottom: 20px;
 }
@@ -163,11 +181,18 @@ Content Atur Konseling
   border: 1px solid black;
   border-radius: 15px;
   width: 130px;
-  height: 50px;
+  min-height: 130px;
   margin-left: 50px;
   margin-bottom: 30px;
   padding: 10px;
   line-height: 1.5;
+}
+
+
+
+.status-konseling h2 {
+  margin-top: 10px;
+  color: #044b77;
 }
 
 .button-simpan {
@@ -180,7 +205,7 @@ Content Atur Konseling
   border-radius: 50px;
   color: white;
   font-weight: bold;
-  background-color: #044B77;
+  background-color: #044b77;
   width: 230px;
   height: 44px;
   cursor: pointer;
