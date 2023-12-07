@@ -53,91 +53,49 @@
       </div>
       <form class="editpsikolog-form">
         <div class="form-control">
-          <input
-            class="form-input"
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Email : adelia123@gmail.com"
-            required
-          />
+          <label for="email">Email : </label>
+          <div class="form-input" id="email">
+            <h4>adelia123@gmail.com</h4>
+          </div>
         </div>
         <div class="form-control">
+          <label for="namapanggilan">Nama Panggilan :</label>
           <i class="fas fa-edit"></i>
-          <input
-            class="form-input"
-            type="nama"
-            id="nama"
-            name="nama"
-            placeholder="Nama : Adelia Tatiana"
-            required
-          />
+          <input class="form-input" type="text" id="namapanggilan" name="namapanggilan" placeholder="Natasha" required />
         </div>
         <div class="form-control">
+          <label for="nowa">Nomor Whatsapp :</label>
           <i class="fas fa-edit"></i>
-          <input
-            class="form-input"
-            type="nowa"
-            id="nowa"
-            name="nowa"
-            placeholder="Nomor Whatsapp : 081234567890"
-            required
-          />
+          <input class="form-input" type="nowa" id="nowa" name="nowa" placeholder="081234567890" required />
         </div>
         <div class="form-control">
-          <i class="fas fa-edit"></i>
-          <input
-            class="form-input"
-            type="tgllahir"
-            id="tgllahir"
-            name="tgllahir"
-            placeholder="Tanggal Lahir : 08 Februari 2000"
-            required
-          />
+          <label for="tgllahir">Tanggal Lahir :</label>
+          <input class="form-input" type="date" id="tgllahir" name="tgllahir" required />
         </div>
         <div class="form-control">
-          <i class="fas fa-edit"></i>
-          <input
-            class="form-input"
-            type="text"
-            id="gender"
-            name="gender"
-            placeholder="Jenis Kelamin : Perempuan"
-            required
-          />
+          <label for="gender">Jenis Kelamin :</label>
+          <select class="form-input" id="gender" name="gender" required>
+            <option value="laki-laki">Laki-laki</option>
+            <option value="perempuan">Perempuan</option>
+          </select>
         </div>
         <div class="form-control">
+          <label for="topik">Topik Keahlian :</label>
           <i class="fas fa-edit"></i>
-          <input
-            class="form-input"
-            type="topik"
-            id="topik"
-            name="topik"
-            placeholder="Topik Keahlian : Suicidal, Fobia, Trauma"
-            required
-          />
+          <input class="form-input" type="text" id="topik" name="topik" placeholder="Suicidal, Fobia, Trauma" required />
         </div>
         <div class="form-control">
+          <label for="bio">Bio :</label>
           <i class="fas fa-edit"></i>
-          <input
-            class="form-input"
-            type="bio"
-            id="bio"
-            name="bio"
-            placeholder="Bio : lorem ipsum dolor ....."
-            required
-          />
+          <input class="form-input" type="text" id="bio" name="bio" placeholder="Tulis bio mu disini..." required />
         </div>
         <div class="form-control">
-          <i class="fas fa-edit"></i>
-          <input
-            class="form-input"
-            type="pengalaman"
-            id="pengalaman"
-            name="pengalaman"
-            placeholder="Pengalaman Praktik : 2 - 3 tahun"
-            required
-          />
+          <label for="pengalaman">Pengalaman Praktik :</label>
+          <select class="form-input" id="pengalaman" name="pengalaman" required>
+            <option value="rendah">&lt; 2 Tahun</option>
+            <option value="sedang">2 - 4 Tahun</option>
+            <option value="tinggi">&gt; 4 Tahun</option>
+          </select>
         </div>
         <button class="simpan-btn" type="submit">Simpan</button>
       </form>
