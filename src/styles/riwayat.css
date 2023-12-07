@@ -214,10 +214,14 @@ Ulasan
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   background-color: white;
   width: 500px;
-  height: 500px;
+  height: 435px;
+}
+
+.container-ulasan .content-ulasan .isi-ulasan h2 {
+  margin-top: 30px;
 }
 
 .container-ulasan .content-ulasan textarea {
