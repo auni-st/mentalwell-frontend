@@ -43,8 +43,8 @@ async function populateHTMLWithData() {
 
 function redirectToIndex() {
   // Replace 'index.html' with your actual index page file
-  window.location.href = `http://localhost:5501/src/templates/index.html`;
-  // window.location.href = `https://mentalwell.vercel.app/`;
+  // window.location.href = `http://localhost:5501/src/templates/index.html`;
+  window.location.href = `https://mentalwell.vercel.app/`;
 }
 
 function convertDateFormat(inputDate) {

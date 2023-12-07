@@ -146,8 +146,8 @@ async function redirectToCounseling2() {
     return;
   }
 
-  window.location.href = `http://localhost:5501/src/templates/jadwalkonseling-permasalahan.html?id=${currentId}`;
-  //   // window.location.href = `https://mentalwell.vercel.app/jadwalkonseling-permasalahan.html?id=${currentId}`;
+  // window.location.href = `http://localhost:5501/src/templates/jadwalkonseling-permasalahan.html?id=${currentId}`;
+    window.location.href = `https://mentalwell.vercel.app/jadwalkonseling-permasalahan.html?id=${currentId}`;
 
 
   try {
@@ -168,39 +168,6 @@ async function redirectToCounseling2() {
     console.error('Error sending counseling data:', error);
   }
 }
-
-// async function redirectToCounseling2() {
-//   // Assuming you want to redirect to the URL with the current 'id'
-//   const currentId = new URLSearchParams(window.location.search).get('id');
-//   const selectedDate = counselingData.schedule_date;
-//   const selectedTime = counselingData.schedule_time;
-//   const selectedMethod = counselingData.type;
-
-//   if (!selectedDate || !selectedTime || !selectedMethod) {
-//     // Display an error message to the user (you can customize this part)
-//     alert('Please select date, time, and counseling method.');
-//     return;
-//   }
-
-//   saveDataToSessionStorage();
-
-//   const token = sessionStorage.getItem('authToken')
-//   const dataStorage = sessionStorage.getItem('counselingData')
-
-//   const response = await fetch(`https://mentalwell-backend.vercel.app/counselings/psychologists/${currentId}`, {
-//     method: 'POST',
-//     headers: {
-//       'Content-Type': 'application/json',
-//       'Authorization': `Bearer ${token}`,
-//     },
-//     body: JSON.stringify(dataStorage),
-//   });
-//   console.log(response)
-
-
-//   // window.location.href = `http://localhost:5501/src/templates/jadwalkonseling-permasalahan.html?id=${currentId}`;
-//   // window.location.href = `https://mentalwell.vercel.app/jadwalkonseling-permasalahan.html?id=${currentId}`;
-// }
 
 async function sendCounselingData() {
   // Get the description and hope_after values from the textarea elements
@@ -240,8 +207,8 @@ async function sendCounselingData() {
       });
 
       // Replace this with your actual redirection logic
-      window.location.href = `http://localhost:5501/src/templates/jadwalkonseling-selesai.html?id=${currentId}`;
-      // window.location.href = `http://mentalwell.vercel.app/jadwalkonseling-selesai?id=${currentId}`;
+      // window.location.href = `http://localhost:5501/src/templates/jadwalkonseling-selesai.html?id=${currentId}`;
+      window.location.href = `http://mentalwell.vercel.app/jadwalkonseling-selesai?id=${currentId}`;
       // console.log(counselingData);
 
       if (!response.ok) {
@@ -269,14 +236,6 @@ async function sendCounselingData() {
   } catch (error) {
     console.error('Error sending counseling data:', error);
   }
-}
-
-function redirectToCounseling3() {
-  // Replace this with your actual redirection logic
-  // const currentId = new URLSearchParams(window.location.search).get('id');
-  // window.location.href = `http://localhost:5501/src/templates/jadwalkonseling-selesai.html?id=${currentId}`;
-  console.log(counselingData);
-
 }
 
 function confirmAndRedirect() {

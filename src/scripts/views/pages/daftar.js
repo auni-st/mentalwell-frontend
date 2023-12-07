@@ -93,8 +93,8 @@ daftarForm.addEventListener('submit', async (event) => {
         icon: 'success',
         showConfirmButton: true,
       }).then(() => {
-        window.location.href = "http://localhost:5501/src/templates/index.html"
-        // window.location.href = 'https://mentalwell.vercel.app/';
+        // window.location.href = "http://localhost:5501/src/templates/index.html"
+        window.location.href = 'https://mentalwell.vercel.app/';
         event.preventDefault();
       });
     } else {

@@ -74,9 +74,9 @@ function redirectToCounseling() {
   const articleId = urlParams.get('id');
 
   // Redirect to the specified URL with the articleId parameter
-  window.location.href = `http://localhost:5501/src/templates/jadwalkonseling-isidata.html?id=${articleId}`;
+  // window.location.href = `http://localhost:5501/src/templates/jadwalkonseling-isidata.html?id=${articleId}`;
   // for prod
-  // window.location.href = `https://mentalwell.vercel.app/jadwalkonseling-isidata.html?id=${articleId}`;
+  window.location.href = `https://mentalwell.vercel.app/jadwalkonseling-isidata.html?id=${articleId}`;
 
 }
 
