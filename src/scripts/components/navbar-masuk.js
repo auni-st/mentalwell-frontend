@@ -29,7 +29,7 @@ class NavBar extends HTMLElement {
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
-            margin-left: 2rem;
+            margin-left: 4rem;
           }
     
           .navbar .navbar-brand h1 {
@@ -49,17 +49,25 @@ class NavBar extends HTMLElement {
           .navbar .navbar-list .button {
             display: flex;
             align-items: center;
-            margin-right: 2rem;
+            margin-right: 4rem;
           }
     
           .navbar .navbar-list .button button {
-            width: 95px;
+            width: 110px;
             height: 44px;
+<<<<<<< Updated upstream
             border-radius: 20px;
             background-color: #044b77;
             color: #ffffff;
             font-size: 17px;
             border: none;
+=======
+            border-radius: 30px;
+            background-color: #044b77;
+            color: #ffffff;
+            font-size: 17px;
+            border:none;
+>>>>>>> Stashed changes
           }
     
           .navbar .navbar-list .button button:hover {
@@ -256,7 +264,11 @@ class NavBarLogin extends HTMLElement {
   }
 }
 
+<<<<<<< Updated upstream
 const authToken = sessionStorage.getItem('authToken');
+=======
+const authToken = sessionStorage.getItem("authToken");
+>>>>>>> Stashed changes
 
 if (authToken) {
   customElements.define('navbar-masuk', NavBarLogin);
