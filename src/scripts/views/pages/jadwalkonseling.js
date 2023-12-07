@@ -147,26 +147,8 @@ async function redirectToCounseling2() {
   }
 
   // window.location.href = `http://localhost:5501/src/templates/jadwalkonseling-permasalahan.html?id=${currentId}`;
-    window.location.href = `https://mentalwell.vercel.app/jadwalkonseling-permasalahan?id=${currentId}`;
+  window.location.href = `https://mentalwell.vercel.app/jadwalkonseling-permasalahan?id=${currentId}`;
 
-
-  try {
-    const response = await fetch(`https://mentalwell-backend.vercel.app/counselings/psychologists/${currentId}`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${token}`,
-      },
-      body: dataStorage,
-    });
-
-    if (!response.ok) {
-      throw new Error('Failed to send counseling data');
-    }
-
-  } catch (error) {
-    console.error('Error sending counseling data:', error);
-  }
 }
 
 async function sendCounselingData() {
