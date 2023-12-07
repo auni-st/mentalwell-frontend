@@ -264,7 +264,7 @@ class NavBarLogin extends HTMLElement {
   }
 }
 
-const authToken = sessionStorage.getItem("authToken");
+const authToken = sessionStorage.getItem('authToken');
 
 if (authToken) {
   customElements.define('navbar-masuk', NavBarLogin);
