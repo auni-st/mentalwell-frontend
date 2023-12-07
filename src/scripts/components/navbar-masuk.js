@@ -281,7 +281,7 @@ class NavBarLogin extends HTMLElement {
                             <li class="list-item"><a href="/listpsikolog">Cari Psikolog</a></li>
                             <li class="list-item"><a href="/tentangkami">Tentang Kami</a></li>
                         </ul>
-                        <div class="button">
+                        <div class="button" id="userDropdown">
                             <img src="/src/public/beranda/man.png" alt="Foto User" id="photoUser" width="60px" height="60px">
                             <h2>John Doe</h2>
                             <div class="dropdown-content">
@@ -323,7 +323,7 @@ if (authToken) {
   userDropdown.addEventListener('mouseout', () => {
     userDropdown.querySelector('.dropdown-content').style.display = 'none';
   });
-  
+
 } else {
   customElements.define('navbar-masuk', NavBar);
 }
