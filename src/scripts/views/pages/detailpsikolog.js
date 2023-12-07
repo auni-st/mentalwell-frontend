@@ -68,7 +68,6 @@ async function renderArticleDetails() {
 // Render artikel details ketika halaman dimuat
 renderArticleDetails();
 
-
 // Add an event listener to the Daftar Konseling button
 const daftarKonselingButton = document.getElementById('btnDaftar');
 daftarKonselingButton.addEventListener('click', redirectToCounseling);

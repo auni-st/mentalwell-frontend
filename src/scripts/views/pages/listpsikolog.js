@@ -21,7 +21,7 @@ fetch(apiUrl)
                             <p class="ulasan">${articleData.counselings.review.count}</p>
                         </div>
                         <div class="list-button-psikolog">
-                          <div class="jadwal-hijau">
+                            <div class="${articleData.availability === 'available' ? 'jadwal-hijau' : 'jadwal-merah'}">
                                 <p>${articleData.availability}</p>
                             </div>
                             <div class="button-psikolog">
