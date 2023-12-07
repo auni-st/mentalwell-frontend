@@ -58,14 +58,32 @@
 </html>
 <script>
   function redirectToCounseling() {
-  // Get the articleId from the URL
   // const urlParams = new URLSearchParams(window.location.search);
   // const articleId = urlParams.get('id');
+  const authToken = sessionStorage.getItem('authToken');
 
+  if (authToken) {
+    redirectJadwalKonselingData();
+  } else {
+    openLoginPopup()
+  }
   // window.location.href = `https://mentalwell.vercel.app/jadwalkonseling-isidata?id=${articleId}`;
-  window.location.href = `/jadwalkonseling-isidata`;
-
+  
 }
+
+function redirectJadwalKonselingData() {
+  window.location.href = `/jadwalkonseling-isidata`;
+}
+
+function openLoginPopup() {
+  document.getElementById('login-container').style.display = 'flex';
+  document.getElementById('daftar-container').style.display = 'none';
+  document.getElementById('overlay').style.display = 'block';
+  document.getElementById('overly').style.display = 'none';
+  var navbarLinks = document.getElementById('masuk');
+  navbarLinks.style.pointerEvents = 'none';
+}
+
 </script>
 <script src="/src/scripts/views/pages/detailpsikolog.js"></script>
 <script src="/src/scripts/views/pages/login.js"></script>
