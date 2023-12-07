@@ -8,14 +8,11 @@
     <link rel="stylesheet" href="/src/styles/editprofilpasien.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     <script type="module" src="/src/scripts/components/navbar-user.js" defer></script>
-    <script type="module" src="/src/scripts/components/navbar-psikolog.js" defer></script>
   </head>
 
   <body>
     <!-- navbar components -->
-    <navbar-user></navbar-user>
-    <!-- <navbar-user></navbar-user> -->
-    
+    <navbar-user></navbar-user>    
 
     <!-- <header class="navbar">
         <div class="navbar-brand">
@@ -44,29 +41,36 @@
         <div class="profil-image">
           <img src="/src/public/beranda/man.png" alt="gambar profil" />
         </div>
+        <h3>Natasha Wilona</h3>
       </div>
 
       <form class="editpasien-form">
         <div class="form-control">
-          <input class="form-input" type="text" id="namalengkap" name="namalengkap" placeholder="natasha wilona" required />
+          <label for="email">Email : </label>
+          <div class="form-input" id="email">
+            <h4>natasya123@gmail.com</h4>
+          </div>
         </div>
         <div class="form-control">
-          <input class="form-input" type="text" id="namapanggilan" name="namapanggilan" placeholder="natasha" required />
-        </div>
-        <div class="form-control">
-          <input class="form-input" type="email" id="email" name="email" placeholder="Email : natasya123@gmail.com" required />
-        </div>
-        <div class="form-control">
+          <label for="namapanggilan">Nama Panggilan :</label>
           <i class="fas fa-edit"></i>
-          <input class="form-input" type="nowa" id="nowa" name="nowa" placeholder="Nomor Whatsapp : 081234567890" required />
+          <input class="form-input" type="text" id="namapanggilan" name="namapanggilan" placeholder="Natasha" required />
         </div>
         <div class="form-control">
+          <label for="nowa">Nomor Whatsapp :</label>
           <i class="fas fa-edit"></i>
-          <input class="form-input" type="tgllahir" id="tgllahir" name="tgllahir" placeholder="Tanggal Lahir : 08 Februari 2000" required />
+          <input class="form-input" type="nowa" id="nowa" name="nowa" placeholder="081234567890" required />
         </div>
         <div class="form-control">
-          <i class="fas fa-edit"></i>
-          <input class="form-input" type="text" id="gender" name="gender" placeholder="Jenis Kelamin : Perempuan" required />
+          <label for="tgllahir">Tanggal Lahir :</label>
+          <input class="form-input" type="date" id="tgllahir" name="tgllahir" required />
+        </div>
+        <div class="form-control">
+          <label for="gender">Jenis Kelamin :</label>
+          <select class="form-input" id="gender" name="gender" required>
+            <option value="laki-laki">Laki-laki</option>
+            <option value="perempuan">Perempuan</option>
+          </select>
         </div>
         <button class="simpan-btn" type="submit">Simpan</button>
       </form>

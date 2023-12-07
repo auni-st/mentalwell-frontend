@@ -108,12 +108,13 @@ Header
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 98px auto 10px;
+  /* margin: 98px auto 10px; */
+  margin: 130px 0 auto 135px;
 }
 
 .editpsikolog-container .editpsikolog-title {
-  margin-top: 5px;
-  margin-bottom: 40px;
+  margin-top: 20px;
+  margin-bottom: 30px;
   color: #333;
 }
 
@@ -138,6 +139,7 @@ Header
   width: 150px;
   height: 150px;
   border-radius: 50%;
+  margin-bottom: 20px;
 }
 
 h3 {
@@ -153,13 +155,24 @@ h3 {
 .editpsikolog-container .editpsikolog-form .form-control .form-input {
   display: flex;
   border: 1px solid #ccc;
-  border-radius: 50px;
+  border-radius: 20px;
   font-size: 16px;
-  padding-left: 20px;
-  padding-right: 20px;
-  width: 330px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 200px;
   align-items: center;
-  height: 44px;
+  height: 34px;
+  position: relative;
+  left: 45%;
+}
+
+h4 {
+  font-weight: normal;
+}
+
+label {
+  position: absolute;
+  padding-top: 7px;
 }
 
 .editpsikolog-container .editpsikolog-form .form-control .form-input:focus {
@@ -169,17 +182,15 @@ h3 {
 
 .editpsikolog-container .editpsikolog-form .form-control .fa-edit {
   position: absolute;
-  margin-left: 330px;
-  margin-top: 15px;
+  z-index: 1;
+  margin-left: 360px;
+  margin-top: 10px;
 }
 
 .editpsikolog-container .editpsikolog-form .form-control .fa-edit:hover {
-  background-color: #044b77;
-  padding: 4px;
-  border-radius: 4px;
-  margin-left: 328px;
-  margin-top: 10px;
+  background-color: #044B77; 
   color: #ffffff;
+  cursor: pointer;
 }
 
 .editpsikolog-container .editpsikolog-form .form-input {
