@@ -171,12 +171,6 @@ class NavBar extends HTMLElement {
                           <li class="list-item"><a href="/listpsikolog">Cari Psikolog</a></li>
                           <li class="list-item"><a href="/tentangkami">Tentang Kami</a></li>
                       </ul>
-<<<<<<< Updated upstream
-                      <div class="button">
-                          <img src="/src/public/beranda/man.png" alt="Foto User" id="photoUser" width="60px" height="60px">
-                          <h2>John Doe</h2>
-                      </div>
-=======
                   
                   <div class="button-user" id="userDropdown">
                     <img src="/src/public/beranda/man.png" alt="Foto User" id="photoUser" >
@@ -185,7 +179,6 @@ class NavBar extends HTMLElement {
                         <a href="#">Profil saya</a>
                         <a class="keluar" href="#">Keluar</a>
                     </div>
->>>>>>> Stashed changes
                   </div>
               </div>
           </nav>
@@ -206,9 +199,6 @@ class NavBar extends HTMLElement {
 }
 
 // Define the custom element
-<<<<<<< Updated upstream
-customElements.define('navbar-user', NavBar);
-=======
 customElements.define("navbar-user", NavBar);
 
 // Get userDropdown element outside Shadow DOM
@@ -222,4 +212,3 @@ userDropdown.addEventListener("mouseover", () => {
 userDropdown.addEventListener("mouseout", () => {
   userDropdown.querySelector(".dropdown-content").style.display = "none";
 });
->>>>>>> Stashed changes
