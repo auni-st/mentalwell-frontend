@@ -44,7 +44,7 @@ async function renderArticleDetails() {
     const ulasanPengguna = document.getElementById('ulasan-pengguna');
     const userReviewsContainer = document.getElementById('userReviews');
 
-     if (articleData.counselings && articleData.counselings.length > 0) {
+    if (articleData.counselings && articleData.counselings.length > 0) {
       const userReviews = articleData.counselings.map(counseling => `
         <div class="isi-ulasan">
           <img src="/src/public/beranda/man.png" alt="Foto User" id="userReview" />
@@ -67,3 +67,19 @@ async function renderArticleDetails() {
 
 // Render artikel details ketika halaman dimuat
 renderArticleDetails();
+
+function redirectToCounseling() {
+  // Get the articleId from the URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const articleId = urlParams.get('id');
+
+  // Redirect to the specified URL with the articleId parameter
+  // window.location.href = `http://localhost:5501/src/templates/jadwalkonseling-isidata.html?id=${articleId}`;
+  // for prod
+  window.location.href = `https://mentalwell.vercel.app/jadwalkonseling-isidata?id=${articleId}`;
+
+}
+
+// Add an event listener to the Daftar Konseling button
+const daftarKonselingButton = document.getElementById('btnDaftar');
+daftarKonselingButton.addEventListener('click', redirectToCounseling);
