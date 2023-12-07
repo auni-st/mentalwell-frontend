@@ -97,7 +97,9 @@ Header
 .editpsikolog-container {
   background-color: #fff;
   border-radius: 15px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   text-align: center;
   width: 80%;
   max-width: 1000px;
@@ -105,7 +107,6 @@ Header
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid #000;
   justify-content: center;
   margin: 98px auto 10px;
 }
@@ -207,6 +208,7 @@ h3 {
   width: 370px;
   height: 44px;
   margin-top: 0rem;
+  margin-bottom: 2rem;
 }
 
 .editpsikolog-container .editpsikolog-form .simpan-btn:hover {
