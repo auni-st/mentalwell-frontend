@@ -161,25 +161,25 @@ class NavBar extends HTMLElement {
           <nav>
               <div class="navbar">
                   <div class="navbar-brand">
-                  <img src="/src/public/logo/logo-mentalwell.jpg" alt="imagelogo" width="50px" height="50px">
-                      <h1>MentalWell</h1>
+                    <img src="/src/public/logo/logo-mentalwell.jpg" alt="imagelogo" width="50px" height="50px">
+                    <h1>MentalWell</h1>
                   </div>
                   <div class="navbar-list">
-                      <ul class="navbar-list-item">
-                          <li class="list-item"><a href="./">Beranda</a></li>
-                          <li class="list-item"><a href="/artikel">Artikel</a></li>
-                          <li class="list-item"><a href="/listpsikolog">Cari Psikolog</a></li>
-                          <li class="list-item"><a href="/tentangkami">Tentang Kami</a></li>
-                      </ul>
-                  
-                  <div class="button-user" id="userDropdown">
-                    <img src="/src/public/beranda/man.png" alt="Foto User" id="photoUser" >
-                    <button type="submit">John Doe</button>
+                    <ul class="navbar-list-item">
+                      <li class="list-item"><a href="./">Beranda</a></li>
+                      <li class="list-item"><a href="/artikel">Artikel</a></li>
+                      <li class="list-item"><a href="/listpsikolog">Cari Psikolog</a></li>
+                      <li class="list-item"><a href="/tentangkami">Tentang Kami</a></li>
+                    </ul>
+                    <div class="button-user" id="userDropdown">
+                     <img src="/src/public/beranda/man.png" alt="Foto User" id="photoUser" >
+                     <button type="submit">John Doe</button>
+                    </div>
                     <div class="dropdown-content">
                         <a href="#">Profil saya</a>
                         <a class="keluar" href="#">Keluar</a>
                     </div>
-                  </div>
+                </div>
               </div>
           </nav>
         `;

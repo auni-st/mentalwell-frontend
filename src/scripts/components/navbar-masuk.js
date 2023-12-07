@@ -238,6 +238,34 @@ class NavBarLogin extends HTMLElement {
               .navbar .navbar-list .navbar-list-item .list-item a:hover::after {
                 width: 100%;
               }
+
+              .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+                top: 90px;
+                right: 0;
+                border-bottom-left-radius: 10px;
+            }
+            
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                display: block;
+                text-decoration: none;
+            }
+            
+            .dropdown-content a:hover {
+                background-color: #044B77;
+                color: #fff;
+            }
+
+            .keluar {
+              border-bottom-left-radius: 10px;
+            }
             </style>
             
             <nav>
@@ -256,11 +284,26 @@ class NavBarLogin extends HTMLElement {
                         <div class="button">
                             <img src="/src/public/beranda/man.png" alt="Foto User" id="photoUser" width="60px" height="60px">
                             <h2>John Doe</h2>
+                            <div class="dropdown-content">
+                                <a href="#">Profil saya</a>
+                                <a class="keluar" href="#">Keluar</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </nav>
       `;
+    // Get userDropdown element within Shadow DOM
+    const userDropdown = this.shadowRoot.getElementById('userDropdown');
+
+    // Add event listeners for mouseover and mouseout within Shadow DOM
+    userDropdown.addEventListener('mouseover', () => {
+      userDropdown.querySelector('.dropdown-content').style.display = 'block';
+    });
+
+    userDropdown.addEventListener('mouseout', () => {
+      userDropdown.querySelector('.dropdown-content').style.display = 'none';
+    });
   }
 }
 
@@ -268,6 +311,19 @@ const authToken = sessionStorage.getItem('authToken');
 
 if (authToken) {
   customElements.define('navbar-masuk', NavBarLogin);
+
+  // Get userDropdown element outside Shadow DOM
+  const userDropdown = document.getElementById('userDropdown');
+
+  // Add event listeners for mouseover and mouseout outside Shadow DOM
+  userDropdown.addEventListener('mouseover', () => {
+    userDropdown.querySelector('.dropdown-content').style.display = 'block';
+  });
+
+  userDropdown.addEventListener('mouseout', () => {
+    userDropdown.querySelector('.dropdown-content').style.display = 'none';
+  });
+  
 } else {
   customElements.define('navbar-masuk', NavBar);
 }
