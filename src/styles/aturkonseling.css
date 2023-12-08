@@ -100,7 +100,7 @@ Content Atur Konseling
   display: flex;
   flex-direction: column;
   background-color: white;
-  margin: 98px 30px 40px 30px;
+  margin: 98px 100px 80px 100px;
   border: 1px solid black;
   border-radius: 20px;
 }
@@ -178,8 +178,6 @@ Content Atur Konseling
 }
 
 .status-konseling {
-  border: 1px solid black;
-  border-radius: 15px;
   width: 130px;
   min-height: 130px;
   margin-left: 50px;
@@ -188,11 +186,10 @@ Content Atur Konseling
   line-height: 1.5;
 }
 
-
-
 .status-konseling h2 {
   margin-top: 10px;
-  color: #044b77;
+  color: #000;
+  font-size: 20px;
 }
 
 .button-simpan {
