@@ -172,8 +172,8 @@ class NavBar extends HTMLElement {
                             <img src="/src/public/beranda/man.png" alt="Foto User" id="photoUser" >
                             <button type="submit">John Doe</button>
                             <div class="dropdown-content">
-                                <a id="profilLink" href="#">Profil saya</a>
-                                <a class="keluar" href="#">Keluar</a>
+                              <a id="profilLink" href="#">Profil saya</a>
+                              <a class="keluar" href="#">Keluar</a>
                             </div>
                         </div>
                     <div>
@@ -194,13 +194,10 @@ class NavBar extends HTMLElement {
             userDropdown.querySelector(".dropdown-content").style.display = "none";
           });
 
-          // Add event listener for "Profil saya" link click
           profilLink.addEventListener("click", () => {
-            // Redirect to /editprofilpsikolog
             window.location.href = "/editprofilpsikolog";
           });
 
-          // Add event listener for "Keluar" (logout) link click
           this.shadowRoot.querySelector(".keluar").addEventListener("click", () => {
             this.logout();
           });

@@ -116,8 +116,9 @@ class NavBar extends HTMLElement {
                     <button type="submit">John Doe</button>
                     </div>
                     <div class="dropdown-content">
-                        <a href="#">Profil saya</a>
-                        <a class="keluar" href="#">Keluar</a>
+                      <a id="riwayat" href="#">Riwayat</a>
+                      <a id="profilLink" href="#">Profil saya</a>
+                      <a class="keluar" href="#">Keluar</a>
                     </div>
                 </div>
               </div>
@@ -126,6 +127,8 @@ class NavBar extends HTMLElement {
 
     // Get userDropdown element within Shadow DOM
     const userDropdown = this.shadowRoot.getElementById("userDropdown");
+    const profilLink = this.shadowRoot.getElementById("profilLink");
+    const riwayat = this.shadowRoot.getElementById("riwayat");
 
     // Add event listeners for mouseover and mouseout within Shadow DOM
     userDropdown.addEventListener("mouseover", () => {
@@ -134,6 +137,14 @@ class NavBar extends HTMLElement {
 
     userDropdown.addEventListener("mouseout", () => {
       userDropdown.querySelector(".dropdown-content").style.display = "none";
+    });
+
+    profilLink.addEventListener("click", () => {
+      window.location.href = "/editprofilpasien";
+    });
+
+    riwayat.addEventListener("click", () => {
+      window.location.href = "/riwayat";
     });
   }
 }
