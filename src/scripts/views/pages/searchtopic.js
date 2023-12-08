@@ -33,14 +33,15 @@ async function filterArticles() {
                                 <p class="ulasan">${articleData.counselings.review.count}</p>
                             </div>
                             <div class="list-button-psikolog">
-                                <div class="jadwal-hijau">
-                                    <p>${articleData.availability}</p>
+                                <div class="${articleData.availability === 'available' ? 'jadwal-hijau' : 'jadwal-merah'}">
+                                  <p>${articleData.availability}</p>
                                 </div>
                                 <div class="button-psikolog">
                                     <button type="button" onclick="redirectToDetailPsychologist()">Lihat Selengkapnya</button>
                                 </div>
                             </div>
                         </div>
+
                     `
       container.appendChild(contentDiv);
     });
