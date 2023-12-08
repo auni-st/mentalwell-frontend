@@ -44,8 +44,8 @@
           <h2>ULASAN</h2>
         </div>
         <div id="userReviews" class="userReviews"></div>
-        </div>
       </div>
+    </div>
     </div>
     <div class="button-daftar">
       <button type="button" id="btnDaftar" onclick="redirectToCounseling()">Daftar Konseling</button>
@@ -55,18 +55,19 @@
     <span>@MentalWell 2023, SEMUA HAK DILINDUNGI</span>
   </footer>
 </body>
+
 </html>
 <script>
   function redirectToCounseling() {
-  // Get the articleId from the URL
-  const urlParams = new URLSearchParams(window.location.search);
-  const articleId = urlParams.get('id');
+    // Get the articleId from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const articleId = urlParams.get('id');
 
-  // Redirect to the specified URL with the articleId parameter
-  // window.location.href = `http://localhost:5501/src/templates/jadwalkonseling-isidata.html?id=${articleId}`;
-  // for prod
-  window.location.href = `https://mentalwell.vercel.app/jadwalkonseling-isidata?id=${articleId}`;
-}
+    // Redirect to the specified URL with the articleId parameter
+    // window.location.href = `http://localhost:5501/src/templates/jadwalkonseling-isidata.html?id=${articleId}`;
+    // for prod
+    window.location.href = `https://mentalwell.vercel.app/jadwalkonseling-isidata?id=${articleId}`;
+  }
 </script>
 <script src="/src/scripts/views/pages/detailpsikolog.js"></script>
 <script src="/src/scripts/views/pages/login.js"></script>

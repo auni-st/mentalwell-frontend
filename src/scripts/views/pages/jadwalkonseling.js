@@ -24,7 +24,6 @@ async function fetchCounselingData() {
 async function populateFormFields() {
   try {
     const counselingData = await fetchCounselingData();
-    // console.log(counselingData)
 
     const fullNameInput = document.querySelector('input[placeholder="Nama Lengkap"]');
     const nicknameInput = document.querySelector('input[placeholder="Nama Panggilan"]');
@@ -63,8 +62,68 @@ function saveDataToSessionStorage() {
   // sessionStorage.setItem('counselingData', JSON.stringify(counselingData));
 }
 
-function selectDate() {
+function getPsychologistIdFromUrl() {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get('id');
+}
+
+async function fetchPsychologistSchedule(psychologistId) {
+  const url = `https://mentalwell-backend.vercel.app/schedule/psychologist/${psychologistId}`;
+
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error(error);
+    // Handle the error as needed
+    return null;
+  }
+}
+
+async function selectDate() {
   const selectedDate = document.getElementById('tanggalInput').value;
+
+  // Extract psychologist ID from the URL
+  const psychologistId = getPsychologistIdFromUrl();
+
+  const scheduleData = await fetchPsychologistSchedule(psychologistId);
+
+  if (scheduleData) {
+    const conflicts = scheduleData.counselings.filter(counseling =>
+      counseling.schedule_date === selectedDate && counseling.status === 'belum_selesai'
+    );
+
+    const timeOptions = document.querySelectorAll('.time');
+
+    timeOptions.forEach(card => {
+      card.disabled = false;
+      card.classList.remove('disabled'); // Remove the class to reset their color
+    });
+
+    if (conflicts.length > 0) {
+
+      conflicts.forEach(conflict => {
+        const normalizedHtmlTime = normalizeTimeFormat(conflict.schedule_time).trim();
+
+        const timeOptionsArray = Array.from(timeOptions);
+
+        const conflictingButton = timeOptionsArray.find(card => {
+          const normalizedCardTime = normalizeTimeFormat(card.innerText.trim());
+          return normalizedCardTime.replace(/\s+/g, ' ') === normalizedHtmlTime && card.classList.contains('time');
+        });
+
+
+        if (conflictingButton) {
+          conflictingButton.disabled = true;
+          conflictingButton.classList.add('disabled'); 
+        } else {
+          console.warn('Button not found for schedule time:', normalizedHtmlTime);
+        }
+
+      });
+    }
+  }
 
   counselingData.schedule_date = selectedDate;
   saveDataToSessionStorage();
@@ -219,6 +278,14 @@ async function sendCounselingData() {
     console.error('Error sending counseling data:', error);
   }
 }
+
+function normalizeTimeFormat(time) {
+  // Replace colons with dots and add a single space (e.g., "13:00-14:00" to "13.00 - 14.00")
+  return time.replace(/:/g, '.').replace('-', ' - ');
+}
+
+// Searching for normalized schedule time: 13.00 - 14.00
+// Comparing to: 13.00  -  14.00
 
 function confirmAndRedirect() {
   console.log(counselingData)

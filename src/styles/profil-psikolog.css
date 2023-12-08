@@ -51,18 +51,18 @@ Header
 }
 
 .navbar .navbar-list .button-user {
-    display: flex;
-    align-items: center;
-  }
-  
-  .navbar .navbar-list .button-user button {
-    width: 95px;
-    height: 40px;
-    background-color: white;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-  }
+  display: flex;
+  align-items: center;
+}
+
+.navbar .navbar-list .button-user button {
+  width: 95px;
+  height: 40px;
+  background-color: white;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
 
 .navbar .navbar-list .navbar-list-item {
   text-decoration: none;
@@ -139,7 +139,8 @@ Content Profil Psikolog
   margin: 10px 0 20px 50px;
 }
 
-.pengalaman-praktik h3,p {
+.pengalaman-praktik h3,
+p {
   padding-left: 10px;
 }
 
@@ -166,18 +167,18 @@ Content Profil Psikolog
 
 .container-ulasan::before {
   position: absolute;
-  content: "←"; 
+  content: "←";
   bottom: -140px;
   left: 80px;
-  font-size: 24px; 
+  font-size: 24px;
 }
 
 .container-ulasan::after {
   position: absolute;
-  content: "→"; 
+  content: "→";
   bottom: -140px;
-  right: 80px; 
-  font-size: 24px; 
+  right: 80px;
+  font-size: 24px;
 }
 
 .header-ulasan {
@@ -230,8 +231,17 @@ Content Profil Psikolog
 }
 
 #btnDaftar:hover {
-  background-color: #3ad0ea; 
+  background-color: #3ad0ea;
   color: #ffffff;
+}
+
+#btnDaftar.disabled {
+  background-color: #ccc;
+  /* Change to your desired disabled button color */
+  color: #999;
+  /* Change to your desired text color for disabled button */
+  /* Add any additional styling for the disabled state */
+  cursor: default;
 }
 
 /*
