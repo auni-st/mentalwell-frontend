@@ -268,7 +268,7 @@ login
 }
 
 .login-container .login-title h2 {
-  margin-top: -2rem;
+  margin-top: -1rem;
 }
 
 .login-container .login-title p {
@@ -297,14 +297,14 @@ login
   font-size: 16px;
   padding-left: 20px;
   padding-right: 20px;
-  width: 330px;
+  width: 350px;
   align-items: center;
   height: 44px;
 }
 
 .login-container .login-form .form-control .eye {
   position: absolute;
-  margin-left: 310px;
+  margin-left: 300px;
   margin-top: 15px;
 }
 
@@ -325,18 +325,18 @@ login
 
 .login-container .login-form p a:hover {
   text-decoration: none;
-  color: black;
+  color: blue;
 }
 
 .login-container .login-form .submit-btn {
   border: 1px solid #ccc;
   border-radius: 50px;
   font-size: 20px;
-  margin-top: 2rem;
+  margin-top: 4rem;
   color: white;
   font-weight: bold;
   background-color: #044b77;
-  width: 370px;
+  width: 350px;
   height: 44px;
 }
 

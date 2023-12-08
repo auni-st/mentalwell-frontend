@@ -129,7 +129,7 @@ login
 }
 
 .login-container .login-title h2 {
-  margin-top: -2rem;
+  margin-top: -1rem;
 }
 
 .login-container .login-title p {
@@ -193,7 +193,7 @@ login
   border: 1px solid #ccc;
   border-radius: 50px;
   font-size: 20px;
-  margin-top: 2rem;
+  margin-top: 4rem;
   color: white;
   font-weight: bold;
   background-color: #044b77;
