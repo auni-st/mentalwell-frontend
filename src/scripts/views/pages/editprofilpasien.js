@@ -1,5 +1,6 @@
 const token = sessionStorage.getItem('authToken');
 const editIcon = document.getElementById('editIcon');
+const form = document.querySelector('.editpasien-form');
 
 document.addEventListener('DOMContentLoaded', async function () {
   // Fetch patient data from the backend with authorization
@@ -31,89 +32,37 @@ document.addEventListener('DOMContentLoaded', async function () {
 
 });
 
-
-// function getPatientProfile() {
-//   fetch('https://mentalwell-backend.vercel.app/patient', {
-//     method: 'GET',
-//     headers: {
-//       'Authorization': `Bearer ${token}`,
-//       'Content-Type': 'application/json'
-//     }
-//   })
-//     .then(response => {
-//       if (!response.ok) {
-//         throw new Error('Failed to fetch data. Status: ' + response.status);
-//       }
-//       return response.json();
-//     })
-//     .then(data => {
-//       displayPatientProfile(data);
-//     })
-//     .catch(error => console.error('Error fetching patient profile:', error));
-// }
-
-// function displayPatientProfile(patientData) {
-//   document.querySelector('.editpasien-container h3').innerText = patientData.full_name;
-//   document.querySelector('.editpasien-form #email h4').innerText = patientData.email;
-//   document.getElementById('namalengkap').value = patientData.full_name;
-//   document.getElementById('namapanggilan').value = patientData.nickname;
-//   document.getElementById('nowa').value = patientData.phone_number;
-//   document.getElementById('tgllahir').value = patientData.birthdate;
-//   document.getElementById('gender').value = patientData.gender;
-
-//   document.getElementById('namalengkap').readOnly = true;
-//   document.getElementById('email').readOnly = true;
-
-//   editIcon.addEventListener('click', function () {
-//     document.getElementById('namalengkap').readOnly = false;
-//     document.getElementById('namapanggilan').readOnly = false;
-//     document.getElementById('nowa').readOnly = false;
-//     document.getElementById('tgllahir').readOnly = false;
-//     document.getElementById('gender').readOnly = false;
-//   });
-// }
-
-function editPatientProfile(formData) {
-  fetch('https://mentalwell-backend.vercel.app/patient', {
-    method: 'PUT',
-    headers: {
-      'Authorization': `Bearer ${token}`,
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      full_name: formData.get('namalengkap'),
-      nickname: formData.get('namapanggilan'),
-      phone_number: formData.get('nowa'),
-      birthdate: formData.get('tgllahir'),
-      gender: formData.get('gender')
-    })
-  })
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Failed to edit patient profile. Status: ' + response.status);
-      }
-      return response.json();
-    })
-    .then(data => {
-      console.log('Patient profile edited successfully:', data);
-      displayPatientProfile(data);
-    })
-    .catch(error => console.error('Error editing patient profile:', error));
-}
-
-getPatientProfile();
-
-document.querySelector('.editpasien-form').addEventListener('submit', function (event) {
+form.addEventListener('submit', async function (event) {
   event.preventDefault();
 
-  const formData = new FormData(this);
+  // Get the updated values from the form
+  const name = document.getElementById('namalengkap').value;
+  const nickname = document.getElementById('namapanggilan').value;
+  const phone_number = document.getElementById('nowa').value;
+  const birthdate = document.getElementById('tgllahir').value;
+  const gender = document.getElementById('gender').value;
 
-  document.getElementById('namalengkap').readOnly = true;
-  document.getElementById('namapanggilan').readOnly = true;
-  document.getElementById('nowa').readOnly = true;
-  document.getElementById('tgllahir').readOnly = true;
-  document.getElementById('gender').readOnly = true;
+  // Send the updated data to the backend using the PUT method
+  const response = await fetch('https://mentalwell-backend.vercel.app/patient', {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify({
+      name,
+      nickname,
+      phone_number,
+      birthdate,
+      gender,
+    }),
+  });
 
-  editPatientProfile(formData);
+  // Handle the response from the backend (you can customize this based on your needs)
+  if (response.ok) {
+    alert('Profile updated successfully!');
+  } else {
+    const errorMessage = await response.text();
+    alert(`Failed to update profile. Error: ${errorMessage}`);
+  }
 });
-
