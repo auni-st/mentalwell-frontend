@@ -172,7 +172,7 @@ class NavBar extends HTMLElement {
                             <img src="/src/public/beranda/man.png" alt="Foto User" id="photoUser" >
                             <button type="submit">John Doe</button>
                             <div class="dropdown-content">
-                                <a href="#">Profil saya</a>
+                                <a id="profilLink" href="#">Profil saya</a>
                                 <a class="keluar" href="#">Keluar</a>
                             </div>
                         </div>
@@ -183,6 +183,7 @@ class NavBar extends HTMLElement {
 
     // Get userDropdown element within Shadow DOM
     const userDropdown = this.shadowRoot.getElementById("userDropdown");
+    const profilLink = this.shadowRoot.getElementById("profilLink");
 
     // Add event listeners for mouseover and mouseout within Shadow DOM
     userDropdown.addEventListener("mouseover", () => {
@@ -191,6 +192,12 @@ class NavBar extends HTMLElement {
 
     userDropdown.addEventListener("mouseout", () => {
       userDropdown.querySelector(".dropdown-content").style.display = "none";
+    });
+
+    // Add event listener for "Profil saya" link click
+    profilLink.addEventListener("click", () => {
+      // Redirect to /editprofilpsikolog
+      window.location.href = "/editprofilpsikolog";
     });
   }
 }
@@ -208,4 +215,17 @@ userDropdown.addEventListener("mouseover", () => {
 
 userDropdown.addEventListener("mouseout", () => {
   userDropdown.querySelector(".dropdown-content").style.display = "none";
+});
+
+function logout() {
+  sessionStorage.removeItem('authToken');
+  window.location.href = '/'; 
+}
+
+document.getElementById("profilLink").addEventListener("click", () => {
+  window.location.href = "/editprofilpsikolog";
+});
+
+document.querySelector(".keluar").addEventListener("click", () => {
+  logout();
 });

@@ -35,14 +35,12 @@ document.addEventListener('DOMContentLoaded', async function () {
 form.addEventListener('submit', async function (event) {
   event.preventDefault();
 
-  // Get the updated values from the form
-  const name = document.getElementById('namalengkap').value;
-  const nickname = document.getElementById('namapanggilan').value;
-  const phone_number = document.getElementById('nowa').value;
-  const birthdate = document.getElementById('tgllahir').value;
-  const gender = document.getElementById('gender').value;
+  const newName = document.getElementById('namalengkap').value;
+  const newNickname = document.getElementById('namapanggilan').value;
+  const newPhone_number = document.getElementById('nowa').value;
+  const newBirthdate = document.getElementById('tgllahir').value;
+  const newGender = document.getElementById('gender').value;
 
-  // Send the updated data to the backend using the PUT method
   const response = await fetch('https://mentalwell-backend.vercel.app/patient', {
     method: 'PUT',
     headers: {
@@ -50,15 +48,14 @@ form.addEventListener('submit', async function (event) {
       Authorization: `Bearer ${token}`,
     },
     body: JSON.stringify({
-      name,
-      nickname,
-      phone_number,
-      birthdate,
-      gender,
+      newName: newName,
+      newNickname: newNickname,
+      newPhone_number: newPhone_number,
+      newBirthdate: newBirthdate,
+      newGender: newGender,
     }),
   });
 
-  // Handle the response from the backend (you can customize this based on your needs)
   if (response.ok) {
     alert('Profile updated successfully!');
   } else {
