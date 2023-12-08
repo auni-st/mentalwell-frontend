@@ -146,6 +146,15 @@ class NavBar extends HTMLElement {
     riwayat.addEventListener("click", () => {
       window.location.href = "/riwayat";
     });
+
+    this.shadowRoot.querySelector(".keluar").addEventListener("click", () => {
+      this.logout();
+    });
+  }
+
+  logout() {
+    sessionStorage.removeItem('authToken');
+    window.location.href = '/'; 
   }
 }
 
