@@ -19,7 +19,7 @@ async function renderArticleDetails() {
     const articleId = urlParams.get('id');
     // Mendapatkan elemen HTML untuk menampilkan data artikel
     const fotopsikolog = document.querySelector('.foto-psikolog img');
-    const datapsikolog = document.querySelector('h2');
+    const datapsikolog = document.querySelector('.data-psikolog h2');
     const biodatapsikolog = document.getElementById('biodata-psikolog');
     const pengalamanpraktik = document.getElementById('praktik');
     const topikKeahlian = document.getElementById('topik-keahlian'); // Updated ID
