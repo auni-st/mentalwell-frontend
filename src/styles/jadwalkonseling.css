@@ -4,20 +4,18 @@
 
 button {
   background-color: #044b77;
-<<<<<<< Updated upstream
   border: none;
   color: #fff;
-=======
-  color: #fff;
-  border: none;
->>>>>>> Stashed changes
 }
 
 button:hover {
   background-color: #02bbdd;
 }
 
-<<<<<<< Updated upstream
+/*
+Footer
+*/
+
 footer {
   padding-bottom: 50px;
 }
@@ -28,15 +26,3 @@ footer {
   color: white;
   /* Customize the text color for the selected card */
 }
-=======
-/* footer */
-footer {
-  position: absolute;
-  top: 100vh;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  text-align: center;
-  padding-bottom: 50px;
-}
->>>>>>> Stashed changes

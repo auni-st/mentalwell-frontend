@@ -19,16 +19,16 @@ body {
 
 .lupasandi-title {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .lupasandi-title h2 {
-    font-size: 24px;
+    font-size: 28px;
 }
 
 .lupasandi-title p {
     color: #333;
-    font-size: 15px;
+    font-size: 17px;
 }
 
 .lupasandi-form {
@@ -55,6 +55,7 @@ body {
     border: 1px solid #ccc;
     border-radius: 50px;
     cursor: pointer;
+    font-size: 15px;
 }
 
 .next-btn:hover {
