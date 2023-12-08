@@ -96,66 +96,6 @@ class NavBar extends HTMLElement {
             .navbar .navbar-list .navbar-list-item .list-item a:hover::after {
               width: 100%;
             }
-<<<<<<< Updated upstream
-=======
-
-            .navbar .navbar-list .button-user {
-                display: flex;
-                align-items: center;
-              }
-              
-              .navbar .navbar-list .button-user button {
-                width: 95px;
-                height: 40px;
-                background-color: white;
-                border: none;
-                font-size: 20px;
-                cursor: pointer;
-              }
-
-            #photoUser {
-                border-radius: 50%;
-                width: 50px;
-                height: 50px;
-                cursor: pointer;
-              }
-
-              // dropdown menu
-              .button-user {
-                position: relative;
-                display: inline-block;
-                
-            }
-            
-            .dropdown-content {
-                display: none;
-                position: absolute;
-                background-color: #f9f9f9;
-                min-width: 160px;
-                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-                z-index: 1;
-                top: 80px;
-                border-bottom-left-radius: 10px;
-            }
-            
-            .dropdown-content a {
-                color: black;
-                padding: 12px 16px;
-                display: block;
-                text-decoration: none;
-            }
-            
-            .dropdown-content a:hover {
-                // background-color: #f1f1f1;
-                background-color: #044b77;
-                color: #fff;
-            }
-
-            .dropdown-content .keluar {
-              border-bottom-left-radius: 10px;
-            }
-
->>>>>>> Stashed changes
           </style>
           
           <nav>
@@ -172,8 +112,8 @@ class NavBar extends HTMLElement {
                       <li class="list-item"><a href="/tentangkami">Tentang Kami</a></li>
                     </ul>
                     <div class="button-user" id="userDropdown">
-                     <img src="/src/public/beranda/man.png" alt="Foto User" id="photoUser" >
-                     <button type="submit">John Doe</button>
+                    <img src="/src/public/beranda/man.png" alt="Foto User" id="photoUser" >
+                    <button type="submit">John Doe</button>
                     </div>
                     <div class="dropdown-content">
                         <a href="#">Profil saya</a>

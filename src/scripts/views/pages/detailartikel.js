@@ -31,7 +31,7 @@ async function renderArticleDetails() {
 
     // Menampilkan data artikel pada elemen HTML
     judulDetailArticel.innerHTML = `<h2>${articleData.title}</h2>`;
-    createdArticel.innerHTML = `<time> Created At: ${articleData.created_at}</time>`;
+    createdArticel.innerHTML = `<time> Dibuat pada: ${articleData.created_at}</time>`;
     imageDetailArticel.innerHTML = `<img src="${articleData.image}" alt="image detail artice" />`;
     contentDetailArticel.innerHTML = `<p>${articleData.content}</p>`;
     referensiArticel.innerHTML = `<p>Referensi : ${articleData.references}<p>`;

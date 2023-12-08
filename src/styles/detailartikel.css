@@ -106,8 +106,8 @@ main {
 .detail-articel {
   display: flex;
   flex-direction: column;
-  margin-top: 98px;
-  gap: 2rem;
+  margin-top: 100px;
+  gap: 3rem;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -117,6 +117,10 @@ main {
   width: 100%;
   display: flex;
   justify-content: center;
+}
+
+.judul-detail-articel h2 {
+  font-size: 25px; 
 }
 
 .detail-articel .created-articel {
