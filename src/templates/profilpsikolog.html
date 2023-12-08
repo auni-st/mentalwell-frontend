@@ -9,6 +9,7 @@
   <link rel="icon" href="/src/public/logo/logoicon.png" type="image/x-icon">
   <link rel="stylesheet" href="/src/styles/profil-psikolog.css" />
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
   <script type="module" src="/src/scripts/components/navbar-user.js" defer></script>
   <script type="module" src="/src/scripts/components/navbar-masuk.js"></script>
 </head>
@@ -16,6 +17,48 @@
 <body>
   <!-- navbar components -->
   <navbar-masuk id="masuk"></navbar-masuk>
+  <div id="overlay" class="overlay" onclick="closeLoginPopup()"></div>
+  <div class="login-container" id="login-container">
+    <div class="login-title">
+      <h2>Masuk</h2>
+      <p>Belum punya akun? <a href="#" id="popupDaftar" onclick="openDaftarPopup()">Daftar</a></p>
+    </div>
+    <form class="login-form" id="login-form">
+      <div class="form-control">
+        <input class="form-input" type="email" id="emaillogin" name="emaillogin" placeholder="Masukkan Email" required />
+      </div>
+      <div class="form-control">
+        <i class="far fa-eye eye" onclick="togglePasswordLoginVisibility()"></i>
+        <input class="form-input" type="text" id="loginpassword" name="loginpassword" placeholder="Masukkan Kata Sandi" required />
+      </div>
+      <p><a href="/src/templates/lupasandi.html">Lupa kata sandi</a></p>
+      <button class="submit-btn" type="submit">Masuk</button>
+    </form>
+  </div>
+  <div id="overly" class="overly" onclick="closeDaftarPopup()"></div>
+  <div class="daftar-container" id="daftar-container">
+    <div class="daftar-title">
+      <h2>Daftar</h2>
+      <p>Sudah punya akun? <a href="#" onclick="openLoginPopup()">Masuk</a></p>
+    </div>
+    <form class="daftar-form" id="daftar-form">
+      <div class="form-control">
+        <input class="form-input" type="email" id="email" name="email" placeholder="Email" required />
+      </div>
+      <div class="form-control">
+        <input class="form-input" type="notelp" id="notelp" name="notelp" placeholder="Nomor Whatsapp" required />
+      </div>
+      <div class="form-control">
+        <i class="far fa-eye eye" onclick="togglePasswordVisibility()"></i>
+        <input class="form-input" type="password" id="passworddaftar" name="passworddaftar" placeholder="Kata Sandi" required />
+      </div>
+      <div class="form-control">
+        <i class="far fa-eye confpassword eye" onclick="toggleConfirmasiPasswordVisibility()"></i>
+        <input class="form-input" type="password" id="confpassword" name="password" placeholder="Konfirmasi Kata Sandi" required />
+      </div>
+      <button class="submit-btn" type="submit">Daftar</button>
+    </form>
+  </div>
   <main>
     <div class="main-content">
       <div class="foto-psikolog" id="foto-psikolog">
