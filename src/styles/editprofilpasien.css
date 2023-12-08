@@ -107,7 +107,7 @@ Header
     align-items: center;
     border: 1px solid #000;
     justify-content: center;
-    margin: 130px 0 auto 135px;
+    margin: 130px auto;
 }
 
 .editpasien-container .editpasien-title {
