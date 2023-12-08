@@ -147,6 +147,8 @@ login
 .login-container .login-form {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .login-container .login-form .form-control {
@@ -162,7 +164,7 @@ login
   font-size: 16px;
   padding-left: 20px;
   padding-right: 20px;
-  width: 350px;
+  width: 310px;
   align-items: center;
   height: 44px;
 }
@@ -179,7 +181,7 @@ login
 
 .login-container .login-form p {
   text-align: end;
-  margin-right: 3px;
+  margin-left: 12rem;
   margin-top: -8px;
 }
 
@@ -197,11 +199,11 @@ login
   border: 1px solid #ccc;
   border-radius: 50px;
   font-size: 20px;
-  margin-top: 4rem;
+  margin-top: 2rem;
   color: white;
   font-weight: bold;
   background-color: #044b77;
-  width: 350px;
+  width: 340px;
   height: 44px;
 }
 

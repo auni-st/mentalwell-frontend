@@ -436,7 +436,7 @@ login
   font-size: 16px;
   padding-left: 20px;
   padding-right: 20px;
-  width: 350px;
+  width: 320px;
   align-items: center;
   height: 44px;
 }
@@ -475,7 +475,7 @@ login
   color: white;
   font-weight: bold;
   background-color: #044b77;
-  width: 350px;
+  width: 360px;
   height: 44px;
 }
 
@@ -543,7 +543,7 @@ daftar
   font-size: 16px;
   padding-left: 20px;
   padding-right: 20px;
-  width: 300px;
+  width: 310px;
   align-items: center;
   height: 44px;
 }

@@ -26,7 +26,7 @@
 //       contentDiv.innerHTML = `
 //                         <img class="image-psikolog" src="${articleData.profile_image}" alt="man" />
 //                         <div class="data-psikolog">
-//                             <h2>${articleData.name}</h2>  
+//                             <h2>${articleData.name}</h2>
 //                             <div class="value-psikolog">
 //                                 <p>${articleData.experience}</p>
 //                             <i class="far fa-envelope"></i>
@@ -53,10 +53,9 @@
 //   }
 // }
 
-
- // Fungsi untuk mengambil data psikolog dari API
- async function fetchPsychologists(topics) {
-  const apiUrl = `https://mentalwell-backend.vercel.app/psychologists?${topics.map(topic => `topics=${topic}`).join('&')}`;
+// Fungsi untuk mengambil data psikolog dari API
+async function fetchPsychologists(topics) {
+  const apiUrl = `https://mentalwell-backend.vercel.app/psychologists?${topics.map((topic) => `topics=${topic}`).join('&')}`;
   const response = await fetch(apiUrl);
   const data = await response.json();
   return data;
@@ -67,7 +66,7 @@ function displayPsychologists(psychologists) {
   const container = document.getElementById('container-psikolog');
   container.innerHTML = ''; // Bersihkan konten sebelumnya
 
-  psychologists.forEach(psychologist => {
+  psychologists.forEach((psychologist) => {
     const content = `
       <div class="content-psikolog">
         <img class="image-psikolog" src="${psychologist.profile_image}" alt="man" />
@@ -95,15 +94,14 @@ function displayPsychologists(psychologists) {
 }
 
 // Pasang event listener pada perubahan checkbox
-document.querySelectorAll('.filter-checkbox').forEach(checkbox => {
+document.querySelectorAll('.filter-checkbox').forEach((checkbox) => {
   checkbox.addEventListener('change', async () => {
-    const selectedFilters = Array.from(document.querySelectorAll('.filter-checkbox:checked'))
-      .map(checkbox => checkbox.dataset.filter);
-
+    const selectedFilters = Array.from(document.querySelectorAll('.filter-checkbox:checked')).map((checkbox) => checkbox.dataset.filter);
+    console.log(selectedFilters)
     const psychologists = await fetchPsychologists(selectedFilters);
     displayPsychologists(psychologists);
   });
 });
 
 // Tampilkan awal (menampilkan semua psikolog)
-fetchPsychologists([]).then(psychologists => displayPsychologists(psychologists));
+fetchPsychologists([]).then((psychologists) => displayPsychologists(psychologists));
