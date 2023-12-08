@@ -181,51 +181,85 @@ class NavBar extends HTMLElement {
             </nav>
           `;
 
-    // Get userDropdown element within Shadow DOM
-    const userDropdown = this.shadowRoot.getElementById("userDropdown");
-    const profilLink = this.shadowRoot.getElementById("profilLink");
+          // Get userDropdown element within Shadow DOM
+          const userDropdown = this.shadowRoot.getElementById("userDropdown");
+          const profilLink = this.shadowRoot.getElementById("profilLink");
 
-    // Add event listeners for mouseover and mouseout within Shadow DOM
-    userDropdown.addEventListener("mouseover", () => {
-      userDropdown.querySelector(".dropdown-content").style.display = "block";
-    });
+          // Add event listeners for mouseover and mouseout within Shadow DOM
+          userDropdown.addEventListener("mouseover", () => {
+            userDropdown.querySelector(".dropdown-content").style.display = "block";
+          });
 
-    userDropdown.addEventListener("mouseout", () => {
-      userDropdown.querySelector(".dropdown-content").style.display = "none";
-    });
+          userDropdown.addEventListener("mouseout", () => {
+            userDropdown.querySelector(".dropdown-content").style.display = "none";
+          });
 
-    // Add event listener for "Profil saya" link click
-    profilLink.addEventListener("click", () => {
-      // Redirect to /editprofilpsikolog
-      window.location.href = "/editprofilpsikolog";
-    });
-  }
+          // Add event listener for "Profil saya" link click
+          profilLink.addEventListener("click", () => {
+            // Redirect to /editprofilpsikolog
+            window.location.href = "/editprofilpsikolog";
+          });
+
+          // Add event listener for "Keluar" (logout) link click
+          this.shadowRoot.querySelector(".keluar").addEventListener("click", () => {
+            this.logout();
+          });
+        }
+
+        logout() {
+          sessionStorage.removeItem('authToken');
+          window.location.href = '/'; 
+        }
 }
 
 // Define the custom element
 customElements.define("navbar-psikolog", NavBar);
 
-// Get userDropdown element outside Shadow DOM
-const userDropdown = document.getElementById("userDropdown");
+//     // Get userDropdown element within Shadow DOM
+//     const userDropdown = this.shadowRoot.getElementById("userDropdown");
+//     const profilLink = this.shadowRoot.getElementById("profilLink");
 
-// Add event listeners for mouseover and mouseout outside Shadow DOM
-userDropdown.addEventListener("mouseover", () => {
-  userDropdown.querySelector(".dropdown-content").style.display = "block";
-});
+//     // Add event listeners for mouseover and mouseout within Shadow DOM
+//     userDropdown.addEventListener("mouseover", () => {
+//       userDropdown.querySelector(".dropdown-content").style.display = "block";
+//     });
 
-userDropdown.addEventListener("mouseout", () => {
-  userDropdown.querySelector(".dropdown-content").style.display = "none";
-});
+//     userDropdown.addEventListener("mouseout", () => {
+//       userDropdown.querySelector(".dropdown-content").style.display = "none";
+//     });
 
-function logout() {
-  sessionStorage.removeItem('authToken');
-  window.location.href = '/'; 
-}
+//     // Add event listener for "Profil saya" link click
+//     profilLink.addEventListener("click", () => {
+//       // Redirect to /editprofilpsikolog
+//       window.location.href = "/editprofilpsikolog";
+//     });
+//   }
+// }
 
-document.getElementById("profilLink").addEventListener("click", () => {
-  window.location.href = "/editprofilpsikolog";
-});
+// // Define the custom element
+// customElements.define("navbar-psikolog", NavBar);
 
-document.querySelector(".keluar").addEventListener("click", () => {
-  logout();
-});
+// // Get userDropdown element outside Shadow DOM
+// const userDropdown = document.getElementById("userDropdown");
+
+// // Add event listeners for mouseover and mouseout outside Shadow DOM
+// userDropdown.addEventListener("mouseover", () => {
+//   userDropdown.querySelector(".dropdown-content").style.display = "block";
+// });
+
+// userDropdown.addEventListener("mouseout", () => {
+//   userDropdown.querySelector(".dropdown-content").style.display = "none";
+// });
+
+// function logout() {
+//   sessionStorage.removeItem('authToken');
+//   window.location.href = '/'; 
+// }
+
+// document.getElementById("profilLink").addEventListener("click", () => {
+//   window.location.href = "/editprofilpsikolog";
+// });
+
+// document.querySelector(".keluar").addEventListener("click", () => {
+//   logout();
+// });
