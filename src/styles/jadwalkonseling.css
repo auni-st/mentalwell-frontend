@@ -12,6 +12,12 @@ button:hover {
   background-color: #02bbdd;
 }
 
+.time.disabled {
+  background-color: #ccc !important;
+  color: #999 !important;
+  /* Add any additional styling for the disabled state */
+}
+
 /*
 Footer
 */

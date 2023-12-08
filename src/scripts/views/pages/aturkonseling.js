@@ -122,11 +122,3 @@ statusDropdown.addEventListener('change', () => {
     });
 });
 
-// const btnSimpan = document.getElementById('btnSimpan');
-
-// if (btnSimpan) {
-//   btnSimpan.addEventListener('click', () => {
-//     // window.location.href = 'https://mentalwell.vercel.app/dashboardpsikolog';
-//     window.location.href = 'http://localhost:5501/src/templates/aturkonseling.html';
-//   });
-// }

@@ -65,8 +65,39 @@ async function renderArticleDetails() {
   }
 }
 
+async function fetchPsychologistAvailability() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const psychologistId = urlParams.get('id');
+  const url = `https://mentalwell-backend.vercel.app/availability/psychologist/${psychologistId}`;
+
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    console.log(data.availability)
+
+    // Update the button state directly based on availability
+    updateButtonState(data.availability);
+  } catch (error) {
+    console.error(error);
+    // Handle the error as needed
+  }
+}
+
+function updateButtonState(availability) {
+  const btnDaftar = document.getElementById('btnDaftar');
+
+  if (availability === 'available') {
+    btnDaftar.disabled = false;
+    btnDaftar.classList.remove('disabled');
+  } else {
+    btnDaftar.disabled = true;
+    btnDaftar.classList.add('disabled');
+  }
+}
+
 // Render artikel details ketika halaman dimuat
 renderArticleDetails();
+fetchPsychologistAvailability();
 
 // Add an event listener to the Daftar Konseling button
 const daftarKonselingButton = document.getElementById('btnDaftar');
