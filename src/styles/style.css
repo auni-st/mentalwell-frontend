@@ -313,6 +313,7 @@ Content
 main {
   display: flex;
   flex-direction: column;
+  margin-bottom: 2rem;
 }
 
 .konsultasi {
@@ -618,11 +619,12 @@ Footer
 
 footer {
   font-size: 18px;
-  padding: 1rem 2rem 2rem 2rem;
-  height: 18px;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  height: 20px;
+  width: 100%;
   background-color: #02bbdd;
   color: #fff;
-  margin-top: 2rem;
   text-align: center;
 }
 
