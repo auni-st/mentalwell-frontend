@@ -247,6 +247,10 @@ daftar
   text-decoration: none;
 }
 
+.daftar-container .daftar-title h2 {
+  margin-bottom: 1rem;
+}
+
 .daftar-container .daftar-form {
   display: flex;
   flex-direction: column;

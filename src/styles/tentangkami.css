@@ -21,13 +21,15 @@ Tentang Kami
   margin-bottom: 50px;
 }
 
-h2,
-h3 {
+.tentangkami h2 {
   color: #000;
   text-align: center;
   padding: 20px;
   font-size: 30px;
 }
+
+
+
 
 .highlight-text {
   background-color: #02bbdd;
@@ -62,6 +64,13 @@ p {
   box-sizing: border-box;
   /* margin-top: 50px; */
   margin: 50px auto;
+}
+
+#tim-pengembang  h2,h3 {
+  color: #000;
+  text-align: center;
+  padding: 20px;
+  font-size: 30px;
 }
 
 .card.team-container {
@@ -246,12 +255,14 @@ daftar
 .daftar-container .daftar-title {
   margin-bottom: 20px;
   color: #333;
-  margin-top: 0.5rem;
+  margin-top: 2rem;
 }
 
 .daftar-container .daftar-title p a {
   text-decoration: none;
+  margin-top: 1rem;
 }
+
 
 .daftar-container .daftar-form {
   display: flex;

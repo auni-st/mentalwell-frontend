@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap');
 
 * {
   padding: 0;
@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   background-color: #fafafa;
   min-height: 100vh;
   flex: 1;
@@ -181,8 +181,7 @@ main .content-articel {
   width: 400px;
   min-height: 500px;
   /* border: 1px solid #808080; */
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
   border-radius: 20px;
 }
 
@@ -382,7 +381,7 @@ daftar
 .daftar-container .daftar-title {
   margin-bottom: 20px;
   color: #333;
-  margin-top: 1rem;
+  margin-top: 2.5rem;
 }
 
 .daftar-container .daftar-title p a {
@@ -392,12 +391,13 @@ daftar
 .daftar-container .daftar-form {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .daftar-container .daftar-form .form-control {
   margin-bottom: 1rem;
   display: flex;
-  justify-content: center;
 }
 
 .daftar-container .daftar-form .form-control .form-input {
@@ -407,7 +407,7 @@ daftar
   font-size: 16px;
   padding-left: 20px;
   padding-right: 20px;
-  width: 300px;
+  width: 310px;
   align-items: center;
   height: 44px;
 }
@@ -441,7 +441,7 @@ daftar
   color: white;
   font-weight: bold;
   background-color: #044b77;
-  width: 340px;
+  width: 350px;
   height: 44px;
 }
 
