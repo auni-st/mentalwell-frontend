@@ -285,7 +285,7 @@ class NavBarLogin extends HTMLElement {
                             <img src="/src/public/beranda/man.png" alt="Foto User" id="photoUser" width="60px" height="60px">
                             <h2>John Doe</h2>
                             <div class="dropdown-content">
-                                <a href="/src/scripts">Profil saya</a>
+                                <a href="/src/scripts/templates/">Profil saya</a>
                                 <a class="keluar" href="#">Keluar</a>
                             </div>
                         </div>
