@@ -176,7 +176,7 @@ login
 .login-container .login-form p {
   text-align: end;
   margin-right: 3px;
-  margin-top: -8px;
+  margin-top: -10px;
 }
 
 .login-container .login-form p a {
@@ -193,7 +193,7 @@ login
   border: 1px solid #ccc;
   border-radius: 50px;
   font-size: 20px;
-  margin-top: 4rem;
+  margin-top: 90px;
   color: white;
   font-weight: bold;
   background-color: #044b77;
@@ -225,7 +225,7 @@ daftar
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
   width: 400px;
-  height: 490px;
+  height: 440px;
   display: none;
   position: fixed;
   top: 20%;
@@ -293,7 +293,7 @@ daftar
   border: 1px solid #ccc;
   border-radius: 50px;
   font-size: 20px;
-  margin-top: 2rem;
+  margin-top: 25px;
   color: white;
   font-weight: bold;
   background-color: #044b77;
