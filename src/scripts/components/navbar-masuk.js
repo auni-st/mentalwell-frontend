@@ -294,8 +294,6 @@ class NavBarLogin extends HTMLElement {
             </nav>
       `;
 
-    
-
     // Get userDropdown element within Shadow DOM
     const userDropdown = this.shadowRoot.getElementById('userDropdown');
     const profilLink = this.shadowRoot.getElementById('profilLink');
@@ -310,7 +308,9 @@ class NavBarLogin extends HTMLElement {
     });
 
     profilLink.addEventListener('click', () => {
-      window.location.href = '/editprofilpasien';
+      const urlParams = new URLSearchParams(window.location.search);
+      const pasienId = urlParams.get('id');
+      window.location.href = `https://mentalwell-backend.vercel.app/patient/id=${pasienId}`;
     });
 
     this.shadowRoot.querySelector('.keluar').addEventListener('click', () => {
