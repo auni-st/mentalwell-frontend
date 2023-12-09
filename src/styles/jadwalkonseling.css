@@ -1,3 +1,11 @@
+body {
+  display: flex;
+}
+
+main {
+  flex: 1;
+}
+
 .container {
   margin-top: 98px;
 }
@@ -47,8 +55,6 @@ footer {
   padding-bottom: 15px;
   background-color: #02bbdd;
   color: #fff;
-  position: fixed;
-  bottom: 0;
 }
 
 footer p {
