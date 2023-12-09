@@ -293,8 +293,10 @@ class NavBarLogin extends HTMLElement {
                 </div>
             </nav>
       `;
+      
     // Get userDropdown element within Shadow DOM
     const userDropdown = this.shadowRoot.getElementById('userDropdown');
+    const profilLink = this.shadowRoot.getElementById('profilLink');
 
     // Add event listeners for mouseover and mouseout within Shadow DOM
     userDropdown.addEventListener('mouseover', () => {
@@ -304,6 +306,19 @@ class NavBarLogin extends HTMLElement {
     userDropdown.addEventListener('mouseout', () => {
       userDropdown.querySelector('.dropdown-content').style.display = 'none';
     });
+
+    profilLink.addEventListener('click', () => {
+      window.location.href = '/editprofilpsikolog';
+    });
+
+    this.shadowRoot.querySelector('.keluar').addEventListener('click', () => {
+      this.logout();
+    });
+  }
+
+  logout() {
+    sessionStorage.removeItem('authToken');
+    window.location.href = '/';
   }
 }
 
@@ -323,7 +338,6 @@ if (authToken) {
   userDropdown.addEventListener('mouseout', () => {
     userDropdown.querySelector('.dropdown-content').style.display = 'none';
   });
-
 } else {
   customElements.define('navbar-masuk', NavBar);
 }
