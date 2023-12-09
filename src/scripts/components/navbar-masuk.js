@@ -55,19 +55,11 @@ class NavBar extends HTMLElement {
           .navbar .navbar-list .button button {
             width: 110px;
             height: 44px;
-<<<<<<< Updated upstream
-            border-radius: 20px;
-            background-color: #044b77;
-            color: #ffffff;
-            font-size: 17px;
-            border: none;
-=======
             border-radius: 30px;
             background-color: #044b77;
             color: #ffffff;
             font-size: 17px;
             border:none;
->>>>>>> Stashed changes
           }
     
           .navbar .navbar-list .button button:hover {
@@ -293,33 +285,7 @@ class NavBarLogin extends HTMLElement {
                 </div>
             </nav>
       `;
-
-    // Get userDropdown element within Shadow DOM
-    const userDropdown = this.shadowRoot.getElementById('userDropdown');
-    const profilLink = this.shadowRoot.getElementById('profilLink');
-
-    // Add event listeners for mouseover and mouseout within Shadow DOM
-    userDropdown.addEventListener('mouseover', () => {
-      userDropdown.querySelector('.dropdown-content').style.display = 'block';
-    });
-
-    userDropdown.addEventListener('mouseout', () => {
-      userDropdown.querySelector('.dropdown-content').style.display = 'none';
-    });
-
-    profilLink.addEventListener('click', () => {
-      window.location.href = '/editprofilpasien';
-    });
-
-    this.shadowRoot.querySelector('.keluar').addEventListener('click', () => {
-      this.logout();
-    });
-  }
-
-  logout() {
-    sessionStorage.removeItem('authToken');
-    window.location.href = '/';
-  }
+    }
 }
 
 const authToken = sessionStorage.getItem('authToken');
@@ -341,4 +307,7 @@ if (authToken) {
 } else {
   customElements.define('navbar-masuk', NavBar);
 }
-// Define the custom element
+
+
+
+
