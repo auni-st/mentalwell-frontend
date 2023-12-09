@@ -113,6 +113,7 @@ Main
 */
 main {
   width: 100%;
+  margin-top: 30px;
   display: flex;
   flex-direction: row;
   flex: 1;
@@ -203,7 +204,7 @@ main .listpsikolog {
 .listpsikolog form .button-search button {
   padding: 0 15px;
   border-radius: 20px;
-  font-size: 20px;
+  font-size: 15px;
   background-color: #044b77;
   color: white;
   font-weight: 700px;
@@ -350,7 +351,7 @@ main .listpsikolog {
   .list-button-psikolog
   .button-psikolog
   button {
-  padding: 5px 20px;
+  padding: 10px 20px;
   border-radius: 20px;
   font-size: 15px;
   background-color: #044b77;
@@ -483,7 +484,6 @@ login
   background-color: #3ad0ea;
   color: #ffffff;
 }
-
 
 /*
 daftar

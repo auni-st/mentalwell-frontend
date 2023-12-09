@@ -1,31 +1,41 @@
-const articleSection = document.getElementById('container-psikolog');
-const loadingIndicator = document.getElementById('loading-indicator');
-const apiUrl = 'https://mentalwell-backend.vercel.app/psychologists';
+const articleSection = document.getElementById("container-psikolog");
+const loadingIndicator = document.getElementById("loading-indicator");
+const apiUrl = "https://mentalwell-backend.vercel.app/psychologists";
 
-loadingIndicator.style.display = 'block';
+loadingIndicator.style.display = "block";
 
 fetch(apiUrl)
   .then((response) => response.json())
   .then((data) => {
-    loadingIndicator.style.display = 'none';
+    loadingIndicator.style.display = "none";
     data.forEach((articleData) => {
-      const articleElement = document.createElement('div');
-      articleElement.classList.add('content-psikolog');
+      const articleElement = document.createElement("div");
+      articleElement.classList.add("content-psikolog");
       articleElement.innerHTML = `
-                    <img class="image-psikolog" src="${articleData.profile_image}" alt="man" />
+                    <img class="image-psikolog" src="${
+                      articleData.profile_image
+                    }" alt="man" />
                     <div class="data-psikolog">
                         <h2>${articleData.name}</h2>
                         <div class="value-psikolog">
-                            <p>${articleData.experience}</p>
-                        <i class="far fa-envelope"></i>
-                            <p class="ulasan">${articleData.counselings.review.count}</p>
+                            <p>Pengalaman Kerja ${articleData.experience}</p>
+                        <i class="fa-solid fa-comments"></i>
+                            <p class="ulasan">${
+                              articleData.counselings.review.count
+                            }</p>
                         </div>
                         <div class="list-button-psikolog">
-                            <div class="${articleData.availability === 'available' ? 'jadwal-hijau' : 'jadwal-merah'}">
+                            <div class="${
+                              articleData.availability === "available"
+                                ? "jadwal-hijau"
+                                : "jadwal-merah"
+                            }">
                                 <p>${articleData.availability}</p>
                             </div>
                             <div class="button-psikolog">
-                                <button type="button" onclick="redirectToDetailPsychologist('${articleData.id}')">Lihat Selengkapnya</button>
+                                <button type="button" onclick="redirectToDetailPsychologist('${
+                                  articleData.id
+                                }')">Lihat Selengkapnya</button>
                             </div>
                         </div>
                     </div>
@@ -34,8 +44,8 @@ fetch(apiUrl)
     });
   })
   .catch((error) => {
-    console.error('Error fetching data from API:', error);
-    loadingIndicator.style.display = 'none';
+    console.error("Error fetching data from API:", error);
+    loadingIndicator.style.display = "none";
   });
 
 function redirectToDetailPsychologist(id) {

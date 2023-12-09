@@ -215,16 +215,21 @@ p {
   justify-content: flex-end;
   margin-right: 1rem;
   margin-top: 2rem;
+  position: relative;
 }
 
 .content-articel .button-articel button {
   padding: 10px 20px;
   border-radius: 20px;
-  font-size: 20px;
+  font-size: 15px;
   background-color: #044b77;
   color: white;
   font-weight: 700px;
   border: none;
+  position: absolute;
+  top: 0;
+  left: 50;
+  right: 0;
 }
 
 .content-articel .button-articel button:hover {
