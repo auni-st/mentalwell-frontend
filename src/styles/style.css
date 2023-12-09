@@ -618,13 +618,14 @@ Footer
 
 footer {
   font-size: 18px;
-  padding: 1.5em;
+  padding: 1rem 2rem 2rem 2rem;
   height: 18px;
   background-color: #02bbdd;
   color: #fff;
   margin-top: 2rem;
   text-align: center;
 }
+
 
 
 /* responsive */
