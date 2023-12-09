@@ -100,16 +100,20 @@
 </body>
 
 </html>
+<script>
+  function redirectToCounseling() {
+    // Get the articleId from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const articleId = urlParams.get('id');
+    const authToken = sessionStorage.getItem('authToken');
+
+    if (authToken) {
+      window.location.href = `https://mentalwell.vercel.app/jadwalkonseling-isidata?id=${articleId}`;
+    } else {
+      openLoginPopup();
+    }
+  }
+</script>
 <script src="/src/scripts/views/pages/detailpsikolog.js"></script>
 <script src="/src/scripts/views/pages/login.js"></script>
 <script src="/src/scripts/views/pages/daftar.js"></script>
-<script> 
-function redirectToCounseling() {
-  const authToken = sessionStorage.getItem('authToken');
-
-  if (authToken) {
-    window.location.href = '/jadwalkonseling-isidata';
-  } else {
-    openLoginPopup();
-  }
-}</script>
