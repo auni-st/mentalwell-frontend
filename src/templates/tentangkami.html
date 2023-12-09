@@ -6,21 +6,10 @@
     <link rel="stylesheet" href="/src/styles/tentangkami.css" />
     <title>MentalWell</title>
     <link rel="icon" href="/src/public/logo/logoicon.png" type="image/x-icon" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script
-      type="module"
-      src="/src/scripts/components/navbar-user.js"
-      defer
-    ></script>
-    <script
-      type="module"
-      src="/src/scripts/components/navbar-masuk.js"
-      defer
-    ></script>
+    <script type="module" src="/src/scripts/components/navbar-user.js" defer></script>
+    <script type="module" src="/src/scripts/components/navbar-masuk.js" defer></script>
   </head>
 
   <body>
@@ -36,28 +25,11 @@
       </div>
       <form class="login-form" id="login-form">
         <div class="form-control">
-          <input
-            class="form-input"
-            type="email"
-            id="emaillogin"
-            name="emaillogin"
-            placeholder="Masukkan Email"
-            required
-          />
+          <input class="form-input" type="email" id="emaillogin" name="emaillogin" placeholder="Masukkan Email" required />
         </div>
         <div class="form-control">
-          <i
-            class="far fa-eye eye"
-            onclick="togglePasswordLoginVisibility()"
-          ></i>
-          <input
-            class="form-input"
-            type="text"
-            id="loginpassword"
-            name="loginpassword"
-            placeholder="Masukkan Kata Sandi"
-            required
-          />
+          <i class="far fa-eye eye" onclick="togglePasswordLoginVisibility()"></i>
+          <input class="form-input" type="text" id="loginpassword" name="loginpassword" placeholder="Masukkan Kata Sandi" required />
         </div>
         <p><a href="/src/templates/lupasandi.html">Lupa kata sandi</a></p>
         <button class="submit-btn" type="submit">Masuk</button>
@@ -67,55 +39,22 @@
     <div class="daftar-container" id="daftar-container">
       <div class="daftar-title">
         <h2>Daftar</h2>
-        <p>
-          Sudah punya akun? <a href="#" onclick="openLoginPopup()">Masuk</a>
-        </p>
+        <p>Sudah punya akun? <a href="#" onclick="openLoginPopup()">Masuk</a></p>
       </div>
       <form class="daftar-form" id="daftar-form">
         <div class="form-control">
-          <input
-            class="form-input"
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Email"
-            required
-          />
+          <input class="form-input" type="email" id="email" name="email" placeholder="Email" required />
         </div>
         <div class="form-control">
-          <input
-            class="form-input"
-            type="notelp"
-            id="notelp"
-            name="notelp"
-            placeholder="Nomor Whatsapp"
-            required
-          />
+          <input class="form-input" type="notelp" id="notelp" name="notelp" placeholder="Nomor Whatsapp" required />
         </div>
         <div class="form-control">
           <i class="far fa-eye eye" onclick="togglePasswordVisibility()"></i>
-          <input
-            class="form-input"
-            type="password"
-            id="passworddaftar"
-            name="passworddaftar"
-            placeholder="Kata Sandi"
-            required
-          />
+          <input class="form-input" type="password" id="passworddaftar" name="passworddaftar" placeholder="Kata Sandi" required />
         </div>
         <div class="form-control">
-          <i
-            class="far fa-eye eye confpassword"
-            onclick="toggleConfirmasiPasswordVisibility()"
-          ></i>
-          <input
-            class="form-input"
-            type="password"
-            id="confpassword"
-            name="password"
-            placeholder="Konfirmasi Kata Sandi"
-            required
-          />
+          <i class="far fa-eye eye confpassword" onclick="toggleConfirmasiPasswordVisibility()"></i>
+          <input class="form-input" type="password" id="confpassword" name="password" placeholder="Konfirmasi Kata Sandi" required />
         </div>
         <button class="submit-btn" type="submit">Daftar</button>
       </form>
@@ -126,12 +65,8 @@
         <div class="img-tentangkami">
           <img src="/src/public/profil/rafiki.png" alt="Gambar Logo" />
           <p class="highlight-text">
-            MentalWell adalah platform kesehatan mental yang inovatif, bertujuan
-            memberikan akses mudah dan terpercaya ke layanan penyuluhan dan
-            konseling psikologis secara online.<br /><br />
-            MentalWell dirancang untuk mendukung kesejahteraan emosional dengan
-            menyediakan sesi konseling online yang membantu pengguna menjalani
-            perjalanan kesehatan mental mereka.
+            MentalWell adalah platform kesehatan mental yang inovatif, bertujuan memberikan akses mudah dan terpercaya ke layanan penyuluhan dan konseling psikologis secara online.<br /><br />
+            MentalWell dirancang untuk mendukung kesejahteraan emosional dengan menyediakan sesi konseling online yang membantu pengguna menjalani perjalanan kesehatan mental mereka.
           </p>
         </div>
       </section>
@@ -146,21 +81,10 @@
             <p>Universitas Negeri Semarang</p>
             <p>DevOps Engineer | Backend Web Developer</p>
             <div class="social-icons">
-              <a
-                href="https://www.linkedin.com/in/ahmad-ramadhan-auni"
-                target="_blank"
-                rel="noopener"
-              >
-                <img
-                  src="/src/public/profil/linkedin-icon.png"
-                  alt="LinkedIn"
-                />
+              <a href="https://www.linkedin.com/in/ahmad-ramadhan-auni" target="_blank" rel="noopener">
+                <img src="/src/public/profil/linkedin-icon.png" alt="LinkedIn" />
               </a>
-              <a
-                href="https://github.com/auni-st"
-                target="_blank"
-                rel="noopener"
-              >
+              <a href="https://github.com/auni-st" target="_blank" rel="noopener">
                 <img src="/src/public/profil/github-icon.png" alt="GitHub" />
               </a>
             </div>
@@ -173,21 +97,10 @@
             <p>Universitas Amikom Yogyakarta</p>
             <p>Frontend Web Developer</p>
             <div class="social-icons">
-              <a
-                href="https://www.linkedin.com/in/rahman-hakim-69641227a/"
-                target="_blank"
-                rel="noopener"
-              >
-                <img
-                  src="/src/public/profil/linkedin-icon.png"
-                  alt="LinkedIn"
-                />
+              <a href="https://www.linkedin.com/in/rahman-hakim-69641227a/" target="_blank" rel="noopener">
+                <img src="/src/public/profil/linkedin-icon.png" alt="LinkedIn" />
               </a>
-              <a
-                href="https://github.com/Rahmanhakim7"
-                target="_blank"
-                rel="noopener"
-              >
+              <a href="https://github.com/Rahmanhakim7" target="_blank" rel="noopener">
                 <img src="/src/public/profil/github-icon.png" alt="GitHub" />
               </a>
             </div>
@@ -200,21 +113,10 @@
             <p>Universitas Lampung</p>
             <p>Frontend Web Developer</p>
             <div class="social-icons">
-              <a
-                href="https://www.linkedin.com/in/gibran-alfarabi/"
-                target="_blank"
-                rel="noopener"
-              >
-                <img
-                  src="/src/public/profil/linkedin-icon.png"
-                  alt="LinkedIn"
-                />
+              <a href="https://www.linkedin.com/in/gibran-alfarabi/" target="_blank" rel="noopener">
+                <img src="/src/public/profil/linkedin-icon.png" alt="LinkedIn" />
               </a>
-              <a
-                href="https://github.com/gibranalfarabi"
-                target="_blank"
-                rel="noopener"
-              >
+              <a href="https://github.com/gibranalfarabi" target="_blank" rel="noopener">
                 <img src="/src/public/profil/github-icon.png" alt="GitHub" />
               </a>
             </div>
@@ -227,21 +129,10 @@
             <p>Universitas Muhammadiyah Purworejo</p>
             <p>Frontend Web Developer</p>
             <div class="social-icons">
-              <a
-                href="https://www.linkedin.com/in/rizki-ardi/"
-                target="_blank"
-                rel="noopener"
-              >
-                <img
-                  src="/src/public/profil/linkedin-icon.png"
-                  alt="LinkedIn"
-                />
+              <a href="https://www.linkedin.com/in/rizki-ardi/" target="_blank" rel="noopener">
+                <img src="/src/public/profil/linkedin-icon.png" alt="LinkedIn" />
               </a>
-              <a
-                href="https://github.com/rizkiardii"
-                target="_blank"
-                rel="noopener"
-              >
+              <a href="https://github.com/rizkiardii" target="_blank" rel="noopener">
                 <img src="/src/public/profil/github-icon.png" alt="GitHub" />
               </a>
             </div>
@@ -254,21 +145,10 @@
             <p>Universitas Lampung</p>
             <p>UI UX Designer</p>
             <div class="social-icons">
-              <a
-                href="https://www.linkedin.com/in/echa-andrea-gustiar"
-                target="_blank"
-                rel="noopener"
-              >
-                <img
-                  src="/src/public/profil/linkedin-icon.png"
-                  alt="LinkedIn"
-                />
+              <a href="https://www.linkedin.com/in/echa-andrea-gustiar" target="_blank" rel="noopener">
+                <img src="/src/public/profil/linkedin-icon.png" alt="LinkedIn" />
               </a>
-              <a
-                href="https://github.com/EchaAndrea"
-                target="_blank"
-                rel="noopener"
-              >
+              <a href="https://github.com/EchaAndrea" target="_blank" rel="noopener">
                 <img src="/src/public/profil/github-icon.png" alt="GitHub" />
               </a>
             </div>
