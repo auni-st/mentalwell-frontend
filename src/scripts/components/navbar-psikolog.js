@@ -176,7 +176,7 @@ class NavBar extends HTMLElement {
                               <a class="keluar" href="#">Keluar</a>
                             </div>
                         </div>
-                    <div>
+                    </div>
                 </div>
             </nav>
           `;
