@@ -1,63 +1,78 @@
-body, h1, h2, p, input, button {
-    margin: 0;
-    padding: 0;
+body,
+h1,
+h2,
+p,
+input,
+button {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 .ubahsandi-container {
-    padding: 20px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
+  padding: 70px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .ubahsandi-title {
-    text-align: center;
-    margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .ubahsandi-title h2 {
-    font-size: 24px;
+  font-size: 24px;
 }
 
 .ubahsandi-title p {
-    color: #333;
-    font-size: 15px;
+  color: #333;
+  font-size: 15px;
 }
 
 .ubahsandi-form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .ubahsandi-control {
-    margin-bottom: 16px;
+  margin-bottom: 16px;
 }
 
 .ubahsandi-input {
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 50px;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  font-size: 15px;
+  text-align: center;
+  outline: none;
+}
+
+.ubahsandi-input:focus {
+  border: 1px solid #044b77;
 }
 
 .next-btn {
-    background-color: #044B77;
-    color: #fff;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 50px;
-    cursor: pointer;
+  background-color: #044b77;
+  color: #fff;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 17px;
+  margin-top: 20px;
 }
 
 .next-btn:hover {
-    background-color: #3ad0ea; 
-    color: #ffffff;
+  background-color: #3ad0ea;
+  color: #ffffff;
 }
