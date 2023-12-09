@@ -18,17 +18,39 @@ button:hover {
   /* Add any additional styling for the disabled state */
 }
 
+.data-diri .lengkapi {
+  padding-top: 20px;
+}
+
+.jadwal .atur-jadwal {
+  padding-top: 20px;
+}
+
+.card.waktu,
+.card.metode {
+  cursor: pointer;
+}
+
+.card.selected {
+  background-color: #02bbdd;
+  color: white;
+}
+
 /*
 Footer
 */
 
 footer {
-  padding-bottom: 50px;
+  width: 100%;
+  height: 50px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #02bbdd;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
 }
 
-.card.selected {
-  background-color: lightblue;
-  /* Customize the background color for the selected card */
-  color: white;
-  /* Customize the text color for the selected card */
+footer p {
+  text-align: center;
 }
