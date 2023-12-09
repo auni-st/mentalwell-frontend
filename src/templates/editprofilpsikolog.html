@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MentalWell</title>
-    <link rel="icon" href="/src/public/logo/logoicon.png" type="image/x-icon">
+    <link rel="icon" href="/src/public/logo/logoicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="/src/styles/editprofilpsikolog.css" />
     <link
       rel="stylesheet"
@@ -52,44 +52,75 @@
       </div>
       <form class="editpsikolog-form">
         <div class="form-control">
-          <label for="email">Email : </label>
+          <label for="email">Email </label>
           <div class="form-input" id="email">
             <h4>adelia123@gmail.com</h4>
           </div>
         </div>
         <div class="form-control">
-          <label for="namapanggilan">Nama Lengkap :</label>
+          <label for="namapanggilan">Nama Lengkap </label>
           <i class="fas fa-edit"></i>
-          <input class="form-input" type="text" id="namapanggilan" name="namapanggilan" placeholder="Adelia Tatiana" required />
+          <input
+            class="form-input"
+            type="text"
+            id="namapanggilan"
+            name="namapanggilan"
+            placeholder="Adelia Tatiana"
+            required
+          />
         </div>
         <div class="form-control">
-          <label for="nowa">Nomor Whatsapp :</label>
+          <label for="nowa">Nomor Whatsapp </label>
           <i class="fas fa-edit"></i>
-          <input class="form-input" type="nowa" id="nowa" name="nowa" placeholder="081234567890" required />
+          <input
+            class="form-input"
+            type="nowa"
+            id="nowa"
+            name="nowa"
+            placeholder="081234567890"
+            required
+          />
         </div>
         <div class="form-control">
-          <label for="tgllahir">Tanggal Lahir :</label>
-          <input class="form-input" type="date" id="tgllahir" name="tgllahir" required />
+          <label for="tgllahir">Tanggal Lahir </label>
+          <input
+            class="form-input"
+            type="date"
+            id="tgllahir"
+            name="tgllahir"
+            required
+          />
         </div>
         <div class="form-control">
-          <label for="gender">Jenis Kelamin :</label>
+          <label for="gender">Jenis Kelamin </label>
           <select class="form-input" id="gender" name="gender" required>
             <option value="laki-laki">Laki-laki</option>
             <option value="perempuan">Perempuan</option>
           </select>
         </div>
         <div class="form-control">
-          <label for="topik">Topik Keahlian :</label>
-          <i class="fas fa-edit"></i>
-          <input class="form-input" type="text" id="topik" name="topik" placeholder="Suicidal, Fobia, Trauma" required />
+          <label for="topik">Topik Keahlian </label>
+          <select class="form-input" id="topik" name="topik" required>
+            <option value="suicidal">Suicidal</option>
+            <option value="fobia">Fobia</option>
+            <option value="trauma">Trauma</option>
+          </select>
         </div>
         <div class="form-control">
-          <label for="bio">Bio :</label>
-          <i class="fas fa-edit"></i>
-          <input class="form-input" type="text" id="bio" name="bio" placeholder="Tulis bio mu disini..." required />
+          <label for="bio">Bio </label>
+
+          <textarea
+            class="form-input"
+            id="bio"
+            name="bio"
+            cols="30"
+            rows="10"
+            placeholder="Tulis bio mu disini..."
+            required
+          ></textarea>
         </div>
         <div class="form-control">
-          <label for="pengalaman">Pengalaman Praktik :</label>
+          <label for="pengalaman">Pengalaman Praktik </label>
           <select class="form-input" id="pengalaman" name="pengalaman" required>
             <option value="rendah">&lt; 2 Tahun</option>
             <option value="sedang">2 - 4 Tahun</option>
