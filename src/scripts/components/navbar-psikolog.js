@@ -195,7 +195,7 @@ class NavBar extends HTMLElement {
           });
 
           profilLink.addEventListener("click", () => {
-            window.location.href = "/profilpsikolog";
+            window.location.href = "/editprofilpsikolog";
           });
 
           this.shadowRoot.querySelector(".keluar").addEventListener("click", () => {
