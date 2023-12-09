@@ -93,6 +93,7 @@ Jumbotron
   margin-left: 5rem;
 }
 
+
 /*
 login 
 */
@@ -124,12 +125,12 @@ login
 }
 
 .login-container .login-title {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   color: #333;
 }
 
 .login-container .login-title h2 {
-  margin-top: -1rem;
+  margin-bottom: 1rem;
 }
 
 .login-container .login-title p {
@@ -143,6 +144,7 @@ login
 .login-container .login-form {
   display: flex;
   flex-direction: column;
+  margin-top: -1rem;
 }
 
 .login-container .login-form .form-control {
@@ -176,7 +178,7 @@ login
 .login-container .login-form p {
   text-align: end;
   margin-right: 3px;
-  margin-top: -10px;
+  margin-top: -8px;
 }
 
 .login-container .login-form p a {
@@ -193,11 +195,11 @@ login
   border: 1px solid #ccc;
   border-radius: 50px;
   font-size: 20px;
-  margin-top: 90px;
+  margin-top: 4rem;
   color: white;
   font-weight: bold;
   background-color: #044b77;
-  width: 350px;
+  width: 360px;
   height: 44px;
 }
 
@@ -225,7 +227,7 @@ daftar
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
   width: 400px;
-  height: 440px;
+  height: 490px;
   display: none;
   position: fixed;
   top: 20%;
@@ -236,9 +238,9 @@ daftar
 }
 
 .daftar-container .daftar-title {
+  margin-bottom: 20px;
   color: #333;
   margin-top: 2rem;
-  margin-bottom: 1rem;
 }
 
 .daftar-container .daftar-title p a {
@@ -293,7 +295,7 @@ daftar
   border: 1px solid #ccc;
   border-radius: 50px;
   font-size: 20px;
-  margin-top: 25px;
+  margin-top: 2rem;
   color: white;
   font-weight: bold;
   background-color: #044b77;
@@ -305,6 +307,7 @@ daftar
   background-color: #3ad0ea;
   color: #ffffff;
 }
+
 
 /*
 Content
