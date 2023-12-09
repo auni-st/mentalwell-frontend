@@ -310,7 +310,7 @@ class NavBarLogin extends HTMLElement {
     profilLink.addEventListener('click', () => {
       const urlParams = new URLSearchParams(window.location.search);
       const pasienId = urlParams.get('id');
-      window.location.href = `https://mentalwell-backend.vercel.app/patient/id=${pasienId}`;
+      window.location.href = `https://mentalwell-backend.vercel.app/patient`;
     });
 
     this.shadowRoot.querySelector('.keluar').addEventListener('click', () => {
