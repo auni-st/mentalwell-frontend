@@ -108,7 +108,7 @@ function redirectToCounseling() {
   const authToken = sessionStorage.getItem('authToken');
 
   if (authToken) {
-    window.location.href = '/listpsikolog';
+    window.location.href = '/jadwalkonseling-isidata';
   } else {
     openLoginPopup();
   }
