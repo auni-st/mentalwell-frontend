@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap");
 
 * {
   padding: 0;
@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   background-color: #fafafa;
   min-height: 100vh;
   flex: 1;
@@ -95,6 +95,9 @@ Header
 /*
 Content Profil Psikolog
 */
+main {
+  flex: 1;
+}
 
 .main-content {
   margin-top: 98px;
@@ -167,7 +170,7 @@ p {
 
 .container-ulasan::before {
   position: absolute;
-  content: '←';
+  content: "←";
   bottom: -140px;
   left: 80px;
   font-size: 24px;
@@ -175,7 +178,7 @@ p {
 
 .container-ulasan::after {
   position: absolute;
-  content: '→';
+  content: "→";
   bottom: -140px;
   right: 80px;
   font-size: 24px;
@@ -204,7 +207,7 @@ p {
   border: 1px solid black;
   border-radius: 20px;
   margin: 60px 40px 30px 40px;
-  width: 500px;
+  width: 400px;
   height: 150px;
 }
 
@@ -483,11 +486,14 @@ Footer
 */
 
 footer {
-  font-size: 18px;
-  padding: 1.5em;
-  height: 18px;
+  width: 100%;
+  /* height: 50px; */
+  padding-top: 15px;
+  padding-bottom: 15px;
   background-color: #02bbdd;
   color: #fff;
-  margin-top: 2rem;
+}
+
+footer p {
   text-align: center;
 }
