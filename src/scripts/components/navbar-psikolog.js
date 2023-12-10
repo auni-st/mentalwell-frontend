@@ -154,17 +154,18 @@ class NavBar extends HTMLElement {
                 flex-direction: row;
               }
     
-              .dropdown-content img {
-                margin-left: 10px;
-                margin-top: 6px;
+              .profilLink {
+                display: flex;
+                align-items: center; /* Pusatkan elemen secara vertikal */
+                text-decoration: none; /* Hilangkan garis bawah pada tautan */
+                color: black; /* Ubah warna teks jika diinginkan */
+                padding: 12px 16px;
+              }
+
+              .profilLink img {
+                margin-right: 5px;
               }
               
-              .dropdown-content a {
-                  color: black;
-                  padding: 12px 16px;
-                  display: block;
-                  text-decoration: none;
-              }
               
               .dropdown-content a:hover {
                   color: #fff;
@@ -183,7 +184,16 @@ class NavBar extends HTMLElement {
               }
 
               .keluar {
-                border-bottom-left-radius: 10px;
+                border-bottom-left-radius: none;
+                display: flex;
+                align-items: center; /* Pusatkan elemen secara vertikal */
+                text-decoration: none; /* Hilangkan garis bawah pada tautan */
+                color: black; /* Ubah warna teks jika diinginkan */
+                padding: 12px 16px;
+              }
+
+              .keluar img {
+                margin-right: 10px;
               }
             </style>
             
@@ -199,12 +209,16 @@ class NavBar extends HTMLElement {
                             <h2 id="nicknameTag"></h2>
                             <div class="dropdown-content">
                               <div class="profile-button" id="profile-button">
-                                <img src="/src/public/dropdown/man.png" width="30px" height="30px">
-                                <a id="profilLink" href="#">Profil saya</a>
+                                <a id="profilLink" class="profilLink" href="#">
+                                  <img src="/src/public/dropdown/man.png" width="30px" height="30px">
+                                  <span>Profil saya</span>
+                                </a>
                               </div>
                               <div class="keluar-button" id="keluar-button">
-                                <img src="/src/public/dropdown/exit.png" width="30px" height="30px">
-                                <a class="keluar" href="#">Keluar</a>
+                                <a class="keluar" href="#">
+                                  <img src="/src/public/dropdown/exit.png" width="30px" height="30px">
+                                  <span>Keluar</span>
+                                </a>
                               </div>
                             </div>
                         </div>
