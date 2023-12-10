@@ -1,46 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MentalWell</title>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <link rel="icon" href="/src/public/logo/logoicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="/src/styles/riwayat.css" />
-    <script
-      type="module"
-      src="/src/scripts/components/navbar-user.js"
-      defer
-    ></script>
-    <script type="module" src="/src/scripts/components/navbar-masuk.js"></script>
-  </head>
-  <body>
-    <navbar-masuk id="masuk"></navbar-masuk>
-    <main>
-      <div id="overlay" class="overlay" onclick="closeUlasanPopup()"></div>
-      <div class="container-ulasan" id="container-ulasan">
-        <form class="content-ulasan">
-          <div class="isi-ulasan">
-            <h2>Berikan Ulasan</h2>
-            <textarea
-              name="ulasan"
-              id="ulasan"
-              cols="55"
-              rows="15"
-              placeholder="Tuliskan ulasanmu disini"
-            ></textarea>
-          </div>
-          <div class="btn-detail">
-            <button type="submit">Kirim</button>
-          </div>
-        </form>
-      </div>
-      <h2>Riwayat Konseling</h2>
-      <div class="content-riwayat">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MentalWell</title>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="icon" href="/src/public/logo/logoicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="/src/styles/riwayat.css" />
+  <script type="module" src="/src/scripts/components/navbar-user.js" defer></script>
+  <script type="module" src="/src/scripts/components/navbar-masuk.js"></script>
+</head>
+
+<body>
+  <navbar-masuk id="masuk"></navbar-masuk>
+  <main>
+    <div id="overlay" class="overlay" onclick="closeUlasanPopup()"></div>
+    <div class="container-ulasan" id="container-ulasan">
+      <form class="content-ulasan">
+        <div class="isi-ulasan">
+          <h2>Berikan Ulasan</h2>
+          <textarea name="ulasan" id="ulasan" cols="55" rows="15" placeholder="Tuliskan ulasanmu disini"></textarea>
+        </div>
+        <div class="btn-detail">
+          <button type="submit">Kirim</button>
+        </div>
+      </form>
+    </div>
+    <h2>Riwayat Konseling</h2>
+    <div class="content-riwayat">
 
 
-        <div class="container-riwayat">
+      <!-- <div class="container-riwayat">
           <img
             src="/src/public/beranda/man.png"
             alt="Foto Psikolog"
@@ -62,9 +54,9 @@
               </button>
             </div>
           </div>
-        </div>
+        </div> -->
 
-        <div class="container-riwayat">
+      <!-- <div class="container-riwayat">
           <img
             src="/src/public/beranda/man.png"
             alt="Foto Psikolog"
@@ -90,13 +82,14 @@
               </button>
             </div>
           </div>
-        </div>
-      </div>
-    </main>
-    <footer>
-      <span> &copy; 2023 Mentalwell, Hak Cipta Dilindungi. </span>
-    </footer>
-    <script src="/src/scripts/views/pages/ulasan.js"></script>
-    <script src="/src/scripts/views/pages/riwayat.js"></script>
-  </body>
+        </div> -->
+    </div>
+  </main>
+  <footer>
+    <span> &copy; 2023 Mentalwell, Hak Cipta Dilindungi. </span>
+  </footer>
+  <script src="/src/scripts/views/pages/ulasan.js"></script>
+  <script src="/src/scripts/views/pages/riwayat.js"></script>
+</body>
+
 </html>
