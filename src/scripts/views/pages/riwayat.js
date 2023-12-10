@@ -27,6 +27,9 @@ fetch('https://mentalwell-backend.vercel.app/history', {
           const riwayatElement = document.createElement('div');
           riwayatElement.classList.add('container-riwayat');
 
+          const isReviewFilled = riwayat.review !== null;
+
+          console.log([riwayat.id, riwayat.review])
           riwayatElement.innerHTML = `
             <img src="/src/public/beranda/man.png" alt="Foto Psikolog" id="psychologPhoto" />
             <div class="info-riwayat">
@@ -37,14 +40,16 @@ fetch('https://mentalwell-backend.vercel.app/history', {
                   ${riwayat.schedule_time}<br />
                   Via ${riwayat.type}
                 </p>
+                </div>
+                <div class="status-button">
+                  <span class="status-riwayat">${riwayat.status}</span>
+                  <button type="button" data-counseling-id="${riwayat.id}" onclick="openUlasanPopup(${riwayat.id}, '${riwayat.status}')"
+                    ${riwayat.status === 'belum_selesai' || isReviewFilled ? 'disabled' : ''}
+                    style="${(riwayat.status === 'belum_selesai' || isReviewFilled) ? 'background-color: lightgray; color: gray; cursor: default' : ''}">
+                    ${isReviewFilled ? 'ULASAN TERISI' : 'ISI ULASAN'}
+                  </button>
+                </div>
               </div>
-              <div class="status-button">
-              <span class="status-riwayat">${riwayat.status}</span>
-              <button type="button" data-counseling-id="${riwayat.id}" onclick="openUlasanPopup(${riwayat.id}, '${riwayat.status}')"
-              ${riwayat.status === 'belum_selesai' ? 'disabled' : ''}
-              style="${riwayat.status === 'belum_selesai' ? 'background-color: lightgray; color: gray;; cursor: default' : ''}">
-              ISI ULASAN
-            </button>            </div>            </div>
           `;
 
           containerRiwayat.appendChild(riwayatElement);

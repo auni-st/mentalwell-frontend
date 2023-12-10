@@ -28,7 +28,7 @@ function authenticate(event) {
 }
 
 function submitUlasan(ulasan) {
-  fetch('https://mentalwell-backend.vercel.app/history/counselings/38', {
+  fetch(`https://mentalwell-backend.vercel.app/history/counselings/${currentCounselingId}`, {
     method: 'POST',
     headers: {
       'Authorization': `Bearer ${authToken}`,
@@ -44,6 +44,7 @@ function submitUlasan(ulasan) {
     })
     .then(data => {
       console.log('Review submitted successfully:', data);
+      console.log([currentCounselingId, data])
       // Call a function to update the button in riwayat.js
       updateButtonAfterSubmission(currentCounselingId);
     })
