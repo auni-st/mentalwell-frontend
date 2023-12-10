@@ -303,7 +303,7 @@ class NavBarLogin extends HTMLElement {
                       </ul>
                       <div class="button" id="userDropdown">
                           <img src="" alt="Foto User" id="photoUser" width="60px" height="60px">
-                          <h2></h2>
+                          <ul id="nicknameList"></ul>
                           <div class="dropdown-content">
                             <div class="profile-button" id="profile-button">
                               <img src="/src/public/dropdown/man.png" width="30px" height="30px">
@@ -320,8 +320,9 @@ class NavBarLogin extends HTMLElement {
           </nav>
         `;
 
+    // Mendapatkan elemen foto user dan h2 dengan ID yang sesuai
     const photoUser = document.getElementById('photoUser');
-    const h2User = document.querySelector('h2');
+    const ulNickname = document.getElementById('nicknameList');
 
     // Mendapatkan token dari sessionStorage
     const token = sessionStorage.getItem('authToken');
@@ -339,8 +340,18 @@ class NavBarLogin extends HTMLElement {
     fetch('https://mentalwell-backend.vercel.app/currentUser', requestOptions)
       .then((response) => response.json())
       .then((data) => {
-        h2User.innerHTML = `${data.nickname}`
-        photoUser.src.innerHTML = `${data.profile_image}`;
+        
+        data.forEach((articleData) => {
+          console.log(articleData.nickname);
+          const li = document.createElement('li');
+          li.textContent = articleData.nickname;
+          ulNickname.appendChild(li);
+        });
+      // // Mengubah atribut src gambar dengan data yang diterima
+      // photoUser.src = data.profile_image;
+
+      // // Menambahkan alt untuk gambar
+      // photoUser.alt = 'Foto Profil';
       })
       .catch((error) => {
         // Handle kesalahan jika terjadi
