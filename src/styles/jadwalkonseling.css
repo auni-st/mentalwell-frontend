@@ -49,14 +49,12 @@ Footer
 */
 
 footer {
-  width: 100%;
-  height: 50px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  font-size: 18px;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  height: 18px;
   background-color: #02bbdd;
   color: #fff;
-}
-
-footer p {
+  margin-top: 2rem;
   text-align: center;
 }
