@@ -1,64 +1,78 @@
-body, h1, h2, p, input, button {
-    margin: 0;
-    padding: 0;
+body,
+h1,
+h2,
+p,
+input,
+button {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 .lupasandi-container {
-    padding: 20px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
+  width: 400px;
+  border-radius: 10px;
+  padding: 70px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .lupasandi-title {
-    text-align: center;
-    margin-bottom: 25px;
+  text-align: center;
+  margin-bottom: 25px;
 }
 
 .lupasandi-title h2 {
-    font-size: 28px;
+  font-size: 25px;
+  margin-bottom: 10px;
 }
 
 .lupasandi-title p {
-    color: #333;
-    font-size: 17px;
+  color: #333;
+  font-size: 15px;
+  margin-bottom: 30px;
 }
 
 .lupasandi-form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .lupasandi-control {
-    margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 
 .lupasandi-input {
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 50px;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  outline: none;
+  border: 1px solid #ddd;
+  border-radius: 50px;
+  text-align: center;
+}
+
+.lupasandi-input:focus {
+  border: 1px solid #044b77;
 }
 
 .next-btn {
-    background-color: #044B77;
-    color: #fff;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 50px;
-    cursor: pointer;
-    font-size: 15px;
+  background-color: #044b77;
+  color: #fff;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 15px;
 }
 
 .next-btn:hover {
-    background-color: #3ad0ea; 
-    color: #ffffff;
+  background-color: #3ad0ea;
+  color: #ffffff;
 }
