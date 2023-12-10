@@ -334,7 +334,7 @@ class NavBarLogin extends HTMLElement {
     });
 
     profilLink.addEventListener('click', () => {
-      // const urlParams = new URLSearchParams(window.location.search);
+      const urlParams = new URLSearchParams(window.location.search);
       window.location.href = `https://mentalwell.vercel.app/editprofilpasien`;
     });
 
