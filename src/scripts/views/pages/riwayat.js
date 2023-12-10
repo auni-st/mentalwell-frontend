@@ -1,10 +1,10 @@
-const authToken = sessionStorage.getItem('authToken');
+// const authToken = sessionStorage.getItem('authToken');
 const containerRiwayat = document.querySelector('.content-riwayat');
 
 fetch('https://mentalwell-backend.vercel.app/history', {
   method: 'GET',
   headers: {
-    'Authorization': `Bearer ${authToken}`, 
+    'Authorization': `Bearer ${authToken}`,
     'Content-Type': 'application/json'
   }
 })
@@ -39,10 +39,12 @@ fetch('https://mentalwell-backend.vercel.app/history', {
                 </p>
               </div>
               <div class="status-button">
-                <span class="status-riwayat">${riwayat.status}</span>
-                <button type="button" onclick="openUlasanPopup()">ISI ULASAN</button>
-              </div>
-            </div>
+              <span class="status-riwayat">${riwayat.status}</span>
+              <button type="button" data-counseling-id="${riwayat.id}" onclick="openUlasanPopup(${riwayat.id}, '${riwayat.status}')"
+              ${riwayat.status === 'belum_selesai' ? 'disabled' : ''}
+              style="${riwayat.status === 'belum_selesai' ? 'background-color: lightgray; color: gray;; cursor: default' : ''}">
+              ISI ULASAN
+            </button>            </div>            </div>
           `;
 
           containerRiwayat.appendChild(riwayatElement);

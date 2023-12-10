@@ -45,7 +45,7 @@ form.addEventListener('submit', async function (event) {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',
-      Authorization: `Bearer ${token}`,
+      'Authorization': `Bearer ${token}`,
     },
     body: JSON.stringify({
       newName: newName,
@@ -57,7 +57,8 @@ form.addEventListener('submit', async function (event) {
   });
 
   if (response.ok) {
-    alert('Profile updated successfully!');
+    console.log(response)
+    // alert('Profile updated successfully!');
   } else {
     const errorMessage = await response.text();
     alert(`Failed to update profile. Error: ${errorMessage}`);
