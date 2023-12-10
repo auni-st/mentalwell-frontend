@@ -3,7 +3,7 @@ class NavBar extends HTMLElement {
     super();
 
     // Create a shadow root
-    this.attachShadow({ mode: "open" });
+    this.attachShadow({ mode: 'open' });
 
     // Define the HTML content for the component
     this.shadowRoot.innerHTML = `
@@ -133,15 +133,30 @@ class NavBar extends HTMLElement {
               }
               
               .dropdown-content {
-                  display: none;
-                  position: absolute;
-                  background-color: #f9f9f9;
-                  min-width: 160px;
-                  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-                  z-index: 1;
-                  top: 90px;
-                  right: 0;
-                  border-bottom-left-radius: 10px;
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+                top: 90px;
+                right: 1px;
+                border-bottom-left-radius: 10px;
+              }
+
+              .dropdown-content .profile-button {
+                display: flex;
+                flex-direction: row; 
+              }
+    
+              .dropdown-content .keluar-button {
+                display: flex;
+                flex-direction: row;
+              }
+    
+              .dropdown-content img {
+                margin-left: 10px;
+                margin-top: 6px;
               }
               
               .dropdown-content a {
@@ -152,8 +167,19 @@ class NavBar extends HTMLElement {
               }
               
               .dropdown-content a:hover {
-                  background-color: #044B77;
                   color: #fff;
+              }
+
+              .dropdown-content .profile-button:hover {
+                background-color: #044B97;
+                color: #fff;
+                cursor: pointer;
+              }
+    
+              .dropdown-content .keluar-button:hover {
+                background-color: #044B97;
+                color: #fff;
+                cursor: pointer;
               }
 
               .keluar {
@@ -172,8 +198,14 @@ class NavBar extends HTMLElement {
                             <img src="/src/public/beranda/man.png" alt="Foto User" id="photoUser" >
                             <button type="submit">John Doe</button>
                             <div class="dropdown-content">
-                              <a id="profilLink" href="#">Profil saya</a>
-                              <a class="keluar" href="#">Keluar</a>
+                              <div class="profile-button" id="profile-button">
+                                <img src="/src/public/dropdown/man.png" width="30px" height="30px">
+                                <a id="profilLink" href="#">Profil saya</a>
+                              </div>
+                              <div class="keluar-button" id="keluar-button">
+                                <img src="/src/public/dropdown/exit.png" width="30px" height="30px">
+                                <a class="keluar" href="#">Keluar</a>
+                              </div>
                             </div>
                         </div>
                     </div>
@@ -181,36 +213,36 @@ class NavBar extends HTMLElement {
             </nav>
           `;
 
-          // Get userDropdown element within Shadow DOM
-          const userDropdown = this.shadowRoot.getElementById("userDropdown");
-          const profilLink = this.shadowRoot.getElementById("profilLink");
+    // Get userDropdown element within Shadow DOM
+    const userDropdown = this.shadowRoot.getElementById('userDropdown');
+    const profilLink = this.shadowRoot.getElementById('profilLink');
 
-          // Add event listeners for mouseover and mouseout within Shadow DOM
-          userDropdown.addEventListener("mouseover", () => {
-            userDropdown.querySelector(".dropdown-content").style.display = "block";
-          });
+    // Add event listeners for mouseover and mouseout within Shadow DOM
+    userDropdown.addEventListener('mouseover', () => {
+      userDropdown.querySelector('.dropdown-content').style.display = 'block';
+    });
 
-          userDropdown.addEventListener("mouseout", () => {
-            userDropdown.querySelector(".dropdown-content").style.display = "none";
-          });
+    userDropdown.addEventListener('mouseout', () => {
+      userDropdown.querySelector('.dropdown-content').style.display = 'none';
+    });
 
-          profilLink.addEventListener("click", () => {
-            window.location.href = "/editprofilpsikolog";
-          });
+    profilLink.addEventListener('click', () => {
+      window.location.href = '/editprofilpsikolog';
+    });
 
-          this.shadowRoot.querySelector(".keluar").addEventListener("click", () => {
-            this.logout();
-          });
-        }
+    this.shadowRoot.querySelector('.keluar').addEventListener('click', () => {
+      this.logout();
+    });
+  }
 
-        logout() {
-          sessionStorage.removeItem('authToken');
-          window.location.href = '/'; 
-        }
+  logout() {
+    sessionStorage.removeItem('authToken');
+    window.location.href = '/';
+  }
 }
 
 // Define the custom element
-customElements.define("navbar-psikolog", NavBar);
+customElements.define('navbar-psikolog', NavBar);
 
 //     // Get userDropdown element within Shadow DOM
 //     const userDropdown = this.shadowRoot.getElementById("userDropdown");
@@ -250,7 +282,7 @@ customElements.define("navbar-psikolog", NavBar);
 
 // function logout() {
 //   sessionStorage.removeItem('authToken');
-//   window.location.href = '/'; 
+//   window.location.href = '/';
 // }
 
 // document.getElementById("profilLink").addEventListener("click", () => {

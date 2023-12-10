@@ -306,11 +306,11 @@ class NavBarLogin extends HTMLElement {
                           <h2>John Doe</h2>
                           <div class="dropdown-content">
                             <div class="profile-button" id="profile-button">
-                              <img src="/src/public/dropdown/man.png" width="30px" height="30px"></img>
+                              <img src="/src/public/dropdown/man.png" width="30px" height="30px">
                               <a id="profilLink" href="#">Profil saya</a>
                             </div>
                             <div class="keluar-button" id="keluar-button">
-                              <img src="/src/public/dropdown/exit.png" width="30px" height="30px"></img>
+                              <img src="/src/public/dropdown/exit.png" width="30px" height="30px">
                               <a class="keluar" href="#">Keluar</a>
                             </div>
                           </div>
