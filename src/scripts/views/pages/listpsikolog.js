@@ -16,8 +16,8 @@ fetch(apiUrl)
                     <div class="data-psikolog">
                         <h2>${articleData.name}</h2>
                         <div class="value-psikolog">
-                            <p>Pengalaman Kerja ${articleData.experience}</p>
-                        <i class="fa-solid fa-comments"></i>
+                            <p>Pengalaman Kerja ${articleData.experience.replace(/_/g, ' ')}</p>
+                            <i class="fa-solid fa-comments"></i>
                             <p class="ulasan">${articleData.counselings.review.count}</p>
                         </div>
                         <div class="list-button-psikolog">
