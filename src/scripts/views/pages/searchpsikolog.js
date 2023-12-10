@@ -23,9 +23,9 @@ searchForm.addEventListener('submit', (event) => {
                         <div class="data-psikolog">
                             <h2>${articleData.name}</h2>  
                             <div class="value-psikolog">
-                                <p>Pengalaman Kerja ${articleData.experience.replace(/_/g, ' ')}</p>
-                                <i class="far fa-envelope"></i>
-                                <p class="ulasan">${articleData.counselings.review.count}</p>
+                              <p>Pengalaman Kerja ${articleData.experience}</p>
+                              <i class="fa-solid fa-comments"></i>
+                              <p class="ulasan">${articleData.counselings.review.count}</p>
                             </div>
                             <div class="list-button-psikolog">
                                 <div class="${articleData.availability === 'available' ? 'jadwal-hijau' : 'jadwal-merah'}">
@@ -57,9 +57,9 @@ searchForm.addEventListener('submit', (event) => {
                     <div class="data-psikolog">
                         <h2>${articleData.name}</h2>
                         <div class="value-psikolog">
-                            <p>Pengalaman Kerja ${articleData.experience.replace(/_/g, ' ')}</p>
-                            <i class="far fa-envelope"></i>
-                            <p class="ulasan">${articleData.counselings.review.count}</p>
+                          <p>Pengalaman Kerja ${articleData.experience}</p>
+                          <i class="fa-solid fa-comments"></i>
+                          <p class="ulasan">${articleData.counselings.review.count}</p>
                         </div>
                         <div class="list-button-psikolog">
                             <div class="${articleData.availability === 'available' ? 'jadwal-hijau' : 'jadwal-merah'}">
