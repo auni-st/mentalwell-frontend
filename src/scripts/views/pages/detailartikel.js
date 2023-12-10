@@ -33,7 +33,8 @@ async function renderArticleDetails() {
     judulDetailArticel.innerHTML = `<h2>${articleData.title}</h2>`;
     createdArticel.innerHTML = `<time> Dibuat pada: ${articleData.created_at}</time>`;
     imageDetailArticel.innerHTML = `<img src="${articleData.image}" alt="image detail artice" />`;
-    contentDetailArticel.innerHTML = `<p>${articleData.content}</p>`;
+    const formattedContent = articleData.content ? articleData.content.replace(/\n/g, '<br>') : '';
+    contentDetailArticel.innerHTML = `<p>${formattedContent}</p>`;
     referensiArticel.innerHTML = `<p>Referensi : ${articleData.references}<p>`;
     // Menampilkan referensi artikel jika ada
     // if (articleData.references && articleData.references.length > 0) {
