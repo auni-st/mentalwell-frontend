@@ -319,7 +319,7 @@ class NavBarLogin extends HTMLElement {
 
     // Get userDropdown element within Shadow DOM
     const userDropdown = this.shadowRoot.getElementById('userDropdown');
-    const profilLink = this.shadowRoot.getElementById('profile-button');
+    const profilLink = this.shadowRoot.getElementById('profilLink');
 
     // Add event listeners for mouseover and mouseout within Shadow DOM
     userDropdown.addEventListener('mouseover', () => {
@@ -335,7 +335,7 @@ class NavBarLogin extends HTMLElement {
       window.location.href = `https://mentalwell.vercel.app/editprofilpasien`;
     });
 
-    this.shadowRoot.querySelector('.keluar-button').addEventListener('click', () => {
+    this.shadowRoot.querySelector('.keluar').addEventListener('click', () => {
       this.logout();
     });
   }
