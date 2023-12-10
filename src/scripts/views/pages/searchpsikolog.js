@@ -23,7 +23,7 @@ searchForm.addEventListener('submit', (event) => {
                         <div class="data-psikolog">
                             <h2>${articleData.name}</h2>  
                             <div class="value-psikolog">
-                              <p>Pengalaman Kerja ${articleData.experience}</p>
+                            <p>Pengalaman Kerja ${articleData.experience.replace(/_/g, ' ')}</p>
                               <i class="fa-solid fa-comments"></i>
                               <p class="ulasan">${articleData.counselings.review.count}</p>
                             </div>
@@ -57,7 +57,7 @@ searchForm.addEventListener('submit', (event) => {
                     <div class="data-psikolog">
                         <h2>${articleData.name}</h2>
                         <div class="value-psikolog">
-                          <p>Pengalaman Kerja ${articleData.experience}</p>
+                        <p>Pengalaman Kerja ${articleData.experience.replace(/_/g, ' ')}</p>
                           <i class="fa-solid fa-comments"></i>
                           <p class="ulasan">${articleData.counselings.review.count}</p>
                         </div>
