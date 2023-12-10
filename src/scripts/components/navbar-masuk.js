@@ -302,8 +302,8 @@ class NavBarLogin extends HTMLElement {
                           <li class="list-item"><a href="/tentangkami">Tentang Kami</a></li>
                       </ul>
                       <div class="button" id="userDropdown">
-                          <img src="/src/public/beranda/man.png" alt="Foto User" id="photoUser" width="60px" height="60px">
-                          <h2>John Doe</h2>
+                          <img src="" alt="Foto User" id="photoUser" width="60px" height="60px">
+                          <h2></h2>
                           <div class="dropdown-content">
                             <div class="profile-button" id="profile-button">
                               <img src="/src/public/dropdown/man.png" width="30px" height="30px">
@@ -319,6 +319,33 @@ class NavBarLogin extends HTMLElement {
               </div>
           </nav>
         `;
+
+    const photoUser = document.getElementById('photoUser');
+    const h2User = document.querySelector('h2');
+
+    // Mendapatkan token dari sessionStorage
+    const token = sessionStorage.getItem('authToken');
+
+    // Membuat objek konfigurasi untuk request fetch
+    const requestOptions = {
+      method: 'GET',
+      headers: {
+        Authorization: `Bearer ${token}`,
+        'Content-Type': 'application/json',
+      },
+    };
+
+    // Melakukan fetch ke API dengan URL yang diberikan
+    fetch('https://mentalwell-backend.vercel.app/currentUser', requestOptions)
+      .then((response) => response.json())
+      .then((data) => {
+        h2User.innerHTML = `${data.nickname}`
+        photoUser.src.innerHTML = `${data.profile_image}`;
+      })
+      .catch((error) => {
+        // Handle kesalahan jika terjadi
+        console.error('Error fetching data:', error);
+      });
 
     // Get userDropdown element within Shadow DOM
     const userDropdown = this.shadowRoot.getElementById('userDropdown');
