@@ -303,7 +303,7 @@ class NavBarLogin extends HTMLElement {
                       </ul>
                       <div class="button" id="userDropdown">
                           <img src="" alt="Foto User" id="photoUser" width="60px" height="60px">
-                          <ul id="nicknameList"></ul>
+                          <h2 id="nicknameTag">tes</h2>
                           <div class="dropdown-content">
                             <div class="profile-button" id="profile-button">
                               <img src="/src/public/dropdown/man.png" width="30px" height="30px">
@@ -318,16 +318,16 @@ class NavBarLogin extends HTMLElement {
                   </div>
               </div>
           </nav>
+          <script src="/src/scripts/components/navbar-masuk.js"></script>
         `;
+    this.connectedCallback();
+  }
 
-    // Mendapatkan elemen foto user dan h2 dengan ID yang sesuai
-    const photoUser = document.getElementById('photoUser');
-    const ulNickname = document.getElementById('nicknameList');
+  connectedCallback() {
+    const photoUser = this.shadowRoot.getElementById('photoUser');
+    const nicknameTag = this.shadowRoot.getElementById('nicknameTag');
 
-    // Mendapatkan token dari sessionStorage
     const token = sessionStorage.getItem('authToken');
-
-    // Membuat objek konfigurasi untuk request fetch
     const requestOptions = {
       method: 'GET',
       headers: {
@@ -336,33 +336,27 @@ class NavBarLogin extends HTMLElement {
       },
     };
 
-    // Melakukan fetch ke API dengan URL yang diberikan
     fetch('https://mentalwell-backend.vercel.app/currentUser', requestOptions)
       .then((response) => response.json())
       .then((data) => {
-        
-        data.forEach((articleData) => {
-          console.log(articleData.nickname);
-          const li = document.createElement('li');
-          li.textContent = articleData.nickname;
-          ulNickname.appendChild(li);
-        });
-      // // Mengubah atribut src gambar dengan data yang diterima
-      // photoUser.src = data.profile_image;
+        const currentUser = data[0];
+        console.log(currentUser.nickname);
+        console.log(currentUser.profile_image);
 
-      // // Menambahkan alt untuk gambar
-      // photoUser.alt = 'Foto Profil';
+        if (nicknameTag) {
+          nicknameTag.innerText = currentUser.nickname;
+          
+        } else {
+          console.error('Element with ID "nicknameTag" not found.');
+        }
       })
       .catch((error) => {
-        // Handle kesalahan jika terjadi
         console.error('Error fetching data:', error);
       });
 
-    // Get userDropdown element within Shadow DOM
     const userDropdown = this.shadowRoot.getElementById('userDropdown');
     const profilLink = this.shadowRoot.getElementById('profilLink');
 
-    // Add event listeners for mouseover and mouseout within Shadow DOM
     userDropdown.addEventListener('mouseover', () => {
       userDropdown.querySelector('.dropdown-content').style.display = 'block';
     });
@@ -395,4 +389,79 @@ if (authToken) {
 } else {
   customElements.define('navbar-masuk', NavBar);
 }
-// Define the custom element
+//     // Mendapatkan elemen foto user dan h2 dengan ID yang sesuai
+//     const photoUser = document.getElementById('photoUser');
+
+//     // Mendapatkan token dari sessionStorage
+//     const token = sessionStorage.getItem('authToken');
+
+//     // Membuat objek konfigurasi untuk request fetch
+//     const requestOptions = {
+//       method: 'GET',
+//       headers: {
+//         Authorization: `Bearer ${token}`,
+//         'Content-Type': 'application/json',
+//       },
+//     };
+
+//     // Melakukan fetch ke API dengan URL yang diberikan
+//     fetch('https://mentalwell-backend.vercel.app/currentUser', requestOptions)
+//       .then((response) => response.json())
+//       .then((data) => {
+//         const nicknameTag = document.getElementById('nicknameTag');
+//         const currentUser = data[0];
+//         console.log(currentUser.nickname);
+//         console.log(currentUser.profile_image);
+
+//         console.log(nicknameTag)
+
+//         if (nicknameTag) {
+//           nicknameTag.innerText = currentUser.nickname;
+//         } else {
+//           console.error('Element with ID "nicknameTag" not found.');
+//         }
+
+//       })
+//       .catch((error) => {
+//         // Handle kesalahan jika terjadi
+//         console.error('Error fetching data:', error);
+//       });
+
+//     // Get userDropdown element within Shadow DOM
+//     const userDropdown = this.shadowRoot.getElementById('userDropdown');
+//     const profilLink = this.shadowRoot.getElementById('profilLink');
+
+//     // Add event listeners for mouseover and mouseout within Shadow DOM
+//     userDropdown.addEventListener('mouseover', () => {
+//       userDropdown.querySelector('.dropdown-content').style.display = 'block';
+//     });
+
+//     userDropdown.addEventListener('mouseout', () => {
+//       userDropdown.querySelector('.dropdown-content').style.display = 'none';
+//     });
+
+//     profilLink.addEventListener('click', () => {
+//       const urlParams = new URLSearchParams(window.location.search);
+//       const articleId = urlParams.get('id');
+//       window.location.href = `https://mentalwell.vercel.app/editprofilpasien`;
+//     });
+
+//     this.shadowRoot.querySelector('.keluar').addEventListener('click', () => {
+//       this.logout();
+//     });
+//   }
+
+//   logout() {
+//     sessionStorage.removeItem('authToken');
+//     window.location.href = '/';
+//   }
+// }
+
+// const authToken = sessionStorage.getItem('authToken');
+
+// if (authToken) {
+//   customElements.define('navbar-masuk', NavBarLogin);
+// } else {
+//   customElements.define('navbar-masuk', NavBar);
+// }
+// // Define the custom element
