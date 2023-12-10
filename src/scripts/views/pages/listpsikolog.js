@@ -11,12 +11,23 @@ fetch(apiUrl)
     data.forEach((articleData) => {
       const articleElement = document.createElement('div');
       articleElement.classList.add('content-psikolog');
+
+      let formattedExperience
+      if (articleData.experience == "<2_tahun") {
+        formattedExperience = "< 2 tahun"
+      } else if (articleData.experience == "2-4_tahun") {
+        formattedExperience = "2-4 tahun"
+
+      } else if (articleData.experience == ">4_tahun") {
+        formattedExperience = "> 4 tahun"
+      }
+
       articleElement.innerHTML = `
                     <img class="image-psikolog" src="${articleData.profile_image}" alt="man" />
                     <div class="data-psikolog">
                         <h2>${articleData.name}</h2>
                         <div class="value-psikolog">
-                            <p>Pengalaman Kerja ${articleData.experience.replace(/_/g, ' ')}</p>
+                            <p>Pengalaman Kerja ${formattedExperience}</p>
                             <i class="fa-solid fa-comments"></i>
                             <p class="ulasan">${articleData.counselings.review.count}</p>
                         </div>
