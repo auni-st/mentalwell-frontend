@@ -7,7 +7,6 @@ searchForm.addEventListener('submit', (event) => {
 
   const searchTerm = searchInput.value.trim();
 
-  // Jika input pencarian tidak kosong, ambil data sesuai dengan kata kunci
   if (searchTerm !== '') {
     const apiUrl = `https://mentalwell-backend.vercel.app/psychologists?name=${encodeURIComponent(searchTerm)}`;
 
@@ -45,9 +44,6 @@ searchForm.addEventListener('submit', (event) => {
         console.error('Error fetching search results:', error);
       });
   } else {
-    // Jika input pencarian kosong, tampilkan semua konten
-    // Implementasikan kembali logika untuk menampilkan semua konten
-    // Sama seperti ketika halaman pertama dimuat
     fetch('https://mentalwell-backend.vercel.app/psychologists')
       .then((response) => response.json())
       .then((data) => {

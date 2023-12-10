@@ -242,6 +242,17 @@ class NavBarLogin extends HTMLElement {
                 right: 0;
                 border-bottom-left-radius: 10px;
             }
+
+            .dropdown-content .profile-button {
+              display: flex;
+              flex-direction: row; 
+            }
+
+            .dropdown-content .keluar-button {
+              display: flex;
+              flex-direction: row;
+            }
+            
             
             .dropdown-content a {
                 color: black;
@@ -277,8 +288,14 @@ class NavBarLogin extends HTMLElement {
                             <img src="/src/public/beranda/man.png" alt="Foto User" id="photoUser" width="60px" height="60px">
                             <h2>John Doe</h2>
                             <div class="dropdown-content">
+                              <div class="profile-button">
+                                <i class="fas fa-user"></i>
                                 <a id="profilLink" href="#">Profil saya</a>
+                              </div>
+                              <div class="keluar-button">
+                                <i class="fas fa-sign-out-alt"></i>
                                 <a class="keluar" href="#">Keluar</a>
+                              </div>
                             </div>
                         </div>
                     </div>
