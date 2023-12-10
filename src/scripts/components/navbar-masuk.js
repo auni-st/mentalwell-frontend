@@ -266,14 +266,17 @@ class NavBarLogin extends HTMLElement {
               text-decoration: none;
               width: 100%;
           }
+
           .dropdown-content .profile-button:hover {
             background-color: #044B97;
             color: #fff;
+            cursor: pointer;
           }
 
           .dropdown-content .keluar-button:hover {
             background-color: #044B97;
             color: #fff;
+            cursor: pointer;
           }
           
           .dropdown-content a:hover {
@@ -331,7 +334,7 @@ class NavBarLogin extends HTMLElement {
     });
 
     profilLink.addEventListener('click', () => {
-      const urlParams = new URLSearchParams(window.location.search);
+      // const urlParams = new URLSearchParams(window.location.search);
       window.location.href = `https://mentalwell.vercel.app/editprofilpasien`;
     });
 
