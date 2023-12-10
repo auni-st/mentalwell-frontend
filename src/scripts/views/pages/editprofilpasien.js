@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 
   const patientData = await response.json();
   
+  document.getElementById('')
 
   // Update email
   document.getElementById('email').innerHTML = `<h4>${patientData.users.email}</h4>`;

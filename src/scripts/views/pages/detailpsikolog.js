@@ -25,15 +25,24 @@ async function renderArticleDetails() {
     const topikKeahlian = document.getElementById('topik-keahlian'); // Updated ID
     const topicList = document.getElementById('topiclist');
 
+    
     const articleData = await fetchArticleById(articleId);
+    let formattedExperience;
+    if (articleData.experience == '<2_tahun') {
+      formattedExperience = '< 2 tahun';
+    } else if (articleData.experience == '2-4_tahun') {
+      formattedExperience = '2-4 tahun';
+    } else if (articleData.experience == '>4_tahun') {
+      formattedExperience = '> 4 tahun';
+    }
     // Menampilkan data artikel pada elemen HTML
     fotopsikolog.src = `${articleData.profile_image}`;
     datapsikolog.innerHTML = `${articleData.name}`;
     biodatapsikolog.innerHTML = `<p>${articleData.bio}</p>`;
-    pengalamanpraktik.innerHTML = `${articleData.experience}`;
+    pengalamanpraktik.innerHTML = `${formattedExperience}`;
     // Menampilkan topik-topik psikolog
     if (articleData.psychologist_topics && articleData.psychologist_topics.length > 0) {
-      const topicsList = articleData.psychologist_topics.map(topic => `<li>${topic.topic_name}</li>`).join('');
+      const topicsList = articleData.psychologist_topics.map((topic) => `<li>${topic.topic_name}</li>`).join('');
       topicList.innerHTML = topicsList;
       topikKeahlian.style.display = 'block'; // Show the container if there are topics
     } else {
@@ -45,7 +54,9 @@ async function renderArticleDetails() {
     const userReviewsContainer = document.getElementById('userReviews');
 
     if (articleData.counselings && articleData.counselings.length > 0) {
-      const userReviews = articleData.counselings.map(counseling => `
+      const userReviews = articleData.counselings
+        .map(
+          (counseling) => `
         <div class="isi-ulasan">
           <img src="/src/public/beranda/man.png" alt="Foto User" id="userReview" />
           <div class="komentar-user">
@@ -53,7 +64,9 @@ async function renderArticleDetails() {
             <p>${counseling.review}</p>
           </div>
         </div>
-      `).join('');
+      `
+        )
+        .join('');
       userReviewsContainer.innerHTML = userReviews;
       ulasanPengguna.style.display = 'block'; // Tampilkan kontainer jika ada ulasan pengguna
     } else {
@@ -73,7 +86,7 @@ async function fetchPsychologistAvailability() {
   try {
     const response = await fetch(url);
     const data = await response.json();
-    console.log(data.availability)
+    console.log(data.availability);
 
     // Update the button state directly based on availability
     updateButtonState(data.availability);
