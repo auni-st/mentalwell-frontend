@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', async function () {
   });
 
   const patientData = await response.json();
+  
 
   // Update email
   document.getElementById('email').innerHTML = `<h4>${patientData.users.email}</h4>`;
@@ -34,7 +35,6 @@ document.addEventListener('DOMContentLoaded', async function () {
 
 form.addEventListener('submit', async function (event) {
   event.preventDefault();
-
   const newName = document.getElementById('namalengkap').value;
   const newNickname = document.getElementById('namapanggilan').value;
   const newPhone_number = document.getElementById('nowa').value;

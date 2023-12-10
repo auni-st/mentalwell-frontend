@@ -71,7 +71,7 @@ statusDropdown.addEventListener("change", () => {
 tableBody.addEventListener("click", (event) => {
   // const targetRow = event.target.closest('tr');
   const isIcon = event.target.tagName === "IMG" && event.target.alt === "tulis";
-
+  
   // console.log(targetRow)
   console.log(isIcon);
 

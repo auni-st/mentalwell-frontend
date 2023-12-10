@@ -6,15 +6,8 @@
     <title>MentalWell</title>
     <link rel="icon" href="/src/public/logo/logoicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="/src/styles/editprofilpsikolog.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    />
-    <script
-      type="module"
-      src="/src/scripts/components/navbar-psikolog.js"
-      defer
-    ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <script type="module" src="/src/scripts/components/navbar-psikolog.js" defer></script>
   </head>
   <body>
     <!-- navbar components -->
@@ -39,36 +32,16 @@
         <div class="form-control">
           <label for="namapanggilan">Nama Lengkap </label>
           <i class="fas fa-edit"></i>
-          <input
-            class="form-input"
-            type="text"
-            id="namapanggilan"
-            name="namapanggilan"
-            placeholder="Adelia Tatiana"
-            required
-          />
+          <input class="form-input" type="text" id="namapanggilan" name="namapanggilan" placeholder="Adelia Tatiana" required />
         </div>
         <div class="form-control">
           <label for="nowa">Nomor Whatsapp </label>
           <i class="fas fa-edit"></i>
-          <input
-            class="form-input"
-            type="nowa"
-            id="nowa"
-            name="nowa"
-            placeholder="081234567890"
-            required
-          />
+          <input class="form-input" type="nowa" id="nowa" name="nowa" placeholder="081234567890" required />
         </div>
         <div class="form-control">
           <label for="tgllahir">Tanggal Lahir </label>
-          <input
-            class="form-input"
-            type="date"
-            id="tgllahir"
-            name="tgllahir"
-            required
-          />
+          <input class="form-input" type="date" id="tgllahir" name="tgllahir" required />
         </div>
         <div class="form-control">
           <label for="gender">Jenis Kelamin </label>
@@ -78,24 +51,8 @@
           </select>
         </div>
         <div class="form-control">
-          <label for="topik">Topik Keahlian </label>
-          <select class="form-input" id="topik" name="topik" required>
-            <option value="suicidal">Suicidal</option>
-            <option value="fobia">Fobia</option>
-            <option value="trauma">Trauma</option>
-          </select>
-        </div>
-        <div class="form-control">
           <label for="bio">Bio </label>
-          <textarea
-            class="form-input"
-            id="bio"
-            name="bio"
-            cols="30"
-            rows="10"
-            placeholder="Tulis bio mu disini..."
-            required
-          ></textarea>
+          <textarea class="form-input" id="bio" name="bio" cols="30" rows="10" placeholder="Tulis bio mu disini..." required></textarea>
         </div>
         <div class="form-control">
           <label for="pengalaman">Pengalaman Praktik </label>
@@ -103,6 +60,14 @@
             <option value="rendah">&lt; 2 Tahun</option>
             <option value="sedang">2 - 4 Tahun</option>
             <option value="tinggi">&gt; 4 Tahun</option>
+          </select>
+        </div>
+        <div class="form-control">
+          <label for="topik">Topik Keahlian </label>
+          <select class="form-input" id="topik" name="topik" required>
+            <option value="suicidal">Suicidal</option>
+            <option value="fobia">Fobia</option>
+            <option value="trauma">Trauma</option>
           </select>
         </div>
         <button class="simpan-btn" type="submit">Simpan</button>

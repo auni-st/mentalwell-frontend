@@ -196,7 +196,7 @@ class NavBar extends HTMLElement {
                     <div class="navbar-list">
                         <div class="button-user" id="userDropdown">
                             <img src="/src/public/beranda/man.png" alt="Foto User" id="photoUser" >
-                            <button type="submit">John Doe</button>
+                            <h2 id="nicknameTag"></h2>
                             <div class="dropdown-content">
                               <div class="profile-button" id="profile-button">
                                 <img src="/src/public/dropdown/man.png" width="30px" height="30px">
@@ -212,6 +212,39 @@ class NavBar extends HTMLElement {
                 </div>
             </nav>
           `;
+    this.connectedCallback();
+  }
+
+  connectedCallback() {
+    const photoUser = this.shadowRoot.getElementById('photoUser');
+    const nicknameTag = this.shadowRoot.getElementById('nicknameTag');
+
+    const token = sessionStorage.getItem('authToken');
+    const requestOptions = {
+      method: 'GET',
+      headers: {
+        Authorization: `Bearer ${token}`,
+        'Content-Type': 'application/json',
+      },
+    };
+
+    fetch('https://mentalwell-backend.vercel.app/currentPsychologist', requestOptions)
+    .then((response) => response.json())
+    .then((data) => {
+      const currentUser = data[0];
+      console.log(currentUser.name);
+      console.log(currentUser.profile_image);
+
+      if (nicknameTag && photoUser) {
+        nicknameTag.innerText = currentUser.name;
+        photoUser.src = currentUser.profile_image;
+      }  else {
+        console.error('Element with ID "nicknameTag" not found.');
+      }
+    })
+    .catch((error) => {
+      console.error('Error fetching data:', error);
+    });
 
     // Get userDropdown element within Shadow DOM
     const userDropdown = this.shadowRoot.getElementById('userDropdown');
@@ -243,52 +276,3 @@ class NavBar extends HTMLElement {
 
 // Define the custom element
 customElements.define('navbar-psikolog', NavBar);
-
-//     // Get userDropdown element within Shadow DOM
-//     const userDropdown = this.shadowRoot.getElementById("userDropdown");
-//     const profilLink = this.shadowRoot.getElementById("profilLink");
-
-//     // Add event listeners for mouseover and mouseout within Shadow DOM
-//     userDropdown.addEventListener("mouseover", () => {
-//       userDropdown.querySelector(".dropdown-content").style.display = "block";
-//     });
-
-//     userDropdown.addEventListener("mouseout", () => {
-//       userDropdown.querySelector(".dropdown-content").style.display = "none";
-//     });
-
-//     // Add event listener for "Profil saya" link click
-//     profilLink.addEventListener("click", () => {
-//       // Redirect to /editprofilpsikolog
-//       window.location.href = "/editprofilpsikolog";
-//     });
-//   }
-// }
-
-// // Define the custom element
-// customElements.define("navbar-psikolog", NavBar);
-
-// // Get userDropdown element outside Shadow DOM
-// const userDropdown = document.getElementById("userDropdown");
-
-// // Add event listeners for mouseover and mouseout outside Shadow DOM
-// userDropdown.addEventListener("mouseover", () => {
-//   userDropdown.querySelector(".dropdown-content").style.display = "block";
-// });
-
-// userDropdown.addEventListener("mouseout", () => {
-//   userDropdown.querySelector(".dropdown-content").style.display = "none";
-// });
-
-// function logout() {
-//   sessionStorage.removeItem('authToken');
-//   window.location.href = '/';
-// }
-
-// document.getElementById("profilLink").addEventListener("click", () => {
-//   window.location.href = "/editprofilpsikolog";
-// });
-
-// document.querySelector(".keluar").addEventListener("click", () => {
-//   logout();
-// });
