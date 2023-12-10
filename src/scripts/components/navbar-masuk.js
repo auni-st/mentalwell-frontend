@@ -238,7 +238,7 @@ class NavBarLogin extends HTMLElement {
               min-width: 160px;
               box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
               z-index: 1;
-              top: 90px;
+              top: 88px;
               right: 1px;
               border-bottom-left-radius: 10px;
           }
