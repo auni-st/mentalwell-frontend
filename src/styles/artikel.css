@@ -183,6 +183,7 @@ main .content-articel {
   /* border: 1px solid #808080; */
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
   border-radius: 20px;
+  position: relative;
 }
 
 .content-articel article img {
@@ -212,9 +213,9 @@ p {
 .content-articel .button-articel {
   display: flex;
   justify-content: flex-end;
-  margin-right: 1rem;
-  margin-top: 2rem;
-  position: relative;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
 }
 
 .content-articel .button-articel button {
@@ -225,7 +226,6 @@ p {
   color: white;
   font-weight: 700px;
   border: none;
-  position: absolute;
   top: 0;
   left: 50;
   right: 0;

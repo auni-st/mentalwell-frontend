@@ -22,7 +22,7 @@ fetch(apiUrl)
                           <p id="contentParagraph">${articleData.content}</p>
                         </div>
                         <div class="button-articel">
-                        <button type="button" onclick="redirectToDetail('${articleData.id}')"> Baca Selengkapnya</button>
+                          <button type="button" onclick="redirectToDetail('${articleData.id}')"> Baca Selengkapnya</button>
                         </div>
                     </div>
                 `;
