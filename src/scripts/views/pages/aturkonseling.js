@@ -82,7 +82,7 @@ fetch(`https://mentalwell-backend.vercel.app/dashboard/counseling/${counselingId
         <h3>Harapan Setelah Konseling</h3>
         <p>${patientDetails.hope_after}</p>
       `;
-    const selectedStatus = patientDetails.status.toLowerCase(); // assuming status is "Selesai" or "Belum Selesai"
+    const selectedStatus = patientDetails.status.toLowerCase();
     statusDropdown.value = selectedStatus;
   })
   .catch(error => {
