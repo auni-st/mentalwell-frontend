@@ -123,13 +123,12 @@ main {
 }
 
 .dashboard .content-dashboard table {
-  width: 950px;
+  width: 800px;
   border-collapse: collapse;
 }
 
 .dashboard .content-dashboard table tr {
   border: 1px solid black;
-  height: 20px; 
 }
 
 .dashboard .content-dashboard table th,
