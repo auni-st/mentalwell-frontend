@@ -21,7 +21,14 @@ fetch(apiUrl)
       } else if (articleData.experience == ">4_tahun") {
         formattedExperience = "> 4 tahun"
       }
+      
 
+      let formattedketersediaan;
+      if (articleData.availability === 'available') {
+        formattedketersediaan = "Tersedia";
+      } else {
+        formattedketersediaan = "Tidak Tersedia";
+      }
       articleElement.innerHTML = `
                     <img class="image-psikolog" src="${articleData.profile_image}" alt="man" />
                     <div class="data-psikolog">
@@ -33,7 +40,7 @@ fetch(apiUrl)
                         </div>
                         <div class="list-button-psikolog">
                             <div class="${articleData.availability === 'available' ? 'jadwal-hijau' : 'jadwal-merah'}">
-                                <p>${articleData.availability}</p>
+                                <p>${formattedketersediaan}</p>
                             </div>
                             <div class="button-psikolog">
                                 <button type="button" onclick="redirectToDetailPsychologist('${articleData.id}')">Lihat Selengkapnya</button>
