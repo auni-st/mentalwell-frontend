@@ -13,6 +13,13 @@ document.addEventListener('DOMContentLoaded', async function () {
   const psychologistData = await response.json();
   console.log(psychologistData.email)
 
+  //Update profile_image
+  document.getElementById('profileimage').innerHTML = `<img src="${psychologistData.profile_image}">
+  <i class="fas fa-edit edit-icon" id="editProfileImage"></i>
+  `
+  // document.getElementById('profileimage').innerHTML = `<i class="fas fa-edit edit-icon" id="editProfileImage"></i>
+  // `
+
   // Update email
   document.getElementById('email').innerHTML = `<h4>${psychologistData.email}</h4>`;
 
