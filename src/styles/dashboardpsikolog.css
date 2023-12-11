@@ -129,6 +129,7 @@ main {
 
 .dashboard .content-dashboard table tr {
   border: 1px solid black;
+  height: 30px; 
 }
 
 .dashboard .content-dashboard table th,
