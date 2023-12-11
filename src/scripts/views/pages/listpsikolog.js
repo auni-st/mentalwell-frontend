@@ -29,6 +29,7 @@ fetch(apiUrl)
       } else {
         formattedketersediaan = "Tidak Tersedia";
       }
+      
       articleElement.innerHTML = `
                     <img class="image-psikolog" src="${articleData.profile_image}" alt="man" />
                     <div class="data-psikolog">
