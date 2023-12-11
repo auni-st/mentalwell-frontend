@@ -123,7 +123,7 @@ main {
 }
 
 .dashboard .content-dashboard table {
-  width: 1000px;
+  width: 950px;
   border-collapse: collapse;
 }
 
@@ -148,13 +148,13 @@ th {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin-right: 11rem;
+  margin-right: 17rem;
 }
 
 .status-dropdown {
   padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 10px;
+  border-radius: 15px;
   cursor: pointer;
   font-size: 15px;
   list-style: none;

@@ -108,8 +108,9 @@ Header
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* margin: 98px auto 10px; */
-  margin: 130px 0 auto 135px;
+  /* margin: 98px auto 10px; 
+  margin: 130px 0 auto 135px; */
+  margin: 130px auto;
 }
 
 .editpsikolog-container .editpsikolog-title {
