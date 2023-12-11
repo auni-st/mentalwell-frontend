@@ -13,7 +13,26 @@ async function fetchArticleById(articleId) {
   }
 }
 
-// Function to render article details
+// Function to format the date
+function formatDateTime(dateString) {
+  const dateObject = new Date(dateString);
+  const day = dateObject.getDate();
+  const monthIndex = dateObject.getMonth();
+  const year = dateObject.getFullYear();
+  const hours = dateObject.getHours();
+  const minutes = dateObject.getMinutes();
+
+  // Nama bulan dalam bahasa Indonesia
+  const monthNames = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+
+  // Format jam dan menit dengan leading zero jika kurang dari 10
+  const formattedTime = `${hours < 10 ? '0' : ''}${hours}:${minutes < 10 ? '0' : ''}${minutes}`;
+
+  const formattedDateTime = `${day} ${monthNames[monthIndex]} ${year}, ${formattedTime}`;
+  return formattedDateTime;
+}
+
+
 async function renderArticleDetails() {
   try {
     // Mendapatkan ID artikel dari URL
@@ -26,12 +45,14 @@ async function renderArticleDetails() {
     const imageDetailArticel = document.getElementById('image-detail-articel');
     const contentDetailArticel = document.getElementById('content-detail-articel');
     const referensiArticel = document.getElementById('referensi-articel');
-    // Fetch data artikel berdasarkan ID
+    
     const articleData = await fetchArticleById(articleId);
 
-    // Menampilkan data artikel pada elemen HTML
+    const formattedDateTime = formatDateTime(articleData.created_at);
+    createdArticel.innerHTML = `<time> Dibuat pada: ${formattedDateTime}</time>`;
+
     judulDetailArticel.innerHTML = `<h2>${articleData.title}</h2>`;
-    createdArticel.innerHTML = `<time> Dibuat pada: ${articleData.created_at}</time>`;
+    // createdArticel.innerHTML = `<time> Dibuat pada: ${articleData.created_at}</time>`;
     imageDetailArticel.innerHTML = `<img src="${articleData.image}" alt="image detail artice" />`;
     const formattedContent = articleData.content ? articleData.content.replace(/\n/g, '<br>') : '';
     contentDetailArticel.innerHTML = `<p>${formattedContent}</p>`;
