@@ -170,7 +170,6 @@ p {
 
 .container-ulasan::before {
   position: absolute;
-  content: '←';
   bottom: -140px;
   left: 80px;
   font-size: 24px;
@@ -178,7 +177,6 @@ p {
 
 .container-ulasan::after {
   position: absolute;
-  content: '→';
   bottom: -140px;
   right: 80px;
   font-size: 24px;
