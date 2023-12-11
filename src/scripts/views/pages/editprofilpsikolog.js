@@ -11,21 +11,22 @@ document.addEventListener('DOMContentLoaded', async function () {
   });
 
   const psychologistData = await response.json();
+  console.log(psychologistData.email)
 
   // Update email
-  document.getElementById('email').innerHTML = `<h4>${psychologistData.users.email}</h4>`;
+  document.getElementById('email').innerHTML = `<h4>${psychologistData.email}</h4>`;
 
   // Update name
-  document.getElementById('namapanggilan').value = psychologistData.users.name;
+  document.getElementById('namapanggilan').value = psychologistData.name;
 
   // Update phone number
-  document.getElementById('nowa').value = psychologistData.users.phone_number;
+  document.getElementById('nowa').value = psychologistData.phone_number;
 
   // Update birthdate
-  document.getElementById('tgllahir').value = psychologistData.users.birthdate;
+  document.getElementById('tgllahir').value = psychologistData.birthdate;
 
   // Update gender
-  document.getElementById('gender').value = psychologistData.users.gender;
+  document.getElementById('gender').value = psychologistData.gender;
 
   // Update bio
   document.getElementById('bio').value = psychologistData.bio;
