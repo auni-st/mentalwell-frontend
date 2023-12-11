@@ -116,11 +116,11 @@ Header
     color: #333;
 }
 
-.editpasien-container .editpasien-title p{
+.editpasien-container .editpasien-title p {
     margin-top: -10px;
 }
 
-.editpasien-container .editpasien-title p a{
+.editpasien-container .editpasien-title p a {
     text-decoration: none;
 }
 
@@ -136,10 +136,19 @@ Header
 
 .profil-image img {
     width: 150px;
-    height: 150px; 
-    border-radius: 50%; 
+    height: 150px;
+    border-radius: 50%;
     margin-bottom: 20px;
 }
+
+.profil-image i {
+    position: absolute;
+}
+
+.profil-image i:hover {
+    cursor: pointer;
+}
+
 
 h3 {
     font-weight: bold;
@@ -182,7 +191,7 @@ label {
 }
 
 .editpasien-container .editpasien-form .form-control .fa-edit:hover {
-    background-color: #044B77; 
+    background-color: #044B77;
     color: #ffffff;
     cursor: pointer;
 }
@@ -197,7 +206,7 @@ label {
     margin-top: -8px;
 }
 
-.editpasien-container .editpasien-form p a{
+.editpasien-container .editpasien-form p a {
     text-decoration: none;
     color: black;
 }
@@ -216,7 +225,7 @@ label {
 }
 
 .editpasien-container .editpasien-form .simpan-btn:hover {
-    background-color: #3ad0ea; 
+    background-color: #3ad0ea;
     color: #ffffff;
 }
 

@@ -11,8 +11,10 @@ document.addEventListener('DOMContentLoaded', async function () {
   });
 
   const patientData = await response.json();
-  
-  document.getElementById('')
+
+  document.getElementById('profil-image').innerHTML = `<img src="${patientData.users.profile_image}">
+  <i class="fas fa-edit edit-icon" id="editProfileImage"></i>
+  `
 
   // Update email
   document.getElementById('email').innerHTML = `<h4>${patientData.users.email}</h4>`;
