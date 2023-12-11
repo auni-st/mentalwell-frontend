@@ -400,6 +400,7 @@ class NavBarLogin extends HTMLElement {
 
     const userDropdown = this.shadowRoot.getElementById('userDropdown');
     const profilLink = this.shadowRoot.getElementById('profilLink');
+    const riwayat = this.shadowRoot.getElementById('riwayat');
 
     userDropdown.addEventListener('mouseover', () => {
       userDropdown.querySelector('.dropdown-content').style.display = 'block';
@@ -413,6 +414,10 @@ class NavBarLogin extends HTMLElement {
       const urlParams = new URLSearchParams(window.location.search);
       const articleId = urlParams.get('id');
       window.location.href = `https://mentalwell.vercel.app/editprofilpasien`;
+    });
+
+    riwayat.addEventListener('click', () => {
+      window.location.href = '/riwayat';
     });
 
     this.shadowRoot.querySelector('.keluar').addEventListener('click', () => {
