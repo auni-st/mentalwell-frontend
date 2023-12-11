@@ -143,6 +143,14 @@ Header
   margin-bottom: 20px;
 }
 
+.profil-image i {
+  position: absolute;
+}
+
+.profil-image i:hover {
+  cursor: pointer;
+}
+
 h3 {
   font-weight: bold;
   margin-bottom: 20px;
@@ -171,7 +179,7 @@ h4 {
   font-weight: normal;
 }
 
-label {
+.form-control label {
   position: absolute;
   padding-top: 7px;
 }
@@ -226,6 +234,33 @@ label {
 .editpsikolog-container .editpsikolog-form .simpan-btn:hover {
   background-color: #3ad0ea;
   color: #ffffff;
+}
+
+.form-control-2 {
+  margin-top: 10px;
+  margin-bottom: 1rem;
+  display: flex;
+}
+
+.checkbox-group {
+  display: grid;
+  grid-template-columns: repeat(2, 100px);
+  grid-gap: 5px;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  margin-left: 25px;
+  margin-bottom: 10px;
+  position: relative;
+  left: 40%;
+  bottom: 20%;
+  text-align: left;
+}
+
+.checkbox-group input {
+  margin-right: 8px;
 }
 
 /*

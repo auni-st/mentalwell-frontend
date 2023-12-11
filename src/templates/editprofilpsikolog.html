@@ -20,6 +20,7 @@
       <div class="profil-container">
         <div class="profil-image">
           <img src="/src/public/beranda/man.png" alt="gambar profil" />
+          <i class="fas fa-edit edit-icon" id="editProfileImage"></i>
         </div>
       </div>
       <form class="editpsikolog-form">
@@ -62,13 +63,16 @@
             <option value="tinggi">&gt; 4 Tahun</option>
           </select>
         </div>
-        <div class="form-control">
+        <div class="form-control-2">
           <label for="topik">Topik Keahlian </label>
-          <select class="form-input" id="topik" name="topik" required>
-            <option value="suicidal">Suicidal</option>
-            <option value="fobia">Fobia</option>
-            <option value="trauma">Trauma</option>
-          </select>
+          <div class="checkbox-group" id="topik">
+            <label><input type="checkbox" name="topik" value="adiksi"> Adiksi</label>
+            <label><input type="checkbox" name="topik" value="anak-remaja"> Anak Remaja</label>
+            <label><input type="checkbox" name="topik" value="trauma"> Trauma</label>
+            <label><input type="checkbox" name="topik" value="seksualitas"> Seksualitas</label>
+            <label><input type="checkbox" name="topik" value="fobia"> Fobia</label>
+            <label><input type="checkbox" name="topik" value="bunuh-diri"> Kecenderungan Bunuh Diri</label>
+         </div>
         </div>
         <button class="simpan-btn" type="submit">Simpan</button>
       </form>
