@@ -4,7 +4,7 @@ const form = document.querySelector('.editpsikolog-form');
 
 document.addEventListener('DOMContentLoaded', async function () {
   // Fetch psychologist data from the backend with authorization
-  const response = await fetch('https://mentalwell-backend.vercel.app/psychologist', {
+  const response = await fetch('https://mentalwell-backend.vercel.app/psychologist/profile', {
     headers: {
       Authorization: `Bearer ${token}`,
     },
