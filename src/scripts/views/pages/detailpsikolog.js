@@ -14,6 +14,7 @@ async function fetchArticleById(articleId) {
 
 async function renderArticleDetails() {
   try {
+    showLoadingIndicator();
     // Mendapatkan ID artikel dari URL
     const urlParams = new URLSearchParams(window.location.search);
     const articleId = urlParams.get('id');
@@ -25,16 +26,17 @@ async function renderArticleDetails() {
     const topikKeahlian = document.getElementById('topik-keahlian'); // Updated ID
     const topicList = document.getElementById('topiclist');
 
-    
     const articleData = await fetchArticleById(articleId);
     let formattedExperience;
-    if (articleData.experience == '<2_tahun') {
-      formattedExperience = '< 2 tahun';
-    } else if (articleData.experience == '2-4_tahun') {
-      formattedExperience = '2-4 tahun';
-    } else if (articleData.experience == '>4_tahun') {
-      formattedExperience = '> 4 tahun';
+    if (articleData.experience == "<2_tahun") {
+      formattedExperience = "< 2 tahun"
+    } else if (articleData.experience == "2-4_tahun") {
+      formattedExperience = "2-4 tahun"
+    } else if (articleData.experience == ">4_tahun") {
+      formattedExperience = "> 4 tahun"
     }
+    console.log(articleData.experience)
+
     // Menampilkan data artikel pada elemen HTML
     fotopsikolog.src = `${articleData.profile_image}`;
     datapsikolog.innerHTML = `${articleData.name}`;
@@ -73,6 +75,7 @@ async function renderArticleDetails() {
       userReviewsContainer.innerHTML = '<p>Tidak ada ulasan pengguna.</p>';
       ulasanPengguna.style.display = 'none'; // Sembunyikan kontainer jika tidak ada ulasan pengguna
     }
+    hideLoadingIndicator();
   } catch (error) {
     console.error('Error rendering article details:', error);
   }
@@ -84,15 +87,18 @@ async function fetchPsychologistAvailability() {
   const url = `https://mentalwell-backend.vercel.app/availability/psychologist/${psychologistId}`;
 
   try {
+    showLoadingIndicator();
     const response = await fetch(url);
     const data = await response.json();
     console.log(data.availability);
 
     // Update the button state directly based on availability
     updateButtonState(data.availability);
+    hideLoadingIndicator();
   } catch (error) {
     console.error(error);
     // Handle the error as needed
+    hideLoadingIndicator();
   }
 }
 
@@ -108,9 +114,44 @@ function updateButtonState(availability) {
   }
 }
 
+function showLoadingIndicator() {
+  // Get loading indicator element and show it
+  const loadingIndicator = document.getElementById('loading-indicator');
+  loadingIndicator.style.display = 'block';
+}
+
+function hideLoadingIndicator() {
+  // Hide loading indicator
+  const loadingIndicator = document.getElementById('loading-indicator');
+  loadingIndicator.style.display = 'none';
+}
+
 // Render artikel details ketika halaman dimuat
 renderArticleDetails();
 fetchPsychologistAvailability();
+
+const logosContainer2 = document.querySelector(".logos-2");
+const originalLogosContainer2 = document.querySelector(".logos-2");
+const clone2 = originalLogosContainer2.cloneNode(true);
+originalLogosContainer2.parentNode.insertBefore(clone2, originalLogosContainer2.nextSibling);
+
+let scrollAmount2 = 0;
+const scrollSpeed2 = 2;
+
+function scroll2() {
+  scrollAmount2 += scrollSpeed2;
+  originalLogosContainer2.scrollLeft = scrollAmount2;
+
+  // Reset to the beginning when it reaches the end
+  if (scrollAmount2 >= originalLogosContainer2.scrollWidth - originalLogosContainer2.clientWidth) {
+    scrollAmount2 = 0;
+  }
+
+  requestAnimationFrame(scroll2);
+}
+
+scroll2();
+
 
 // Add an event listener to the Daftar Konseling button
 const daftarKonselingButton = document.getElementById('btnDaftar');

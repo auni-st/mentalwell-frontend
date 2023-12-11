@@ -23,6 +23,8 @@ async function fetchCounselingData() {
 
 async function populateFormFields() {
   try {
+    showLoadingIndicator();
+
     const counselingData = await fetchCounselingData();
 
     const fullNameInput = document.querySelector('input[placeholder="Nama Lengkap"]');
@@ -30,15 +32,26 @@ async function populateFormFields() {
     const birthdateInput = document.querySelector('input[placeholder="01-02-2023"]');
     const genderInput = document.querySelector('input[placeholder="laki-Laki"]');
     const phoneNumberInput = document.querySelector('input[placeholder="08123456789"]');
-    const occupationInput = document.querySelector('input[placeholder="Pekerjaan"]');
+
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+
+    const formattedBirthdate = new Date(counselingData.users.birthdate).toLocaleDateString('id-ID', options);
+
+    let formattedGender;
+    if (counselingData.users.gender == 'laki_laki') {
+      formattedGender = 'Laki-laki';
+    } else {
+      formattedGender = 'Perempuan';
+    }
 
     // Populate form fields with counseling data
-    fullNameInput.value = counselingData.users.name;
-    nicknameInput.value = counselingData.users.nickname;
-    birthdateInput.value = counselingData.users.birthdate;
-    genderInput.value = counselingData.users.gender;
-    phoneNumberInput.value = counselingData.users.phone_number;
-    occupationInput.value = ''; // Assuming this field should be empty, as it is not present in the example response
+    fullNameInput.value = counselingData.users.name || '';
+    nicknameInput.value = counselingData.users.nickname || '';
+    birthdateInput.value = formattedBirthdate || '';
+    genderInput.value = formattedGender || '';
+    phoneNumberInput.value = counselingData.users.phone_number || '';
+
+    hideLoadingIndicator();
 
   } catch (error) {
     console.error('Error populating form fields:', error);
@@ -116,7 +129,7 @@ async function selectDate() {
 
         if (conflictingButton) {
           conflictingButton.disabled = true;
-          conflictingButton.classList.add('disabled'); 
+          conflictingButton.classList.add('disabled');
         } else {
           console.warn('Button not found for schedule time:', normalizedHtmlTime);
         }
@@ -232,8 +245,8 @@ async function sendCounselingData() {
       text: 'Apakah Anda Yakin untuk Mendaftar Konseling? Hal Ini Tidak Bisa Dibatalkan',
       icon: 'question',
       showCancelButton: true,
-      confirmButtonText: 'Yes',
-      cancelButtonText: 'No',
+      confirmButtonText: 'Ya',
+      cancelButtonText: 'Tidak',
     });
 
     if (result.isConfirmed) {
@@ -286,6 +299,19 @@ function normalizeTimeFormat(time) {
 
 // Searching for normalized schedule time: 13.00 - 14.00
 // Comparing to: 13.00  -  14.00
+
+function showLoadingIndicator() {
+  // Get loading indicator element and show it
+  const loadingIndicator = document.getElementById('loading-indicator');
+  loadingIndicator.style.display = 'block';
+}
+
+function hideLoadingIndicator() {
+  // Hide loading indicator
+  const loadingIndicator = document.getElementById('loading-indicator');
+  loadingIndicator.style.display = 'none';
+}
+
 
 function confirmAndRedirect() {
   console.log(counselingData)

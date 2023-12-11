@@ -13,6 +13,7 @@
   <script type="module" src="/src/scripts/components/navbar-masuk.js" defer></script>
   <script type="module" src="/src/scripts/components/navbar-user.js"></script>
 </head>
+
 <body>
   <navbar-masuk class="navbar-masuk" id="masuk"></navbar-masuk>
   <!-- <navbar-user></navbar-user> -->
@@ -47,7 +48,7 @@
         <i class="far fa-eye eye" onclick="togglePasswordLoginVisibility()"></i>
         <input class="form-input" type="text" id="loginpassword" name="loginpassword" placeholder="Masukkan Kata Sandi"
           required />
-         <a href="/src/scripts/views/pages/"></a>
+        <a href="/src/scripts/views/pages/"></a>
       </div>
       <p><a href="/src/templates/lupasandi.html">Lupa kata sandi</a></p>
       <button class="submit-btn" type="submit">Masuk</button>
@@ -190,10 +191,14 @@
       <div class="content">
         <h2>Rekomendasi Psikolog di MentalWell</h2>
       </div>
-      <div class="container-rekomendasi" id="container-rekomendasi">
-        <!-- Loading Indicator -->
-        <div id="loading-indicator" class="spinner" style="display: none;"></div>
-      </div>
+      <div id="loading-indicator" class="spinner" style="display: none;"></div>
+
+      <div class="logos-2">
+        <div class="logo-slide-2">
+          <div class="container-rekomendasi" id="container-rekomendasi">
+            <!-- Your dynamically generated content will be added here using JavaScript -->
+          </div>
+        </div>
       </div>
       <div class="btn-semua">
         <button type="button" onclick="redirectToList()">Lihat Semua</button>
@@ -203,6 +208,7 @@
   <footer>
     <span> &copy; 2023 Mentalwell, Hak Cipta Dilindungi. </span>
   </footer>
+
 </body>
 
 </html>

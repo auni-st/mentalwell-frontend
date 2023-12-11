@@ -34,8 +34,54 @@ fetch(apiUrl)
     loadingIndicator.style.display = 'none';
   });
 
-  function redirectToDetailPsychologist(id) {
-    window.location.href = `/profilpsikolog?id=${id}`;
+function redirectToDetailPsychologist(id) {
+  window.location.href = `/profilpsikolog?id=${id}`;
+}
+
+const logosContainer2 = document.querySelector(".logos-2");
+const originalLogosContainer2 = document.querySelector(".logos-2");
+const clone2 = originalLogosContainer2.cloneNode(true);
+originalLogosContainer2.parentNode.insertBefore(clone2, originalLogosContainer2.nextSibling);
+
+let scrollAmount2 = 0;
+const scrollSpeed2 = 2;
+
+function scroll2() {
+  scrollAmount2 += scrollSpeed2;
+  originalLogosContainer2.scrollLeft = scrollAmount2;
+
+  // Reset to the beginning when it reaches the end
+  if (scrollAmount2 >= originalLogosContainer2.scrollWidth - originalLogosContainer2.clientWidth) {
+    scrollAmount2 = 0;
   }
 
+  requestAnimationFrame(scroll2);
+}
 
+scroll2();
+
+// const logosContainer = document.querySelector(".logos");
+
+// // Clone the entire logos container
+// const originalLogosContainer = document.querySelector(".logos");
+// const clone = originalLogosContainer.cloneNode(true);
+// originalLogosContainer.parentNode.insertBefore(clone, originalLogosContainer.nextSibling);
+
+// // Start the autoscrolling
+// let scrollAmount = 0;
+// const scrollSpeed = 2;
+
+// function scroll() {
+//   scrollAmount += scrollSpeed;
+//   originalLogosContainer.scrollLeft = scrollAmount;
+
+//   // Reset to the beginning when it reaches the end
+//   if (scrollAmount >= originalLogosContainer.scrollWidth - originalLogosContainer.clientWidth) {
+//     scrollAmount = 0;
+//   }
+
+//   requestAnimationFrame(scroll);
+// }
+
+// // Start the autoscrolling
+// scroll();

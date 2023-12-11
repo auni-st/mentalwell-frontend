@@ -39,12 +39,14 @@ fetch(`https://mentalwell-backend.vercel.app/dashboard/counseling/${counselingId
     const patientDetails = counselingDetails[0];
     const birthdateString = patientDetails.birthdate;
     const birthdate = new Date(birthdateString);
-    const options = { day: 'numeric', month: 'long', year: 'numeric' };
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
     const formattedBirthdate = birthdate.toLocaleDateString('id-ID', options);
 
     const scheduleDateString = patientDetails.schedule_date;
     const scheduleDate = new Date(scheduleDateString);
-    const formattedScheduleDate = scheduleDate.toLocaleDateString('id-ID', options)
+    const optionsSchedule = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+
+    const formattedScheduleDate = scheduleDate.toLocaleDateString('id-ID', optionsSchedule)
 
     const backendValues = {
       call: 'Call',
@@ -65,8 +67,7 @@ fetch(`https://mentalwell-backend.vercel.app/dashboard/counseling/${counselingId
         <p>Nama Panggilan: ${patientDetails.nickname}</p>
         <p>Tanggal Lahir: ${formattedBirthdate}</p>
         <p>Jenis Kelamin: ${displayTextGender}</p>
-        <p>Nomor Telepon: ${patientDetails.phone_number}</p>
-        <p>Pekerjaan: ${patientDetails.occupation}</p>
+        <p>Nomor WhatsApp: ${patientDetails.phone_number}</p>
     `;
     tanggalKonseling.innerHTML = `
         <p>${formattedScheduleDate}</p>

@@ -25,11 +25,13 @@
     </div>
     <form class="login-form" id="login-form">
       <div class="form-control">
-        <input class="form-input" type="email" id="emaillogin" name="emaillogin" placeholder="Masukkan Email" required />
+        <input class="form-input" type="email" id="emaillogin" name="emaillogin" placeholder="Masukkan Email"
+          required />
       </div>
       <div class="form-control">
         <i class="far fa-eye eye" onclick="togglePasswordLoginVisibility()"></i>
-        <input class="form-input" type="text" id="loginpassword" name="loginpassword" placeholder="Masukkan Kata Sandi" required />
+        <input class="form-input" type="text" id="loginpassword" name="loginpassword" placeholder="Masukkan Kata Sandi"
+          required />
       </div>
       <p><a href="/src/templates/lupasandi.html">Lupa kata sandi</a></p>
       <button class="submit-btn" type="submit">Masuk</button>
@@ -50,11 +52,13 @@
       </div>
       <div class="form-control">
         <i class="far fa-eye eye" onclick="togglePasswordVisibility()"></i>
-        <input class="form-input" type="password" id="passworddaftar" name="passworddaftar" placeholder="Kata Sandi" required />
+        <input class="form-input" type="password" id="passworddaftar" name="passworddaftar" placeholder="Kata Sandi"
+          required />
       </div>
       <div class="form-control">
         <i class="far fa-eye confpassword eye" onclick="toggleConfirmasiPasswordVisibility()"></i>
-        <input class="form-input" type="password" id="confpassword" name="password" placeholder="Konfirmasi Kata Sandi" required />
+        <input class="form-input" type="password" id="confpassword" name="password" placeholder="Konfirmasi Kata Sandi"
+          required />
       </div>
       <button class="submit-btn" type="submit">Daftar</button>
     </form>
@@ -68,6 +72,7 @@
         <h2></h2>
         <div class="biodata-psikolog" id="biodata-psikolog"></div>
       </div>
+      <div id="loading-indicator" class="spinner" style="display: none;"></div>
       <div class="data-lainnya">
         <div class="pengalaman-praktik" id="pengalaman-praktik">
           <h3>PRAKTIK</h3>
@@ -86,7 +91,11 @@
         <div class="header-ulasan">
           <h2>ULASAN</h2>
         </div>
-        <div id="userReviews" class="userReviews"></div>
+        <div class="logos-2">
+          <div class="logo-slide-2">
+            <div id="userReviews" class="userReviews"></div>
+          </div>
+        </div>
       </div>
     </div>
     </div>

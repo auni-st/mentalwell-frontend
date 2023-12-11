@@ -384,13 +384,13 @@ class NavBarLogin extends HTMLElement {
       .then((response) => response.json())
       .then((data) => {
         const currentUser = data[0];
-        console.log(currentUser.nickname);
-        console.log(currentUser.profile_image);
+        // console.log(currentUser.nickname);
+        // console.log(currentUser.profile_image);
 
         if (nicknameTag && photoUser) {
           nicknameTag.innerText = currentUser.nickname;
           photoUser.src = currentUser.profile_image;
-        }  else {
+        } else {
           console.error('Element with ID "nicknameTag" not found.');
         }
       })
