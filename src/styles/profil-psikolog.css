@@ -197,7 +197,8 @@ p {
 .userReviews {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
-  gap: 1rem; /* Adjust the gap as needed */
+  gap: 1rem;
+  /* Adjust the gap as needed */
 }
 
 .isi-ulasan {
@@ -517,15 +518,21 @@ daftar
   display: flex;
   overflow: hidden;
   /* Ensure that the content stays in one line */
-  margin: 0 1rem; /* Adjust margin as needed */
-  height: 20rem;
+  margin: 0 1rem;
+  /* Adjust margin as needed */
+  height: 15rem;
   flex-wrap: wrap;
-  word-wrap: break-word;  
+  word-wrap: break-word;
 }
 
 .logo-slide-2 div.komentar-user {
-  overflow:hidden;
+  overflow: hidden;
+  white-space: normal;
+  /* Prevent text from wrapping onto new lines */
+  text-overflow: ellipsis;
+  /* Add ellipsis (...) to indicate truncated text */
 }
+
 
 /*
 Footer
