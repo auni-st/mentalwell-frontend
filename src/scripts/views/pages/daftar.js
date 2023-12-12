@@ -116,3 +116,41 @@ daftarForm.addEventListener('submit', async (event) => {
     });
   }
 })
+
+function validateForm() {
+  var password = document.getElementById("passworddaftar").value;
+  var confirmPassword = document.getElementById("confpassword").value;
+
+  // Check if the password is at least 8 characters long and contains at least 1 number
+  if (!isValidPassword(password)) {
+    setTimeout(function () {
+      Swal.fire({
+        title: 'Gagal Daftar!',
+        text: 'Kata Sandi harus paling sedikit 8 karakter dengan setidaknya 1 angka!',
+        icon: 'error',
+        showConfirmButton: true,
+      });
+    }, 2000); // 2000 milliseconds (2 seconds) delay
+    return false;
+  }
+
+  // Check if the confirmed password matches the original password
+  setTimeout(function () {
+    if (password !== confirmPassword) {
+      Swal.fire({
+        title: 'Gagal Daftar!',
+        text: 'Kata Sandi dan Konfirmasi Kata Sandi Harus Sama!',
+        icon: 'error',
+        showConfirmButton: true,
+      });
+    }
+  }, 2000); // 2000 milliseconds (2 seconds) delay
+
+  // If everything is valid, clear the error message
+  return true;
+}
+
+function isValidPassword(password) {
+  // Check if the password is at least 8 characters long and contains at least 1 number
+  return password.length >= 8 && /\d/.test(password);
+}
