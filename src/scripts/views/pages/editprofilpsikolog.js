@@ -40,47 +40,58 @@ document.addEventListener('DOMContentLoaded', async function () {
 
   // Update topics
   const topics = psychologistData.topics;
+  const checkboxGroup = document.querySelectorAll('input[name="topik"]');
+
+  // topics.forEach((topic) => {
+  //   document.querySelector(`input[value="${topic}"]`).checked = true;
+  // });
+
   topics.forEach((topic) => {
-    document.querySelector(`input[value="${topic}"]`).checked = true;
+    // Cek apakah nilai topik ada dalam checkboxGroup
+    const matchingCheckbox = Array.from(checkboxGroup).find((checkbox) => checkbox.value === topic);
+  
+    if (matchingCheckbox) {
+      matchingCheckbox.checked = true;
+    }
   });
 });
 
-const fileInput = document.getElementById('fileInput');
+// const fileInput = document.getElementById('fileInput');
 const editImageIcon = document.getElementById('editProfileImage');
 
 editImageIcon.addEventListener('click', function () {
   fileInput.click();
 });
 
-fileInput.addEventListener('change', function () {
-  const file = fileInput.files[0];
-  if (file) {
-    uploadProfileImage(file);
-  }
-});
+// fileInput.addEventListener('change', function () {
+//   const file = fileInput.files[0];
+//   if (file) {
+//     uploadProfileImage(file);
+//   }
+// });
 
-async function uploadProfileImage(file) {
-  const formData = new FormData();
-  formData.append('profileImage', file);
+// async function uploadProfileImage(file) {
+//   const formData = new FormData();
+//   formData.append('profileImage', file);
 
-  const response = await fetch('https://mentalwell-backend.vercel.app/psychologist', {
-    method: 'PUT',
-    headers: {
-      Authorization: `Bearer ${token}`,
-    },
-    body: formData,
-  });
+//   const response = await fetch('https://mentalwell-backend.vercel.app/psychologist', {
+//     method: 'PUT',
+//     headers: {
+//       Authorization: `Bearer ${token}`,
+//     },
+//     body: formData,
+//   });
 
-  if (response.ok) {
-    const psychologistData = await response.json();
-    document.getElementById('profileimage').innerHTML = `<img src="${psychologistData.profile_image}" alt="Profile Image">
-      <i class="fas fa-edit edit-icon" id="editProfileImage"></i>`;
-    alert('Profile image updated successfully!');
-  } else {
-    const errorMessage = await response.text();
-    alert(`Failed to update profile image. Error: ${errorMessage}`);
-  }
-}
+//   if (response.ok) {
+//     const psychologistData = await response.json();
+//     document.getElementById('profileimage').innerHTML = `<img src="${psychologistData.profile_image}" alt="Profile Image">
+//       <i class="fas fa-edit edit-icon" id="editProfileImage"></i>`;
+//     alert('Profile image updated successfully!');
+//   } else {
+//     const errorMessage = await response.text();
+//     alert(`Failed to update profile image. Error: ${errorMessage}`);
+//   }
+// }
 
 form.addEventListener('submit', async function (event) {
   event.preventDefault();
