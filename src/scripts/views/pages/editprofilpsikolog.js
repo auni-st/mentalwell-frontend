@@ -20,45 +20,21 @@ document.addEventListener('DOMContentLoaded', async function () {
   <input type="file" id="inputImage" onchange="previewImage(event)">
   `;
 
-  // Update email
   document.getElementById('email').innerHTML = `<h4>${psychologistData.email}</h4>`;
-
-  // Update name
   document.getElementById('namapanggilan').value = psychologistData.name;
-
-  // Update phone number
   document.getElementById('nowa').value = psychologistData.phone_number;
-
-  // Update birthdate
   document.getElementById('tgllahir').value = psychologistData.birthdate;
-
-  // Update gender
   document.getElementById('gender').value = psychologistData.gender;
-
-  // Update bio
   document.getElementById('bio').value = psychologistData.bio;
-
-  // Update experience
   document.getElementById('pengalaman').value = psychologistData.experience;
-
-  // Update topics
-  const topics = psychologistData.topics;
-  const checkboxGroup = document.querySelectorAll('input[name="topik"]');
-
-  // topics.forEach((topic) => {
-  //   document.querySelector(`input[value="${topic}"]`).checked = true;
-  // });
-
-  topics.forEach((topic) => {
-    // Cek apakah nilai topik ada dalam checkboxGroup
-    const matchingCheckbox = Array.from(checkboxGroup).find((checkbox) => checkbox.value === topic);
-
-    if (matchingCheckbox) {
-      matchingCheckbox.checked = true;
-    }
+  const expertiseCheckboxes = document.querySelectorAll('input[name="topik"]');
+  const expertiseTopics = psychologistData.psychologists_topics || [];
+  console.log(psychologistData);
+  expertiseCheckboxes.forEach((checkbox) => {
+    console.log(expertiseTopics.map((row) => row.topic_name));
+    checkbox.checked = expertiseTopics.map((row) => row.topic_name).includes(checkbox.value);
   });
 });
-
 
 function previewImage(event) {
   const inputImage = event.target;
@@ -80,7 +56,6 @@ function previewImage(event) {
   }
 }
 
-
 form.addEventListener('submit', async function (event) {
   event.preventDefault();
 
@@ -99,13 +74,7 @@ form.addEventListener('submit', async function (event) {
   formData.append('newGender', newGender);
   formData.append('newBio', newBio);
   formData.append('newExperience', newExperience);
-  // formData.append('newTopics', newTopics);
   formData.append('profile_image', image);
-
-  // const newTopics = [];
-  // document.querySelectorAll('input[name="topik"]:checked').forEach((checkbox) => {
-  //   newTopics.push(checkbox.value);
-  // });
 
   const response = await fetch('https://mentalwell-backend.vercel.app/psychologist', {
     method: 'PUT',

@@ -86,7 +86,7 @@ form.addEventListener('submit', async function (event) {
 
   if (response.ok) {
     console.log(response);
-    // alert('Profile updated successfully!');
+    alert('Profile updated successfully!');
   } else {
     const errorMessage = await response.text();
     alert(`Failed to update profile. Error: ${errorMessage}`);
