@@ -214,7 +214,7 @@ class NavBar extends HTMLElement {
                         </ul>
                         <div class="button-user" id="userDropdown">
                             <img src="/src/public/beranda/man.png" alt="Foto User" id="photoUser" >
-                            <h2 id="nicknameTag"></h2>
+                            <h4 id="nicknameTag"></h4>
                             <div class="dropdown-content">
                               <div class="profile-button" id="profile-button">
                                 <a id="profilLink" class="profilLink" href="#">

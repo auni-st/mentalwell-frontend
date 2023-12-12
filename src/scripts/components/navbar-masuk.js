@@ -342,7 +342,7 @@ class NavBarLogin extends HTMLElement {
                       </ul>
                       <div class="button" id="userDropdown">
                           <img src="" alt="Foto User" id="photoUser" width="60px" height="60px">
-                          <h2 id="nicknameTag">tes</h2>
+                          <h4 id="nicknameTag">Memuat...</h4>
                           <div class="dropdown-content">
                             <div class="profile-button" id="profile-button">
                               <a id="profilLink" class="profilLink" href="#">

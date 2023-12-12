@@ -166,7 +166,7 @@ class NavBar extends HTMLElement {
                         </ul>
                         <div class="button" id="userDropdown">
                             <img src="/src/public/beranda/man.png" alt="Foto User" id="photoUser" width="60px" height="60px">
-                            <h2>John Doe</h2>
+                            <h4>John Doe</h4>
                             <div class="dropdown-content">
                               <div class="profile-button">
                                 <img src="/src/public/dropdown/man.png" width="30px" height="30px"></img>
