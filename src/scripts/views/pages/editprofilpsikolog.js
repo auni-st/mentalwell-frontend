@@ -12,9 +12,12 @@ document.addEventListener('DOMContentLoaded', async function () {
 
   const psychologistData = await response.json();
 
-  //Update profile_image
-  document.getElementById('profileimage').innerHTML = `<img src="${psychologistData.profile_image}">
-  <i class="fas fa-edit edit-icon" id="editProfileImage"></i>
+  document.getElementById('profileimage').innerHTML = `
+  <div id="imagePreviewContainer">
+    <img src="${psychologistData.profile_image}" id="gambar">
+  </div>
+  <label for="inputImage" class="inputImage">Update Gambar</label>
+  <input type="file" id="inputImage" onchange="previewImage(event)">
   `;
 
   // Update email
@@ -49,49 +52,34 @@ document.addEventListener('DOMContentLoaded', async function () {
   topics.forEach((topic) => {
     // Cek apakah nilai topik ada dalam checkboxGroup
     const matchingCheckbox = Array.from(checkboxGroup).find((checkbox) => checkbox.value === topic);
-  
+
     if (matchingCheckbox) {
       matchingCheckbox.checked = true;
     }
   });
 });
 
-// const fileInput = document.getElementById('fileInput');
-const editImageIcon = document.getElementById('editProfileImage');
 
-editImageIcon.addEventListener('click', function () {
-  fileInput.click();
-});
+function previewImage(event) {
+  const inputImage = event.target;
+  const imagePreview = document.getElementById('gambar');
+  const imagePreviewContainer = document.getElementById('imagePreviewContainer');
 
-// fileInput.addEventListener('change', function () {
-//   const file = fileInput.files[0];
-//   if (file) {
-//     uploadProfileImage(file);
-//   }
-// });
+  if (inputImage.files && inputImage.files[0]) {
+    const reader = new FileReader();
 
-// async function uploadProfileImage(file) {
-//   const formData = new FormData();
-//   formData.append('profileImage', file);
+    reader.onload = function (e) {
+      imagePreview.src = e.target.result;
+      imagePreviewContainer.style.display = 'block';
+    };
 
-//   const response = await fetch('https://mentalwell-backend.vercel.app/psychologist', {
-//     method: 'PUT',
-//     headers: {
-//       Authorization: `Bearer ${token}`,
-//     },
-//     body: formData,
-//   });
+    reader.readAsDataURL(inputImage.files[0]);
+  } else {
+    imagePreview.src = '';
+    imagePreviewContainer.style.display = 'none';
+  }
+}
 
-//   if (response.ok) {
-//     const psychologistData = await response.json();
-//     document.getElementById('profileimage').innerHTML = `<img src="${psychologistData.profile_image}" alt="Profile Image">
-//       <i class="fas fa-edit edit-icon" id="editProfileImage"></i>`;
-//     alert('Profile image updated successfully!');
-//   } else {
-//     const errorMessage = await response.text();
-//     alert(`Failed to update profile image. Error: ${errorMessage}`);
-//   }
-// }
 
 form.addEventListener('submit', async function (event) {
   event.preventDefault();
@@ -102,32 +90,33 @@ form.addEventListener('submit', async function (event) {
   const newGender = document.getElementById('gender').value;
   const newBio = document.getElementById('bio').value;
   const newExperience = document.getElementById('pengalaman').value;
+  const image = document.getElementById('inputImage').files[0];
+  const formData = new FormData();
 
-  const newTopics = [];
-  document.querySelectorAll('input[name="topik"]:checked').forEach((checkbox) => {
-    newTopics.push(checkbox.value);
-  });
+  formData.append('newName', newName);
+  formData.append('newPhone_number', newPhone_number);
+  formData.append('newBirthdate', newBirthdate);
+  formData.append('newGender', newGender);
+  formData.append('newBio', newBio);
+  formData.append('newExperience', newExperience);
+  // formData.append('newTopics', newTopics);
+  formData.append('profile_image', image);
+
+  // const newTopics = [];
+  // document.querySelectorAll('input[name="topik"]:checked').forEach((checkbox) => {
+  //   newTopics.push(checkbox.value);
+  // });
 
   const response = await fetch('https://mentalwell-backend.vercel.app/psychologist', {
     method: 'PUT',
     headers: {
-      'Content-Type': 'application/json',
       Authorization: `Bearer ${token}`,
     },
-    body: JSON.stringify({
-      newName: newName,
-      newPhone_number: newPhone_number,
-      newBirthdate: newBirthdate,
-      newGender: newGender,
-      newBio: newBio,
-      newExperience: newExperience,
-      newTopics: newTopics,
-    }),
+    body: formData,
   });
 
   if (response.ok) {
     console.log(response);
-    // alert('Profile updated successfully!');
   } else {
     const errorMessage = await response.text();
     alert(`Failed to update profile. Error: ${errorMessage}`);

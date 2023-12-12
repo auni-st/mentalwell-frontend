@@ -136,6 +136,10 @@ Header
   text-align: center;
 }
 
+.profil-image {
+  position: relative;
+}
+
 .profil-image img {
   width: 150px;
   height: 150px;
@@ -143,13 +147,35 @@ Header
   margin-bottom: 20px;
 }
 
-.profil-image i {
-  position: absolute;
+.profil-image input {
+  display: none;
 }
 
-.profil-image i:hover {
+.profil-image label {
+  position: absolute;
+  background-color: #044b77;
+  width: 140px;
+  height: 30px;
+  border-radius: 15px;
+  padding-top: 7px;
+  color: white;
+  font-family: inherit;
+  left: 270px;
+  top: 100px;
+}
+
+.profil-image label:hover {
+  background-color: #3ad0ea;
   cursor: pointer;
 }
+
+/* .profil-image i {
+  position: absolute;
+} */
+
+/* .profil-image i:hover {
+  cursor: pointer;
+} */
 
 h3 {
   font-weight: bold;
