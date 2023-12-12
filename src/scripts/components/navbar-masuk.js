@@ -307,6 +307,11 @@ class NavBarLogin extends HTMLElement {
             margin-right: 8px;
           }
 
+          #dropdown- {
+            width: 40px;
+            height: 40px;
+          }
+
 
           .keluar {
             border-bottom-left-radius: none;
@@ -343,6 +348,7 @@ class NavBarLogin extends HTMLElement {
                       <div class="button" id="userDropdown">
                           <img src="" alt="Foto User" id="photoUser" width="60px" height="60px">
                           <h4 id="nicknameTag">Memuat...</h4>
+                          <img src="/src/public/dropdown/dropdown.png" alt="Foto User" id="dropdown-" >
                           <div class="dropdown-content">
                             <div class="profile-button" id="profile-button">
                               <a id="profilLink" class="profilLink" href="#">

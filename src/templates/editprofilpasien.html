@@ -6,6 +6,7 @@
     <title>MentalWell</title>
     <link rel="icon" href="/src/public/logo/logoicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="/src/styles/editprofilpasien.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     <script type="module" src="/src/scripts/components/navbar-user.js" defer></script>
     <script type="module" src="/src/scripts/components/navbar-masuk.js" defer></script>
@@ -24,32 +25,29 @@
           </div>
         </div>
         <div class="form-control">
-          <label for="email">Email : </label>
+          <label for="email">Email  </label>
           <div class="form-input gray-text" id="email">
-            <h4>natasya123@gmail.com</h4>
+            <h4></h4>
           </div>
         </div>
         <div class="form-control">
-          <label for="namalengkap">Nama Lengkap :</label>
-          <i id="editIcon" class="fas fa-edit"></i>
-          <input class="form-input" type="text" id="namalengkap" name="namalengkap" placeholder="Natasha Alana Putri" required />
+          <label for="namalengkap">Nama Lengkap </label>
+          <input class="form-input" type="text" id="namalengkap" name="namalengkap"  required />
         </div>
         <div class="form-control">
-          <label for="namapanggilan">Nama Panggilan :</label>
-          <i id="editIcon" class="fas fa-edit"></i>
-          <input class="form-input" type="text" id="namapanggilan" name="namapanggilan" placeholder="Natasha" required />
+          <label for="namapanggilan">Nama Panggilan </label>
+          <input class="form-input" type="text" id="namapanggilan" name="namapanggilan" required />
         </div>
         <div class="form-control">
-          <label for="nowa">Nomor Whatsapp :</label>
-          <i id="editIcon" class="fas fa-edit"></i>
-          <input class="form-input" type="nowa" id="nowa" name="nowa" placeholder="081234567890" required />
+          <label for="nowa">Nomor Whatsapp </label>
+          <input class="form-input" type="number" id="nowa" name="nowa" required />
         </div>
         <div class="form-control">
-          <label for="tgllahir">Tanggal Lahir :</label>
+          <label for="tgllahir">Tanggal Lahir </label>
           <input class="form-input" type="date" id="tgllahir" name="tgllahir" required />
         </div>
         <div class="form-control">
-          <label for="gender">Jenis Kelamin :</label>
+          <label for="gender">Jenis Kelamin </label>
           <select class="form-input" id="gender" name="gender" required>
             <option value="laki_laki">Laki-laki</option>
             <option value="perempuan">Perempuan</option>

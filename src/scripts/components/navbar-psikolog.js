@@ -118,7 +118,12 @@ class NavBar extends HTMLElement {
                   font-size: 20px;
                   cursor: pointer;
                 }
-  
+                
+              #dropdown- {
+                width: 40px;
+                height: 40px;
+                margin-right: 1rem;
+              }
               #photoUser {
                   border-radius: 50%;
                   width: 50px;
@@ -127,7 +132,7 @@ class NavBar extends HTMLElement {
                   margin-right: 1rem;
                 }
 
-                .navbar .navbar-list .button-user h2 {
+                .navbar .navbar-list .button-user h4 {
                   margin-right: 1rem;
                 }
 
@@ -215,6 +220,7 @@ class NavBar extends HTMLElement {
                         <div class="button-user" id="userDropdown">
                             <img src="/src/public/beranda/man.png" alt="Foto User" id="photoUser" >
                             <h4 id="nicknameTag"></h4>
+                            <img src="/src/public/dropdown/dropdown.png" alt="Foto User" id="dropdown-" >
                             <div class="dropdown-content">
                               <div class="profile-button" id="profile-button">
                                 <a id="profilLink" class="profilLink" href="#">

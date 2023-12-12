@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     <div id="imagePreviewContainer">
       <img src="${patientData.users.profile_image}" id="gambar">
     </div>
-    <label for="inputImage" class="inputImage">Update Gambar</label>
+    <label for="inputImage" class="inputImage">Ubah Gambar</label>
     <input type="file" id="inputImage" onchange="previewImage(event)">
   `;
 
@@ -86,9 +86,19 @@ form.addEventListener('submit', async function (event) {
 
   if (response.ok) {
     console.log(response);
-    alert('Profile updated successfully!');
+    Swal.fire({
+      title: 'Profil Berhasil Diubah',
+      icon: 'success',
+      showConfirmButton: false,
+      timer: 2000,
+    });
   } else {
     const errorMessage = await response.text();
-    alert(`Failed to update profile. Error: ${errorMessage}`);
+    Swal.fire({
+      title: 'Gagal!',
+      text: 'Profil Gagal Diubah, Format File Harus Gambar',
+      icon: 'error',
+      showConfirmButton: true,
+    });
   }
 });
