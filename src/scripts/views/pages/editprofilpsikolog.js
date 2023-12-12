@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', async function () {
   const expertiseTopics = psychologistData.psychologists_topics || [];
   console.log(psychologistData);
   expertiseCheckboxes.forEach((checkbox) => {
-    console.log(expertiseTopics.map((row) => row.topic_name));
+    // console.log(expertiseTopics.map((row) => row.topic_name));
     checkbox.checked = expertiseTopics.map((row) => row.topic_name).includes(checkbox.value);
   });
 });
@@ -76,6 +76,30 @@ form.addEventListener('submit', async function (event) {
   formData.append('newExperience', newExperience);
   formData.append('profile_image', image);
 
+  const expertiseCheckboxes = document.querySelectorAll('input[name="topik"]:checked');
+
+  expertiseCheckboxes.forEach((checkbox) => {
+    let topicId;
+    if (checkbox.value == "adiksi") {
+      topicId = 1;
+    } else if (checkbox.value == "anak_dan_remaja") {
+      topicId = 2;
+    } else if (checkbox.value == "trauma") {
+      topicId = 3;
+    } else if (checkbox.value == "seksualitas") {
+      topicId = 4;
+    } else if (checkbox.value == "fobia") {
+      topicId = 5;
+    } else if (checkbox.value == "kecenderungan_bunuh_diri") {
+      topicId = 6;
+    }
+
+    formData.append('newTopics', topicId);
+  });
+
+  for (const pair of formData.entries()) {
+    console.log(pair[0] + ': ' + pair[1]);
+  }
   const response = await fetch('https://mentalwell-backend.vercel.app/psychologist', {
     method: 'PUT',
     headers: {

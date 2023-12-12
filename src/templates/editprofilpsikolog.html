@@ -1,86 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MentalWell</title>
-    <link rel="icon" href="/src/public/logo/logoicon.png" type="image/x-icon" />
-    <link rel="stylesheet" href="/src/styles/editprofilpsikolog.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-    <script type="module" src="/src/scripts/components/navbar-psikolog.js" defer></script>
-  </head>
-  <body>
-    <!-- navbar components -->
-    <navbar-psikolog></navbar-psikolog>
 
-    <div class="editpsikolog-container">
-      <div class="editpsikolog-title">
-        <h2>Profil Pengguna</h2>
-      </div>
-      <form class="editpsikolog-form">
-        <div class="profil-container">
-          <div class="profil-image" id="profileimage">
-            <!-- <img src="/src/public/beranda/man.png" id="gambar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MentalWell</title>
+  <link rel="icon" href="/src/public/logo/logoicon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="/src/styles/editprofilpsikolog.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <script type="module" src="/src/scripts/components/navbar-psikolog.js" defer></script>
+</head>
+
+<body>
+  <!-- navbar components -->
+  <navbar-psikolog></navbar-psikolog>
+
+  <div class="editpsikolog-container">
+    <div class="editpsikolog-title">
+      <h2>Profil Pengguna</h2>
+    </div>
+    <form class="editpsikolog-form">
+      <div class="profil-container">
+        <div class="profil-image" id="profileimage">
+          <!-- <img src="/src/public/beranda/man.png" id="gambar">
             <label for="inputImage" class="inputImage">Update Gambar</label>
             <input type="file" id="inputImage"> -->
-          </div>
         </div>
-        <div class="form-control">
-          <label for="email">Email </label>
-          <div class="form-input gray-text" id="email">
-            <h4>adelia123@gmail.com</h4>
-          </div>
+      </div>
+      <div class="form-control">
+        <label for="email">Email </label>
+        <div class="form-input gray-text" id="email">
+          <h4>adelia123@gmail.com</h4>
         </div>
-        <div class="form-control">
-          <label for="namapanggilan">Nama Lengkap </label>
-          <i class="fas fa-edit"></i>
-          <input class="form-input" type="text" id="namapanggilan" name="namapanggilan" placeholder="Adelia Tatiana" required />
+      </div>
+      <div class="form-control">
+        <label for="namapanggilan">Nama Lengkap </label>
+        <i class="fas fa-edit"></i>
+        <input class="form-input" type="text" id="namapanggilan" name="namapanggilan" placeholder="Adelia Tatiana"
+          required />
+      </div>
+      <div class="form-control">
+        <label for="nowa">Nomor Whatsapp </label>
+        <i class="fas fa-edit"></i>
+        <input class="form-input" type="nowa" id="nowa" name="nowa" placeholder="081234567890" required />
+      </div>
+      <div class="form-control">
+        <label for="tgllahir">Tanggal Lahir </label>
+        <input class="form-input" type="date" id="tgllahir" name="tgllahir" required />
+      </div>
+      <div class="form-control">
+        <label for="gender">Jenis Kelamin </label>
+        <select class="form-input" id="gender" name="gender" required>
+          <option value="laki-laki">Laki-laki</option>
+          <option value="perempuan">Perempuan</option>
+        </select>
+      </div>
+      <div class="form-control">
+        <label for="bio">Bio </label>
+        <textarea class="form-input" id="bio" name="bio" cols="30" rows="10" placeholder="Tulis bio mu disini..."
+          required></textarea>
+      </div>
+      <div class="form-control">
+        <label for="pengalaman">Pengalaman Praktik </label>
+        <select class="form-input" id="pengalaman" name="pengalaman" required>
+          <option value="&lt;2_tahun">&lt; 2 Tahun</option>
+          <option value="2-4_tahun">2 - 4 Tahun</option>
+          <option value="&gt;4_tahun">&gt; 4 Tahun</option>
+        </select>
+      </div>
+      <div class="form-control-2">
+        <label for="topik">Topik Keahlian </label>
+        <div class="checkbox-group" id="topik">
+          <label><input type="checkbox" name="topik" value="adiksi" /> Adiksi</label>
+          <label><input type="checkbox" name="topik" value="anak_dan_remaja" /> Anak Remaja</label>
+          <label><input type="checkbox" name="topik" value="trauma" /> Trauma</label>
+          <label><input type="checkbox" name="topik" value="seksualitas" /> Seksualitas</label>
+          <label><input type="checkbox" name="topik" value="fobia" /> Fobia</label>
+          <label><input type="checkbox" name="topik" value="kecenderungan_bunuh_diri" /> Kecenderungan Bunuh
+            Diri</label>
         </div>
-        <div class="form-control">
-          <label for="nowa">Nomor Whatsapp </label>
-          <i class="fas fa-edit"></i>
-          <input class="form-input" type="nowa" id="nowa" name="nowa" placeholder="081234567890" required />
-        </div>
-        <div class="form-control">
-          <label for="tgllahir">Tanggal Lahir </label>
-          <input class="form-input" type="date" id="tgllahir" name="tgllahir" required />
-        </div>
-        <div class="form-control">
-          <label for="gender">Jenis Kelamin </label>
-          <select class="form-input" id="gender" name="gender" required>
-            <option value="laki-laki">Laki-laki</option>
-            <option value="perempuan">Perempuan</option>
-          </select>
-        </div>
-        <div class="form-control">
-          <label for="bio">Bio </label>
-          <textarea class="form-input" id="bio" name="bio" cols="30" rows="10" placeholder="Tulis bio mu disini..." required></textarea>
-        </div>
-        <div class="form-control">
-          <label for="pengalaman">Pengalaman Praktik </label>
-          <select class="form-input" id="pengalaman" name="pengalaman" required>
-            <option value="&lt;2_tahun">&lt; 2 Tahun</option>
-            <option value="2-4_tahun">2 - 4 Tahun</option>
-            <option value="&gt;4_tahun">&gt; 4 Tahun</option>
-          </select>
-        </div>
-        <div class="form-control-2">
-          <label for="topik">Topik Keahlian </label>
-          <div class="checkbox-group" id="topik">
-            <label><input type="checkbox" name="topik" value="adiksi" /> Adiksi</label>
-            <label><input type="checkbox" name="topik" value="anak_dan_remaja" /> Anak Remaja</label>
-            <label><input type="checkbox" name="topik" value="trauma" /> Trauma</label>
-            <label><input type="checkbox" name="topik" value="seksualitas" /> Seksualitas</label>
-            <label><input type="checkbox" name="topik" value="fobia" /> Fobia</label>
-            <label><input type="checkbox" name="topik" value="kecenderungan_bunuh_diri" /> Kecenderungan Bunuh Diri</label>
-          </div>
-        </div>
-        <button class="simpan-btn" type="submit">Simpan</button>
-      </form>
-    </div>
-    <footer>
-      <span> &copy; 2023 MentalWell, Hak Cipta Dilindungi. </span>
-    </footer>
-  </body>
+      </div>
+      <button class="simpan-btn" type="submit">Simpan</button>
+    </form>
+  </div>
+  <footer>
+    <span> &copy; 2023 MentalWell, Hak Cipta Dilindungi. </span>
+  </footer>
+</body>
+
 </html>
 <script src="/src/scripts/views/pages/editprofilpsikolog.js"></script>
