@@ -209,6 +209,9 @@ class NavBar extends HTMLElement {
                         <h1>MentalWell</h1>
                     </div>
                     <div class="navbar-list">
+                        <ul class="navbar-list-item">
+                          <li class="list-item"><a href="/dashboardpsikolog">Dashboard</a></li>
+                        </ul>
                         <div class="button-user" id="userDropdown">
                             <img src="/src/public/beranda/man.png" alt="Foto User" id="photoUser" >
                             <h2 id="nicknameTag"></h2>
