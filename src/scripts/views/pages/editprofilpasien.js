@@ -12,9 +12,13 @@ document.addEventListener('DOMContentLoaded', async function () {
 
   const patientData = await response.json();
 
-  document.getElementById('profil-image').innerHTML = `<img src="${patientData.users.profile_image}">
-  <i class="fas fa-edit edit-icon" id="editProfileImage"></i>
-  `
+  document.getElementById('profileimage').innerHTML = `
+    <div id="imagePreviewContainer">
+      <img src="${patientData.users.profile_image}" id="gambar">
+    </div>
+    <label for="inputImage" class="inputImage">Update Gambar</label>
+    <input type="file" id="inputImage" onchange="previewImage(event)">
+  `;
 
   // Update email
   document.getElementById('email').innerHTML = `<h4>${patientData.users.email}</h4>`;
@@ -33,8 +37,27 @@ document.addEventListener('DOMContentLoaded', async function () {
 
   // Update gender
   document.getElementById('gender').value = patientData.users.gender;
-
 });
+
+function previewImage(event) {
+  const inputImage = event.target;
+  const imagePreview = document.getElementById('gambar');
+  const imagePreviewContainer = document.getElementById('imagePreviewContainer');
+
+  if (inputImage.files && inputImage.files[0]) {
+    const reader = new FileReader();
+
+    reader.onload = function (e) {
+      imagePreview.src = e.target.result;
+      imagePreviewContainer.style.display = 'block';
+    };
+
+    reader.readAsDataURL(inputImage.files[0]);
+  } else {
+    imagePreview.src = '';
+    imagePreviewContainer.style.display = 'none';
+  }
+}
 
 form.addEventListener('submit', async function (event) {
   event.preventDefault();
@@ -43,24 +66,26 @@ form.addEventListener('submit', async function (event) {
   const newPhone_number = document.getElementById('nowa').value;
   const newBirthdate = document.getElementById('tgllahir').value;
   const newGender = document.getElementById('gender').value;
+  const image = document.getElementById('inputImage').files[0];
+  const formData = new FormData();
+
+  formData.append('newName', newName);
+  formData.append('newNickname', newNickname);
+  formData.append('newPhone_number', newPhone_number);
+  formData.append('newBirthdate', newBirthdate);
+  formData.append('newGender', newGender);
+  formData.append('profile_image', image);
 
   const response = await fetch('https://mentalwell-backend.vercel.app/patient', {
     method: 'PUT',
     headers: {
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer ${token}`,
+      Authorization: `Bearer ${token}`,
     },
-    body: JSON.stringify({
-      newName: newName,
-      newNickname: newNickname,
-      newPhone_number: newPhone_number,
-      newBirthdate: newBirthdate,
-      newGender: newGender,
-    }),
+    body: formData,
   });
 
   if (response.ok) {
-    console.log(response)
+    console.log(response);
     // alert('Profile updated successfully!');
   } else {
     const errorMessage = await response.text();
