@@ -63,7 +63,7 @@ fetch('https://mentalwell-backend.vercel.app/history', {
           }
 
           riwayatElement.innerHTML = `
-            <img src="/src/public/beranda/man.png" alt="Foto Psikolog" id="psychologPhoto" />
+            <img src="${riwayat.profile_image}" alt="Foto Psikolog" id="psychologPhoto" />
             <div class="info-riwayat">
               <div class="info-text">
                 <p>
