@@ -124,6 +124,11 @@ class NavBar extends HTMLElement {
                   width: 50px;
                   height: 50px;
                   cursor: pointer;
+                  margin-right: 1rem;
+                }
+
+                .navbar .navbar-list .button-user h2 {
+                  margin-right: 1rem;
                 }
 
                 // dropdown menu

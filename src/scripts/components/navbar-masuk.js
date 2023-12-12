@@ -51,7 +51,7 @@ class NavBar extends HTMLElement {
             align-items: center;
             margin-right: 4rem;
           }
-    
+
           .navbar .navbar-list .button button {
             width: 110px;
             height: 44px;
@@ -185,6 +185,11 @@ class NavBarLogin extends HTMLElement {
               align-items: center;
               margin-right: 20px;
             }
+
+            .navbar .navbar-list .button img {
+              border-radius: 30px
+            }
+      
             .navbar .navbar-list .button h2 {
               margin-left: 1rem;
             }

@@ -35,7 +35,6 @@ async function renderArticleDetails() {
     } else if (articleData.experience == ">4_tahun") {
       formattedExperience = "> 4 tahun"
     }
-    console.log(articleData.experience)
 
     // Menampilkan data artikel pada elemen HTML
     fotopsikolog.src = `${articleData.profile_image}`;
@@ -44,11 +43,38 @@ async function renderArticleDetails() {
     pengalamanpraktik.innerHTML = `${formattedExperience}`;
     // Menampilkan topik-topik psikolog
     if (articleData.psychologist_topics && articleData.psychologist_topics.length > 0) {
-      const topicsList = articleData.psychologist_topics.map((topic) => `<li>${topic.topic_name}</li>`).join('');
-      topicList.innerHTML = topicsList;
+      const formattedTopics = articleData.psychologist_topics.map((topic) => {
+        let formattedTopicName = '';
+
+        if (topic.topic_name === 'adiksi') {
+          formattedTopicName = 'Adiksi';
+        } else if (topic.topic_name === 'anak_dan_remaja') {
+          formattedTopicName = 'Anak dan Remaja';
+        } else if (topic.topic_name === 'trauma') {
+          formattedTopicName = 'Trauma';
+        } else if (topic.topic_name === 'seksualitas') {
+          formattedTopicName = 'Seksualitas';
+        } else if (topic.topic_name === 'fobia') {
+          formattedTopicName = 'Fobia';
+        } else if (topic.topic_name === 'kecenderungan_bunuh_diri') {
+          formattedTopicName = 'Kecenderungan Bunuh Diri';
+        } else {
+          formattedTopicName = topic.topic_name;
+        }
+
+        return formattedTopicName;
+      });
+
+      const formattedTopicsList = formattedTopics.map((formattedTopic) => `<li>${formattedTopic}</li>`).join('');
+      topicList.innerHTML = formattedTopicsList;
+
+      // const originalTopicsList = articleData.psychologist_topics.map((topic) => `<li>${topic.topic_name}</li>`).join('');
+      // originalTopicList.innerHTML = originalTopicsList;
+
       topikKeahlian.style.display = 'block'; // Show the container if there are topics
     } else {
       topicList.innerHTML = '<li>Tidak ada topik.</li>';
+      originalTopicList.innerHTML = ''; // Clear the original topic list
       topikKeahlian.style.display = 'none'; // Hide the container if there are no topics
     }
 
@@ -90,7 +116,6 @@ async function fetchPsychologistAvailability() {
     showLoadingIndicator();
     const response = await fetch(url);
     const data = await response.json();
-    console.log(data.availability);
 
     // Update the button state directly based on availability
     updateButtonState(data.availability);

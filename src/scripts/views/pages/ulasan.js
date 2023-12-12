@@ -45,6 +45,12 @@ function submitUlasan(ulasan) {
     .then(data => {
       console.log('Review submitted successfully:', data);
       console.log([currentCounselingId, data])
+      Swal.fire({
+        title: 'Berhasil Membuat Ulasan!',
+        icon: 'success',
+        showConfirmButton: false,
+        timer: 2000,
+      });
       // Call a function to update the button in riwayat.js
       updateButtonAfterSubmission(currentCounselingId);
     })
