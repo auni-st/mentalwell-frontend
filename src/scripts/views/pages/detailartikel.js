@@ -45,18 +45,19 @@ async function renderArticleDetails() {
     const imageDetailArticel = document.getElementById('image-detail-articel');
     const contentDetailArticel = document.getElementById('content-detail-articel');
     const referensiArticel = document.getElementById('referensi-articel');
-    
+
     const articleData = await fetchArticleById(articleId);
 
     const formattedDateTime = formatDateTime(articleData.created_at);
-    createdArticel.innerHTML = `<time> Dibuat pada: ${formattedDateTime}</time>`;
+    createdArticel.innerHTML = `<time> Ditulis pada: ${formattedDateTime}</time>`;
 
     judulDetailArticel.innerHTML = `<h2>${articleData.title}</h2>`;
     // createdArticel.innerHTML = `<time> Dibuat pada: ${articleData.created_at}</time>`;
     imageDetailArticel.innerHTML = `<img src="${articleData.image}" alt="image detail artice" />`;
     const formattedContent = articleData.content ? articleData.content.replace(/\n/g, '<br>') : '';
     contentDetailArticel.innerHTML = `<p>${formattedContent}</p>`;
-    referensiArticel.innerHTML = `<p>Referensi : ${articleData.references}<p>`;
+    const formattedReferences = articleData.references ? articleData.references.replace(/\n/g, '<br>') : '';
+    referensiArticel.innerHTML = `<p>Referensi : <br> ${formattedReferences}<p>`;
     // Menampilkan referensi artikel jika ada
     // if (articleData.references && articleData.references.length > 0) {
     //   referensiArticel.innerHTML = `<h2>Referensi</h2><ol>${articleData.references.map((ref) => `<li>${ref}</li>`).join('')}</ol>`;

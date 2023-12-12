@@ -131,8 +131,8 @@ main {
 }
 
 .detail-articel .created-articel time {
-  margin-left: 4rem;
-  margin-top: -1rem;
+  margin-left: 6rem;
+  margin-top: -2rem;
 }
 
 .detail-articel .garis-detail-articel {
@@ -154,8 +154,8 @@ main {
 }
 
 .detail-articel .image-detail-articel img {
-  width: 100%;
-  height: 500px;
+  /* width: 700px; */
+  height: 400px;
   margin-right: 7rem;
   margin-left: 7rem; 
 }
