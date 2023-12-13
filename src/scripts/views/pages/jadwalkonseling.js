@@ -250,6 +250,18 @@ async function sendCounselingData() {
     });
 
     if (result.isConfirmed) {
+
+      Swal.fire({
+        title: 'Memuat...',
+        text: 'Harap tunggu sejenak. Jadwal akan segera dikonfirmasi. ',
+        allowOutsideClick: false,
+        showCancelButton: false,
+        showConfirmButton: false,
+        onBeforeOpen: () => {
+          Swal.showLoading();
+        },
+      });
+
       // User clicked "Yes," proceed with sending data
       const response = await fetch(`https://mentalwell-backend.vercel.app/counselings/psychologists/${currentId}`, {
         method: 'POST',
@@ -259,6 +271,9 @@ async function sendCounselingData() {
         },
         body: JSON.stringify(counselingDataStorage),
       });
+
+      // Hide loading state
+      Swal.close();
 
       // Replace this with your actual redirection logic
       // window.location.href = `http://localhost:5501/src/templates/jadwalkonseling-selesai.html?id=${currentId}`;
