@@ -15,8 +15,7 @@ function closeLoginPopup() {
 }
 
 function authenticate(event) {
-  event.preventDefault(); // Prevent the default form submission for this example
-  // Add your authentication logic here
+  event.preventDefault(); 
   alert('Authentication logic goes here!');
 }
 
@@ -29,7 +28,6 @@ function togglePasswordLoginVisibility() {
   const passwordInput = document.getElementById('loginpassword');
   const toggleIcon = document.querySelector('.form-control i');
 
-  // Mengubah tipe input dan ikon berdasarkan status input
   if (passwordInput.type === 'password') {
     passwordInput.type = 'text';
     toggleIcon.classList.remove('far', 'fa-eye-slash');
@@ -40,8 +38,6 @@ function togglePasswordLoginVisibility() {
     toggleIcon.classList.add('far', 'fa-eye-slash');
   }
 }
-
-// import Swal from 'sweetalert2';
 
 const loginForm = document.getElementById('login-form');
 
@@ -75,7 +71,6 @@ loginForm.addEventListener('submit', async (event) => {
       sessionStorage.setItem('authToken', token);
 
       setTimeout(async () => {
-        // Display success message
         await Swal.fire({
           title: 'Anda Berhasil Masuk!',
           icon: 'success',
@@ -83,7 +78,6 @@ loginForm.addEventListener('submit', async (event) => {
           showConfirmButton: false,
         });
 
-        // Check if it's the first time login as a patient
         if (userName === null && userRole === 'patient') {
           const result = await Swal.fire({
             title: "Selamat Datang!",
@@ -92,7 +86,6 @@ loginForm.addEventListener('submit', async (event) => {
             showConfirmButton: true,
           });
           if (result.isConfirmed) {
-            // Redirect to the edit profile page
             // window.location.href = 'http://localhost:5501/src/templates/editprofilpasien.html';
             // or use the production URL
             window.location.href = 'https://mentalwell.vercel.app/editprofilpasien';
@@ -105,17 +98,14 @@ loginForm.addEventListener('submit', async (event) => {
             showConfirmButton: true,
           });
           if (result.isConfirmed) {
-            // Redirect to the edit profile page
             // window.location.href = 'http://localhost:5501/src/templates/editprofilpsikolog.html';
             // or use the production URL
             window.location.href = 'https://mentalwell.vercel.app/editprofilpasien';
           }
         } else if (userRole === 'patient') {
-          // Handle patient login
           // window.location.href = 'http://localhost:5501/src/templates/index.html';
           window.location.href = 'https://mentalwell.vercel.app/';
         } else if (userRole === 'psychologist') {
-          // Handle psychologist login
           // window.location.href = 'http://localhost:5501/src/templates/dashboardpsikolog.html';
           window.location.href = 'https://mentalwell.vercel.app/dashboardpsikolog';
         } else {

@@ -24,11 +24,9 @@ lupasandiForm.addEventListener('submit', async (event) => {
         title: 'Success!',
         text: 'Tautan untuk Mengubah Kata Sandi Telah Dikirim ke Email Anda!',
         icon: 'success',
-        timer: 2000, // Set the timer to close the alert after 2000 milliseconds (2 seconds)
-        showConfirmButton: false, // Hide the "OK" button
+        timer: 2000, 
+        showConfirmButton: false, 
       });
-
-      //redirect user to reset-password page
 
     } else {
       const responseData = await response.json();

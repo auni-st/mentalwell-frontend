@@ -2,10 +2,8 @@ class NavBar extends HTMLElement {
   constructor() {
     super();
 
-    // Create a shadow root
     this.attachShadow({ mode: 'open' });
 
-    // Define the HTML content for the component
     this.shadowRoot.innerHTML = `
         <style>
           /* Add your styling for the navbar here */
@@ -395,8 +393,6 @@ class NavBarLogin extends HTMLElement {
       .then((response) => response.json())
       .then((data) => {
         const currentUser = data[0];
-        // console.log(currentUser.nickname);
-        // console.log(currentUser.profile_image);
 
         if (nicknameTag && photoUser) {
           nicknameTag.innerText = currentUser.nickname;

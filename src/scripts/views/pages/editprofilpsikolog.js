@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', async function () {
   document.getElementById('pengalaman').value = psychologistData.experience;
   const expertiseCheckboxes = document.querySelectorAll('input[name="topik"]');
   const expertiseTopics = psychologistData.psychologists_topics || [];
-  console.log(psychologistData);
+  // console.log(psychologistData);
   expertiseCheckboxes.forEach((checkbox) => {
     // console.log(expertiseTopics.map((row) => row.topic_name));
     checkbox.checked = expertiseTopics.map((row) => row.topic_name).includes(checkbox.value);
@@ -98,8 +98,22 @@ form.addEventListener('submit', async function (event) {
   });
 
   for (const pair of formData.entries()) {
-    console.log(pair[0] + ': ' + pair[1]);
+    // console.log(pair[0] + ': ' + pair[1]);
   }
+
+  Swal.fire({
+    title: 'Memuat...',
+    text: 'Harap tunggu sejenak. Profil anda akan segera berubah. ',
+    allowOutsideClick: false,
+    showCancelButton: false,
+    showConfirmButton: false,
+    onBeforeOpen: () => {
+      Swal.showLoading();
+    },
+  });
+
+
+
   const response = await fetch('https://mentalwell-backend.vercel.app/psychologist', {
     method: 'PUT',
     headers: {
@@ -109,18 +123,23 @@ form.addEventListener('submit', async function (event) {
   });
 
   if (response.ok) {
-    console.log(response);
+    // console.log(response);
+
+    Swal.close();
+
     Swal.fire({
       title: 'Profil Berhasil Diubah',
       icon: 'success',
       showConfirmButton: false,
       timer: 2000,
     });
+    location.reload();
+
   } else {
     const errorMessage = await response.text();
     Swal.fire({
       title: 'Gagal!',
-      text: 'Profil Gagal Diubah, Format File Harus Gambar',
+      text: 'Profil Gagal Diubah, Format File Harus .JPG',
       icon: 'error',
       showConfirmButton: true,
     });

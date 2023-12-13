@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function () {
             console.error('Error fetching results:', error);
           });
       } else {
-        contentArticle.innerHTML = ''; // Clear the content if needed
+        contentArticle.innerHTML = ''; 
       }
     });
   });

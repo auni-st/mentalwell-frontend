@@ -17,12 +17,10 @@ fetch('https://mentalwell-backend.vercel.app/history', {
   .then(data => {
     if (data && Array.isArray(data)) {
       if (data.length === 0) {
-        // Tidak ada data riwayat
         const noDataElement = document.createElement('p');
         noDataElement.textContent = 'Tidak ada riwayat konseling.';
         containerRiwayat.appendChild(noDataElement);
       } else {
-        // Menampilkan data riwayat
         data.forEach(riwayat => {
           const riwayatElement = document.createElement('div');
           riwayatElement.classList.add('container-riwayat');

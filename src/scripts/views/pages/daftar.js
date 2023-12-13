@@ -121,7 +121,6 @@ function validateForm() {
   var password = document.getElementById("passworddaftar").value;
   var confirmPassword = document.getElementById("confpassword").value;
 
-  // Check if the password is at least 8 characters long and contains at least 1 number
   if (!isValidPassword(password)) {
     setTimeout(function () {
       Swal.fire({
@@ -130,11 +129,10 @@ function validateForm() {
         icon: 'error',
         showConfirmButton: true,
       });
-    }, 2000); // 2000 milliseconds (2 seconds) delay
+    }, 2000); 
     return false;
   }
 
-  // Check if the confirmed password matches the original password
   setTimeout(function () {
     if (password !== confirmPassword) {
       Swal.fire({
@@ -144,13 +142,11 @@ function validateForm() {
         showConfirmButton: true,
       });
     }
-  }, 2000); // 2000 milliseconds (2 seconds) delay
+  }, 2000);
 
-  // If everything is valid, clear the error message
   return true;
 }
 
 function isValidPassword(password) {
-  // Check if the password is at least 8 characters long and contains at least 1 number
   return password.length >= 8 && /\d/.test(password);
 }

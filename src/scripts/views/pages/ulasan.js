@@ -43,15 +43,12 @@ function submitUlasan(ulasan) {
       return response.json();
     })
     .then(data => {
-      console.log('Review submitted successfully:', data);
-      console.log([currentCounselingId, data])
       Swal.fire({
         title: 'Berhasil Membuat Ulasan!',
         icon: 'success',
         showConfirmButton: false,
         timer: 2000,
       });
-      // Call a function to update the button in riwayat.js
       updateButtonAfterSubmission(currentCounselingId);
     })
     .catch(error => console.error('Error submitting review:', error))
@@ -61,7 +58,6 @@ function submitUlasan(ulasan) {
 }
 
 function updateButtonAfterSubmission(counselingId) {
-  // Find the button element with the corresponding counseling ID
   const buttonElement = document.querySelector(`button[data-counseling-id="${counselingId}"]`);
 
   if (buttonElement) {
