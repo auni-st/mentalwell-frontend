@@ -49,7 +49,7 @@ ubahsandiForm.addEventListener("submit", async (event) => {
       const responseData = await response.json();
       const errorMessage = responseData.message || "Error occured";
       Swal.fire({
-        title: "Error!",
+        title: "Gagal!",
         text: `Ubah Sandi Gagal!`,
         icon: "error",
         showConfirmButton: true,

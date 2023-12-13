@@ -21,7 +21,7 @@ lupasandiForm.addEventListener('submit', async (event) => {
     if (response.ok) {
       const responseData = await response.json();
       Swal.fire({
-        title: 'Success!',
+        title: 'Berhasil Mengirim Email!',
         text: 'Tautan untuk Mengubah Kata Sandi Telah Dikirim ke Email Anda!',
         icon: 'success',
         timer: 2000, 
