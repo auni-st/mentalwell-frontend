@@ -21,6 +21,7 @@ if (btnSimpan) {
 }
 
 const authToken = sessionStorage.getItem('authToken')
+
 fetch(`https://mentalwell-backend.vercel.app/dashboard/counseling/${counselingId}`, {
   headers: {
     'Authorization': `Bearer ${authToken}`,
@@ -93,6 +94,17 @@ fetch(`https://mentalwell-backend.vercel.app/dashboard/counseling/${counselingId
 statusDropdown.addEventListener('change', () => {
   const newStatus = statusDropdown.value;
 
+  Swal.fire({
+    title: 'Memuat...',
+    text: 'Harap tunggu sejenak. Status konseling akan segera berubah ',
+    allowOutsideClick: false,
+    showCancelButton: false,
+    showConfirmButton: false,
+    onBeforeOpen: () => {
+      Swal.showLoading();
+    },
+  });
+
   // Update the status using the backend API
   fetch(`https://mentalwell-backend.vercel.app/dashboard/counseling/${counselingId}`, {
     method: 'PUT',
@@ -106,13 +118,15 @@ statusDropdown.addEventListener('change', () => {
   })
     .then(response => {
       if (response.ok) {
-        console.log('Status Konseling Berhasil Diubah!');
+        Swal.close();
+
         Swal.fire({
           title: 'Status Konseling Berhasil Diubah!',
           icon: 'success',
           showConfirmButton: false,
           timer: 2000,
         });
+
       } else {
         console.error('Failed to update status');
         throw new Error('Failed to update status.');

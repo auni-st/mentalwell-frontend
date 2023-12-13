@@ -13,7 +13,6 @@ async function fetchArticleById(articleId) {
   }
 }
 
-// Function to format the date
 function formatDateTime(dateString) {
   const dateObject = new Date(dateString);
   const day = dateObject.getDate();
@@ -52,20 +51,14 @@ async function renderArticleDetails() {
     createdArticel.innerHTML = `<time> Ditulis pada: ${formattedDateTime}</time>`;
 
     judulDetailArticel.innerHTML = `<h2>${articleData.title}</h2>`;
-    // createdArticel.innerHTML = `<time> Dibuat pada: ${articleData.created_at}</time>`;
     imageDetailArticel.innerHTML = `<img src="${articleData.image}" alt="image detail artice" />`;
     const formattedContent = articleData.content ? articleData.content.replace(/\n/g, '<br>') : '';
     contentDetailArticel.innerHTML = `<p>${formattedContent}</p>`;
     const formattedReferences = articleData.references ? articleData.references.replace(/\n/g, '<br>') : '';
     referensiArticel.innerHTML = `<p>Referensi : <br> ${formattedReferences}<p>`;
-    // Menampilkan referensi artikel jika ada
-    // if (articleData.references && articleData.references.length > 0) {
-    //   referensiArticel.innerHTML = `<h2>Referensi</h2><ol>${articleData.references.map((ref) => `<li>${ref}</li>`).join('')}</ol>`;
-    // }
   } catch (error) {
     console.error('Error rendering article details:', error);
   }
 }
 
-// Render artikel details ketika halaman dimuat
 renderArticleDetails();

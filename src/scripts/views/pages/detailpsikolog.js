@@ -68,9 +68,6 @@ async function renderArticleDetails() {
       const formattedTopicsList = formattedTopics.map((formattedTopic) => `<li>${formattedTopic}</li>`).join('');
       topicList.innerHTML = formattedTopicsList;
 
-      // const originalTopicsList = articleData.psychologist_topics.map((topic) => `<li>${topic.topic_name}</li>`).join('');
-      // originalTopicList.innerHTML = originalTopicsList;
-
       topikKeahlian.style.display = 'block'; // Show the container if there are topics
     } else {
       topicList.innerHTML = '<li>Tidak ada topik.</li>';

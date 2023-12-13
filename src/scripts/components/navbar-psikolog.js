@@ -260,8 +260,6 @@ class NavBar extends HTMLElement {
     .then((response) => response.json())
     .then((data) => {
       const currentUser = data[0];
-      console.log(currentUser.name);
-      console.log(currentUser.profile_image);
 
       if (nicknameTag && photoUser) {
         nicknameTag.innerText = currentUser.name;

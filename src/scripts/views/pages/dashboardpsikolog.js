@@ -35,6 +35,17 @@ const redirectToCounselingDetail = (counselingId) => {
 statusDropdown.addEventListener("change", () => {
   const selectedValue = statusDropdown.value;
 
+  Swal.fire({
+    title: 'Memuat...',
+    text: 'Harap tunggu sejenak. Status ketersediaan anda akan segera berubah ',
+    allowOutsideClick: false,
+    showCancelButton: false,
+    showConfirmButton: false,
+    onBeforeOpen: () => {
+      Swal.showLoading();
+    },
+  });
+
   fetch("https://mentalwell-backend.vercel.app/counselings/psychologist", {
     method: "PUT",
     headers: {
@@ -55,13 +66,16 @@ statusDropdown.addEventListener("change", () => {
       } else {
         formattedValue = "Tersedia";
       }
+
+      Swal.close();
+
       Swal.fire({
         title: `Berhasil Mengubah Ketersediaan Menjadi ${formattedValue}!`,
         icon: "success",
         timer: 3000,
         showConfirmButton: false, // Hide the "OK" button
       });
-      console.log("Availibility updated:", data);
+
     })
     .catch((error) => {
       console.error("Error update availability:", error);
@@ -69,17 +83,12 @@ statusDropdown.addEventListener("change", () => {
 });
 
 tableBody.addEventListener("click", (event) => {
-  // const targetRow = event.target.closest('tr');
   const isIcon = event.target.tagName === "IMG" && event.target.alt === "tulis";
-  
-  // console.log(targetRow)
-  console.log(isIcon);
 
   const counselingId = event.target
     .closest("tr")
     .querySelector("img")
     .getAttribute("data-counseling-id");
-  console.log(counselingId);
 
   if (counselingId) {
     redirectToCounselingDetail(counselingId);

@@ -76,6 +76,17 @@ form.addEventListener('submit', async function (event) {
   formData.append('newGender', newGender);
   formData.append('profile_image', image);
 
+  Swal.fire({
+    title: 'Memuat...',
+    text: 'Harap tunggu sejenak. Profil anda akan segera berubah. ',
+    allowOutsideClick: false,
+    showCancelButton: false,
+    showConfirmButton: false,
+    onBeforeOpen: () => {
+      Swal.showLoading();
+    },
+  });
+
   const response = await fetch('https://mentalwell-backend.vercel.app/patient', {
     method: 'PUT',
     headers: {
@@ -85,18 +96,20 @@ form.addEventListener('submit', async function (event) {
   });
 
   if (response.ok) {
-    console.log(response);
+    Swal.close();
+
     Swal.fire({
       title: 'Profil Berhasil Diubah',
       icon: 'success',
       showConfirmButton: false,
       timer: 2000,
     });
+    location.reload();
   } else {
     const errorMessage = await response.text();
     Swal.fire({
       title: 'Gagal!',
-      text: 'Profil Gagal Diubah, Format File Harus Gambar',
+      text: 'Profil Gagal Diubah, Format Gambar Harus .JPG',
       icon: 'error',
       showConfirmButton: true,
     });
