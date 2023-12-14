@@ -52,6 +52,16 @@ loginForm.addEventListener('submit', async (event) => {
     password,
   };
 
+  Swal.fire({
+    title: 'Memuat...',
+    allowOutsideClick: false,
+    showCancelButton: false,
+    showConfirmButton: false,
+    onBeforeOpen: () => {
+      Swal.showLoading();
+    },
+  });
+
   try {
     const response = await fetch('https://mentalwell-backend.vercel.app/login', {
       method: 'POST',
@@ -62,6 +72,7 @@ loginForm.addEventListener('submit', async (event) => {
     });
 
     if (response.ok) {
+      Swal.close();
 
       const responseData = await response.json();
       const token = responseData.data.token;

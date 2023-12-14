@@ -28,6 +28,18 @@ function authenticate(event) {
 }
 
 function submitUlasan(ulasan) {
+  Swal.fire({
+    title: 'Memuat...',
+    text: 'Harap tunggu sejenak. Ulasan akan segera dikirim',
+    allowOutsideClick: false,
+    showCancelButton: false,
+    showConfirmButton: false,
+    onBeforeOpen: () => {
+      Swal.showLoading();
+    },
+  });
+
+
   fetch(`https://mentalwell-backend.vercel.app/history/counselings/${currentCounselingId}`, {
     method: 'POST',
     headers: {
@@ -43,6 +55,8 @@ function submitUlasan(ulasan) {
       return response.json();
     })
     .then(data => {
+      Swal.close();
+
       Swal.fire({
         title: 'Berhasil Membuat Ulasan!',
         icon: 'success',
