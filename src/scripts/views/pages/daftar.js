@@ -78,6 +78,16 @@ daftarForm.addEventListener('submit', async (event) => {
     phone_number: notelp,
   };
 
+  Swal.fire({
+    title: 'Memuat...',
+    allowOutsideClick: false,
+    showCancelButton: false,
+    showConfirmButton: false,
+    onBeforeOpen: () => {
+      Swal.showLoading();
+    },
+  });
+
   try {
     const response = await fetch('https://mentalwell-backend.vercel.app/users', {
       method: 'POST',
@@ -88,6 +98,8 @@ daftarForm.addEventListener('submit', async (event) => {
     });
 
     if (response.ok) {
+      Swal.close();
+
       Swal.fire({
         title: 'Daftar Akun Berhasil!',
         icon: 'success',
@@ -129,7 +141,7 @@ function validateForm() {
         icon: 'error',
         showConfirmButton: true,
       });
-    }, 2000); 
+    }, 2000);
     return false;
   }
 
