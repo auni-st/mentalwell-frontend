@@ -7,7 +7,7 @@ MentalWell adalah website penyuluhan dan konseling psikologis yang memiliki tuju
 
 Website MentalWell memiliki dua peran, yaitu klien dan konselor. Sebagai klien, pengguna dapat mengisi profil, membaca artikel-artikel terkait psikologi, melakukan pendaftaran konseling sesuai dengan konselor yang dipilih, melihat riwayat konseling, dan memberi ulasan untuk konseling yang telah diikutinya. Sebagai konselor, pengguna dapat mengisi profil, melihat daftar konseling yang perlu diisi olehnya, melihat detail dari konseling, dan mengubah status konseling saat konseling berakhir.
 
-## Tim Capstone Project
+## Tim capstone project
 Team ID: C523-PS034  
 Anggota tim pengembang:
 - F183YB262 - Rahman Hakim 
@@ -16,7 +16,7 @@ Anggota tim pengembang:
 - F264YB259 - Rizki Septi Ardi
 - S283YB429 - Ahmad Ramadhan Auni
 
-## Menjalankan server development
+## Menjalankan project di local
 1. Clone repository ini.
 2. Lakukan instalasi extension Live Server (jika belum).
 3. Navigasi ke index.html dengan lokasi src/templates/index.html.
