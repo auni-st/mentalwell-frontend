@@ -100,7 +100,7 @@ loginForm.addEventListener('submit', async (event) => {
           if (result.isConfirmed) {
             // window.location.href = 'http://localhost:5501/src/templates/editprofilpsikolog.html';
             // or use the production URL
-            window.location.href = 'https://mentalwell.vercel.app/editprofilpasien';
+            window.location.href = 'https://mentalwell.vercel.app/editprofilpsikolog';
           }
         } else if (userRole === 'patient') {
           // window.location.href = 'http://localhost:5501/src/templates/index.html';
