@@ -162,7 +162,7 @@ class NavBarLogin extends HTMLElement {
               align-items: center;
               justify-content: space-between;
               margin-left: 2rem;
-            }
+            } 
 
             .navbar .navbar-brand h1 {
               color: #044b77;
@@ -232,6 +232,14 @@ class NavBarLogin extends HTMLElement {
 
             .navbar .navbar-list .navbar-list-item .list-item a:hover::after {
               width: 100%;
+            }
+
+            #photoUser {
+              margin-right: 1rem;
+            }
+
+            .button h4 {
+              margin-right: 1rem;
             }
 
             .dropdown-content {
@@ -333,7 +341,7 @@ class NavBarLogin extends HTMLElement {
           <nav>
               <div class="navbar">
                   <div class="navbar-brand">
-                  <img src="/src/public/logo/logo-mentalwell.jpg" alt="imagelogo" width="50px" height="50px">
+                      <img src="/src/public/logo/logo-mentalwell.jpg" alt="imagelogo" width="50px" height="50px">
                       <h1>MentalWell</h1>
                   </div>
                   <div class="navbar-list">
