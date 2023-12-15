@@ -61,15 +61,15 @@ daftarForm.addEventListener('submit', async (event) => {
   const password = document.getElementById('passworddaftar').value;
   const confirmPassword = document.getElementById('confpassword').value;
 
-  if (password !== confirmPassword) {
-    Swal.fire({
-      title: 'Gagal!',
-      text: 'Kata Sandi dan Konfirmasi Kata Sandi Harus Sama!',
-      icon: 'error',
-      showConfirmButton: true,
-    });
-    return;
-  }
+  // if (password !== confirmPassword) {
+  //   Swal.fire({
+  //     title: 'Gagal!',
+  //     text: 'Kata Sandi dan Konfirmasi Kata Sandi Harus Sama!',
+  //     icon: 'error',
+  //     showConfirmButton: true,
+  //   });
+  //   return;
+  // }
 
   const formData = {
     email,
@@ -113,7 +113,7 @@ daftarForm.addEventListener('submit', async (event) => {
       const responseData = await response.json();
       Swal.fire({
         title: 'Daftar Akun Gagal!',
-        text: 'Silahkan Coba Lagi',
+        text: error,
         icon: 'error',
         showConfirmButton: true,
       });
@@ -122,7 +122,7 @@ daftarForm.addEventListener('submit', async (event) => {
     console.error('Error during registration:', error);
     Swal.fire({
       title: 'Daftar Akun Gagal!',
-      text: 'Silahkan Coba Lagi',
+      text: 'Harap isi data dengan benar!',
       icon: 'error',
       showConfirmButton: true,
     });
@@ -130,20 +130,35 @@ daftarForm.addEventListener('submit', async (event) => {
 })
 
 function validateForm() {
+  var notelp = document.getElementById("notelp").value;
   var password = document.getElementById("passworddaftar").value;
   var confirmPassword = document.getElementById("confpassword").value;
 
-  if (!isValidPassword(password)) {
-    setTimeout(function () {
+  setTimeout(function () {
+    if (notelp.length >= 14) {
       Swal.fire({
         title: 'Gagal Daftar!',
-        text: 'Kata Sandi harus paling sedikit 8 karakter dengan setidaknya 1 angka!',
+        text: 'Nomor Whatsapp paling panjang 14 angka!',
         icon: 'error',
         showConfirmButton: true,
       });
-    }, 2000);
-    return false;
-  }
+      return false;
+    }
+  }, 2000);
+
+  setTimeout(function () {
+    if (!isValidPassword(password)) {
+      setTimeout(function () {
+        Swal.fire({
+          title: 'Gagal Daftar!',
+          text: 'Kata Sandi harus paling sedikit 8 karakter dengan setidaknya 1 angka!',
+          icon: 'error',
+          showConfirmButton: true,
+        });
+      });
+      return false;
+    }
+  }, 2000);
 
   setTimeout(function () {
     if (password !== confirmPassword) {

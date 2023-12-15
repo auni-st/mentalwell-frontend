@@ -60,12 +60,12 @@
       <h2>Daftar</h2>
       <p>Sudah punya akun? <a href="#" onclick="openLoginPopup()">Masuk</a></p>
     </div>
-    <form class="daftar-form" id="daftar-form" onsubmit="return validateForm()">
+    <form class="daftar-form" id="daftar-form" onsubmit="validateForm()">
       <div class="form-control">
         <input class="form-input" type="email" id="email" name="email" placeholder="Email" required />
       </div>
       <div class="form-control">
-        <input class="form-input" type="notelp" id="notelp" name="notelp" placeholder="Nomor Whatsapp" required />
+        <input class="form-input" type="text" id="notelp" name="notelp" placeholder="Nomor Whatsapp" required />
       </div>
       <div class="form-control">
         <i class="far fa-eye eye" onclick="togglePasswordVisibility()"></i>
