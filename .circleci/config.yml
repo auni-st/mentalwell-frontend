@@ -2,6 +2,7 @@ version: 2.1
 
 jobs:
   deploy:
+    resource_class: medium+
     docker:
       - image: circleci/node:16
     steps:
